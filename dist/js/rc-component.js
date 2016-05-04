@@ -57,15 +57,15 @@
       
             // 이벤트 헨들러 세팅 
             var event_handler=$(component).find('[data-role="event-handler"]');
-            var _url=rooturl+'/'+url;
-            var meta_description=$('meta[property="og:description"]').attr('content');
-            var meta_image=$('meta[property="og:image"]').attr('content');
+            // var _url=rooturl+'/'+url;
+            // var meta_description=$('meta[property="og:description"]').attr('content');
+            // var meta_image=$('meta[property="og:image"]').attr('content');
 
-            $(event_handler).attr('data-id',uid);
-            $(event_handler).attr('data-title',title);
-            $(event_handler).attr('data-url',_url);
-            $(event_handler).attr('data-text',meta_description);  
-            $(event_handler).attr('data-image',meta_image);  
+            // $(event_handler).attr('data-id',uid);
+            // $(event_handler).attr('data-title',title);
+            // $(event_handler).attr('data-url',_url);
+            // $(event_handler).attr('data-text',meta_description);  
+            // $(event_handler).attr('data-image',meta_image);  
          
              // 나머지 데이타들 일괄적용  
             if(etc!=undefined){
