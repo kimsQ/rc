@@ -47,7 +47,8 @@
 
 $(document).ready(function(){
     $('btn').click(function(){
-        $("#myModal").modal('show').modal({
+    	$('#myModal').modal('show'),
+        $("#myModal").modal({
             title: '타이틀'
         });
     }); 
