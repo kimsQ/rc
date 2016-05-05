@@ -40,21 +40,19 @@
 	</header>
 
 	<div class="content">
-		<p class="content-padded">
-			<form>
-				<input type="text" placeholder="이름" id="myInput">
-				<input type="search" placeholder="검">
-				<textarea rows="5"></textarea>
-				<button class="btn btn-positive btn-block">Choose existing</button>
-			</form>
-		</p>
+		<form class="content-padded">
+			<input type="text" placeholder="이름" id="myInput">
+			<input type="search" placeholder="검">
+			<textarea rows="5"></textarea>
+			<button class="btn btn-positive btn-block">Choose existing</button>
+		</form>
 	</div>
 </div>
 
 
 <script type="text/javascript">
 
-$('#myModal').on('shown.bs.modal', function () {
+$('#myModal').on('shown.rc.modal', function () {
 	$('#myInput').focus()
 })
 
