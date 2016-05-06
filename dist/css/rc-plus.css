@@ -54,6 +54,9 @@
   border-bottom: 0;
 }
 
+
+
+
 /**
  * 1. card (bootstrap v4-alpha)
  * ----------------------------------------------------------------------------
@@ -515,4 +518,102 @@ a.bg-warning:focus, a.bg-warning:hover {
 
 a.bg-danger:focus, a.bg-danger:hover {
   background-color: #c9302c;
+}
+
+
+
+/*
+ * popup 팝업
+ * ----------------------------------------------------------------------------
+ */
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 16;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.popup.active {
+    visibility: visible;
+}
+.popup:before {
+    opacity: 0;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.popup.active:before {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.popup:before {
+    position: relative;
+}
+.popup .bar-nav {
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.popup .bar-footer {
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.popup .bar-footer .btn {
+    font-size: 16px
+}
+.popup .table-view {
+    max-height: 300px;
+    margin-bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 6px;
+}
+.popup .bar~.table-view {
+    padding-top: 44px;
+}
+.popup .bar-footer~.table-view {
+    padding-bottom: 44px;
+}
+.popup .content {
+    position: relative;
+    min-height: 210px;
+    max-height: 500px;
+    margin-bottom: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 6px;
 }
