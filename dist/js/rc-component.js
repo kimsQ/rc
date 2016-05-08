@@ -57,15 +57,7 @@
       
             // 이벤트 헨들러 세팅 
             var event_handler=$(component).find('[data-role="event-handler"]');
-            // var _url=rooturl+'/'+url;
-            // var meta_description=$('meta[property="og:description"]').attr('content');
-            // var meta_image=$('meta[property="og:image"]').attr('content');
-
-            // $(event_handler).attr('data-id',uid);
-            // $(event_handler).attr('data-title',title);
-            // $(event_handler).attr('data-url',_url);
-            // $(event_handler).attr('data-text',meta_description);  
-            // $(event_handler).attr('data-image',meta_image);  
+ 
          
              // 나머지 데이타들 일괄적용  
             if(etc!=undefined){
@@ -86,7 +78,13 @@
       }
 
       Utility.prototype.addHistoryObject=function(object,title,url){
+
             History.pushState(object, title, url); 
+            // var CurrentIndex=History.getCurrentIndex();
+            // var CurrentObj=History.getStateByIndex(CurrentIndex);  
+            // var CurrentObj=JSON.stringify(CurrentObj);
+            // var result=$.parseJSON(CurrentObj);
+            // console.log(result);
       }
 
       Utility.prototype.resetHistoryObject=function(objType,objTarget){
@@ -99,7 +97,6 @@
             }else if(objType=='modal'){
                   var object=objTarget; 
                   $(object).removeClass('active');
-                  $(object).html('');
             }else if(objType=='popup'){
                   var object=objTarget.popup;
                   var container=objTarget.container;
@@ -152,24 +149,6 @@
             $(loadPage).attr('class','page transition right'); // start 페이지는 반대로 이동 
       }  
 
-      // document 내 data-toggle=modal 엘리먼트 체크   
-      var checkModalEle=function(){
-            $(document).find('[data-toggle="modal"]').each(function(){
-                  var _target=$(this).data('target');
-                  var target=_target.replace('#', '');
-                  var transition=$(this).data('transition')?' '+$(this).data('transition'):'';
-                  // 해당 container 가 body  내 존재하지 않을 경우 생성함수 호출 (엘리먼트의 target->id , transition -> class 로 대체된다.)
-                  if(!$('body').find('#'+target).length){
-                        addModalContainer(target,'modal'+transition); 
-                  }
-            })      
-      }
-
-      // 모둘 container 생셩함수 
-      var addModalContainer=function(id,className){
-          $('body').append('<div id="'+id+'" class="'+className+'"></div>');
-      }
-
 
        // history.back
       $(document).on('tap click','[data-history="back"]',function(e){
@@ -182,10 +161,6 @@
              history.back();
        });
 
-
-      $(document).ready(function(){
-             checkModalEle(); // data-toggle="modal" 엘리먼트 체크
-      });
       var utility=new Utility(null,null).init();
       window.addEventListener('popstate', utility.popComponentState);      
       
@@ -209,7 +184,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:'#'
+            this.url               = this.options.url?this.options.url:' '
             this.isShown             = null
      }
 
@@ -223,13 +198,12 @@
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
  
-      // 모달 호출   
       Popover.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.popover', { relatedTarget: _relatedTarget })
             var title =this.title;
-            var url =this.url;
-            var popover=this.target?this.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
+            var popover=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
+            var url=this.url;
             var placement=this.options.placement?this.options.placement:'bottom';
             var container=this.options.container?this.options.container:'.content';
             var template=this.options.template;
@@ -343,7 +317,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:'#'
+            this.url               = this.options.url?this.options.url:' '
             this.isShown             = null
      }
 
@@ -357,13 +331,13 @@
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
  
-      // 모달 호출   
       Modal.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.modal', { relatedTarget: _relatedTarget })
             var title =this.title;
+            var modal=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 
             var url =this.url;
-            var modal=this.target?this.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 
+            var animation=this.options.animation?this.options.animation:'slide-up';
             var template=this.options.template;
             this.$element.trigger(e);
             this.isShown = true
@@ -378,8 +352,10 @@
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
             } 
-
-            this.$element.addClass('active');
+             
+            this.$element.addClass(animation); // 에니메이션 적용
+            this.$element.addClass('active'); // 모달 활성화
+            
             // 브라우저 history 객체에 추가 
             var object = {'type': 'modal','target': modal}
             utility.addHistoryObject(object,title,url);
@@ -471,7 +447,7 @@
           this.$body            = $(document.body)
           this.$element       = $(element)
           this.title               = this.options.title?this.options.title:null
-          this.url               = this.options.url?this.options.url:'#'
+          this.url               = this.options.url?this.options.url:' '
      }
 
       Page.VERSION  = '1.1.0'
@@ -484,9 +460,9 @@
             var $this = this;
             var e    = $.Event('show.rc.page', { relatedTarget: _relatedTarget })
             var title =this.title;
-            var url =this.url;
             var startPage=this.options.start;
             var loadPage=this.options.target?this.options.target:'#'+this.$element.attr('id');
+            var url =this.url; 
             var transition=this.options.transition;
             var template=this.options.template;
             this.$element.trigger(e);
@@ -598,7 +574,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:'#'
+            this.url               = this.options.url?this.options.url:' '
             this.isShown             = null
      }
 
@@ -617,8 +593,8 @@
             var $this = this
             var e    = $.Event('show.rc.popup', { relatedTarget: _relatedTarget })
             var title =this.title;
-            var url =this.url;
-            var popup=this.target?this.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
+            var popup=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
+            var url =this.url; 
             var container=this.options.container?this.options.container:'.content';
             var template=this.options.template;
             this.$element.trigger(e);
@@ -634,7 +610,7 @@
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
             } 
-            console.log(container);
+      
             if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
              
             this.$element.addClass('active');
