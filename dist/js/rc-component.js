@@ -204,6 +204,7 @@
             var title =this.title;
             var popover=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
             var url=this.url;
+            url=url.toString();
             var placement=this.options.placement?this.options.placement:'bottom';
             var container=this.options.container?this.options.container:'.content';
             var template=this.options.template;
@@ -337,6 +338,7 @@
             var title =this.title;
             var modal=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 
             var url =this.url;
+            url=url.toString();
             var animation=this.options.animation?this.options.animation:'slide-up';
             var template=this.options.template;
             this.$element.trigger(e);
@@ -463,6 +465,7 @@
             var startPage=this.options.start;
             var loadPage=this.options.target?this.options.target:'#'+this.$element.attr('id');
             var url =this.url; 
+            url=url.toString();
             var transition=this.options.transition;
             var template=this.options.template;
             this.$element.trigger(e);
@@ -595,6 +598,7 @@
             var title =this.title;
             var popup=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
             var url =this.url; 
+            url=url.toString();
             var container=this.options.container?this.options.container:'.content';
             var template=this.options.template;
             this.$element.trigger(e);
