@@ -548,7 +548,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .popup.active {
     visibility: visible;
 }
-.popup .wrap {
+.popup .popup-dialog {
     opacity: 0;
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
@@ -558,7 +558,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-.popup.active .wrap {
+.popup.active .popup-dialog {
     opacity: 1;
     box-shadow: 0 0 15px rgba(0,0,0,.1);
     position: relative;
@@ -569,7 +569,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     -ms-transform: scale(1);
     transform: scale(1);
 }
-.popup .wrap {
+.popup .popup-dialog {
     position: relative;
 }
 .popup .bar-nav {
