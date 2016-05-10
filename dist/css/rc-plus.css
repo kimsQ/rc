@@ -647,7 +647,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     transition: all 0.3s;
     z-index: 1
 }
- .scale.in {
+ .scale.active {
     z-index: 1050;
     visibility: visible;
     -webkit-transform: scale(1);
