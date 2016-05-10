@@ -78,8 +78,8 @@
       }
 
       Utility.prototype.addHistoryObject=function(object,title,url){
-
-            History.pushState(object, title, url); 
+            var _url=url!=null?url:'##';
+            History.pushState(object, title, _url); 
             // var CurrentIndex=History.getCurrentIndex();
             // var CurrentObj=History.getStateByIndex(CurrentIndex);  
             // var CurrentObj=JSON.stringify(CurrentObj);
@@ -184,7 +184,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:' '
+            this.url               = this.options.url?this.options.url:null
             this.isShown             = null
      }
 
@@ -318,7 +318,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:' '
+            this.url               = this.options.url?this.options.url:null
             this.isShown             = null
      }
 
@@ -449,7 +449,7 @@
           this.$body            = $(document.body)
           this.$element       = $(element)
           this.title               = this.options.title?this.options.title:null
-          this.url               = this.options.url?this.options.url:' '
+          this.url               = this.options.url?this.options.url:null
      }
 
       Page.VERSION  = '1.1.0'
@@ -577,7 +577,7 @@
             this.$body            = $(document.body)
             this.$element       = $(element)
             this.title               = this.options.title?this.options.title:null
-            this.url               = this.options.url?this.options.url:' '
+            this.url               = this.options.url?this.options.url:null
             this.isShown             = null
      }
 
