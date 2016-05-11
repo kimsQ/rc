@@ -628,29 +628,3 @@ a.bg-danger:focus, a.bg-danger:hover {
   max-width: 100%;
   height: auto;
 }
-
-
-/*animation*/
-
- .scale {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    visibility: hidden;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    z-index: 1
-}
- .scale.active {
-    z-index: 1050;
-    visibility: visible;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-}
