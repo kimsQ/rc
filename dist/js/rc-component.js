@@ -32,49 +32,24 @@
       }
 
       Utility.prototype.setdataVal=function(component,dataAttr){
-            var title=dataAttr['title'];
-            var url=dataAttr['url'];
-            var uid=dataAttr['id'];
-            var etc=dataAttr['etc'];
-
             $.each(dataAttr,function(key,val){
-                 var keyArr=key.split(':'); // '-' 하면 구분하여 인지하지 못한다.
+                 var keyArr=key.split(':'); 
                  var keyArrCnt=keyArr.length;
                  if(keyArrCnt==2){
                        // data-keyType-keyName
                        var keyType=keyArr[0]; 
                        var keyName=keyArr[1]; 
-                       var target=$(component).find('[data-'+keyName+'-role="'+keyName+'"]');
+                       var target=$(component).find('[data-role="'+keyName+'"]');
                        if(keyType=='bg') $(target).css('background-image','url('+val+')');
                        else if(keyType=='img') $(target).attr('src',val);
                        else if(keyType=='inputText') $(target).val(val);
                        else if(keyType=='html') $(target).html(val);
-                       else if(keyType=='text' || keyType==undefined) $(target).text(val);
+                       else if(keyType=='text' || keyType=='') $(target).text(val);
+                 }else{
+                       var target=$(component).find('[data-role="'+key+'"]');
+                       $(target).text(val);                         
                  }
             });
-
-           $(component).find('[data-role="title"]').html(title); // 마크업 title 업데이트 
-      
-            // 이벤트 헨들러 세팅 
-            var event_handler=$(component).find('[data-role="event-handler"]');
- 
-         
-             // 나머지 데이타들 일괄적용  
-            if(etc!=undefined){
-                 var my_liked=false;// 로그인 회원이 해당 게시물에 대해 좋아요를 했는지 여부 값 
-                 var etc_array=$.parseJSON(etc.replace(/\'/gi,'\"')); // json 파싱 전에 홑따옴표를 쌍따옴표로 치완해준다.  
-                 $.each(etc_array, function(data_key, data_val) {
-                       // key 값을 load 페이지 data-role="" 속성명과 매칭한다.   
-                       if(data_key=='avatar' || data_key=='cover-img') $(component).find('[data-role="'+data_key+'"]').attr('src',data_val); 
-                       else if(data_key=='coverImg') $(component).find('[data-role="'+data_key+'"]').css('background-image','url('+data_val+')'); 
-                       else if(data_key=='my_liked' && parseInt(data_val)>0) my_liked=true; 
-                       else $(component).find('[data-role="'+data_key+'"]').html(data_val); 
-                       if(data_key=='video') {
-                             $(component).find('iframe').css('display','block');
-                       }
-                });
-            }
-                      
       }
 
       Utility.prototype.addHistoryObject=function(object,title,url){
