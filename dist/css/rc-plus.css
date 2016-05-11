@@ -548,7 +548,13 @@ a.bg-danger:focus, a.bg-danger:hover {
 .popup.active {
     visibility: visible;
 }
-.popup .popup-dialog {
+.popup.active .popup-content {
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    position: relative;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+.popup.scale .popup-content {
     opacity: 0;
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
@@ -558,19 +564,12 @@ a.bg-danger:focus, a.bg-danger:hover {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-.popup.active .popup-dialog {
+.popup.scale.active .popup-content {
     opacity: 1;
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
-    position: relative;
-    border-radius: 3px;
-    margin: 0 auto;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
-}
-.popup .popup-dialog {
-    position: relative;
 }
 .popup .bar-nav {
     border-bottom: 1px solid #ddd;
