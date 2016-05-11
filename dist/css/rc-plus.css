@@ -639,7 +639,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     transition: all 0.3s;
     opacity: 0;
 }
-.popup.flip.acitve .popup-content {
+.popup.flip.active .popup-content {
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
