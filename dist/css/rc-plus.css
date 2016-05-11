@@ -594,6 +594,11 @@ a.bg-danger:focus, a.bg-danger:hover {
 }
 
 /*fall*/
+.popup.fall {
+    -webkit-perspective: 1300px;
+    -moz-perspective: 1300px;
+    perspective: 1300px;
+}
 .popup.fall .popup-content {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
