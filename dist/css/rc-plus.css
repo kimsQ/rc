@@ -554,6 +554,15 @@ a.bg-danger:focus, a.bg-danger:hover {
     border-radius: 3px;
     margin: 0 auto;
 }
+
+/*scale*/
+.popup.scale.active .popup-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
 .popup.scale .popup-content {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -564,13 +573,26 @@ a.bg-danger:focus, a.bg-danger:hover {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-.popup.scale.active .popup-content {
+
+/*slide-up*/
+.popup.slide-up.active .popup-content {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
 }
+.popup.slide-up .popup-content {
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 .popup .bar-nav {
     border-bottom: 1px solid #ddd;
     border-top-left-radius: 12px;
