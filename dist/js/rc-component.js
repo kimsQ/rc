@@ -99,18 +99,18 @@
                   $(object).removeClass('active');
             }else if(objType=='popup'){
                   var object=objTarget.popup;
-                  var container=objTarget.container;
+                  var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   $(object).removeClass('active'); 
-                  if(backdrop) $(container).find('.backdrop').remove(); 
+                  if(backdrop) $(bcontainer).find('.backdrop').remove(); 
             }else if(objType=='popover'){
                   var object=objTarget.popover;
-                  var container=objTarget.container;
+                  var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
                   $(object).removeClass('rb-'+placement+' visible');   
                   $(object).css("display","none"); 
-                  if(backdrop) $(container).find('.backdrop').remove();
+                  if(backdrop) $(bcontainer).find('.backdrop').remove();
             }else if(objType=='sheet'){
                   var object=objTarget.sheet;
                   var container=objTarget.container;
@@ -206,7 +206,7 @@
             var url=this.url;
             if(url!=null) url=url.toString();
             var placement=this.options.placement?this.options.placement:'bottom';
-            var container=this.options.container?this.options.container:'.content';
+            var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
             this.$element.trigger(e);
             this.isShown = true
@@ -221,12 +221,12 @@
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
             } 
-            if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
+            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
             $(popover).addClass('rb-'+placement+' visible'); // 노출과 함께 방향 설정  
             $(popover).css("display","block"); 
             
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'popover','target': {'popover':popover,'container':container,'backdrop':this.options.backdrop}}
+            var object = {'type': 'popover','target': {'popover':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterPopover(this,_relatedTarget);   
@@ -599,7 +599,7 @@
             var popup=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
             var url =this.url; 
             if(url!=null) url=url.toString();
-            var container=this.options.container?this.options.container:'.content';
+            var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
             this.$element.trigger(e);
             this.isShown = true
@@ -615,12 +615,12 @@
                 },this));  
             } 
       
-            if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
+            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
              
             this.$element.addClass('active');
             
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'popup','target': {'popup':popup,'container':container,'backdrop':this.options.backdrop}}
+            var object = {'type': 'popup','target': {'popup':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterPopup(this,_relatedTarget);   
