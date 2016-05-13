@@ -526,7 +526,7 @@ a.bg-danger:focus, a.bg-danger:hover {
  * ----------------------------------------------------------------------------
  */
 
-.zoom {
+.modal.zoom {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -540,7 +540,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     transition: all 0.3s;
     z-index: 1;
 }
-.zoom.active {
+.modal.zoom.active {
     z-index: 11;
     visibility: visible;
     -webkit-transform: scale(1);
