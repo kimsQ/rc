@@ -521,6 +521,33 @@ a.bg-danger:focus, a.bg-danger:hover {
 }
 
 
+/*
+ * modal 모달  
+ * ----------------------------------------------------------------------------
+ */
+
+.zoom {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.zoom.active {
+    z-index: 11;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
 
 /*
  * popup 팝업
@@ -555,15 +582,15 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin: 0 auto;
 }
 
-/*scale*/
-.popup.scale.active .popup-content {
+/*zoom*/
+.popup.zoom.active .popup-content {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1;
 }
-.popup.scale .popup-content {
+.popup.zoom .popup-content {
     opacity: 0;
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
