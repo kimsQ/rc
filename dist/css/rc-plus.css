@@ -727,6 +727,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 
 .sheet {
+    position: fixed;
     top: auto;
     bottom: 0;
     left: 0;
@@ -744,6 +745,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
+    z-index: 20
 }
 
 .sheet.active {
