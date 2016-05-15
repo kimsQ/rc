@@ -575,7 +575,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .popup.active {
     visibility: visible;
 }
-.popup.active:before {
+.popup.active::before {
     box-shadow: 0 0 15px rgba(0,0,0,.1);
     position: relative;
     border-radius: 3px;
@@ -583,7 +583,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 }
 
 /*zoom*/
-.popup.zoom:before {
+.popup.zoom::before {
     opacity: 0;
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
@@ -593,7 +593,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
-.popup.zoom.active:before {
+.popup.zoom.active::before {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
