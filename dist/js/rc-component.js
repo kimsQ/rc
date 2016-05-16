@@ -93,7 +93,7 @@
                   var container=objTarget.container;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
-                  $(object).removeClass('rb-'+placement+' visible');   
+                  $(object).removeClass('active');   
                   $(object).css("display","none"); 
                   if(backdrop) $(container).find('.backdrop').remove();
             }
@@ -270,6 +270,140 @@
            $target.one('show.rc.popover', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if Popover will actually get shown
                   $target.one('hidden.rc.popover', function () {
+                   $this.is(':visible') && $this.trigger('focus')
+                })
+            }) 
+
+          Plugin.call($target, option, this)
+      })
+
+}(jQuery));
+
+// /* ========================================================================
+//  * rc :  Sheet 
+//  * ======================================================================== */
+
+!(function ($) {
+  'use strict';
+
+      // Sheet CLASS DEFINITION
+      //  element : modal , options : Event Handler data() + more 
+      // ======================
+
+      var Sheet = function (element, options) {
+            this.options          = options
+            this.$body            = $(document.body)
+            this.$element       = $(element)
+            this.title               = this.options.title?this.options.title:null
+            this.url               = this.options.url?this.options.url:null
+            this.isShown             = null
+     }
+
+      Sheet.VERSION  = '1.1.0'
+      Sheet.DEFAULTS = {
+            show: true,
+            backdrop : true
+      }
+
+      Sheet.prototype.toggle = function (_relatedTarget) {
+            return this.isShown ? this.hide() : this.show(_relatedTarget)
+      }
+ 
+      Sheet.prototype.show = function (_relatedTarget) {
+            var $this = this
+            var e    = $.Event('show.rc.sheet', { relatedTarget: _relatedTarget })
+            var title =this.title;
+            var sheet=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
+            var url=this.url;
+            if(url!=null) url=url.toString();
+            var placement=this.options.placement?this.options.placement:'bottom';
+            var container=this.options.container?this.options.container:'.content';
+            var template=this.options.template;
+            this.$element.trigger(e);
+            this.isShown = true
+
+            // init Utility
+            var utility=new Utility(sheet,this.options).init();  
+            if(!template){
+                 utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다.
+            }else{                 
+                 $(sheet).load(template,$.proxy(function(){
+                      utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다. 
+                      this.afterTemplate(this,_relatedTarget);
+                },this));  
+            } 
+            if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
+            $(sheet).addClass('active');   
+            $(sheet).css("display","block"); 
+            
+            // 브라우저 history 객체에 추가 
+            var object = {'type': 'sheet','target': {'sheet':sheet,'container':container,'backdrop':this.options.backdrop}}
+            utility.addHistoryObject(object,title,url);
+         
+            this.afterSheet(this,_relatedTarget);   
+      }
+
+      Sheet.prototype.afterTemplate=function(obj,_relatedTarget){
+            var e = $.Event('loaded.rc.sheet', { relatedTarget: _relatedTarget })
+            obj.$element.trigger('focus').trigger(e);   
+      }
+
+      Sheet.prototype.afterSheet=function(obj,_relatedTarget){
+           var e = $.Event('shown.rc.sheet', { relatedTarget: _relatedTarget })
+           obj.$element.trigger('focus').trigger(e); 
+      }
+
+      Sheet.prototype.hide = function (e) {
+            if (e) e.preventDefault()
+            e = $.Event('hide.rc.sheet')
+            this.$element.trigger(e)
+            if (!this.isShown || e.isDefaultPrevented()) return
+            this.isShown = false
+            var utility=new Utility().init(); 
+            utility.popComponentState();    
+      }
+
+      var old = $.fn.sheet
+
+      $.fn.sheet             = Plugin
+      $.fn.sheet.Constructor = Sheet
+
+
+        // Sheet NO CONFLICT
+        // =================
+
+      $.fn.sheet.noConflict = function () {
+            $.fn.sheet = old
+            return this
+      }
+
+      // Sheet PLUGIN DEFINITION
+      // =======================
+
+      function Plugin(option, _relatedTarget) {
+            return this.each(function () {
+                var $this   = $(this)
+                var options = $.extend({}, Sheet.DEFAULTS, $this.data(), typeof option == 'object' && option)
+                var data = new Sheet(this, options)
+                if (typeof option == 'string' && option!='toggle') data[option](_relatedTarget)
+                else if (options.show) data.show(_relatedTarget)
+           })
+       }
+      
+      // Sheet DATA-API
+      // ==============
+       
+      $(document).on('click.rc.sheet.data-api', '[data-toggle="sheet"]', function (e) {
+          var $this   = $(this)
+          var href    = $this.attr('href')
+          var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
+          var option  = $target.data('rc.sheet') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+         
+          if ($this.is('a')) e.preventDefault()
+
+           $target.one('show.rc.sheet', function (showEvent) {
+                  if (showEvent.isDefaultPrevented()) return // only register focus restorer if Sheet will actually get shown
+                  $target.one('hidden.rc.sheet', function () {
                    $this.is(':visible') && $this.trigger('focus')
                 })
             }) 
