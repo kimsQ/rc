@@ -76,7 +76,7 @@
                   var object=objTarget.popup;
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
-                  $(object).removeClass('active'); 
+                  $(object).removeClass('active');
                   if(backdrop) $(bcontainer).find('.backdrop').remove(); 
             }else if(objType=='popover'){
                   var object=objTarget.popover;
