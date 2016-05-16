@@ -73,6 +73,7 @@
                   var object=objTarget; 
                   $(object).removeClass('active');
                   $(object).css("display","none");
+                  $(object).modal('historyHide');
             }else if(objType=='popup'){
                   var object=objTarget.popup;
                   var bcontainer=objTarget.bcontainer;
@@ -80,6 +81,7 @@
                   $(object).removeClass('active');
                   $(object).css("display","none"); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove(); 
+                  $(object).popup('historyHide');
             }else if(objType=='popover'){
                   var object=objTarget.popover;
                   var bcontainer=objTarget.bcontainer;
@@ -88,6 +90,7 @@
                   $(object).removeClass('rb-'+placement+' visible');   
                   $(object).css("display","none"); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
+                  $(object).popover('historyHide');
             }else if(objType=='sheet'){
                   var object=objTarget.sheet;
                   var container=objTarget.container;
@@ -96,6 +99,7 @@
                   $(object).removeClass('active');   
                   $(object).css("display","none"); 
                   if(backdrop) $(container).find('.backdrop').remove();
+                   $(object).sheet('historyHide');
             }
             
              // object 입력내용 초기화 (object 공통내용) 
@@ -197,7 +201,10 @@
                       utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
-            } 
+            }
+
+            this.$element.on('click.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
+
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
             $(popover).addClass('rb-'+placement+' visible'); // 노출과 함께 방향 설정  
             $(popover).css("display","block"); 
@@ -223,10 +230,16 @@
             if (e) e.preventDefault()
             e = $.Event('hide.rc.popover')
             this.$element.trigger(e)
-            if (!this.isShown || e.isDefaultPrevented()) return
+            history.back();    
+      }
+     Popover.prototype.historyHide = function () {
             this.isShown = false
-            var utility=new Utility().init(); 
-            utility.popComponentState();    
+            this.afterHide();
+      }
+
+      Popover.prototype.afterHide=function(){
+           var e = $.Event('hidden.rc.popover');
+           this.$element.trigger(e);     
       }
 
       var old = $.fn.popover
@@ -332,6 +345,9 @@
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
             } 
+
+            this.$element.on('click.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
+
             if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
             $(sheet).addClass('active');   
             $(sheet).css("display","block"); 
@@ -353,14 +369,21 @@
            obj.$element.trigger('focus').trigger(e); 
       }
 
-      Sheet.prototype.hide = function (e) {
+       Sheet.prototype.hide = function (e) {
             if (e) e.preventDefault()
-            e = $.Event('hide.rc.sheet')
+            var e    = $.Event('hide.rc.sheet');
             this.$element.trigger(e)
-            if (!this.isShown || e.isDefaultPrevented()) return
+            history.back();
+      }
+
+      Sheet.prototype.historyHide = function () {
             this.isShown = false
-            var utility=new Utility().init(); 
-            utility.popComponentState();    
+            this.afterHide();
+      }
+
+      Sheet.prototype.afterHide=function(){
+           var e = $.Event('hidden.rc.sheet');
+           this.$element.trigger(e);     
       }
 
       var old = $.fn.sheet
@@ -464,7 +487,9 @@
                       utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
-            } 
+            }
+
+            this.$element.on('click.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
              
             this.$element.addClass(animation); // 에니메이션 적용
             this.$element.addClass('active'); // 모달 활성화
@@ -492,8 +517,17 @@
             if (e) e.preventDefault()
             var e    = $.Event('hide.rc.modal');
             this.$element.trigger(e)
-            this.isShown = false
             history.back();
+      }
+
+     Modal.prototype.historyHide = function () {
+            this.isShown = false
+            this.afterHide();
+      }
+
+      Modal.prototype.afterHide=function(){
+           var e = $.Event('hidden.rc.modal');
+           this.$element.trigger(e);     
       }
 
       var old = $.fn.modal
@@ -725,7 +759,9 @@
                       utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
-            } 
+            }
+
+            this.$element.on('click.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))  
       
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
              
@@ -751,12 +787,19 @@
 
       Popup.prototype.hide = function (e) {
             if (e) e.preventDefault()
-            e = $.Event('hide.rc.popup')
+            var e    = $.Event('hide.rc.popup');
             this.$element.trigger(e)
-            if (!this.isShown || e.isDefaultPrevented()) return
+            history.back();
+      }
+
+     Popup.prototype.historyHide = function () {
             this.isShown = false
-            var utility=new Utility().init(); 
-            utility.popComponentState();    
+            this.afterHide();
+      }
+
+      Popup.prototype.afterHide=function(){
+           var e = $.Event('hidden.rc.popup');
+           this.$element.trigger(e);     
       }
 
       var old = $.fn.popup
