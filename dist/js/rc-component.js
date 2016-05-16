@@ -334,7 +334,7 @@
              
             this.$element.addClass(animation); // 에니메이션 적용
             this.$element.addClass('active'); // 모달 활성화
-            $(object).css("display","block");
+            this.$element.css("display","block");
             
             // 브라우저 history 객체에 추가 
             var object = {'type': 'modal','target': modal}
@@ -596,7 +596,7 @@
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
              
             this.$element.addClass('active');
-            $(object).css("display","block");
+            this.$element.css("display","block");
             
             // 브라우저 history 객체에 추가 
             var object = {'type': 'popup','target': {'popup':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
