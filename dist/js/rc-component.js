@@ -473,7 +473,7 @@
             var modal=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 
             var url =this.url;
             if(url!=null) url=url.toString();
-            var animation=this.options.animation?this.options.animation:'slide-up';
+            var animation=this.options.animation?this.options.animation:'';
             var template=this.options.template;
             this.$element.trigger(e);
             this.isShown = true
