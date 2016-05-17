@@ -63,6 +63,7 @@
       }
 
       Utility.prototype.resetHistoryObject=function(objType,objTarget){
+            var ctime=300;
             if(objType=='page'){
                   var startPage=objTarget.start;
                   var loadPage=objTarget.load;
@@ -72,14 +73,14 @@
             }else if(objType=='modal'){
                   var object=objTarget; 
                   $(object).removeClass('active');
-                  $(object).css("display","none");
+                  setTimeout(function(){$(object).hide();},ctime); 
                   $(object).modal('historyHide');
             }else if(objType=='popup'){
                   var object=objTarget.popup;
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   $(object).removeClass('active');
-                  $(object).css("display","none"); 
+                  setTimeout(function(){$(object).hide();},ctime);  
                   if(backdrop) $(bcontainer).find('.backdrop').remove(); 
                   $(object).popup('historyHide');
             }else if(objType=='popover'){
@@ -87,8 +88,8 @@
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
-                  $(object).removeClass('active');   
-                  $(object).css("display","none"); 
+                  $(object).removeClass('active'); 
+                  setTimeout(function(){$(object).hide();},ctime); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
                   $(object).popover('historyHide');
             }else if(objType=='sheet'){
@@ -97,7 +98,7 @@
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
                   $(object).removeClass('active');   
-                  $(object).css("display","none"); 
+                  setTimeout(function(){$(object).hide();},ctime);  
                   if(backdrop) $(container).find('.backdrop').remove();
                    $(object).sheet('historyHide');
             }
@@ -206,9 +207,9 @@
             this.$element.on('click.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
-            $(popover).addClass('active'); // 노출과 함께 방향 설정  
-            $(popover).css("display","block"); 
-            
+            $(popover).show();
+            setTimeout(function(){$(popover).addClass('active')}, 0);
+
             // 브라우저 history 객체에 추가 
             var object = {'type': 'popover','target': {'popover':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
@@ -349,9 +350,9 @@
             this.$element.on('click.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
-            $(sheet).addClass('active');   
-            $(sheet).css("display","block"); 
-            
+            $(sheet).show();   
+            setTimeout(function(){$(popover).addClass('active')}, 0);
+
             // 브라우저 history 객체에 추가 
             var object = {'type': 'sheet','target': {'sheet':sheet,'container':container,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
@@ -492,8 +493,8 @@
             this.$element.on('click.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
              
             this.$element.addClass(animation); // 에니메이션 적용
-            this.$element.addClass('active'); // 모달 활성화
-            this.$element.css("display","block");
+            $(modal).show();
+            setTimeout(function(){$(modal).addClass('active')}, 0);
             
             // 브라우저 history 객체에 추가 
             var object = {'type': 'modal','target': modal}
@@ -765,8 +766,8 @@
       
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
              
-            this.$element.addClass('active');
-            this.$element.css("display","block");
+            $(popup).show();
+            setTimeout(function(){$(popup).addClass('active')}, 0);
             
             // 브라우저 history 객체에 추가 
             var object = {'type': 'popup','target': {'popup':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
