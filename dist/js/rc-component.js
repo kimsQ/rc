@@ -87,7 +87,7 @@
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
-                  $(object).removeClass('rb-'+placement+' visible');   
+                  $(object).removeClass('visible');   
                   $(object).css("display","none"); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
                   $(object).popover('historyHide');
@@ -206,7 +206,7 @@
             this.$element.on('click.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
-            $(popover).addClass('rb-'+placement+' visible'); // 노출과 함께 방향 설정  
+            $(popover).addClass('visible'); // 노출과 함께 방향 설정  
             $(popover).css("display","block"); 
             
             // 브라우저 history 객체에 추가 
