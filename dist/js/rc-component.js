@@ -87,7 +87,7 @@
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
-                  $(object).removeClass('visible');   
+                  $(object).removeClass('active');   
                   $(object).css("display","none"); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
                   $(object).popover('historyHide');
@@ -206,7 +206,7 @@
             this.$element.on('click.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
-            $(popover).addClass('visible'); // 노출과 함께 방향 설정  
+            $(popover).addClass('active'); // 노출과 함께 방향 설정  
             $(popover).css("display","block"); 
             
             // 브라우저 history 객체에 추가 
@@ -283,7 +283,7 @@
            $target.one('show.rc.popover', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if Popover will actually get shown
                   $target.one('hidden.rc.popover', function () {
-                   $this.is(':visible') && $this.trigger('focus')
+                   $this.is(':active') && $this.trigger('focus')
                 })
             }) 
 
@@ -427,7 +427,7 @@
            $target.one('show.rc.sheet', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if Sheet will actually get shown
                   $target.one('hidden.rc.sheet', function () {
-                   $this.is(':visible') && $this.trigger('focus')
+                   $this.is(':active') && $this.trigger('focus')
                 })
             }) 
 
@@ -571,7 +571,7 @@
            $target.one('show.rc.modal', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
                   $target.one('hidden.rc.modal', function () {
-                   $this.is(':visible') && $this.trigger('focus')
+                   $this.is(':active') && $this.trigger('focus')
                 })
             }) 
 
@@ -699,7 +699,7 @@
            $target.one('show.rc.page', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
                   $target.one('hidden.rc.page', function () {
-                   $this.is(':visible') && $this.trigger('focus')
+                   $this.is(':active') && $this.trigger('focus')
                 })
             }) 
           Plugin.call($target, option, this)
@@ -843,7 +843,7 @@
            $target.one('show.rc.popup', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if Popup will actually get shown
                   $target.one('hidden.rc.popup', function () {
-                   $this.is(':visible') && $this.trigger('focus')
+                   $this.is(':active') && $this.trigger('focus')
                 })
             }) 
 
