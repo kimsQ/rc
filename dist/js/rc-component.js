@@ -133,13 +133,13 @@
 
 
        // history.back
-      $(document).on('tap click','[data-history="back"]',function(e){
+      $(document).on('tap','[data-history="back"]',function(e){
              e.preventDefault();
              history.back();
        });
 
        // history.back
-      $(document).on('tap click','.backdrop',function(e){
+      $(document).on('tap','.backdrop',function(e){
              history.back();
        });
 
@@ -204,7 +204,7 @@
                 },this));  
             }
 
-            this.$element.on('click.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
+            this.$element.on('tap.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
             $(popover).show();
@@ -273,7 +273,7 @@
       // Popover DATA-API
       // ==============
        
-      $(document).on('click.rc.popover.data-api', '[data-toggle="popover"]', function (e) {
+      $(document).on('tap.rc.popover.data-api', '[data-toggle="popover"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -347,7 +347,7 @@
                 },this));  
             } 
 
-            this.$element.on('click.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
+            this.$element.on('tap.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
             $(sheet).show();   
@@ -417,7 +417,7 @@
       // Sheet DATA-API
       // ==============
        
-      $(document).on('click.rc.sheet.data-api', '[data-toggle="sheet"]', function (e) {
+      $(document).on('tap.rc.sheet.data-api', '[data-toggle="sheet"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -490,7 +490,7 @@
                 },this));  
             }
 
-            this.$element.on('click.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
+            this.$element.on('tap.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
              
             this.$element.addClass(animation); // 에니메이션 적용
             $(modal).show();
@@ -561,7 +561,7 @@
       // MODAL DATA-API
       // ==============
        
-      $(document).on('click.rc.modal.data-api', '[data-toggle="modal"]', function (e) {
+      $(document).on('tap.rc.modal.data-api', '[data-toggle="modal"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -690,7 +690,7 @@
       // Page DATA-API
       // ==============
 
-      $(document).on('click tap', '[data-toggle="page"]', function (e) {
+      $(document).on('tap.rc.page.data-api', '[data-toggle="page"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -762,7 +762,7 @@
                 },this));  
             }
 
-            this.$element.on('click.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))  
+            this.$element.on('tap.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))  
       
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
              
@@ -833,7 +833,7 @@
       // Popup DATA-API
       // ==============
        
-      $(document).on('click.rc.popup.data-api', '[data-toggle="popup"]', function (e) {
+      $(document).on('tap.rc.popup.data-api', '[data-toggle="popup"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
@@ -916,7 +916,7 @@
     targetBody.classList.add(className);
   });
 
-  window.addEventListener('click', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
+  window.addEventListener('tap', function (e) { if (getTarget(e.target)) {e.preventDefault();} });
 }());
 
 
