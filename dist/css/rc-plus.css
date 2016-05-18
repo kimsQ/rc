@@ -526,6 +526,34 @@ a.bg-danger:focus, a.bg-danger:hover {
  * ----------------------------------------------------------------------------
  */
 
+
+.modal {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
+    -moz-transition: -moz-transform .25s, opacity 1ms .25s;
+    transition: transform .25s, opacity 1ms .25s;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+.modal.active {
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: -webkit-transform .25s;
+    -moz-transition: -moz-transform .25s;
+    transition: transform .25s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
 .modal.zoom {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -538,10 +566,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    z-index: 1;
 }
 .modal.zoom.active {
-    z-index: 11;
     visibility: visible;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
@@ -562,7 +588,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     max-width: 630px;
     min-width: 320px;
     height: auto;
-    z-index: 16;
+    z-index: 20;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -759,7 +785,75 @@ a.bg-danger:focus, a.bg-danger:hover {
     transform: translate3d(0, 0, 0);
 }
 
+/*
+ * popover 팝오버  
+ * ----------------------------------------------------------------------------
+ */
 
+.popover {
+  position: fixed;
+  top: 55px;
+  left: 50%;
+  z-index: 20;
+  display: none;
+  width: 280px;
+  margin-left: -140px;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, .1);
+  opacity: 0;
+  -webkit-transition: all .25s linear;
+     -moz-transition: all .25s linear;
+          transition: all .25s linear;
+  -webkit-transform: translate3d(0, -15px, 0);
+      -ms-transform: translate3d(0, -15px, 0);
+          transform: translate3d(0, -15px, 0);
+}
+.popover:before {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -15px;
+  content: '';
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid white;
+  border-left: 15px solid transparent;
+}
+.popover.active {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.popover .bar ~ .table-view {
+  padding-top: 44px;
+}
+.popover .btn-block {
+  margin-bottom: 5px;
+}
+.popover .btn-block:last-child {
+  margin-bottom: 0;
+}
+.popover .bar-nav {
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.popover .table-view {
+  max-height: 300px;
+  margin-bottom: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 6px;
+}
 
 .img-responsive,
 .thumbnail > img,
