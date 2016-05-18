@@ -351,7 +351,7 @@
 
             if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
             $(sheet).show();   
-            setTimeout(function(){$(popover).addClass('active')}, 0);
+            setTimeout(function(){$(sheet).addClass('active')}, 0);
 
             // 브라우저 history 객체에 추가 
             var object = {'type': 'sheet','target': {'sheet':sheet,'container':container,'backdrop':this.options.backdrop}}
