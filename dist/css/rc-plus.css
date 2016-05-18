@@ -566,7 +566,6 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    z-index: 1;
 }
 .modal.zoom.active {
     visibility: visible;
