@@ -31,7 +31,7 @@
             return this;
       }
 
-   Utility.prototype.setdataVal=function(component,dataAttr){
+      Utility.prototype.setdataVal=function(component,dataAttr){
             $.each(dataAttr,function(key,val){
                  var target=$(component).find('[data-role="'+key+'"]');
                  var strVal=String(val);
@@ -52,54 +52,31 @@
       Utility.prototype.addHistoryObject=function(object,title,url){
             var _url=url!=null?url:'##';
             History.pushState(object, title, _url); 
-            // var CurrentIndex=History.getCurrentIndex();
-            // var CurrentObj=History.getStateByIndex(CurrentIndex);  
-            // var CurrentObj=JSON.stringify(CurrentObj);
-            // var result=$.parseJSON(CurrentObj);
-            // console.log(result);
       }
 
       Utility.prototype.resetHistoryObject=function(objType,objTarget){
             var ctime=300;
+            console.log(objTarget);
             if(objType=='page'){
-                  var startPage=objTarget.start;
-                  var loadPage=objTarget.load;
-                  var transition=objTarget.transition;
-                  var object=loadPage; // title, content 초기화를 object 로 일괄적용하기 위해서  
-                  closeSlidePage(startPage,loadPage,transition);// startPage 와 loadPage 위치를 바꿔준다.
+                  var object=objTarget.load;
+                  $(object).page('historyHide');
             }else if(objType=='modal'){
                   var object=objTarget; 
                   $(object).removeClass('active');
                   setTimeout(function(){$(object).hide();},ctime); 
                   $(object).modal('historyHide');
-            }else if(objType=='popup'){
-                  var object=objTarget.popup;
-                  var bcontainer=objTarget.bcontainer;
-                  var backdrop=objTarget.backdrop;
-                  $(object).removeClass('active');
-                  setTimeout(function(){$(object).hide();},ctime);  
-                  if(backdrop) $(bcontainer).find('.backdrop').remove(); 
-                  $(object).popup('historyHide');
-            }else if(objType=='popover'){
-                  var object=objTarget.popover;
+            }else if(objType=='popover' || objType=='popup' || objType=='sheet'){
+                  var object=objTarget.id;
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
                   $(object).removeClass('active'); 
                   setTimeout(function(){$(object).hide();},ctime); 
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
-                  $(object).popover('historyHide');
-            }else if(objType=='sheet'){
-                  var object=objTarget.sheet;
-                  var bcontainer=objTarget.bcontainer;
-                  var backdrop=objTarget.backdrop;
-                  var placement=objTarget.placement;
-                  $(object).removeClass('active');   
-                  setTimeout(function(){$(object).hide();},ctime);  
-                  if(backdrop) $(bcontainer).find('.backdrop').remove();
-                   $(object).sheet('historyHide');
+                  if(objType=='popover') $(object).popover('historyHide');
+                  else if(objType=='sheet') $(object).sheet('historyHide');
+                  else if(objType=='popup') $(object).popup('historyHide');
             }
-            
              // object 입력내용 초기화 (object 공통내용) 
              $(object).find('[data-role="title"]').html('');
              $(object).find('[data-role="content"]').html('');
@@ -208,7 +185,7 @@
             setTimeout(function(){$(popover).addClass('active')}, 0);
 
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'popover','target': {'popover':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+            var object = {'type': 'popover','target': {'id':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterPopover(this,_relatedTarget);   
@@ -347,11 +324,11 @@
             this.$element.on('tap.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
             if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
-            $(sheet).show();   
+            $(sheet).css("display","block");   
             setTimeout(function(){$(sheet).addClass('active')}, 0);
 
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'sheet','target': {'sheet':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+            var object = {'type': 'sheet','target': {'id':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterSheet(this,_relatedTarget);   
@@ -368,14 +345,14 @@
       }
 
        Sheet.prototype.hide = function (e) {
-            if (e) e.preventDefault()
-            var e    = $.Event('hide.rc.sheet');
-            this.$element.trigger(e)
             history.back();
       }
 
       Sheet.prototype.historyHide = function () {
             this.isShown = false
+            if (e) e.preventDefault()
+            var e    = $.Event('hide.rc.sheet');
+            this.$element.trigger(e) 
             this.afterHide();
       }
 
@@ -598,7 +575,7 @@
 
       Page.VERSION  = '1.1.0'
       Page.DEFAULTS = {
-           show: true
+           show: true,
       }
         
       // 페이지 호출   
@@ -613,7 +590,8 @@
             var transition=this.options.transition;
             var template=this.options.template;
             this.$element.trigger(e);
-
+            this.isShown = true;
+        
             var utility=new Utility(startPage,this.options).init();           
             var object = {'type': 'page', 'target':{'start': startPage,'load':loadPage,'transition':transition}};  // 페이지 정보 : object 구분값 , 현재 페이지, 로드 페이지, 방향 
             utility.addHistoryObject(object,title,url);//
@@ -627,9 +605,11 @@
                        utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
                        this.afterTemplate(this,_relatedTarget);
                 });  
-            } 
+            }
+
+            this.$element.on('tap.dismiss.rc.page', '[data-dismiss="page"]', $.proxy(this.hide, this))  
                  
-            this.loadPage(startPage,loadPage,transition); // 타겟 페이지 호출
+            this.getPage(startPage,loadPage,transition); // 타겟 페이지 호출
             this.afterPage(this,_relatedTarget); 
       }
 
@@ -642,9 +622,36 @@
             var e = $.Event('shown.rc.page', { relatedTarget: _relatedTarget })
             obj.$element.trigger('focus').trigger(e); 
       }
-
+      
+      Page.prototype.hide=function(e){
+           history.back();
+      }
+      
+      Page.prototype.historyHide=function(e){
+          this.isShown = false
+          if (e) e.preventDefault()
+          e = $.Event('hide.rc.page')
+          this.$element.trigger(e)
+          var CurrentIndex=History.getCurrentIndex();
+          var ForwardIndex=parseInt(CurrentIndex)-1;
+          var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object 
+          var ForwardObj=JSON.stringify(ForwardObj);
+          var result=$.parseJSON(ForwardObj);
+          var objTarget=result.data.target; // modal, page, popover..의 id 정보
+          var startPage=objTarget.start;
+          var loadPage=objTarget.load;
+          var transition=objTarget.transition;
+          this.closePage(startPage,loadPage,transition);
+          this.afterHide(); 
+      }
+   
+      Page.prototype.afterHide=function(e){
+            var e = $.Event('hidden.rc.page');
+           this.$element.trigger(e);   
+      }  
+     
       // 슬라이딩으로 페이지 호출(열기) 함수     
-      Page.prototype.loadPage=function(startPage,loadPage,transition){     
+      Page.prototype.getPage=function(startPage,loadPage,transition){     
             $(loadPage).attr('class','page right'); // 출발 위치 세팅 
             $(loadPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동 
             $(startPage).attr('class','page transition left'); // start 페이지는 반대로 이동 
@@ -691,7 +698,7 @@
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
-          var option  = $target.data('rc.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
+          var option  = $target.data('rc.page') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
      
           if ($this.is('a')) e.preventDefault()
            $target.one('show.rc.page', function (showEvent) {
@@ -767,7 +774,7 @@
             setTimeout(function(){$(popup).addClass('active')}, 0);
             
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'popup','target': {'popup':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+            var object = {'type': 'popup','target': {'id':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterPopup(this,_relatedTarget);   
