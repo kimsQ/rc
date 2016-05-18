@@ -228,13 +228,13 @@
       }
 
       Popover.prototype.hide = function (e) {
+            history.back();    
+      }
+     Popover.prototype.historyHide = function (e) {
+            this.isShown = false
             if (e) e.preventDefault()
             e = $.Event('hide.rc.popover')
             this.$element.trigger(e)
-            history.back();    
-      }
-     Popover.prototype.historyHide = function () {
-            this.isShown = false
             this.afterHide();
       }
 
@@ -515,14 +515,14 @@
       }
 
       Modal.prototype.hide = function (e) {
-            if (e) e.preventDefault()
-            var e    = $.Event('hide.rc.modal');
-            this.$element.trigger(e)
             history.back();
       }
 
-     Modal.prototype.historyHide = function () {
+     Modal.prototype.historyHide = function (e) {
             this.isShown = false
+            if (e) e.preventDefault()
+            var e    = $.Event('hide.rc.modal');
+            this.$element.trigger(e) 
             this.afterHide();
       }
 
@@ -787,14 +787,14 @@
       }
 
       Popup.prototype.hide = function (e) {
-            if (e) e.preventDefault()
-            var e    = $.Event('hide.rc.popup');
-            this.$element.trigger(e)
             history.back();
       }
 
-     Popup.prototype.historyHide = function () {
+     Popup.prototype.historyHide = function (e) {
             this.isShown = false
+            if (e) e.preventDefault()
+            var e    = $.Event('hide.rc.popup');
+            this.$element.trigger(e)  
             this.afterHide();
       }
 
