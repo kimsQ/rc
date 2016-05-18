@@ -31,23 +31,20 @@
             return this;
       }
 
-      Utility.prototype.setdataVal=function(component,dataAttr){
+   Utility.prototype.setdataVal=function(component,dataAttr){
             $.each(dataAttr,function(key,val){
-                 var keyArr=key.split(':'); 
-                 var keyArrCnt=keyArr.length;
-                 if(keyArrCnt==2){
-                       // data-keyType-keyName
-                       var keyType=keyArr[0]; 
-                       var keyName=keyArr[1]; 
-                       var target=$(component).find('[data-role="'+keyName+'"]');
-                       if(keyType=='bg') $(target).css('background-image','url('+val+')');
-                       else if(keyType=='img') $(target).attr('src',val);
-                       else if(keyType=='inputText') $(target).val(val);
-                       else if(keyType=='html') $(target).html(val);
-                       else if(keyType=='text' || keyType=='') $(target).text(val);
+                 var target=$(component).find('[data-role="'+key+'"]');
+                 var strVal=String(val);
+                 var valArr=strVal.split('::');
+                 if(valArr.length ==2){
+                     var valType=valArr[0]; 
+                     var valName=valArr[1];
+                     if(valType=='bg') $(target).css('background-image','url('+val+')');
+                     else if(valType=='img') $(target).attr('src',val);
+                     else if(valType=='inputText') $(target).val(val);
+                     else if(valType=='html') $(target).html(val);
                  }else{
-                       var target=$(component).find('[data-role="'+key+'"]');
-                       $(target).text(val);                         
+                     $(target).text(val);                         
                  }
             });
       }
