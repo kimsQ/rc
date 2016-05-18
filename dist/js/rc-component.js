@@ -94,12 +94,12 @@
                   $(object).popover('historyHide');
             }else if(objType=='sheet'){
                   var object=objTarget.sheet;
-                  var container=objTarget.container;
+                  var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
                   $(object).removeClass('active');   
                   setTimeout(function(){$(object).hide();},ctime);  
-                  if(backdrop) $(container).find('.backdrop').remove();
+                  if(backdrop) $(bcontainer).find('.backdrop').remove();
                    $(object).sheet('historyHide');
             }
             
@@ -331,7 +331,7 @@
             var url=this.url;
             if(url!=null) url=url.toString();
             var placement=this.options.placement?this.options.placement:'bottom';
-            var container=this.options.container?this.options.container:'.content';
+            var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
             this.$element.trigger(e);
             this.isShown = true
@@ -349,12 +349,12 @@
 
             this.$element.on('click.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
-            if(this.options.backdrop)  $(container).append('<div class="backdrop"></div>');
+            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
             $(sheet).show();   
             setTimeout(function(){$(sheet).addClass('active')}, 0);
 
             // 브라우저 history 객체에 추가 
-            var object = {'type': 'sheet','target': {'sheet':sheet,'container':container,'backdrop':this.options.backdrop}}
+            var object = {'type': 'sheet','target': {'sheet':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
             utility.addHistoryObject(object,title,url);
          
             this.afterSheet(this,_relatedTarget);   
