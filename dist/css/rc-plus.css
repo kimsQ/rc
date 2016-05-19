@@ -990,7 +990,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     padding: 10px 0;
     margin: -10px 0
 }
-.fbutton-wrap {
+.fbutton-content {
     padding: 25px;
     margin: -25px
 }
