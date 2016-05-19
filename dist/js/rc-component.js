@@ -56,7 +56,6 @@
 
       Utility.prototype.resetHistoryObject=function(objType,objTarget){
             var ctime=300;
-            console.log(objTarget);
             if(objType=='page'){
                   var object=objTarget.load;
                   $(object).page('historyHide');
@@ -112,11 +111,6 @@
              history.back();
        });
 
-       // history.back
-      $(document).on('tap','.backdrop',function(e){
-             history.back();
-       });
-
       var utility=new Utility(null,null).init();
       window.addEventListener('popstate', utility.popComponentState);      
       
@@ -147,7 +141,8 @@
       Popover.VERSION  = '1.1.0'
       Popover.DEFAULTS = {
             show: true,
-            backdrop : true
+            backdrop : true,
+            history : true
       }
 
       Popover.prototype.toggle = function (_relatedTarget) {
@@ -180,14 +175,15 @@
 
             this.$element.on('tap.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
 
-            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
+            if(this.options.backdrop)  this.backdrop(); // add backdrop
             $(popover).show();
             setTimeout(function(){$(popover).addClass('active')}, 0);
 
-            // 브라우저 history 객체에 추가 
-            var object = {'type': 'popover','target': {'id':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
-            utility.addHistoryObject(object,title,url);
-         
+            if(this.options.history){
+                // 브라우저 history 객체에 추가 
+                var object = {'type': 'popover','target': {'id':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+                utility.addHistoryObject(object,title,url);
+            }
             this.afterPopover(this,_relatedTarget);   
       }
 
@@ -202,7 +198,10 @@
       }
 
       Popover.prototype.hide = function (e) {
-            history.back();    
+          if(this.options.history) history.back();
+          else this.nonHistoryHide();
+          var backdrop=$('body').find('.backdrop');
+          $(backdrop).remove();   
       }
      Popover.prototype.historyHide = function (e) {
             this.isShown = false
@@ -212,10 +211,36 @@
             this.afterHide();
       }
 
+      Popover.prototype.nonHistoryHide = function () {
+            this.isShown = false
+            var popover=this.$element;
+            var e    = $.Event('hide.rc.popover');
+            $(popover).trigger(e)
+            $(popover).removeClass('active');
+            setTimeout(function(){$(popover).hide();},300); 
+            this.afterHide();
+      }
+
       Popover.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.popover');
            this.$element.trigger(e);     
       }
+
+      Popover.prototype.backdrop = function (callback) {   
+          if (this.isShown && this.options.backdrop) {
+               this.$backdrop = $(document.createElement('div'))
+                  .addClass('backdrop')
+                  .appendTo(this.$body)
+               this.$backdrop.on('tap.dismiss.rc.popover', $.proxy(function (e) {
+                    if (this.ignoreBackdropClick) {
+                      this.ignoreBackdropClick = false
+                      return
+                    }
+                    if (e.target !== e.currentTarget) return
+                    this.hide();  
+               }, this))   
+          }  
+     } 
 
       var old = $.fn.popover
 
@@ -290,7 +315,8 @@
       Sheet.VERSION  = '1.1.0'
       Sheet.DEFAULTS = {
             show: true,
-            backdrop : true
+            backdrop : true,
+            history : true
       }
 
       Sheet.prototype.toggle = function (_relatedTarget) {
@@ -323,14 +349,15 @@
 
             this.$element.on('tap.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
-            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
+            if(this.options.backdrop) this.backdrop();// add backdrop 
+
             $(sheet).css("display","block");   
             setTimeout(function(){$(sheet).addClass('active')}, 0);
-
-            // 브라우저 history 객체에 추가 
-            var object = {'type': 'sheet','target': {'id':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
-            utility.addHistoryObject(object,title,url);
-         
+            if(this.options.history){
+               // 브라우저 history 객체에 추가 
+                var object = {'type': 'sheet','target': {'id':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+               utility.addHistoryObject(object,title,url);
+            }
             this.afterSheet(this,_relatedTarget);   
       }
 
@@ -344,8 +371,11 @@
            obj.$element.trigger('focus').trigger(e); 
       }
 
-       Sheet.prototype.hide = function (e) {
-            history.back();
+      Sheet.prototype.hide = function (e) {
+           if(this.options.history) history.back();
+           else this.nonHistoryHide();
+           var backdrop=$('body').find('.backdrop');
+           $(backdrop).remove();
       }
 
       Sheet.prototype.historyHide = function () {
@@ -356,11 +386,37 @@
             this.afterHide();
       }
 
+      Sheet.prototype.nonHistoryHide = function () {
+            this.isShown = false
+            var sheet=this.$element;
+            var e    = $.Event('hide.rc.sheet');
+            $(sheet).trigger(e)
+            $(sheet).removeClass('active');
+            setTimeout(function(){$(sheet).hide();},300); 
+            this.afterHide();
+      }
+
       Sheet.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.sheet');
            this.$element.trigger(e);     
       }
 
+     Sheet.prototype.backdrop = function (callback) {   
+          if (this.isShown && this.options.backdrop) {
+               this.$backdrop = $(document.createElement('div'))
+                  .addClass('backdrop')
+                  .appendTo(this.$body)
+               this.$backdrop.on('tap.dismiss.rc.sheet', $.proxy(function (e) {
+                    if (this.ignoreBackdropClick) {
+                      this.ignoreBackdropClick = false
+                      return
+                    }
+
+                    if (e.target !== e.currentTarget) return
+                    this.hide();  
+               }, this))   
+          }  
+     } 
       var old = $.fn.sheet
 
       $.fn.sheet             = Plugin
@@ -434,7 +490,8 @@
       Modal.VERSION  = '1.1.0'
       Modal.DEFAULTS = {
             show: true,
-            afterModal : true
+            afterModal : true,
+            history : true
       }
 
       Modal.prototype.toggle = function (_relatedTarget) {
@@ -469,11 +526,11 @@
             this.$element.addClass(animation); // 에니메이션 적용
             $(modal).show();
             setTimeout(function(){$(modal).addClass('active')}, 0);
-            
-            // 브라우저 history 객체에 추가 
-            var object = {'type': 'modal','target': modal}
-            utility.addHistoryObject(object,title,url);
-            
+            if(this.options.history){
+                // 브라우저 history 객체에 추가 
+                var object = {'type': 'modal','target': modal}
+                utility.addHistoryObject(object,title,url);  
+            }
           
            this.afterModal(this,_relatedTarget);              
       }
@@ -489,14 +546,25 @@
       }
 
       Modal.prototype.hide = function (e) {
-            history.back();
+           if(this.options.history) history.back();
+           else this.nonHistoryHide();
       }
-
+     
      Modal.prototype.historyHide = function (e) {
             this.isShown = false
             if (e) e.preventDefault()
             var e    = $.Event('hide.rc.modal');
             this.$element.trigger(e) 
+            this.afterHide();
+      }
+
+      Modal.prototype.nonHistoryHide = function () {
+            this.isShown = false
+            var modal=this.$element;
+            var e    = $.Event('hide.rc.modal');
+            $(modal).trigger(e)
+            $(modal).removeClass('active');
+            setTimeout(function(){$(modal).hide();},300); 
             this.afterHide();
       }
 
@@ -576,6 +644,7 @@
       Page.VERSION  = '1.1.0'
       Page.DEFAULTS = {
            show: true,
+           history : true
       }
         
       // 페이지 호출   
@@ -593,11 +662,6 @@
             this.isShown = true;
         
             var utility=new Utility(startPage,this.options).init();           
-            var object = {'type': 'page', 'target':{'start': startPage,'load':loadPage,'transition':transition}};  // 페이지 정보 : object 구분값 , 현재 페이지, 로드 페이지, 방향 
-            utility.addHistoryObject(object,title,url);//
-     
-        
-           // 페이지  template 로드하고 data- 값 세팅한다.
             if(!template){
                  utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{
@@ -607,8 +671,12 @@
                 });  
             }
 
-            this.$element.on('tap.dismiss.rc.page', '[data-dismiss="page"]', $.proxy(this.hide, this))  
-                 
+            this.$element.on('tap.dismiss.rc.page', '[data-dismiss="page"]', $.proxy(this.hide, this))
+            
+            if(this.options.history){
+                var object = {'type': 'page', 'target':{'start': startPage,'load':loadPage,'transition':transition}};  // 페이지 정보 : object 구분값 , 현재 페이지, 로드 페이지, 방향 
+                utility.addHistoryObject(object,title,url);//  
+            }     
             this.getPage(startPage,loadPage,transition); // 타겟 페이지 호출
             this.afterPage(this,_relatedTarget); 
       }
@@ -624,7 +692,8 @@
       }
       
       Page.prototype.hide=function(e){
-           history.back();
+           if(this.options.history) history.back();
+           else this.nonHistoryHide();
       }
       
       Page.prototype.historyHide=function(e){
@@ -643,6 +712,18 @@
           var transition=objTarget.transition;
           this.closePage(startPage,loadPage,transition);
           this.afterHide(); 
+      }
+
+     Page.prototype.nonHistoryHide = function () {
+            this.isShown = false
+            var sheet=this.$element;
+            var e    = $.Event('hide.rc.page');
+            $(sheet).trigger(e)
+            var startPage=this.options.start;
+            var loadPage=this.options.target?this.options.target:'#'+this.$element.attr('id');
+            var transition=this.options.transition;
+            this.closePage(startPage,loadPage,transition);
+            this.afterHide();
       }
    
       Page.prototype.afterHide=function(e){
@@ -735,7 +816,8 @@
       Popup.VERSION  = '1.1.0'
       Popup.DEFAULTS = {
             show: true,
-            backdrop : true
+            backdrop : true,
+            history : true
       }
 
       Popup.prototype.toggle = function (_relatedTarget) {
@@ -768,15 +850,16 @@
 
             this.$element.on('tap.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))  
       
-            if(this.options.backdrop)  $(bcontainer).append('<div class="backdrop"></div>');
+            if(this.options.backdrop) this.backdrop();// add backdrop
              
             $(popup).show();
             setTimeout(function(){$(popup).addClass('active')}, 0);
-            
-            // 브라우저 history 객체에 추가 
-            var object = {'type': 'popup','target': {'id':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
-            utility.addHistoryObject(object,title,url);
-         
+
+            if(this.options.history){
+                // 브라우저 history 객체에 추가 
+                var object = {'type': 'popup','target': {'id':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
+                utility.addHistoryObject(object,title,url);
+            }
             this.afterPopup(this,_relatedTarget);   
       }
 
@@ -791,7 +874,10 @@
       }
 
       Popup.prototype.hide = function (e) {
-            history.back();
+           if(this.options.history) history.back();
+           else this.nonHistoryHide();
+           var backdrop=$('body').find('.backdrop');
+           $(backdrop).remove();
       }
 
      Popup.prototype.historyHide = function (e) {
@@ -802,10 +888,36 @@
             this.afterHide();
       }
 
+      Popup.prototype.nonHistoryHide = function () {
+            this.isShown = false
+            var popup=this.$element;
+            var e    = $.Event('hide.rc.popup');
+            $(popup).trigger(e)
+            $(popup).removeClass('active');
+            setTimeout(function(){$(popup).hide();},300); 
+            this.afterHide();
+      }
+
       Popup.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.popup');
            this.$element.trigger(e);     
       }
+
+      Popup.prototype.backdrop = function (callback) {   
+          if (this.isShown && this.options.backdrop) {
+               this.$backdrop = $(document.createElement('div'))
+                  .addClass('backdrop')
+                  .appendTo(this.$body)
+               this.$backdrop.on('tap.dismiss.rc.popup', $.proxy(function (e) {
+                    if (this.ignoreBackdropClick) {
+                      this.ignoreBackdropClick = false
+                      return
+                    }
+                    if (e.target !== e.currentTarget) return
+                    this.hide();  
+               }, this))   
+          }  
+     }
 
       var old = $.fn.popup
 
