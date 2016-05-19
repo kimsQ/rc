@@ -1138,6 +1138,138 @@ a.bg-danger:focus, a.bg-danger:hover {
 }
 
 
+/* zoomin */
+
+.fbutton-bl.zoomin .fbutton-list li, 
+.fbutton-br.zoomin .fbutton-list li {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.fbutton-bl.zoomin .fbutton-list li:nth-child(1), 
+.fbutton-br.zoomin .fbutton-list li:nth-child(1) {
+    -webkit-transform: translateY(-70px) scale(0);
+    transform: translateY(-70px) scale(0);
+    transition: all 0.5s;
+    transition-delay: 0.15s;
+}
+.fbutton-bl.zoomin .fbutton-list li:nth-child(2),  
+.fbutton-br.zoomin .fbutton-list li:nth-child(2) {
+    -webkit-transform: translateY(-140px) scale(0);
+    transform: translateY(-140px) scale(0);
+    transition: all 0.5s;
+    transition-delay: 0.1s;
+}
+.fbutton-bl.zoomin .fbutton-list li:nth-child(3), 
+.fbutton-br.zoomin .fbutton-list li:nth-child(3) {
+    -webkit-transform: translateY(-210px) scale(0);
+    transform: translateY(-210px) scale(0);
+    transition: all 0.5s;
+    transition-delay: 0.05s;
+}
+
+.fbutton-bl.zoomin.active .fbutton-list li:nth-child(1), 
+.fbutton-br.zoomin.active .fbutton-list li:nth-child(1) {
+    -webkit-transform: translateY(-70px) scale(1);
+    transform: translateY(-70px) scale(1);
+    transition-delay: 0.05s;
+}
+
+.fbutton-bl.zoomin.active .fbutton-list li:nth-child(2),  
+.fbutton-br.zoomin.active .fbutton-list li:nth-child(2) {
+    -webkit-transform: translateY(-140px) scale(1);
+    transform: translateY(-140px) scale(1);
+    transition-delay: 0.1s;
+}
+
+.fbutton-bl.zoomin.active .fbutton-list li:nth-child(3), 
+.fbutton-br.zoomin.active .fbutton-list li:nth-child(3) {
+    -webkit-transform: translateY(-210px) scale(1);
+    transform: translateY(-210px) scale(1);
+    transition-delay: 0.15s;
+}
+
+
+
+/* slidein */
+
+.fbutton-bl.slidein .fbutton-list li, 
+.fbutton-br.slidein .fbutton-list li {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.fbutton-bl.slidein.active .fbutton-list li, 
+.fbutton-br.slidein.active .fbutton-list li {
+    opacity: 1;
+}
+
+.fbutton-bl.slidein.active .fbutton-list li:nth-child(1), 
+.fbutton-br.slidein.active .fbutton-list li:nth-child(1) {
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+}
+
+.fbutton-bl.slidein.active .fbutton-list li:nth-child(2),  
+.fbutton-br.slidein.active .fbutton-list li:nth-child(2) {
+    -webkit-transform: translateY(-140px);
+    transform: translateY(-140px);
+}
+
+.fbutton-bl.slidein.active .fbutton-list li:nth-child(3), 
+.fbutton-br.slidein.active .fbutton-list li:nth-child(3) {
+    -webkit-transform: translateY(-210px);
+    transform: translateY(-210px);
+}
+
+
+/* slidein-spring */
+
+.fbutton-bl.slidein-spring .fbutton-list li, 
+.fbutton-br.slidein-spring .fbutton-list li {
+    opacity: 0;
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.fbutton-bl.slidein-spring.active .fbutton-list li, 
+.fbutton-br.slidein-spring.active .fbutton-list li {
+    opacity: 1;
+}
+
+.fbutton-bl.slidein-spring .fbutton-list li:nth-child(1), 
+.fbutton-br.slidein-spring .fbutton-list li:nth-child(1) {
+    transition-delay: 0.05s;
+}
+.fbutton-bl.slidein-spring .fbutton-list li:nth-child(2),  
+.fbutton-br.slidein-spring .fbutton-list li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.fbutton-bl.slidein-spring .fbutton-list li:nth-child(3), 
+.fbutton-br.slidein-spring .fbutton-list li:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(1), 
+.fbutton-br.slidein-spring.active .fbutton-list li:nth-child(1) {
+    transition-delay: 0.05s;
+    -webkit-transform: translateY(-70px);
+    transform: translateY(-70px);
+}
+
+.fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(2),  
+.fbutton-br.slidein-spring.active .fbutton-list li:nth-child(2) {
+    transition-delay: 0.1s;
+    -webkit-transform: translateY(-140px);
+    transform: translateY(-140px);
+}
+
+.fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(3), 
+.fbutton-br.slidein-spring.active .fbutton-list li:nth-child(3) {
+    transition-delay: 0.15s;
+    -webkit-transform: translateY(-210px);
+    transform: translateY(-210px);
+}
 
 
 .img-responsive,
