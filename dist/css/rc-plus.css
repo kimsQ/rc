@@ -1031,9 +1031,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-main-icon-resting,
 .fbutton-child-icon {
     position: absolute;
-    font-size: 30px;
+    font-size: 30px !important;
     text-align: center;
-    line-height: 58px;
+    line-height: 58px !important;
     width: 100%;
 }
 
