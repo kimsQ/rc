@@ -242,7 +242,9 @@
                       return
                     }
                     if (e.target !== e.currentTarget) return
-                    this.hide();  
+                    this.options.backdrop == 'static'
+                    ? this.$element[0].focus()
+                    : this.hide()  
                }, this))   
           }  
      } 
@@ -416,7 +418,9 @@
                       return
                     }
                     if (e.target !== e.currentTarget) return
-                    this.hide();  
+                    this.options.backdrop == 'static'
+                    ? this.$element[0].focus()
+                    : this.hide()
                }, this))   
           }  
      } 
@@ -590,9 +594,10 @@
                       this.ignoreBackdropClick = false
                       return
                     }
-
                     if (e.target !== e.currentTarget) return
-                    this.hide();  
+                    this.options.backdrop == 'static'
+                    ? this.$element[0].focus()
+                    : this.hide()  
                }, this))   
           }  
      } 
@@ -1031,7 +1036,7 @@
       
             if(this.options.backdrop) this.backdrop();// add backdrop
              
-            $(popup).show();
+            $(popup).css("display","block");
             setTimeout(function(){$(popup).addClass('active')}, 0);
 
             if(this.options.history){
@@ -1093,7 +1098,9 @@
                       return
                     }
                     if (e.target !== e.currentTarget) return
-                    this.hide();  
+                    this.options.backdrop == 'static'
+                    ? this.$element[0].focus()
+                    : this.hide()
                }, this))   
           }  
      }
