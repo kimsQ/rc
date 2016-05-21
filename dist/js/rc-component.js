@@ -162,8 +162,10 @@
             var placement=this.options.placement?this.options.placement:'bottom';
             var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?fbutton+' '+this.options.tplcontainer:fbutton;
             this.$element.trigger(e);
             if (this.isShown || e.isDefaultPrevented()) return
+            this.isShown=true
             this.isShown='true';
             sessionStorage.setItem('isfbutton',this.isShown);
             // init Utility
@@ -171,7 +173,7 @@
             if(!template){
                  utility.setdataVal(fbutton,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{                 
-                 $(fbutton).load(template,$.proxy(function(){
+                 $(tplContainer).load(template,$.proxy(function(){
                       utility.setdataVal(fbutton,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
@@ -284,7 +286,7 @@
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.fbutton') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-         
+
           if ($this.is('a')) e.preventDefault()
 
            $target.one('show.rc.fbutton', function (showEvent) {
@@ -340,6 +342,7 @@
             var placement=this.options.placement?this.options.placement:'bottom';
             var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?popover+' '+this.options.tplcontainer:popover;
             this.$element.trigger(e);
             this.isShown = true
 
@@ -348,7 +351,7 @@
             if(!template){
                  utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{                 
-                 $(popover).load(template,$.proxy(function(){
+                 $(tplContainer).load(template,$.proxy(function(){
                       utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
@@ -516,6 +519,7 @@
             var placement=this.options.placement?this.options.placement:'bottom';
             var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?sheet+' '+this.options.tplcontainer:sheet;
             this.$element.trigger(e);
             this.isShown = true
 
@@ -524,7 +528,7 @@
             if(!template){
                  utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{                 
-                 $(sheet).load(template,$.proxy(function(){
+                 $(tplContainer).load(template,$.proxy(function(){
                       utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
@@ -691,18 +695,19 @@
             if(url!=null) url=url.toString();
             var animation=this.options.animation?this.options.animation:'';
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?modal+' '+this.options.tplcontainer:modal;
             this.$element.trigger(e);
             this.isShown = true
-
-            // init Utility
+      
+           // init Utility
             var utility=new Utility(modal,this.options).init();  
             if(!template){
                  utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{                 
-                 $(modal).load(template,$.proxy(function(){
-                      utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다. 
-                      this.afterTemplate(this,_relatedTarget);
-                },this));  
+            }else{ 
+               $(tplContainer).load(template,$.proxy(function(){
+                    utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다. 
+                    this.afterTemplate(this,_relatedTarget);
+               },this));   
             }
 
             this.$element.on('tap.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
@@ -842,6 +847,7 @@
             if(url!=null) url=url.toString();
             var transition=this.options.transition;
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?loadPage+' '+this.options.tplcontainer:loadPage;
             this.$element.trigger(e);
             this.isShown = true;
         
@@ -849,7 +855,7 @@
             if(!template){
                  utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{
-                 $(loadPage).load(template,function(){
+                 $(tplContainer).load(template,function(){
                        utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
                        this.afterTemplate(this,_relatedTarget);
                 });  
@@ -1018,6 +1024,7 @@
             if(url!=null) url=url.toString();
             var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
+            var tplContainer=this.options.tplcontainer?popup+' '+this.options.tplcontainer:popup;
             this.$element.trigger(e);
             this.isShown = true
 
@@ -1026,7 +1033,7 @@
             if(!template){
                  utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{                 
-                 $(popup).load(template,$.proxy(function(){
+                 $(tplContainer).load(template,$.proxy(function(){
                       utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
                 },this));  
