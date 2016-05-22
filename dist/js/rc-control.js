@@ -1394,7 +1394,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
   Affix.DEFAULTS = {
     offset: 0,
-    target: window
+    target: '.content'
   }
 
   Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
