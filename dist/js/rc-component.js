@@ -1187,7 +1187,7 @@
   };
 
   var activeSegment=function(e){
-      e.preventDefault();
+
       var activeTab;
       var activeBodies;
       var targetBody;
@@ -1227,7 +1227,12 @@
 }
 
 window.addEventListener('touchend', activeSegment);
-window.addEventListener('click', activeSegment);
+window.addEventListener('click', function (e) {
+    if (getTarget(e.target)) {
+      e.preventDefault();
+    }
+    activeSegment(e);
+  });
 
 }());
 
