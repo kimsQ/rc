@@ -94,6 +94,12 @@
 		if (safeguard == timeStamp) return;
 		safeguard = timeStamp;
 
+		//get event.target attribute by kiere@kimsq.com
+		var isInSwiper=$(event.target).parent().data('swiper') || $(event.target).data('swiper');
+		var pressDuration;
+		if(isInSwiper)  pressDuration=50;
+		else pressDuration=1000;
+
 		// initializes data
 		start.x = move.x = page('x', event);
 		start.y = move.y = page('y', event);
@@ -106,7 +112,7 @@
 		timeout = setTimeout(function() {
 			cancel = true;
 			trigger(event, 'press');
-		}, Finger.pressDuration);
+		}, pressDuration);
 
 		$.event.add(rootEl, moveEvent + '.' + namespace, moveHandler);
 		$.event.add(rootEl, stopEvent + '.' + namespace, stopHandler);
@@ -294,6 +300,7 @@
   var getTarget = function (e) {
     var target = findTarget(e.target);
 
+   
     if (!target ||
         e.which > 1 ||
         e.metaKey ||
@@ -1614,7 +1621,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     var offsetTop    = offset.top
     var offsetBottom = offset.bottom
     var scrollHeight = Math.max($(document).height(), $(document.body).height())
-
+   
     if (typeof offset != 'object')         offsetBottom = offsetTop = offset
     if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
