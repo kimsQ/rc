@@ -1831,22 +1831,26 @@ a.bg-danger:focus, a.bg-danger:hover {
     transform: translate3d(0, 0, 0);
 }
 
-.page.left {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-}
 
-.page.center {
+/*slide*/
+
+.page.slide {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
-.page.right {
+.page.slide.left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+.page.slide..center {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.page.slide..right {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
 }
-
-.page.transition {
+.page.slide..transition {
     -webkit-transition-duration: .4s;
     transition-duration: .4s;
 }
