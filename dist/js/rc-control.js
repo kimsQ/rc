@@ -1813,6 +1813,10 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 	      return false;
 	});
 
+	// Document Reload
+	$(document).on('tap', '[data-location="reload"]', function() {
+	      window.location.reload();
+	});
 
       var utility=new Utility(null,null).init();
       window.addEventListener('popstate', utility.popComponentState);      
