@@ -97,7 +97,7 @@
 		//get event.target attribute by kiere@kimsq.com
 		var isInSwiper=$(event.target).parent().data('swiper') || $(event.target).data('swiper');
 		var pressDuration;
-		if(isInSwiper)  pressDuration=50;
+		if(isInSwiper)  pressDuration=150;
 		else pressDuration=1000;
 
 		// initializes data
@@ -300,7 +300,6 @@
   var getTarget = function (e) {
     var target = findTarget(e.target);
 
-   
     if (!target ||
         e.which > 1 ||
         e.metaKey ||
@@ -1621,7 +1620,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     var offsetTop    = offset.top
     var offsetBottom = offset.bottom
     var scrollHeight = Math.max($(document).height(), $(document.body).height())
-   
+
     if (typeof offset != 'object')         offsetBottom = offsetTop = offset
     if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
     if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
