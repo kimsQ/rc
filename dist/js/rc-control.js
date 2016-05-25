@@ -1804,6 +1804,15 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
              e.preventDefault();
              history.back();
        });
+      
+      // Scroll Top
+	$(document).on('tap', '[data-scroll="top"]', function(e) {
+	       var target=e.currentTarget;
+	       var speed=$(target).data('speed')?$(target).data('speed'):'fast';
+	      $('.content').animate({scrollTop: 0},speed);
+	      return false;
+	});
+
 
       var utility=new Utility(null,null).init();
       window.addEventListener('popstate', utility.popComponentState);      
