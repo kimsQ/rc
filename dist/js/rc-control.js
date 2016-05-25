@@ -1701,3 +1701,113 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   })
 
 }(jQuery);
+
+/* ========================================================================
+ * rc :  Utility 
+ * ======================================================================== */
+
+!(function($){
+      'use strict';
+      var Utility = function(elem, options){
+            this.elem = elem;
+            this.$elem = $(elem);
+            this.options = options;
+            this.metadata=this.$elem.data('utility-option'); // 엘리먼트 기준  
+       };
+
+      Utility.VERSION  = '1.1.0'
+      Utility.DEFAULTS = {}
+     
+      Utility.prototype.init=function(){
+            this.config=$.extend({}, this.defaults, this.options);
+            return this;
+      }
+
+      Utility.prototype.setdataVal=function(component,dataAttr){
+            $.each(dataAttr,function(key,val){
+                 var target=$(component).find('[data-role="'+key+'"]');
+                 var strVal=String(val);
+                 var valArr=strVal.split('::');
+                 if(valArr.length ==2){
+                     var valType=valArr[0]; 
+                     var valName=valArr[1];
+                     if(valType=='bg') $(target).css('background-image','url('+val+')');
+                     else if(valType=='img') $(target).attr('src',val);
+                     else if(valType=='inputText') $(target).val(val);
+                     else if(valType=='html') $(target).html(val);
+                 }else{
+                     $(target).text(val);                         
+                 }
+            });
+      }
+
+      Utility.prototype.addHistoryObject=function(object,title,url){
+            var _url=url!=null?url:'##';
+            History.pushState(object, title, _url); 
+      }
+
+      Utility.prototype.resetHistoryObject=function(objType,objTarget){
+            var ctime=300;
+            if(objType=='page'){
+                  var object=objTarget.load;
+                  $(object).page('historyHide');
+            }else if(objType=='modal'){
+                  var object=objTarget; 
+                  $(object).removeClass('active');
+                  setTimeout(function(){$(object).hide();},ctime); 
+                  $(object).modal('historyHide');
+            }else if(objType=='popover' || objType=='popup' || objType=='sheet' || objType=='fbutton'){
+                  var object=objTarget.id;
+                  var bcontainer=objTarget.bcontainer;
+                  var backdrop=objTarget.backdrop;
+                  var placement=objTarget.placement;
+                  $(object).removeClass('active'); 
+                  if(objType!='fbutton') setTimeout(function(){$(object).hide();},ctime); 
+                  if(backdrop) $(bcontainer).find('.backdrop').remove();
+                  if(objType=='popover') $(object).popover('historyHide');
+                  else if(objType=='sheet') $(object).sheet('historyHide');
+                  else if(objType=='popup') $(object).popup('historyHide');
+                  else if(objType=='fbutton') $(object).fbutton('historyHide');
+
+            }
+             // object 입력내용 초기화 (object 공통내용) 
+             $(object).find('[data-role="title"]').html('');
+             $(object).find('[data-role="content"]').html('');
+             $(object).find('[data-role="coverImg"]').css('background-image','url()'); // 커버이미지 초기화(배경타입) 
+             $(object).find('[data-role="cover-img"]').attr('src',''); // 커버이미지 초기화 (이미지 타입 )
+             $(object).find('[data-role="focus"]').blur();// 포커싱한 것 초기화  
+      }
+
+      Utility.prototype.popComponentState=function(e){
+            var CurrentIndex=History.getCurrentIndex();
+            var ForwardIndex=parseInt(CurrentIndex)-1;
+            var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object 
+            var ForwardObj=JSON.stringify(ForwardObj);
+            var result=$.parseJSON(ForwardObj);
+            //History.log('직전 history : state =' +ForwardObj+'/ index='+ForwardIndex);
+            var objType=result.data.type; // modal, page, popover, popup,...     
+            var objTarget=result.data.target; // modal, page, popover..의 id 정보
+            var utility=new Utility(objTarget,null).init();
+            utility.resetHistoryObject(objType,objTarget);  
+      }
+
+        // 슬라이딩으로 페이지 닫기 함수     
+      var closeSlidePage=function(startPage,loadPage,transition){     
+            $(startPage).attr('class','page left'); // 출발 위치 세팅 
+            $(startPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동 
+            $(loadPage).attr('class','page transition right'); // start 페이지는 반대로 이동 
+      }  
+
+
+       // history.back
+      $(document).on('tap','[data-history="back"]',function(e){
+             e.preventDefault();
+             history.back();
+       });
+
+      var utility=new Utility(null,null).init();
+      window.addEventListener('popstate', utility.popComponentState);      
+      
+      window.Utility = Utility;
+
+})(jQuery);
