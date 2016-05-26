@@ -19,7 +19,7 @@ kimsQ RC would like to thank the authors of components that have gone into the m
 - [kimsq.github.io/rc](http://kimsq.github.io/rc/)
 
 ##Q&A
-- For help using kimsQ RC, ask on StackOverflow using the tag [kimsQ-rc](http://stackoverflow.com/questions/tagged/kimsq-rb-2)
+- For help using kimsQ RC, ask on StackOverflow using the tag [kimsQ-rc](http://stackoverflow.com/questions/tagged/kimsq-rc)
 
 ##Author & Maintainers
 [@gitaeks](https://github.com/gitaeks), [@kieregh](https://github.com/kieregh)
