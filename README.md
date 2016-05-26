@@ -6,9 +6,10 @@ kimsQ RC makes front-end mobile web & apps development faster and easier.Build m
 ##Special thanks
 kimsQ RC would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
 
-* [Ratchet] (http://goratchet.com/)
-* [Bootstrap] (http://getbootstrap.com/)
-
+* [Ratchet](http://goratchet.com/)
+* [Bootstrap](http://getbootstrap.com/)
+* [jquery.finger](https://github.com/ngryman/jquery.finger)
+* [history.js](https://github.com/browserstate/history.js)
 
 ##Offical site & Community
 - [kimsQ.com/rc](http://kimsq.com/rc)
@@ -21,12 +22,12 @@ kimsQ RC would like to thank the authors of components that have gone into the m
 - For help using kimsQ RC, ask on StackOverflow using the tag [kimsQ-rc](http://stackoverflow.com/questions/tagged/kimsq-rb-2)
 
 ##Author & Maintainers
-[@gitaeks] (https://github.com/gitaeks), [@kieregh] (https://github.com/kieregh)
+[@gitaeks](https://github.com/gitaeks), [@kieregh](https://github.com/kieregh)
 
 
 ##Contact 
-* Email :  [contact@kimsq.com] (mailto:contact@kimsq.com)
-* Facebook : [https://www.facebook.com/kimsQ.Platform] (https://www.facebook.com/kimsQ.Platform)
+* Email :  [contact@kimsq.com](mailto:contact@kimsq.com)
+* Facebook : [https://www.facebook.com/kimsQ.Platform](https://www.facebook.com/kimsQ.Platform)
 
 ##Copyright and license
 Copyright 2016 Redblock, Inc.
