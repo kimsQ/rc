@@ -1,7 +1,8 @@
 
 # kimsQ RC
 
-kimsQ RC makes front-end mobile web & apps development faster and easier.Build mobile apps with simple HTML‚ CSS‚ and JS components.
+Makes front-end mobile web & apps development faster and easier. 
+kimsQ RC is the function extended version of Ratchet.
 
 ##Special thanks
 kimsQ RC would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
