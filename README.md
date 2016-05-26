@@ -9,8 +9,8 @@ kimsQ RC would like to thank the authors of components that have gone into the m
 
 * [Ratchet](http://goratchet.com/)
 * [Bootstrap](http://getbootstrap.com/)
+* [History.js](https://github.com/browserstate/history.js)
 * [jquery.finger](https://github.com/ngryman/jquery.finger)
-* [history.js](https://github.com/browserstate/history.js)
 * [Fuel UX](https://github.com/ExactTarget/fuelux/)
 * [Bootstrap Notify](https://github.com/mouse0270/bootstrap-notify)
 * [jQuery is-loading](https://github.com/hekigan/is-loading) 
