@@ -7,8 +7,8 @@ kimsQ RC is the function extended version of Ratchet.
 ##Special thanks
 kimsQ RC would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
 
-* [Ratchet](http://goratchet.com/)
-* [Bootstrap](http://getbootstrap.com/)
+* [Ratchet](https://github.com/twbs/ratchet)
+* [Bootstrap](https://github.com/twbs/bootstrap)
 * [History.js](https://github.com/browserstate/history.js)
 * [jquery.finger](https://github.com/ngryman/jquery.finger)
 * [Fuel UX](https://github.com/ExactTarget/fuelux/)
