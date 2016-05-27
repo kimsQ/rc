@@ -2246,6 +2246,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .affix {
   position: fixed;
+  top: 45px;
   z-index: 10
 }
 
