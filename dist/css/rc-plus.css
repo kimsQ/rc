@@ -2242,3 +2242,9 @@ a.bg-danger:focus, a.bg-danger:hover {
   max-width: 100%;
   height: auto;
 }
+
+
+.affix {
+  position: fixed;
+}
+
