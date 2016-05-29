@@ -44,7 +44,6 @@
          var speed=$this.data('speed'); 
          var spaceBetween=$this.data('spacebetween');
          var slidesPerView=$this.data('slidesperview');         
-         var pagination=$this.data('pagination');
          var paginationClickable=$this.data('paginationclickable');
          var effect=$this.data('effect');
          var scrollbar=$this.data('scrollbar');
@@ -56,7 +55,7 @@
          $this.trigger(e); 
 
          if(button){
-          	var preBtn=$(document.createElement('div'))
+          	var prevBtn=$(document.createElement('div'))
          	    .addClass('swiper-button-prev')
          	    .appendTo($this);
          	var nextBtn=$(document.createElement('div'))
