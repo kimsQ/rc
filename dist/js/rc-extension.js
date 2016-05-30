@@ -37,7 +37,7 @@
  * =====================================================
  */
  var RC_initSwiper=function(){
-    $(".swiper-container").each(function(index, element){
+    $('[data-extension="swiper"]').each(function(index, element){
          var $this = $(element);
          var pagination=$this.data('pagination');
          var button=$this.data('button');
