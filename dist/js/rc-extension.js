@@ -122,15 +122,20 @@ window.addEventListener('push',RC_initSwiper);
 
 // Function : Initialize Snap.js
 var RC_initDrawer=function(){
-    if(window.snapper){
-         // Snap.js already exists, we just need to re-bind events
-        window.snapper.enable();
-    } else {
+    if(window.snapper==undefined){
         // Initialize Snap.js
         window.snapper = new Snap({
             element: $('[data-extension="drawer"]')[0]
         });
+    } else {
+        // Snap.js already exists, we just need to re-bind events
+        window.snapper.enable();   
     }
+    var snap_update={
+      	tapToClose: false,
+		touchToDrag: false
+    }
+    window.snapper.settings(snap_update);
 } 
 window.addEventListener('push',RC_initDrawer);
 
@@ -155,7 +160,13 @@ window.addEventListener('push',RC_initDrawer);
             this.title               = this.options.title?this.options.title:null
             this.url               = this.options.url?this.options.url:null
             this.isShown             = null
-            this.showType           = this.options.showtype
+            this.showType           = this.options.showtype?this.options.showtype:'default'
+            this.direction          = this.options.direction?this.options.direction:'left'
+            this.snap_update = {
+			    transitionSpeed: this.options.speed?this.options.speed:0.3,
+                easing: this.options.animation?this.options.animation:'ease', 
+	        }
+	        snapper.settings(this.snap_update);
       }
 
       Drawer.VERSION  = '1.1.0'
@@ -201,11 +212,11 @@ window.addEventListener('push',RC_initDrawer);
             if(this.options.backdrop) this.backdrop();// add backdrop 
             
             // drawer open
-            if(this.showType=='default') snapper.open(this.options.direction)
-            else if(this.showType=='expand') snapper.expand(this.options.direction)     
+            if(this.showType=='default') snapper.open(this.direction)
+            else if(this.showType=='expand') snapper.expand(this.direction)     
             else if(this.showType=='toggle') {
-                if(snapper.state().state==this.options.direction) this.hide() 
-                else snapper.open(this.options.direction)	
+                if(snapper.state().state==this.direction) this.hide() 
+                else snapper.open(this.direction)	
             }
       
             if(this.options.history){
