@@ -1775,19 +1775,19 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                   $(object).removeClass('active');
                   setTimeout(function(){$(object).hide();},ctime); 
                   $(object).modal('historyHide');
-            }else if(objType=='popover' || objType=='popup' || objType=='sheet' || objType=='fbutton'){
+            }else if(objType=='popover' || objType=='popup' || objType=='sheet' || objType=='fbutton' || objType=='drawer'  ){
                   var object=objTarget.id;
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
                   $(object).removeClass('active'); 
-                  if(objType!='fbutton') setTimeout(function(){$(object).hide();},ctime); 
+                  if(objType!='fbutton' && objType!='drawer') setTimeout(function(){$(object).hide();},ctime);
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
                   if(objType=='popover') $(object).popover('historyHide');
                   else if(objType=='sheet') $(object).sheet('historyHide');
                   else if(objType=='popup') $(object).popup('historyHide');
                   else if(objType=='fbutton') $(object).fbutton('historyHide');
-
+                  else if(objType=='drawer') $(object).drawer('historyHide');
             }
              // object 입력내용 초기화 (object 공통내용) 
              $(object).find('[data-role="title"]').html('');
