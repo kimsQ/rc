@@ -9,7 +9,7 @@
  * =====================================================
  */
 
-/**
+ /**
  * Swiper 3.2.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * 
@@ -47,7 +47,7 @@
          var paginationClickable=$this.data('paginationclickable');
          var effect=$this.data('effect');
          var scrollbar=$this.data('scrollbar');
-         var grabCursor=$this.data('grabcursor');
+         var centeredSlides=$this.data('centeredslides');
          var loop=$this.data('loop');
          var autoplay=$this.data('autoplay');
          var direction=$this.data('direction');
@@ -84,12 +84,11 @@
 	     	 nextButton: button?nextBtn:'',
 	     	 prevButton: button?prevBtn:'',
 	     	 scrollbar: scrollbar?'.swiper-scrollbar':'',
-	     	 grabCursor: grabCursor?true:false,
+	     	 centeredSlides: centeredSlides?true:false,
 	     	 loop: loop?true:false,
 	     	 autoplay: autoplay?autoplay:'',
 	     	 direction: direction?direction:'horizontal',
          });
-         var slides=swiper.slides;
          swiper.on('Tap',function(e){
          	var $this = $(e.clickedSlide);
          	var component=$this.data('component');
@@ -132,8 +131,8 @@ var RC_initDrawer=function(){
         window.snapper.enable();   
     }
     var snap_update={
-      	tapToClose: false,
-		touchToDrag: false
+        tapToClose: false,
+        touchToDrag: false
     }
     window.snapper.settings(snap_update);
 } 
@@ -337,3 +336,6 @@ window.addEventListener('push',RC_initDrawer);
       })
 
 }(jQuery));
+
+ 
+
