@@ -30,21 +30,21 @@ navs:
     label: Getting started
 
   -
-    href: /rc//layout
+    href: /rc/layout
     label: Layout
 
   -
-    href: /rc//content
+    href: /rc/content
     label: Content
 
   -
-    href: /rc//components
+    href: /rc/components
     label: Components
 
   -
-    href: /rc//controls
+    href: /rc/controls
     label: Controls
 
   -
-    href: /rc//extensions
+    href: /rc/extensions
     label: Extensions
