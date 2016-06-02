@@ -6,14 +6,14 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Ratchet Plus
+title: Ratchet Plus(임시)
 email: contact@kimsq.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "kimsq.github.io/rc/" # the base hostname & protocol for your site
+baseurl: "/rc" # the subpath of your site, e.g. /blog
+url: "http://kimsq.github.io/" # the base hostname & protocol for your site
 twitter_username: kimsqcom
 github_username:  redblock
 
@@ -26,25 +26,25 @@ navs:
 
 
   -
-    href: /getting-started
+    href: /rc/getting-started
     label: Getting started
 
   -
-    href: /layout
+    href: /rc//layout
     label: Layout
 
   -
-    href: /content
+    href: /rc//content
     label: Content
 
   -
-    href: /components
+    href: /rc//components
     label: Components
 
   -
-    href: /controls
+    href: /rc//controls
     label: Controls
 
   -
-    href: /extensions
+    href: /rc//extensions
     label: Extensions
