@@ -3,33 +3,6 @@
 // --------------------------------------------------
 
 
-// General
-// --------------------------------------------------
-
-// Utilities
-// -------------------------
-
-// Clearfix
-// Source: http://nicolasgallagher.com/micro-clearfix-hack/
-//
-// For modern browsers
-// 1. The space content is one way to avoid an Opera bug when the
-//    contenteditable attribute is included anywhere else in the document.
-//    Otherwise it causes space to appear at the top and bottom of elements
-//    that are clearfixed.
-// 2. The use of `table` rather than `block` is only necessary if using
-//    `:before` to contain the top-margins of child elements.
-@mixin clearfix() {
-  &:before,
-  &:after {
-    display: table; // 2
-    content: " ";   // 1
-  }
-  &:after {
-    clear: both;
-  }
-}
-
 // Box shadow
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
@@ -125,3 +98,43 @@
   }
   background-repeat: no-repeat;
 }
+
+
+// Utilities
+// @import "mixins/breakpoints";
+// @import "mixins/hover";
+// @import "mixins/image";
+// @import "mixins/tag";
+// @import "mixins/reset-filter";
+// @import "mixins/resize";
+// @import "mixins/screen-reader";
+// @import "mixins/size";
+// @import "mixins/tab-focus";
+// @import "mixins/reset-text";
+// @import "mixins/text-emphasis";
+// @import "mixins/text-hide";
+// @import "mixins/text-truncate";
+
+// // Components
+// @import "mixins/alert";
+// @import "mixins/buttons";
+// @import "mixins/cards";
+// @import "mixins/pagination";
+// @import "mixins/lists";
+// @import "mixins/list-group";
+// @import "mixins/nav-divider";
+// @import "mixins/forms";
+// @import "mixins/progress";
+// @import "mixins/table-row";
+
+// // Skins
+// @import "mixins/background-variant";
+// @import "mixins/border-radius";
+// @import "mixins/gradients";
+
+// // Layout
+@import "mixins/clearfix";
+// @import "mixins/navbar-align";
+// @import "mixins/grid-framework";
+// @import "mixins/grid";
+@import "mixins/pulls";

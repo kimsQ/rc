@@ -1,11 +1,53 @@
+/*!
+ * =====================================================
+ * Ratchet Plus v1.0.0-alpha (https://github.com/kimsq/rc)
+ * =====================================================
+ * inspired by @twbs's bootstrap & ratchet
+ * Copyright 2016 redblock inc.
+ * Author gitaeks (break@kimsq.com)
+ * Licensed under MIT.
+ * =====================================================
+ */
 
-// Variables
+// Core variables and mixins
 @import "variables";
-
-// Mixins
 @import "mixins";
 
-// Normalize & Base CSS
+// Reset and dependencies
 @import "normalize";
+
+// Core CSS
 @import "base";
 @import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+
+// Components
+@import "animation";
+@import "bars";
+@import "badges";
+@import "card";
+@import "button-group";
+@import "table-views";
+@import "custom-forms";
+@import "segmented-controls";
+@import "responsive-embed";
+
+// Javascript components
+@import "modal";
+@import "popup";
+@import "popover";
+@import "sheet";
+@import "page";
+@import "toggles";
+@import "push";
+
+// Utility classes
+@import "utilities";
+
+// Ratchicons
+@import "ratchicons";
