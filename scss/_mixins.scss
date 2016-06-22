@@ -101,7 +101,7 @@
 
 
 // Utilities
-// @import "mixins/breakpoints";
+@import "mixins/breakpoints";
 // @import "mixins/hover";
 // @import "mixins/image";
 // @import "mixins/tag";
@@ -117,9 +117,8 @@
 
 // // Components
 // @import "mixins/alert";
-// @import "mixins/buttons";
+@import "mixins/buttons";
 // @import "mixins/cards";
-// @import "mixins/pagination";
 // @import "mixins/lists";
 // @import "mixins/list-group";
 // @import "mixins/nav-divider";
@@ -129,7 +128,7 @@
 
 // // Skins
 // @import "mixins/background-variant";
-// @import "mixins/border-radius";
+@import "mixins/border-radius";
 // @import "mixins/gradients";
 
 // // Layout

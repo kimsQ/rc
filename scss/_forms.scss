@@ -7,8 +7,8 @@ input,
 textarea,
 button,
 select {
-  font-family: $font-family-default;
-  font-size: $font-size-default;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
 }
 
 // Stretch inputs/textareas to full width and add height to maintain a consistent baseline
@@ -33,9 +33,9 @@ input[type="color"] {
   -webkit-appearance: none;
   padding: 0 15px;
   margin-bottom: 15px;
-  line-height: $line-height-default;
+  line-height: $line-height-base;
   background-color: #fff;
-  border: $border-default;
+  border: $input-btn-border-width solid $input-border-color;
   border-radius: 3px;
   outline: none;
 }
@@ -93,7 +93,7 @@ select {
 .input-row {
   overflow: hidden;
   height: 35px; // Matches the height of inputs.
-  border-bottom: $border-default;
+  border-bottom: $input-btn-border-width solid $input-border-color;
 }
 
 // Labels get floated left with a set percentage width
@@ -101,7 +101,7 @@ select {
   float: left;
   width: 35%;
   padding: 8px 15px;
-  font-family: $font-family-default;
+  font-family: $font-family-base;
   line-height: 1.1; // Put the text on the baseline.
 }
 

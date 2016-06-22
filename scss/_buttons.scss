@@ -7,17 +7,17 @@
   display: inline-block;
   padding: 6px 8px 7px;
   margin-bottom: 0; // For input.btn
-  font-size: $button-font-size;
-  font-weight: $font-weight-light;
+  font-weight: $btn-font-weight;
   line-height: 1;
   color: #333;
   text-align: center;
   white-space: nowrap;
   vertical-align: top;
   cursor: pointer;
-  background-color: $chrome-color;
-  border: 1px solid #ccc;
+  background-color: $gray-lightest;
+  border: $border-width solid #ccc;
   border-radius: 3px;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
 
   // Active & filled button styles
   &:active,
@@ -37,45 +37,73 @@
 // Other button types
 // --------------------------------------------------
 
-// Primary button (Default color is blue)
+// Primary button
 .btn-primary {
   color: #fff;
-  background-color: $primary-color;
-  border: 1px solid $primary-color;
+  background-color: $brand-primary;
+  border: 1px solid $brand-primary;
 
   &:active,
   &.active {
     color: #fff;
-    background-color: darken($primary-color, 10%);
-    border: 1px solid darken($primary-color, 10%);
+    background-color: darken($brand-primary, 10%);
+    border: 1px solid darken($brand-primary, 10%);
   }
 }
 
-// Positive button (Default color is green)
-.btn-positive {
+// Success button 
+.btn-success {
   color: #fff;
-  background-color: $positive-color;
-  border: 1px solid $positive-color;
+  background-color: $brand-success;
+  border: 1px solid $brand-success;
 
   &:active,
   &.active {
     color: #fff;
-    background-color: darken($positive-color, 10%);
-    border: 1px solid darken($positive-color, 10%);
+    background-color: darken($brand-success, 10%);
+    border: 1px solid darken($brand-success, 10%);
   }
 }
 
-// Negative button (Default color is red)
-.btn-negative {
+// Info button 
+.btn-info {
   color: #fff;
-  background-color: $negative-color;
-  border: 1px solid $negative-color;
+  background-color: $brand-info;
+  border: 1px solid $brand-info;
 
   &:active,
   &.active {
     color: #fff;
-    background-color: darken($negative-color, 10%);
-    border: 1px solid darken($negative-color, 10%);
+    background-color: darken($brand-info, 10%);
+    border: 1px solid darken($brand-info, 10%);
+  }
+}
+
+// Warning button 
+.btn-warning {
+  color: #fff;
+  background-color: $brand-warning;
+  border: 1px solid $brand-warning;
+
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: darken($brand-warning, 10%);
+    border: 1px solid darken($brand-warning, 10%);
+  }
+}
+
+// Danger button
+.btn-danger {
+  color: #fff;
+  background-color: $brand-danger;
+  border: 1px solid $brand-danger;
+
+  &:active,
+  &.active {
+    color: #fff;
+  background-color: darken($brand-danger, 10%);
+  border: 1px solid darken($brand-danger, 10%);
   }
 }
 
@@ -84,18 +112,26 @@
   background-color: transparent;
 
   &.btn-primary {
-    color: $primary-color;
+    color: $brand-primary;
   }
-  &.btn-positive {
-    color: $positive-color;
+  &.btn-success {
+    color: $brand-success;
   }
-  &.btn-negative {
-    color: $negative-color;
+  &.btn-info {
+    color: $brand-info;
+  }
+  &.btn-warning {
+    color: $brand-warning;
+  }
+  &.btn-danger {
+    color: $brand-danger;
   }
   // Active states
   &.btn-primary:active,
-  &.btn-positive:active,
-  &.btn-negative:active {
+  &.btn-success:active,
+  &.btn-info:active,
+  &.btn-warning:active,
+  &.btn-danger:active {
     color: #fff;
   }
 }
@@ -104,13 +140,13 @@
 .btn-link {
   padding-top: 6px;
   padding-bottom: 6px;
-  color: $primary-color;
+  color: $brand-primary;
   background-color: transparent;
   border: 0;
 
   &:active,
   &.active {
-    color: darken($primary-color, 10%);
+    color: darken($brand-primary, 10%);
     background-color: transparent;
   }
 }

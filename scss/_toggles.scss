@@ -41,11 +41,11 @@
 
   // Active state for toggle
   &.active {
-    background-color: $positive-color;
-    border: 2px solid $positive-color;
+    background-color: $brand-primary;
+    border: 2px solid $brand-primary;
 
     .toggle-handle {
-      border-color: $positive-color;
+      border-color: $brand-primary;
       @include transform(translate3d(44px,0,0));
     }
     &:before {

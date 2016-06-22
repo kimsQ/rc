@@ -17,7 +17,7 @@
 @import "normalize";
 
 // Core CSS
-@import "base";
+@import "reboot";
 @import "type";
 @import "images";
 @import "code";
@@ -44,7 +44,8 @@
 @import "sheet";
 @import "page";
 @import "toggles";
-@import "push";
+@import "affix";
+// @import "push";
 
 // Utility classes
 @import "utilities";

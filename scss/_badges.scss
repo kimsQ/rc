@@ -25,29 +25,49 @@
 // Main badge
 .badge-primary {
   color: #fff;
-  background-color: $primary-color;
+  background-color: $brand-primary;
 
   &.badge-inverted {
-    color: $primary-color;
+    color: $brand-primary;
   }
 }
 
-// Positive badge
-.badge-positive {
+// Success badge
+.badge-success {
   color: #fff;
-  background-color: $positive-color;
+  background-color: $brand-success;
 
   &.badge-inverted {
-    color: $positive-color;
+    color: $brand-success;
   }
 }
 
-// Negative badge
-.badge-negative {
+// Info badge
+.badge-info {
   color: #fff;
-  background-color: $negative-color;
+  background-color: $brand-info;
 
   &.badge-inverted {
-    color: $negative-color;
+    color: $brand-info;
+  }
+}
+
+// Warning badge
+.badge-warning {
+  color: #fff;
+  background-color: $brand-warning;
+
+  &.badge-inverted {
+    color: $brand-warning;
+  }
+}
+
+// Danger badge
+.badge-danger {
+  color: #fff;
+  background-color: $brand-danger;
+
+  &.badge-inverted {
+    color: $brand-danger;
   }
 }

@@ -8,7 +8,7 @@
   overflow: hidden;
   font-size: 12px;
   font-weight: $font-weight-light;
-  background-color: $chrome-color;
+  background-color: $gray-lighter;
   border: 1px solid #ccc;
   border-radius: 3px;
 
@@ -48,54 +48,90 @@
 
 // Primary
 .segmented-control-primary {
-  border-color: $primary-color;
+  border-color: $brand-primary;
 
   .control-item {
-    color: $primary-color;
+    color: $brand-primary;
     border-color: inherit;
 
     &:active {
-      background-color: lighten($primary-color, 35%);
+      background-color: lighten($brand-primary, 35%);
     }
     &.active {
       color: #fff;
-      background-color: $primary-color;
+      background-color: $brand-primary;
     }
   }
 }
 
-// Positive
-.segmented-control-positive {
-  border-color: $positive-color;
+// Success
+.segmented-control-success {
+  border-color: $brand-success;
 
   .control-item {
-    color: $positive-color;
+    color: $brand-success;
     border-color: inherit;
 
     &:active {
-      background-color: lighten($positive-color, 35%);
+      background-color: lighten($brand-success, 35%);
     }
     &.active {
       color: #fff;
-      background-color: $positive-color;
+      background-color: $brand-success;
     }
   }
 }
 
-// Negative
-.segmented-control-negative {
-  border-color: $negative-color;
+// Info
+.segmented-control-info {
+  border-color: $brand-info;
 
   .control-item {
-    color: $negative-color;
+    color: $brand-info;
     border-color: inherit;
 
     &:active {
-      background-color: lighten($negative-color, 35%);
+      background-color: lighten($brand-info, 35%);
     }
     &.active {
       color: #fff;
-      background-color: $negative-color;
+      background-color: $brand-info;
+    }
+  }
+}
+
+// Warning
+.segmented-control-warning {
+  border-color: $brand-warning;
+
+  .control-item {
+    color: $brand-warning;
+    border-color: inherit;
+
+    &:active {
+      background-color: lighten($brand-warning, 35%);
+    }
+    &.active {
+      color: #fff;
+      background-color: $brand-warning;
+    }
+  }
+}
+
+// Danger
+.segmented-control-danger {
+  border-color: $brand-danger;
+
+  .control-item {
+    color: $brand-danger;
+    border-color: inherit;
+
+    &:active {
+      background-color: lighten($brand-danger, 35%);
+    }
+    &.active {
+      color: #fff;
+      background-color: $brand-danger;
     }
   }
 }
