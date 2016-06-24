@@ -6,25 +6,25 @@
   position: relative;
   display: table;
   overflow: hidden;
-  font-size: 12px;
+  font-size: .75rem;
   font-weight: $font-weight-light;
   background-color: $gray-lighter;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border: .0625rem solid #ccc;
+  border-radius: .1875rem;
 
   // Section within controller
   .control-item {
     display: table-cell;
     width: 1%;
-    padding-top: 6px;
-    padding-bottom: 7px;
+    padding-top: .375rem;
+    padding-bottom: .4375rem;
     overflow: hidden;
     line-height: 1;
     color: #333;
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border-left: 1px solid #ccc;
+    border-left: .0625rem solid #ccc;
 
     // Remove border-left and shadow from first section
     &:first-child {

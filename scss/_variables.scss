@@ -97,7 +97,7 @@ $spacers: (
     y: ($spacer-y * 3)
   )
 ) !default;
-$border-width: 1px !default;
+$border-width: .0625rem !default;
 
 
 // Body
@@ -244,9 +244,9 @@ $caret-width:            .3em !default;
 $caret-width-lg:         $caret-width !default;
 
 // Bars
-$bar-base-height:  44px !default;
-$bar-tab-height:   50px !default;
-$bar-side-spacing: 10px !default;
+$bar-base-height:  2.75rem !default;
+$bar-tab-height:   3.125rem !default;
+$bar-side-spacing: .625rem !default;
 
 
 // Tables
@@ -459,11 +459,22 @@ $zindex-modal-bg:          1040 !default;
 $zindex-modal:             1050 !default;
 
 
-// Navbar
+// Bar
 
+$bar-border-radius:              $border-radius !default;
+$bar-padding-x:                  $spacer !default;
+$bar-padding-y:                  ($spacer / 2) !default;
+$bar-brand-padding-y:            .25rem !default;
 
-// Navs
+$bar-dark-color:                 rgba(255,255,255,.5) !default;
+$bar-dark-hover-color:           rgba(255,255,255,.75) !default;
+$bar-dark-active-color:          rgba(255,255,255,1) !default;
+$bar-dark-disabled-color:        rgba(255,255,255,.25) !default;
 
+$bar-light-color:                rgba(0,0,0,.3) !default;
+$bar-light-hover-color:          rgba(0,0,0,.6) !default;
+$bar-light-active-color:         rgba(0,0,0,.8) !default;
+$bar-light-disabled-color:       rgba(0,0,0,.15) !default;
 
 
 // Form states and alerts
@@ -661,6 +672,6 @@ $pre-scrollable-max-height:   340px !default;
 // Borders
 // --------------------------------------------------
 
-$border-default-width: 1px;
-$border-default: $border-default-width solid #ddd;
-$border-radius: 6px !default;
+$border-default-width: .0625rem;
+$border-default: $border-default-width solid rgba(0,0,0,.075);
+$border-radius: .375rem !default;

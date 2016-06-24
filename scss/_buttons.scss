@@ -5,7 +5,7 @@
 .btn {
   position: relative;
   display: inline-block;
-  padding: 6px 8px 7px;
+  padding: .375rem .5rem .4375rem;
   margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
   line-height: 1;
@@ -16,7 +16,7 @@
   cursor: pointer;
   background-color: $gray-lightest;
   border: $border-width solid #ccc;
-  border-radius: 3px;
+  border-radius: .1875rem;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
 
   // Active & filled button styles
@@ -41,13 +41,13 @@
 .btn-primary {
   color: #fff;
   background-color: $brand-primary;
-  border: 1px solid $brand-primary;
+  border: .0625rem solid $brand-primary;
 
   &:active,
   &.active {
     color: #fff;
     background-color: darken($brand-primary, 10%);
-    border: 1px solid darken($brand-primary, 10%);
+    border: .0625rem solid darken($brand-primary, 10%);
   }
 }
 
@@ -55,13 +55,13 @@
 .btn-success {
   color: #fff;
   background-color: $brand-success;
-  border: 1px solid $brand-success;
+  border: .0625rem solid $brand-success;
 
   &:active,
   &.active {
     color: #fff;
     background-color: darken($brand-success, 10%);
-    border: 1px solid darken($brand-success, 10%);
+    border: .0625rem solid darken($brand-success, 10%);
   }
 }
 
@@ -69,13 +69,13 @@
 .btn-info {
   color: #fff;
   background-color: $brand-info;
-  border: 1px solid $brand-info;
+  border: .0625rem solid $brand-info;
 
   &:active,
   &.active {
     color: #fff;
     background-color: darken($brand-info, 10%);
-    border: 1px solid darken($brand-info, 10%);
+    border: .0625rem solid darken($brand-info, 10%);
   }
 }
 
@@ -83,13 +83,13 @@
 .btn-warning {
   color: #fff;
   background-color: $brand-warning;
-  border: 1px solid $brand-warning;
+  border: .0625rem solid $brand-warning;
 
   &:active,
   &.active {
     color: #fff;
     background-color: darken($brand-warning, 10%);
-    border: 1px solid darken($brand-warning, 10%);
+    border: .0625rem solid darken($brand-warning, 10%);
   }
 }
 
@@ -97,13 +97,13 @@
 .btn-danger {
   color: #fff;
   background-color: $brand-danger;
-  border: 1px solid $brand-danger;
+  border: .0625rem solid $brand-danger;
 
   &:active,
   &.active {
     color: #fff;
   background-color: darken($brand-danger, 10%);
-  border: 1px solid darken($brand-danger, 10%);
+  border: .0625rem solid darken($brand-danger, 10%);
   }
 }
 
@@ -138,8 +138,8 @@
 
 // Link button (Buttons that look like links)
 .btn-link {
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: .375rem;
+  padding-bottom: .375rem;
   color: $brand-primary;
   background-color: transparent;
   border: 0;
@@ -155,9 +155,9 @@
 .btn-block {
   display: block;
   width: 100%;
-  padding: 15px 0;
-  margin-bottom: 10px;
-  font-size: 18px;
+  padding: .9375rem 0;
+  margin-bottom: .625rem;
+  font-size: 1.5rem;
 }
 
 
@@ -176,8 +176,8 @@ input[type="button"] {
 
 // Generic styles for all badges within default buttons
 .btn .badge {
-  margin: -2px -4px -2px 4px;
-  font-size: 12px;
+  margin: -.125rem -.25rem -.125rem .25rem;
+  font-size: .75rem;
   background-color: rgba(0,0,0,.15);
 }
 
@@ -198,7 +198,7 @@ input[type="button"] {
 .btn-block .badge {
   position: absolute;
   right: 0;
-  margin-right: 10px;
+  margin-right: .625rem;
 }
 
 

@@ -102,7 +102,7 @@
 
 // Utilities
 @import "mixins/breakpoints";
-// @import "mixins/hover";
+@import "mixins/hover";
 // @import "mixins/image";
 // @import "mixins/tag";
 // @import "mixins/reset-filter";
@@ -127,7 +127,7 @@
 // @import "mixins/table-row";
 
 // // Skins
-// @import "mixins/background-variant";
+@import "mixins/background-variant";
 @import "mixins/border-radius";
 // @import "mixins/gradients";
 
