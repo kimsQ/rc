@@ -1,0 +1,73 @@
+//
+// Badges
+// --------------------------------------------------
+
+.badge {
+  display: inline-block;
+  padding: 2px 9px 3px;
+  font-size: 12px;
+  line-height: 1;
+  color: #333;
+  background-color: rgba(0,0,0,.15);
+  border-radius: 100px;
+
+  // Inverted badges have no background.
+  &.badge-inverted {
+    padding: 0 5px 0 0;
+    background-color: transparent;
+  }
+}
+
+
+// Badge modifiers
+// --------------------------------------------------
+
+// Main badge
+.badge-primary {
+  color: #fff;
+  background-color: $brand-primary;
+
+  &.badge-inverted {
+    color: $brand-primary;
+  }
+}
+
+// Success badge
+.badge-success {
+  color: #fff;
+  background-color: $brand-success;
+
+  &.badge-inverted {
+    color: $brand-success;
+  }
+}
+
+// Info badge
+.badge-info {
+  color: #fff;
+  background-color: $brand-info;
+
+  &.badge-inverted {
+    color: $brand-info;
+  }
+}
+
+// Warning badge
+.badge-warning {
+  color: #fff;
+  background-color: $brand-warning;
+
+  &.badge-inverted {
+    color: $brand-warning;
+  }
+}
+
+// Danger badge
+.badge-danger {
+  color: #fff;
+  background-color: $brand-danger;
+
+  &.badge-inverted {
+    color: $brand-danger;
+  }
+}
