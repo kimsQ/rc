@@ -1,6 +1,7 @@
 ---
-layout: docs
-title: Popovers
+layout: preview
+preview: popover
+title: Popover
 group: components
 ---
 

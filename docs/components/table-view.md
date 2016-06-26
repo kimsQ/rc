@@ -1,6 +1,7 @@
 ---
-layout: docs
-title: List group
+layout: preview
+preview: table-view
+title: Table view
 group: components
 ---
 

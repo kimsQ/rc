@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: navs
 title: Navs
 group: components
 ---

@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: forms
 title: Forms
 group: components
 ---

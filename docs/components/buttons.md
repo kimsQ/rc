@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: buttons
 title: Buttons
 group: components
 redirect_from: "/components/"

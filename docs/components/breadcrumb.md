@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: breadcrumb
 title: Breadcrumb
 group: components
 ---

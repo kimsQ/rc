@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: card
 title: Cards
 group: components
 ---

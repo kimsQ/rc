@@ -1,7 +1,7 @@
 ---
 layout: preview
-preview: modal
-title: Modal
+preview: sheet
+title: Sheet
 group: components
 ---
 

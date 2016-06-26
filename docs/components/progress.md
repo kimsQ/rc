@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: progress
 title: Progress
 group: components
 ---

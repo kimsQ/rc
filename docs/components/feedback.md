@@ -1,7 +1,7 @@
 ---
 layout: preview
-preview: modal
-title: Modal
+preview: feedback
+title: Feedback
 group: components
 ---
 

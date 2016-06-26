@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: collapse
 title: Collapse
 group: components
 ---

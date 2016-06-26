@@ -1,7 +1,8 @@
 ---
-layout: docs
-title: Tags
-group: components
+layout: preview
+preview: swiper
+title: Swiper
+group: extensions
 ---
 
 Small and adaptive tag for adding context to just about any content.

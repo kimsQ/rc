@@ -1,7 +1,7 @@
 ---
 layout: preview
-preview: modal
-title: Modal
+preview: toggle
+title: Toggle
 group: components
 ---
 

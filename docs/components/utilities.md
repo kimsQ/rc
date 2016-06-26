@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: utility-classes
 title: Utility classes
 group: components
 ---

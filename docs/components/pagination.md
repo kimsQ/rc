@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: pagination
 title: Pagination
 group: components
 ---
