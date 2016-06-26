@@ -14,7 +14,7 @@ destination:      _gh_pages
 host:             0.0.0.0
 port:             9001
 baseurl:          ""
-url:              http://getbootstrap.com
+url:              http://rc.kimsq.com
 encoding:         UTF-8
 exclude:          [assets/scss/]
 
@@ -24,16 +24,16 @@ gems:
 
 # Custom vars
 current_version:  4.0.0-alpha.2
-repo:             https://github.com/twbs/bootstrap
-slack:            https://bootstrap-slack.herokuapp.com
+repo:             https://github.com/kimsQ/rc
+slack:            https://kimsq-slack.herokuapp.com
 
 download:
-  source:         https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.2.zip
-  dist:           https://github.com/twbs/bootstrap/releases/download/v4.0.0-alpha.2/bootstrap-4.0.0-alpha.2-dist.zip
+  source:         https://github.com/kimsQ/rc/archive/v1.0.0-alpha.1.zip
+  dist:           https://github.com/kimsQ/rc/releases/download/v4.0.0-alpha.2/ratchet-plus-1.0.0-alpha.1-dist.zip
 
-blog:             http://blog.getbootstrap.com
-expo:             http://expo.getbootstrap.com
-themes:           http://themes.getbootstrap.com
+blog:             http://blog.kimsq.com
+expo:             http://expo.kimsq.com
+themes:           http://rcstore.kimsq.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

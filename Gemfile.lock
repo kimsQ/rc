@@ -46,6 +46,3 @@ DEPENDENCIES
   jekyll-redirect-from (~> 0.10.0)
   jekyll-sitemap (~> 0.10.0)
   scss_lint (~> 0.47.1)
-
-BUNDLED WITH
-   1.12.5
