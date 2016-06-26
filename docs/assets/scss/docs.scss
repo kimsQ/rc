@@ -39,6 +39,7 @@ $bd-warning:        #f0ad4e;
 $bd-info:           #5bc0de;
 
 // Load docs components
+@import "grid";
 @import "booticon";
 @import "nav";
 @import "masthead";
@@ -59,6 +60,7 @@ $bd-info:           #5bc0de;
 @import "browser-bugs";
 @import "brand";
 @import "clipboard-js";
+@import "device";
 
 // Load docs dependencies
 @import "syntax";

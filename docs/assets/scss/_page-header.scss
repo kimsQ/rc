@@ -3,9 +3,9 @@
 .bd-pageheader {
   padding: 2rem ($grid-gutter-width / 2);
   margin-bottom: 1.5rem;
-  color: $bd-purple-light;
+  color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  background-color: $bd-purple;
+  background-color: $brand-primary;
 
   .container {
     position: relative;
@@ -24,8 +24,8 @@
   }
 
   @include media-breakpoint-up(sm) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
     margin-bottom: 3rem;
     text-align: left;
 

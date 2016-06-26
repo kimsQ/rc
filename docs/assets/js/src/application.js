@@ -55,6 +55,15 @@
       $('.btn-clipboard').tooltip()
     })
 
+    $('body').scrollspy({ target: '.docs-scrollspy' })
+
+    $('.docs-affix').affix({
+      offset: {
+        top: 300,
+        bottom: 200
+      }
+    })
+
     var clipboard = new Clipboard('.btn-clipboard', {
       target: function (trigger) {
         return trigger.parentNode.nextElementSibling
@@ -90,6 +99,6 @@
 ;(function () {
   'use strict';
 
-  anchors.options.placement = 'left';
+  anchors.options.placement = 'right';
   anchors.add('.bd-content > h1, .bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
 })();
