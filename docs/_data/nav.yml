@@ -30,28 +30,40 @@
 
 - title: Components
   pages:
-    - title: Alerts
-    - title: Breadcrumb
-    - title: Buttons
-    - title: Button group
-    - title: Card
-    - title: Carousel
-    - title: Collapse
-    - title: Dropdowns
-    - title: Forms
-    - title: Input group
-    - title: Jumbotron
-    - title: List group
-    - title: Modal
+    - title: Bars
     - title: Navs
-    - title: Navbar
-    - title: Pagination
-    - title: Popovers
+    - title: Buttons
+    - title: Card
+    - title: Table view
+    - title: Forms
+    - title: Breadcrumb
     - title: Progress
-    - title: Scrollspy
-    - title: Tag
-    - title: Tooltips
+    - title: Badge
+    - title: Modal
+    - title: Popup
+    - title: Page
+    - title: Sheet
+    - title: Popover
+    - title: Collapse
+    - title: Toggle
+    - title: Feedback
+    - title: Icons
     - title: Utilities
+
+- title: Controls
+    - title: Push
+    - title: Infinite-Scroll
+    - title: Loader
+    - title: Feedback
+    - title: Scroll
+    - title: Utility
+
+- title: Extensions
+  pages:
+    - title: Drawer
+    - title: Swiper
+    - title: Photoswipe
+    - title: Rippler
 
 # - title: Extend
 #   pages:
