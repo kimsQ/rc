@@ -51,6 +51,7 @@
     - title: Utilities
 
 - title: Controls
+  pages:
     - title: Push
     - title: Infinite-Scroll
     - title: Loader
