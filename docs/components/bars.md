@@ -1,6 +1,7 @@
 ---
-layout: docs
-title: Navbar
+layout: preview
+preview: bars
+title: Bar
 group: components
 ---
 
