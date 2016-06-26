@@ -23,7 +23,7 @@ gems:
   - jekyll-sitemap
 
 # Custom vars
-current_version:  4.0.0-alpha.2
+current_version:  1.0.0-alpha.1
 repo:             https://github.com/kimsQ/rc
 slack:            https://kimsq-slack.herokuapp.com
 

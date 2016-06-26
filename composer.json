@@ -1,6 +1,6 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "kimsQ/rc",
+  "description": "The most popular front-end framework for developing responsive, mobile only projects on the web.",
   "keywords": [
     "css",
     "js",
@@ -11,11 +11,11 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://rc.kimsq.com",
   "authors": [
     {
       "name": "Mark Otto",
-      "email": "markdotto@gmail.com"
+      "email": "break@redblock.co.kr"
     },
     {
       "name": "Jacob Thornton",
@@ -23,7 +23,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/kimsQ/rc/issues"
   },
   "license": "MIT",
   "extra": {
