@@ -63,6 +63,11 @@
         bottom: 200
       }
     })
+    
+    // History Back
+    $('body').on('click', '[data-history="back"]', function() {
+        window.history.back();
+    });
 
     var clipboard = new Clipboard('.btn-clipboard', {
       target: function (trigger) {
