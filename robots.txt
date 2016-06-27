@@ -3,4 +3,4 @@
 # Allow crawling of all content
 User-agent: *
 Disallow:
-Sitemap: http://kimsq.github.io/rc/sitemap.xml
+Sitemap: http://rc.kimsq.com/sitemap.xml

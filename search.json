@@ -10,16 +10,11 @@
     
 
     
-        {
-            "title" : "Accessibility",
-            "url"   : "/getting-started/accessibility/"
-        } ,
-    
 
     
         {
-            "title" : "Alerts",
-            "url"   : "/components/feedback/"
+            "title" : "Accessibility",
+            "url"   : "/getting-started/accessibility/"
         } ,
     
 
@@ -116,13 +111,6 @@
 
     
         {
-            "title" : "Controls",
-            "url"   : "/controls/"
-        } ,
-    
-
-    
-        {
             "title" : "Customization options",
             "url"   : "/getting-started/options/"
         } ,
@@ -158,15 +146,15 @@
 
     
         {
-            "title" : "Extensions",
-            "url"   : "/extensions/"
+            "title" : "Feedback",
+            "url"   : "/controls/feedback/"
         } ,
     
 
     
         {
             "title" : "Feedback",
-            "url"   : "/controls/feedback/"
+            "url"   : "/components/feedback/"
         } ,
     
 
@@ -235,7 +223,7 @@
 
     
         {
-            "title" : "Infinite-scroll",
+            "title" : "Infinite scroll",
             "url"   : "/controls/infinite-scroll/"
         } ,
     
@@ -291,13 +279,6 @@
 
     
         {
-            "title" : "Navbar",
-            "url"   : "/components/navbar/"
-        } ,
-    
-
-    
-        {
             "title" : "Navs",
             "url"   : "/components/navs/"
         } ,
@@ -333,7 +314,7 @@
 
     
         {
-            "title" : "Popovers",
+            "title" : "Popover",
             "url"   : "/components/popover/"
         } ,
     
@@ -361,7 +342,7 @@
 
     
         {
-            "title" : "Ratchet plus &middot; The world's most popular mobile-first and responsive front-end framework.",
+            "title" : "Ratchet plus &middot; The world's most popular mobile-only and responsive front-end framework.",
             "url"   : "/"
         } ,
     
@@ -438,7 +419,7 @@
 
     
         {
-            "title" : "Toggles",
+            "title" : "Toggle",
             "url"   : "/components/toggle/"
         } ,
     
@@ -475,13 +456,6 @@
         {
             "title" : "Wall of browser bugs",
             "url"   : "/browser-bugs/"
-        } ,
-    
-
-    
-        {
-            "title" : "components",
-            "url"   : "/components/"
         } 
     
 

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="description" content="Ratchet plus, a sleek, intuitive, and powerful mobile only front-end framework for faster and easier web development.">
+<meta name="author" content="Gitaeks, kieregh, and Ratchet plus contributors">
 
 <title>
   
-    Accessibility &middot; Bootstrap
+    Accessibility &middot; Ratchet plus
   
 </title>
 
@@ -24,6 +24,9 @@
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico">
+
+<!-- icon font -->
+<script src="https://use.fontawesome.com/00e99c286e.js"></script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -58,22 +61,22 @@
       <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
         <ul class="nav navbar-nav">
           <li class="nav-item active">
-            <a class="nav-item nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Ratchet plus');"><strong>Ratchet plus</strong></a>
+            <a class="nav-item nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"><strong>Ratchet plus</strong></a>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link active" href="/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link " href="/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'examples');">Examples</a>
+            <a class="nav-item nav-link " href="/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link " href="/themes/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">Themes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link " href="/about/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'about');">About</a>
+            <a class="nav-item nav-link " href="/about/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'About');">About</a>
           </li>
           <li class="nav-item pull-sm-right">
-            <a class="nav-item nav-link" href="https://github.com/kimsq/rc" target="_blank" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Github');">Github project</a>
+            <a class="nav-item nav-link" href="https://github.com/kimsQ/rc" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Github');">Github project</a>
           </li>
         </ul>
       </div>
@@ -1001,24 +1004,6 @@
       </ul>
     </div>
   
-  
-  
-  
-
-  
-
-  <div class="bd-toc-item ">
-    
-        <a class="bd-toc-link" href="/migration/">
-      
-        Migration
-      </a>
-
-      <ul class="nav bd-sidenav">
-        
-      </ul>
-    </div>
-  
 </nav>
 
         </div>
@@ -1042,10 +1027,10 @@
 
 <h2 id="skip-navigation">Skip navigation</h2>
 
-<p>If your navigation contains many links and comes before the main content in the DOM, add a <code class="highlighter-rouge">Skip to main content</code> link before the navigation (for a simple explanation, see this <a href="http://a11yproject.com/posts/skip-nav-links/">A11Y Project article on skip navigation links</a>). Using the <code class="highlighter-rouge">.sr-only</code> class will visually hide the skip link, and the <code>.sr-only-focusable</code> class will ensure that the link becomes visible once focused (for sighted keyboard users).</p>
+<p>If your navigation contains many links and comes before the main content in the DOM, add a <code class="highlighter-rouge">Skip to main content</code> link before the navigation (for a simple explanation, see this <a href="http://a11yproject.com/posts/skip-nav-links">A11Y Project article on skip navigation links</a>). Using the <code class="highlighter-rouge">.sr-only</code> class will visually hide the skip link, and the <code>.sr-only-focusable</code> class will ensure that the link becomes visible once focused (for sighted keyboard users).</p>
 
 <div class="bd-callout bd-callout-danger">
-<p>Due to long-standing shortcomings/bugs in Chrome (see <a href="https://code.google.com/p/chromium/issues/detail?id=454172" title="Chromium bug tracker - Issue 454172: Focus Link Target (sequential focus navigation starting point)">issue 454172 in the Chromium bug tracker</a>) and Internet Explorer (see this article on <a href="http://accessibleculture.org/articles/2010/05/in-page-links/">in-page links and focus order</a>), you will need to make sure that the target of your skip link is at least programmatically focusable by adding <code class="highlighter-rouge">tabindex="-1"</code>.</p>
+<p>Due to long-standing shortcomings/bugs in Internet Explorer (see this article on <a href="http://accessibleculture.org/articles/2010/05/in-page-links/">in-page links and focus order</a>), you will need to make sure that the target of your skip link is at least programmatically focusable by adding <code class="highlighter-rouge">tabindex="-1"</code>.</p>
 
 <p>In addition, you may want to explicitly suppress a visible focus indication on the target (particularly as Chrome currently also sets focus on elements with <code class="highlighter-rouge">tabindex="-1"</code> when they are clicked with the mouse) with <code class="highlighter-rouge">#content:focus { outline: none; }</code>.</p>
 
@@ -1081,13 +1066,13 @@
     <footer class="bd-footer text-muted">
   <div class="container">
     <ul class="bd-footer-links">
-      <li><a href="https://github.com/kimsq/rc">GitHub</a></li>
-      <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li><a href="https://github.com/kimsQ/rc">GitHub</a></li>
+      <li><a href="https://twitter.com/kimsq.com">Twitter</a></li>
       <li><a href="/examples/">Examples</a></li>
       <li><a href="/about/history/">About</a></li>
     </ul>
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p>Currently v1.0.0-alpha. Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Designed and built with all the love in the world by <a href="https://twitter.com/gitaeks" target="_blank">@gitaeks</a> and <a href="https://github.com/kieregh/" target="_blank">@kieregh</a>. Maintained by the <a href="https://github.com/orgs/kimsQ/people">core team</a> with the help of <a href="https://github.com/kimsQ/rc/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v1.0.0-alpha.1. Code licensed <a rel="license" href="https://github.com/kimsQ/rc/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
   </div>
 </footer>
 
@@ -1109,6 +1094,8 @@
     <script src="/../assets/js/vendor/holder.min.js"></script>
   
     <script src="/../assets/js/src/application.js"></script>
+  
+    <script src="/../assets/js/src/affix.js"></script>
   
 
 
