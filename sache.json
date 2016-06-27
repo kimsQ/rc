@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web.",
-  "tags": ["bootstrap", "grid", "typography", "buttons", "ui", "responsive-web-design"]
+  "name": "ratchet-plus",
+  "description": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile only projects on the web.",
+  "tags": ["ratchet-plus", "grid", "typography", "buttons", "ui", "responsive-web-design"]
 }

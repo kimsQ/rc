@@ -5,7 +5,7 @@
     "css",
     "js",
     "sass",
-    "mobile-first",
+    "mobile-only",
     "responsive",
     "front-end",
     "framework",
@@ -14,12 +14,12 @@
   "homepage": "http://rc.kimsq.com",
   "authors": [
     {
-      "name": "Mark Otto",
-      "email": "break@redblock.co.kr"
+      "name": "Gitaek Kwon",
+      "email": "break@kimsq.com"
     },
     {
-      "name": "Jacob Thornton",
-      "email": "jacobthornton@gmail.com"
+      "name": "kiere Kim",
+      "email": "kiere@kimsq.com"
     }
   ],
   "support": {
@@ -28,7 +28,7 @@
   "license": "MIT",
   "extra": {
     "branch-alias": {
-      "dev-master": "3.3.x-dev"
+      "dev-master": "1.1.x-dev"
     }
   },
   "replace": {

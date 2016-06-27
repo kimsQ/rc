@@ -1,22 +1,22 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "ratchet-plus",
+  "description": "The most popular front-end framework for developing responsive, mobile only projects on the web.",
   "keywords": [
     "css",
     "js",
     "sass",
-    "mobile-first",
+    "mobile-only",
     "responsive",
     "front-end",
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://rc.kimsq.com",
   "license": "MIT",
   "moduleType": "globals",
   "main": [
-    "scss/bootstrap.scss",
-    "dist/js/bootstrap.js"
+    "scss/ratchet-plus.scss",
+    "dist/js/ratchet-plus.js"
   ],
   "ignore": [
     "/.*",
