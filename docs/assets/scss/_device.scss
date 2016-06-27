@@ -1,15 +1,16 @@
 .device {
+  position: relative;;
   z-index: 1;
   width: 380px;
   height: 792px;
   background: url("../img/phone-case.png") no-repeat right top;
 }
+
 .device.affix {
     position: fixed !important;
     top: 0;
     width: 380px;
 }
-
 
 .device .device-content > li {
     position: absolute;
@@ -24,7 +25,7 @@
 }
 .device .device-content > li.jsfiddle {
     top: 90px;
-    height: 550px;
+    height: 580px;
 }
 .device .device-content > li iframe {
     position: absolute;
