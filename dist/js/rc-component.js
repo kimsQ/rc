@@ -10,7 +10,7 @@
  */
 
 // /* ========================================================================
-//  * rc :  Fbutton
+//  * rc :  Fbutton 
 //  * ======================================================================== */
 
 !(function ($) {
@@ -40,7 +40,7 @@
             var isShown=isfbutton?isfbutton:'false';
             return isShown=='true' ? this.hide() : this.show(_relatedTarget)
       }
-
+ 
       Fbutton.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.fbutton', { relatedTarget: _relatedTarget })
@@ -58,14 +58,14 @@
             this.isShown='true';
             sessionStorage.setItem('isfbutton',this.isShown);
             // init Utility
-            var utility=new Utility(fbutton,this.options).init();
+            var utility=new Utility(fbutton,this.options).init();  
             if(!template){
                  utility.setdataVal(fbutton,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{
+            }else{                 
                  $(tplContainer).load(template,$.proxy(function(){
-                      utility.setdataVal(fbutton,$this.options); // data 값 세팅하는 전용함수 사용한다.
+                      utility.setdataVal(fbutton,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
-                },this));
+                },this));  
             }
 
             this.$element.on('tap.dismiss.rc.fbutton', '[data-dismiss="fbutton"]', $.proxy(this.hide, this))
@@ -74,29 +74,29 @@
             $(fbutton).addClass('active');
 
             if(this.options.history){
-                // 브라우저 history 객체에 추가
+                // 브라우저 history 객체에 추가 
                 var object = {'type': 'fbutton','target': {'id':fbutton,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
                 utility.addHistoryObject(object,title,url);
             }
-            this.afterFbutton(this,_relatedTarget);
-
+            this.afterFbutton(this,_relatedTarget);   
+            
       }
 
       Fbutton.prototype.afterTemplate=function(obj,_relatedTarget){
             var e = $.Event('loaded.rc.fbutton', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);   
       }
 
       Fbutton.prototype.afterFbutton=function(obj,_relatedTarget){
            var e = $.Event('shown.rc.fbutton', { relatedTarget: _relatedTarget })
-           obj.$element.trigger('focus').trigger(e);
+           obj.$element.trigger('focus').trigger(e); 
       }
 
       Fbutton.prototype.hide = function (e) {
           if(this.options.history) history.back();
           else this.nonHistoryHide();
           var backdrop=$('body').find('.backdrop');
-          $(backdrop).remove();
+          $(backdrop).remove();   
       }
      Fbutton.prototype.historyHide = function (e) {
             this.isShown = 'false'
@@ -119,10 +119,10 @@
 
       Fbutton.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.fbutton');
-           this.$element.trigger(e);
+           this.$element.trigger(e);     
       }
 
-      Fbutton.prototype.backdrop = function (callback) {
+      Fbutton.prototype.backdrop = function (callback) {   
           if (this.isShown && this.options.backdrop) {
                this.$backdrop = $(document.createElement('div'))
                   .addClass('backdrop')
@@ -135,10 +135,10 @@
                     if (e.target !== e.currentTarget) return
                     this.options.backdrop == 'static'
                     ? this.$element[0].focus()
-                    : this.hide()
-               }, this))
-          }
-     }
+                    : this.hide()  
+               }, this))   
+          }  
+     } 
 
       var old = $.fn.fbutton
 
@@ -166,10 +166,10 @@
                 else if (options.toggle) data.toggle(_relatedTarget)
            })
        }
-
+      
       // Fbutton DATA-API
       // ==============
-
+       
       $(document).on('tap.rc.fbutton.data-api', '[data-toggle="fbutton"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
@@ -183,7 +183,7 @@
                   $target.one('hidden.rc.fbutton', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
 
           Plugin.call($target, option, this)
       })
@@ -191,14 +191,14 @@
 }(jQuery));
 
 // /* ========================================================================
-//  * rc :  Popover
+//  * rc :  Popover 
 //  * ======================================================================== */
 
 !(function ($) {
   'use strict';
 
       // Popover CLASS DEFINITION
-      //  element : modal , options : Event Handler data() + more
+      //  element : modal , options : Event Handler data() + more 
       // ======================
 
       var Popover = function (element, options) {
@@ -220,7 +220,7 @@
       Popover.prototype.toggle = function (_relatedTarget) {
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
-
+ 
       Popover.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.popover', { relatedTarget: _relatedTarget })
@@ -236,14 +236,14 @@
             this.isShown = true
 
             // init Utility
-            var utility=new Utility(popover,this.options).init();
+            var utility=new Utility(popover,this.options).init();  
             if(!template){
                  utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{
+            }else{                 
                  $(tplContainer).load(template,$.proxy(function(){
-                      utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다.
+                      utility.setdataVal(popover,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
-                },this));
+                },this));  
             }
 
             this.$element.on('tap.dismiss.rc.popover', '[data-dismiss="popover"]', $.proxy(this.hide, this))
@@ -253,28 +253,28 @@
             setTimeout(function(){$(popover).addClass('active')}, 0);
 
             if(this.options.history){
-                // 브라우저 history 객체에 추가
+                // 브라우저 history 객체에 추가 
                 var object = {'type': 'popover','target': {'id':popover,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
                 utility.addHistoryObject(object,title,url);
             }
-            this.afterPopover(this,_relatedTarget);
+            this.afterPopover(this,_relatedTarget);   
       }
 
       Popover.prototype.afterTemplate=function(obj,_relatedTarget){
             var e = $.Event('loaded.rc.popover', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);   
       }
 
       Popover.prototype.afterPopover=function(obj,_relatedTarget){
            var e = $.Event('shown.rc.popover', { relatedTarget: _relatedTarget })
-           obj.$element.trigger('focus').trigger(e);
+           obj.$element.trigger('focus').trigger(e); 
       }
 
       Popover.prototype.hide = function (e) {
           if(this.options.history) history.back();
           else this.nonHistoryHide();
           var backdrop=$('body').find('.backdrop');
-          $(backdrop).remove();
+          $(backdrop).remove();   
       }
      Popover.prototype.historyHide = function (e) {
             this.isShown = false
@@ -290,16 +290,16 @@
             var e    = $.Event('hide.rc.popover');
             $(popover).trigger(e)
             $(popover).removeClass('active');
-            setTimeout(function(){$(popover).hide();},300);
+            setTimeout(function(){$(popover).hide();},300); 
             this.afterHide();
       }
 
       Popover.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.popover');
-           this.$element.trigger(e);
+           this.$element.trigger(e);     
       }
 
-      Popover.prototype.backdrop = function (callback) {
+      Popover.prototype.backdrop = function (callback) {   
           if (this.isShown && this.options.backdrop) {
                this.$backdrop = $(document.createElement('div'))
                   .addClass('backdrop')
@@ -313,9 +313,9 @@
                     this.options.backdrop == 'static'
                     ? this.$element[0].focus()
                     : this.hide()
-               }, this))
-          }
-     }
+               }, this))   
+          }  
+     } 
 
       var old = $.fn.popover
 
@@ -343,16 +343,16 @@
                 else if (options.show) data.show(_relatedTarget)
            })
        }
-
+      
       // Popover DATA-API
       // ==============
-
+       
       $(document).on('tap.rc.popover.data-api', '[data-toggle="popover"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.popover') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
+         
           if ($this.is('a')) e.preventDefault()
 
            $target.one('show.rc.popover', function (showEvent) {
@@ -360,7 +360,7 @@
                   $target.one('hidden.rc.popover', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
 
           Plugin.call($target, option, this)
       })
@@ -368,14 +368,14 @@
 }(jQuery));
 
 // /* ========================================================================
-//  * rc :  Sheet
+//  * rc :  Sheet 
 //  * ======================================================================== */
 
 !(function ($) {
   'use strict';
 
       // Sheet CLASS DEFINITION
-      //  element : modal , options : Event Handler data() + more
+      //  element : modal , options : Event Handler data() + more 
       // ======================
 
       var Sheet = function (element, options) {
@@ -397,7 +397,7 @@
       Sheet.prototype.toggle = function (_relatedTarget) {
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
-
+ 
       Sheet.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.sheet', { relatedTarget: _relatedTarget })
@@ -413,38 +413,38 @@
             this.isShown = true
 
             // init Utility
-            var utility=new Utility(sheet,this.options).init();
+            var utility=new Utility(sheet,this.options).init();  
             if(!template){
                  utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{
+            }else{                 
                  $(tplContainer).load(template,$.proxy(function(){
-                      utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다.
+                      utility.setdataVal(sheet,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
-                },this));
-            }
+                },this));  
+            } 
 
             this.$element.on('tap.dismiss.rc.sheet', '[data-dismiss="sheet"]', $.proxy(this.hide, this))
 
-            if(this.options.backdrop) this.backdrop();// add backdrop
+            if(this.options.backdrop) this.backdrop();// add backdrop 
 
-            $(sheet).css("display","block");
+            $(sheet).css("display","block");   
             setTimeout(function(){$(sheet).addClass('active')}, 0);
             if(this.options.history){
-               // 브라우저 history 객체에 추가
+               // 브라우저 history 객체에 추가 
                 var object = {'type': 'sheet','target': {'id':sheet,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
                utility.addHistoryObject(object,title,url);
             }
-            this.afterSheet(this,_relatedTarget);
+            this.afterSheet(this,_relatedTarget);   
       }
 
       Sheet.prototype.afterTemplate=function(obj,_relatedTarget){
             var e = $.Event('loaded.rc.sheet', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);   
       }
 
       Sheet.prototype.afterSheet=function(obj,_relatedTarget){
            var e = $.Event('shown.rc.sheet', { relatedTarget: _relatedTarget })
-           obj.$element.trigger('focus').trigger(e);
+           obj.$element.trigger('focus').trigger(e); 
       }
 
       Sheet.prototype.hide = function (e) {
@@ -458,7 +458,7 @@
             this.isShown = false
             if (e) e.preventDefault()
             var e    = $.Event('hide.rc.sheet');
-            this.$element.trigger(e)
+            this.$element.trigger(e) 
             this.afterHide();
       }
 
@@ -468,16 +468,16 @@
             var e    = $.Event('hide.rc.sheet');
             $(sheet).trigger(e)
             $(sheet).removeClass('active');
-            setTimeout(function(){$(sheet).hide();},300);
+            setTimeout(function(){$(sheet).hide();},300); 
             this.afterHide();
       }
 
       Sheet.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.sheet');
-           this.$element.trigger(e);
+           this.$element.trigger(e);     
       }
 
-     Sheet.prototype.backdrop = function (callback) {
+     Sheet.prototype.backdrop = function (callback) {   
           if (this.isShown && this.options.backdrop) {
                this.$backdrop = $(document.createElement('div'))
                   .addClass('backdrop')
@@ -490,10 +490,10 @@
                     if (e.target !== e.currentTarget) return
                     this.options.backdrop == 'static'
                     ? this.$element[0].focus()
-                    : this.hide()
-               }, this))
-          }
-     }
+                    : this.hide()  
+               }, this))   
+          }  
+     } 
       var old = $.fn.sheet
 
       $.fn.sheet             = Plugin
@@ -520,16 +520,16 @@
                 else if (options.show) data.show(_relatedTarget)
            })
        }
-
+      
       // Sheet DATA-API
       // ==============
-
+       
       $(document).on('tap.rc.sheet.data-api', '[data-toggle="sheet"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.sheet') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
+         
           if ($this.is('a')) e.preventDefault()
 
            $target.one('show.rc.sheet', function (showEvent) {
@@ -537,7 +537,7 @@
                   $target.one('hidden.rc.sheet', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
 
           Plugin.call($target, option, this)
       })
@@ -545,14 +545,14 @@
 }(jQuery));
 
 /* ========================================================================
- * rc :  Modal
+ * rc :  Modal 
  * ======================================================================== */
 
 !(function ($) {
   'use strict';
 
       // Modal CLASS DEFINITION
-      //  element : modal , options : Event Handler data() + more
+      //  element : modal , options : Event Handler data() + more 
       // ======================
 
       var Modal = function (element, options) {
@@ -574,12 +574,12 @@
       Modal.prototype.toggle = function (_relatedTarget) {
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
-
+ 
       Modal.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.modal', { relatedTarget: _relatedTarget })
             var title =this.title;
-            var modal=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지
+            var modal=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 
             var url =this.url;
             if(url!=null) url=url.toString();
             var animation=this.options.animation?this.options.animation:'';
@@ -587,35 +587,35 @@
             var tplContainer=this.options.tplcontainer?modal+' '+this.options.tplcontainer:modal;
             this.$element.trigger(e);
             this.isShown = true
-
+      
            // init Utility
-            var utility=new Utility(modal,this.options).init();
+            var utility=new Utility(modal,this.options).init();  
             if(!template){
                  utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{
+            }else{ 
                $(tplContainer).load(template,$.proxy(function(){
-                    utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다.
+                    utility.setdataVal(modal,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                     this.afterTemplate(this,_relatedTarget);
-               },this));
+               },this));   
             }
 
-            this.$element.on('tap.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
-
+            this.$element.on('tap.dismiss.rc.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this)) 
+             
             this.$element.addClass(animation); // 에니메이션 적용
             $(modal).show();
             setTimeout(function(){$(modal).addClass('active')}, 0);
             if(this.options.history){
-                // 브라우저 history 객체에 추가
+                // 브라우저 history 객체에 추가 
                 var object = {'type': 'modal','target': modal}
-                utility.addHistoryObject(object,title,url);
+                utility.addHistoryObject(object,title,url);  
             }
-
-           this.afterModal(this,_relatedTarget);
+          
+           this.afterModal(this,_relatedTarget);              
       }
 
       Modal.prototype.afterTemplate=function(obj,_relatedTarget){
             var e = $.Event('loaded.rc.modal', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);  
       }
 
       Modal.prototype.afterModal=function(obj,_relatedTarget){
@@ -627,12 +627,12 @@
            if(this.options.history) history.back();
            else this.nonHistoryHide();
       }
-
+     
      Modal.prototype.historyHide = function (e) {
             this.isShown = false
             if (e) e.preventDefault()
             var e    = $.Event('hide.rc.modal');
-            this.$element.trigger(e)
+            this.$element.trigger(e) 
             this.afterHide();
       }
 
@@ -642,13 +642,13 @@
             var e    = $.Event('hide.rc.modal');
             $(modal).trigger(e)
             $(modal).removeClass('active');
-            setTimeout(function(){$(modal).hide();},300);
+            setTimeout(function(){$(modal).hide();},300); 
             this.afterHide();
       }
 
       Modal.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.modal');
-           this.$element.trigger(e);
+           this.$element.trigger(e);     
       }
 
       var old = $.fn.modal
@@ -677,16 +677,16 @@
                 else if (options.show) data.show(_relatedTarget)
            })
        }
-
+      
       // MODAL DATA-API
       // ==============
-
+       
       $(document).on('tap.rc.modal.data-api', '[data-toggle="modal"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
+         
           if ($this.is('a')) e.preventDefault()
 
            $target.one('show.rc.modal', function (showEvent) {
@@ -694,7 +694,7 @@
                   $target.one('hidden.rc.modal', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
 
           Plugin.call($target, option, this)
       })
@@ -724,57 +724,57 @@
            show: true,
            history : true
       }
-
-      // 페이지 호출
+        
+      // 페이지 호출   
       Page.prototype.show = function (_relatedTarget) {
             var $this = this;
             var e    = $.Event('show.rc.page', { relatedTarget: _relatedTarget })
             var title =this.title;
             var startPage=this.options.start;
             var loadPage=this.options.target?this.options.target:'#'+this.$element.attr('id');
-            var url =this.url;
+            var url =this.url; 
             if(url!=null) url=url.toString();
             var transition=this.options.transition;
             var template=this.options.template;
             var tplContainer=this.options.tplcontainer?loadPage+' '+this.options.tplcontainer:loadPage;
             this.$element.trigger(e);
             this.isShown = true;
-
-            var utility=new Utility(startPage,this.options).init();
+        
+            var utility=new Utility(startPage,this.options).init();           
             if(!template){
                  utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
             }else{
                  $(tplContainer).load(template,function(){
                        utility.setdataVal(loadPage,$this.options); // data 값 세팅하는 전용함수 사용한다.
                        this.afterTemplate(this,_relatedTarget);
-                });
+                });  
             }
 
             this.$element.on('tap.dismiss.rc.page', '[data-dismiss="page"]', $.proxy(this.hide, this))
-
+            
             if(this.options.history){
-                var object = {'type': 'page', 'target':{'start': startPage,'load':loadPage,'transition':transition}};  // 페이지 정보 : object 구분값 , 현재 페이지, 로드 페이지, 방향
-                utility.addHistoryObject(object,title,url);//
-            }
+                var object = {'type': 'page', 'target':{'start': startPage,'load':loadPage,'transition':transition}};  // 페이지 정보 : object 구분값 , 현재 페이지, 로드 페이지, 방향 
+                utility.addHistoryObject(object,title,url);//  
+            }     
             this.getPage(startPage,loadPage,transition); // 타겟 페이지 호출
-            this.afterPage(this,_relatedTarget);
+            this.afterPage(this,_relatedTarget); 
       }
 
       Page.prototype.afterTemplate=function(obj,_relatedTarget){
              var e = $.Event('loaded.rc.page', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);    
       }
 
       Page.prototype.afterPage=function(obj,_relatedTarget){
             var e = $.Event('shown.rc.page', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e); 
       }
-
+      
       Page.prototype.hide=function(e){
            if(this.options.history) history.back();
            else this.nonHistoryHide();
       }
-
+      
       Page.prototype.historyHide=function(e){
           this.isShown = false
           if (e) e.preventDefault()
@@ -782,7 +782,7 @@
           this.$element.trigger(e)
           var CurrentIndex=History.getCurrentIndex();
           var ForwardIndex=parseInt(CurrentIndex)-1;
-          var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object
+          var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object 
           var ForwardObj=JSON.stringify(ForwardObj);
           var result=$.parseJSON(ForwardObj);
           var objTarget=result.data.target; // modal, page, popover..의 id 정보
@@ -790,7 +790,7 @@
           var loadPage=objTarget.load;
           var transition=objTarget.transition;
           this.closePage(startPage,loadPage,transition);
-          this.afterHide();
+          this.afterHide(); 
       }
 
      Page.prototype.nonHistoryHide = function () {
@@ -804,26 +804,26 @@
             this.closePage(startPage,loadPage,transition);
             this.afterHide();
       }
-
+   
       Page.prototype.afterHide=function(e){
             var e = $.Event('hidden.rc.page');
-           this.$element.trigger(e);
+           this.$element.trigger(e);   
+      }  
+     
+      // 슬라이딩으로 페이지 호출(열기) 함수     
+      Page.prototype.getPage=function(startPage,loadPage,transition){     
+            $(loadPage).attr('class','page right'); // 출발 위치 세팅 
+            $(loadPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동 
+            $(startPage).attr('class','page transition left'); // start 페이지는 반대로 이동 
       }
 
-      // 슬라이딩으로 페이지 호출(열기) 함수
-      Page.prototype.getPage=function(startPage,loadPage,transition){
-            $(loadPage).attr('class','page right'); // 출발 위치 세팅
-            $(loadPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동
-            $(startPage).attr('class','page transition left'); // start 페이지는 반대로 이동
-      }
-
-      // 슬라이딩으로 페이지 닫기 함수
-      Page.prototype.closePage=function(startPage,loadPage,transition){
-            $(startPage).attr('class','page left'); // 출발 위치 세팅
-            $(startPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동
-            $(loadPage).attr('class','page transition right'); // start 페이지는 반대로 이동
-      }
-
+      // 슬라이딩으로 페이지 닫기 함수     
+      Page.prototype.closePage=function(startPage,loadPage,transition){     
+            $(startPage).attr('class','page left'); // 출발 위치 세팅 
+            $(startPage).attr('class','page transition center'); // 출발위치에서 중앙으로 이동 
+            $(loadPage).attr('class','page transition right'); // start 페이지는 반대로 이동 
+      }  
+       
       var old = $.fn.page
 
       $.fn.page             = Plugin
@@ -847,10 +847,10 @@
                   var options = $.extend({}, Page.DEFAULTS, $this.data(), typeof option == 'object' && option)
                   var data = new Page(this, options)
                   if (typeof option == 'string' && option!='toggle') data[option](_relatedTarget)
-                  else if (options.show) data.show(_relatedTarget);
+                  else if (options.show) data.show(_relatedTarget); 
             })
        }
-
+      
       // Page DATA-API
       // ==============
 
@@ -859,28 +859,28 @@
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.page') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
+     
           if ($this.is('a')) e.preventDefault()
            $target.one('show.rc.page', function (showEvent) {
                   if (showEvent.isDefaultPrevented()) return // only register focus restorer if modal will actually get shown
                   $target.one('hidden.rc.page', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
           Plugin.call($target, option, this)
       })
 
 }(jQuery));
 
 // /* ========================================================================
-//  * rc :  Popup
+//  * rc :  Popup 
 //  * ======================================================================== */
 
 !(function ($) {
   'use strict';
 
       // Popup CLASS DEFINITION
-      //  element : modal , options : Event Handler data() + more
+      //  element : modal , options : Event Handler data() + more 
       // ======================
 
       var Popup = function (element, options) {
@@ -902,14 +902,14 @@
       Popup.prototype.toggle = function (_relatedTarget) {
             return this.isShown ? this.hide() : this.show(_relatedTarget)
       }
-
-      // 모달 호출
+ 
+      // 모달 호출   
       Popup.prototype.show = function (_relatedTarget) {
             var $this = this
             var e    = $.Event('show.rc.popup', { relatedTarget: _relatedTarget })
             var title =this.title;
             var popup=this.options.target?this.options.target:'#'+this.$element.attr('id'); // 엘리먼트 클릭(target) & script 오픈 2 가지 ;
-            var url =this.url;
+            var url =this.url; 
             if(url!=null) url=url.toString();
             var bcontainer=this.options.bcontainer?this.options.bcontainer:'body';
             var template=this.options.template;
@@ -918,39 +918,39 @@
             this.isShown = true
 
             // init Utility
-            var utility=new Utility(popup,this.options).init();
+            var utility=new Utility(popup,this.options).init();  
             if(!template){
                  utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다.
-            }else{
+            }else{                 
                  $(tplContainer).load(template,$.proxy(function(){
-                      utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다.
+                      utility.setdataVal(popup,$this.options); // data 값 세팅하는 전용함수 사용한다. 
                       this.afterTemplate(this,_relatedTarget);
-                },this));
+                },this));  
             }
 
-            this.$element.on('tap.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))
-
+            this.$element.on('tap.dismiss.rc.popup', '[data-dismiss="popup"]', $.proxy(this.hide, this))  
+      
             if(this.options.backdrop) this.backdrop();// add backdrop
-
+             
             $(popup).css("display","block");
             setTimeout(function(){$(popup).addClass('active')}, 0);
 
             if(this.options.history){
-                // 브라우저 history 객체에 추가
+                // 브라우저 history 객체에 추가 
                 var object = {'type': 'popup','target': {'id':popup,'bcontainer':bcontainer,'backdrop':this.options.backdrop}}
                 utility.addHistoryObject(object,title,url);
             }
-            this.afterPopup(this,_relatedTarget);
+            this.afterPopup(this,_relatedTarget);   
       }
 
       Popup.prototype.afterTemplate=function(obj,_relatedTarget){
             var e = $.Event('loaded.rc.popup', { relatedTarget: _relatedTarget })
-            obj.$element.trigger('focus').trigger(e);
+            obj.$element.trigger('focus').trigger(e);   
       }
 
       Popup.prototype.afterPopup=function(obj,_relatedTarget){
            var e = $.Event('shown.rc.popup', { relatedTarget: _relatedTarget })
-           obj.$element.trigger('focus').trigger(e);
+           obj.$element.trigger('focus').trigger(e); 
       }
 
       Popup.prototype.hide = function (e) {
@@ -964,7 +964,7 @@
             this.isShown = false
             if (e) e.preventDefault()
             var e    = $.Event('hide.rc.popup');
-            this.$element.trigger(e)
+            this.$element.trigger(e)  
             this.afterHide();
       }
 
@@ -974,16 +974,16 @@
             var e    = $.Event('hide.rc.popup');
             $(popup).trigger(e)
             $(popup).removeClass('active');
-            setTimeout(function(){$(popup).hide();},300);
+            setTimeout(function(){$(popup).hide();},300); 
             this.afterHide();
       }
 
       Popup.prototype.afterHide=function(){
            var e = $.Event('hidden.rc.popup');
-           this.$element.trigger(e);
+           this.$element.trigger(e);     
       }
 
-      Popup.prototype.backdrop = function (callback) {
+      Popup.prototype.backdrop = function (callback) {   
           if (this.isShown && this.options.backdrop) {
                this.$backdrop = $(document.createElement('div'))
                   .addClass('backdrop')
@@ -997,8 +997,8 @@
                     this.options.backdrop == 'static'
                     ? this.$element[0].focus()
                     : this.hide()
-               }, this))
-          }
+               }, this))   
+          }  
      }
 
       var old = $.fn.popup
@@ -1027,16 +1027,16 @@
                 else if (options.show) data.show(_relatedTarget)
            })
        }
-
+      
       // Popup DATA-API
       // ==============
-
+       
       $(document).on('tap.rc.popup.data-api', '[data-toggle="popup"]', function (e) {
           var $this   = $(this)
           var href    = $this.attr('href')
           var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) // strip for ie7
           var option  = $target.data('rc.popup') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
+         
           if ($this.is('a')) e.preventDefault()
 
            $target.one('show.rc.popup', function (showEvent) {
@@ -1044,7 +1044,7 @@
                   $target.one('hidden.rc.popup', function () {
                    $this.is(':active') && $this.trigger('focus')
                 })
-            })
+            }) 
 
           Plugin.call($target, option, this)
       })
