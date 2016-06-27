@@ -60,10 +60,10 @@
     $('.docs-affix').affix({
       offset: {
         top: 300,
-        bottom: 200
+        bottom: 230
       }
     })
-    
+
     // History Back
     $('body').on('click', '[data-history="back"]', function() {
         window.history.back();
