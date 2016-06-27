@@ -50,8 +50,8 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      dist: 'dist',
-      docs: 'docs/dist'
+      // dist: 'dist',
+      // docs: 'docs/dist'
     },
 
     // JS build configuration
