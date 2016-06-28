@@ -50,7 +50,7 @@
     $('.docs-affix').affix({
       offset: {
         top: 300,
-        bottom: 280
+        bottom: 0
       }
     })
 
