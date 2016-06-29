@@ -248,6 +248,13 @@
   margin: 0 auto;
 }
 
+// Position the nav correctly inside a bar.
+.bar .nav {
+    position: relative;
+    margin: 0 auto;
+    display: table
+}
+
 // Color schemes
 // --------------------------------------------------
 
