@@ -51,7 +51,7 @@ Classes are used throughout, so your markup can be super flexible. Use `<ul>`s l
 ## Inline
 
 Space out nav links in a horizontal band with `.nav-inline`. Longer series of links will wrap to a new line.
- bar 영역 내부에서 사용될때 Justified 가 적용됨.
+ bar 영역 내부에서 사용될때 양쪽 정열 `Justified` 이 적용됨.
 {% example html %}
 <nav class="nav nav-inline">
   <a class="nav-link active" href="#">Active</a>

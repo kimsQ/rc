@@ -52,6 +52,7 @@ Cards support a wide variety of content, including images, text, list groups, li
 </div>
 {% endexample %}
 
+### List group
 Lists can be added to a card by adding a list group.
 
 {% example html %}
@@ -64,6 +65,8 @@ Lists can be added to a card by adding a list group.
 </div>
 {% endexample %}
 
+### Image top
+
 `.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
 
 {% example html %}
@@ -75,6 +78,8 @@ Lists can be added to a card by adding a list group.
 </div>
 {% endexample %}
 
+### Block
+
 Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to  a `<a>` tag.
 
 {% example html %}
@@ -85,6 +90,8 @@ Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, l
   <a href="#" class="card-link">Another link</a>
 </div>
 {% endexample %}
+
+### Sub title
 
 Subtitles are used by adding a `.card-subtitle` to an `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-block` item, the card title and subtitle are aligned nicely.
 
@@ -129,6 +136,8 @@ Using the grid:
   </div>
 </div>
 {% endexample %}
+
+### Custom widths
 
 Using custom widths:
 
@@ -181,6 +190,8 @@ Add an optional header and/or footer within a card.
 </div>
 {% endexample %}
 
+### Heading
+
 Card headers can be styled by adding `.card-header` to `<h*>` elements.
 
 {% example html %}
@@ -193,6 +204,8 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
   </div>
 </div>
 {% endexample %}
+
+### Quote
 
 {% example html %}
 <div class="card">
@@ -207,6 +220,8 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
   </div>
 </div>
 {% endexample %}
+
+### Text center
 
 {% example html %}
 <div class="card text-xs-center">
@@ -227,6 +242,8 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 ## Header nav
 
 Use Bootstrap's nav pills or tabs within a card header. Be sure to always include a `.pull-*-*` utility class for proper alignment.
+
+### Header tabs
 
 {% example html %}
 <div class="card text-xs-center">
@@ -250,6 +267,8 @@ Use Bootstrap's nav pills or tabs within a card header. Be sure to always includ
   </div>
 </div>
 {% endexample %}
+
+### Header pills
 
 {% example html %}
 <div class="card text-xs-center">
