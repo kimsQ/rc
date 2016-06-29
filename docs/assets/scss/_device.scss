@@ -5,77 +5,68 @@
   height: 792px;
   background: url("../img/phone-case.png") no-repeat right top;
 }
-
 .device.affix {
-    position: fixed !important;
-    top: 0;
-    width: 380px;
+  position: fixed !important;
+  top: 0;
+  width: 380px;
 }
-
-.device .device-content > li {
-    position: absolute;
-    top: 110px;
-    left: 30px;
-    width: 335px;
-    height: 560px;
-    /*overflow: hidden;*/
-    font-size: 17px;
-    line-height: 21px;
-    background-color: #fff;
+.device .device-content > li > a.ratchet-body {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 335px;
+  height: 555px;
+  font-size: 0;
+  line-height: 0;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .device .device-content > li.jsfiddle {
-    top: 90px;
-    height: 580px;
+  top: 90px;
+  height: 580px;
+}
+.device .device-content > li > a.ratchet-body {
+  display: block;
 }
 .device .device-content > li iframe {
-    position: absolute;
-    z-index: 999
+  position: absolute;
+  z-index: 999
 }
-
 .device .device-content > li [data-history="back"] {
-    position: absolute;
-    z-index: 9999;
-    bottom: -50px;
-    top: auto;
-    right: 10px;
-    left: auto;
-    color: #fff;
-    font-size: 30px
+  position: absolute;
+  z-index: 9999;
+  bottom: -60px;
+  top: auto;
+  right: 10px;
+  left: auto;
+  color: #fff;
+  font-size: 30px
 }
-
-
 .ratchet-body {
-    opacity: 0;
-      transition: opacity .2s ease-in-out;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
 }
-
 .ratchet-body.active {
- opacity: 1;
+  opacity: 1;
 }
-
-
 .ratchet-body a,
 .ratchet-body a:hover,
 .ratchet-body .btn-link {
   text-decoration: none;
 }
 
-
 @media screen and (min-width: 768px) {
   .component {
-      padding-right: 0;
-      padding-left: 0;
-      opacity: .2;
-      -webkit-transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      transition: opacity .2s ease-in-out;
+    padding-right: 0;
+    padding-left: 0;
+    opacity: .2;
+    -webkit-transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
   }
   .component.active {
-      opacity: 1;
+    opacity: 1;
   }
-
   .component .page-header {
     padding:  100px 0 10px
   }
-
 }

@@ -139,6 +139,7 @@
   margin-top: 0;
   font-size: .75rem;
   font-weight: $font-weight-light;
+  line-height: 1;
 
   // Give buttons that are floated left and right side margin
   &.pull-right {
@@ -172,6 +173,7 @@
   padding: .4375rem 0;
   margin-bottom: 0;
   font-size: 1rem; // Scale down font size to fit in bar.
+  line-height: 1;
 }
 
 // Nav buttons (Only applicable within bars)

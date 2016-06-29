@@ -1,209 +1,176 @@
+// scss-lint:disable QualifyingElement
+
 //
-// Buttons
-// --------------------------------------------------
+// Base styles
+//
 
 .btn {
-  position: relative;
   display: inline-block;
-  padding: .375rem .5rem .4375rem;
-  margin-bottom: 0; // For input.btn
   font-weight: $btn-font-weight;
-  line-height: 1;
-  color: #333;
+  line-height: $btn-line-height;
   text-align: center;
   white-space: nowrap;
-  vertical-align: top;
+  vertical-align: middle;
   cursor: pointer;
-  background-color: $gray-lightest;
-  border: $border-width solid #ccc;
+  user-select: none;
+  border: $input-btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  @include transition(all .2s ease-in-out);
 
-  // Active & filled button styles
+  &,
   &:active,
   &.active {
-    color: inherit; // Overriding the global style for all anchors.
-    background-color: #ccc;
+    &:focus,
+    &.focus {
+      @include tab-focus();
+    }
   }
 
-  // Disabled styles & filled button active styles
-  &:disabled,
-  &.disabled {
-    opacity: .6;
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &.focus {
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    outline: 0;
+    @include box-shadow($btn-active-box-shadow);
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: $cursor-disabled;
+    opacity: .65;
+    @include box-shadow(none);
   }
 }
 
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
 
-// Other button types
-// --------------------------------------------------
 
-// Primary button
+//
+// Alternate buttons
+//
+
 .btn-primary {
-  color: #fff;
-  background-color: $brand-primary;
-  border: .0625rem solid $brand-primary;
-
-  &:active,
-  &.active {
-    color: #fff;
-    background-color: darken($brand-primary, 10%);
-    border: .0625rem solid darken($brand-primary, 10%);
-  }
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
-
-// Success button 
-.btn-success {
-  color: #fff;
-  background-color: $brand-success;
-  border: .0625rem solid $brand-success;
-
-  &:active,
-  &.active {
-    color: #fff;
-    background-color: darken($brand-success, 10%);
-    border: .0625rem solid darken($brand-success, 10%);
-  }
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
-
-// Info button 
 .btn-info {
-  color: #fff;
-  background-color: $brand-info;
-  border: .0625rem solid $brand-info;
-
-  &:active,
-  &.active {
-    color: #fff;
-    background-color: darken($brand-info, 10%);
-    border: .0625rem solid darken($brand-info, 10%);
-  }
+  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
-
-// Warning button 
+.btn-success {
+  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
 .btn-warning {
-  color: #fff;
-  background-color: $brand-warning;
-  border: .0625rem solid $brand-warning;
-
-  &:active,
-  &.active {
-    color: #fff;
-    background-color: darken($brand-warning, 10%);
-    border: .0625rem solid darken($brand-warning, 10%);
-  }
+  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
-
-// Danger button
 .btn-danger {
-  color: #fff;
-  background-color: $brand-danger;
-  border: .0625rem solid $brand-danger;
-
-  &:active,
-  &.active {
-    color: #fff;
-  background-color: darken($brand-danger, 10%);
-  border: .0625rem solid darken($brand-danger, 10%);
-  }
+  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
-// Outlined buttons
-.btn-outlined {
-  background-color: transparent;
-
-  &.btn-primary {
-    color: $brand-primary;
-  }
-  &.btn-success {
-    color: $brand-success;
-  }
-  &.btn-info {
-    color: $brand-info;
-  }
-  &.btn-warning {
-    color: $brand-warning;
-  }
-  &.btn-danger {
-    color: $brand-danger;
-  }
-  // Active states
-  &.btn-primary:active,
-  &.btn-success:active,
-  &.btn-info:active,
-  &.btn-warning:active,
-  &.btn-danger:active {
-    color: #fff;
-  }
+// Remove all backgrounds
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-secondary {
+  @include button-outline-variant($btn-secondary-border);
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info-bg);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success-bg);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger-bg);
 }
 
-// Link button (Buttons that look like links)
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
 .btn-link {
-  padding-top: .375rem;
-  padding-bottom: .375rem;
-  color: $brand-primary;
-  background-color: transparent;
-  border: 0;
+  font-weight: normal;
+  color: $link-color;
+  border-radius: 0;
 
+  &,
   &:active,
-  &.active {
-    color: darken($brand-primary, 10%);
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+  &,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  @include hover {
+    border-color: transparent;
+  }
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
     background-color: transparent;
   }
+  &:disabled {
+    @include hover-focus {
+      color: $btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
 }
 
-// Block level buttons (full width buttons)
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+}
+
+
+//
+// Block button
+//
+
 .btn-block {
   display: block;
   width: 100%;
-  padding: .9375rem 0;
-  margin-bottom: .625rem;
-  font-size: 1.5rem;
 }
 
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
 
-// Button overrides
-// --------------------------------------------------
-
+// Specificity overrides
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  width: 100%;
-}
-
-
-// Buttons with badges
-// --------------------------------------------------
-
-// Generic styles for all badges within default buttons
-.btn .badge {
-  margin: -.125rem -.25rem -.125rem .25rem;
-  font-size: .75rem;
-  background-color: rgba(0,0,0,.15);
-}
-
-// Buttons with inverted badges
-.btn .badge-inverted,
-.btn:active .badge-inverted {
-  background-color: transparent;
-}
-.btn-primary:active .badge-inverted,
-.btn-positive:active .badge-inverted,
-.btn-negative:active .badge-inverted {
-  color: #fff;
-}
-
-// Position badges within block level buttons
-// Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
-// stays at the center of button
-.btn-block .badge {
-  position: absolute;
-  right: 0;
-  margin-right: .625rem;
-}
-
-
-// Buttons with Ratchicons
-// --------------------------------------------------
-
-.btn .icon {
-  font-size: inherit;
+  &.btn-block {
+    width: 100%;
+  }
 }

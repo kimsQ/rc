@@ -5,7 +5,51 @@ title: Examples
 
 [Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
 
-## Framework
+## Componets
+
+Examples that focus on implementing uses of built-in components provided by Bootstrap.
+
+### bars
+
+#### bar-nav
+* [basic](./components/bars/bar-nav/basic.html)
+
+
+
+<div class="row bd-examples">
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/components/bar/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/starter-template.jpg" alt="">
+    </a>
+    <h4>Bar</h4>
+    <p>Nothing but the basics: compiled CSS and JavaScript.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/grid/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/grid.jpg" alt="">
+    </a>
+    <h4>Grids</h4>
+    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/jumbotron/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.jpg" alt="">
+    </a>
+    <h4>Jumbotron</h4>
+    <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/examples/narrow-jumbotron/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron-narrow.jpg" alt="">
+    </a>
+    <h4>Narrow jumbotron</h4>
+    <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+  </div>
+</div>
+
+## Layout
 
 Examples that focus on implementing uses of built-in components provided by Bootstrap.
 

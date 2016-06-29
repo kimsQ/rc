@@ -17,6 +17,8 @@
 
   $(function () {
 
+    // Scrollspy
+
     // Tooltip and popover demos
     $('.tooltip-demo').tooltip({
       selector: '[data-toggle="tooltip"]',
@@ -37,17 +39,6 @@
       e.preventDefault()
     })
 
-    // Modal relatedTarget demo
-    $('#exampleModal').on('show.bs.modal', function (event) {
-      var $button = $(event.relatedTarget)      // Button that triggered the modal
-      var recipient = $button.data('whatever')  // Extract info from data-* attributes
-      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-      var $modal = $(this)
-      $modal.find('.modal-title').text('New message to ' + recipient)
-      $modal.find('.modal-body input').val(recipient)
-    })
-
     // Insert copy to clipboard button before .highlight
     $('.highlight').each(function () {
       var btnHtml = '<div class="bd-clipboard"><span class="btn-clipboard" title="Copy to clipboard">Copy</span></div>'
@@ -55,12 +46,11 @@
       $('.btn-clipboard').tooltip()
     })
 
-    $('body').scrollspy({ target: '.docs-scrollspy' })
-
+    // Device preview affix
     $('.docs-affix').affix({
       offset: {
         top: 300,
-        bottom: 230
+        bottom: 0
       }
     })
 
@@ -103,7 +93,6 @@
 
 ;(function () {
   'use strict';
-
-  anchors.options.placement = 'right';
-  anchors.add('.bd-content > h1, .bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
+  anchors.options.placement = 'left';
+  anchors.add('.bd-content > h2, .bd-content > h3, .bd-content > h4, .bd-content > h5')
 })();

@@ -7,7 +7,7 @@
  */
 @media (min-width: 1200px) {
   .container {
-    max-width: 1320px; } }
+    max-width: 1400px; } }
 
 .bd-booticon {
   display: block;
@@ -19,7 +19,7 @@
   text-align: center;
   cursor: default;
   background-color: #563d7c;
-  border-radius: 15%; }
+  border-radius: 25%; }
   .bd-booticon.inverse {
     color: #563d7c;
     background-color: #fff; }
@@ -967,20 +967,22 @@
   top: 0;
   width: 380px; }
 
-.device .device-content > li {
+.device .device-content > li > a.ratchet-body {
   position: absolute;
-  top: 110px;
+  top: 100px;
   left: 30px;
   width: 335px;
-  height: 560px;
-  /*overflow: hidden;*/
-  font-size: 17px;
-  line-height: 21px;
-  background-color: #fff; }
+  height: 555px;
+  font-size: 0;
+  line-height: 0;
+  background-color: rgba(0, 0, 0, 0.1); }
 
 .device .device-content > li.jsfiddle {
   top: 90px;
   height: 580px; }
+
+.device .device-content > li > a.ratchet-body {
+  display: block; }
 
 .device .device-content > li iframe {
   position: absolute;
@@ -989,7 +991,7 @@
 .device .device-content > li [data-history="back"] {
   position: absolute;
   z-index: 9999;
-  bottom: -50px;
+  bottom: -60px;
   top: auto;
   right: 10px;
   left: auto;

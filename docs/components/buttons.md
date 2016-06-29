@@ -17,7 +17,7 @@ Use Bootstrap's custom button styles for actions in forms, dialogs, and more. In
 
 Bootstrap includes six predefined button styles, each serving its own semantic purpose.
 
-{% example html %}
+{% highlight html %}
 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 <button type="button" class="btn btn-primary">Primary</button>
 
@@ -38,7 +38,7 @@ Bootstrap includes six predefined button styles, each serving its own semantic p
 
 <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
 <button type="button" class="btn btn-link">Link</button>
-{% endexample %}
+{% endhighlight %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -49,26 +49,27 @@ The `.btn` classes are designed to be used with the `<button>` element. However,
 
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
-{% example html %}
+{% highlight html %}
 <a class="btn btn-primary" href="#" role="button">Link</a>
 <button class="btn btn-primary" type="submit">Button</button>
 <input class="btn btn-primary" type="button" value="Input">
 <input class="btn btn-primary" type="submit" value="Submit">
 <input class="btn btn-primary" type="reset" value="Reset">
-{% endexample %}
+{% endhighlight %}
+
 
 ## Outline buttons
 
 In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
-{% example html %}
+{% highlight html %}
 <button type="button" class="btn btn-outline-primary">Primary</button>
 <button type="button" class="btn btn-outline-secondary">Secondary</button>
 <button type="button" class="btn btn-outline-success">Success</button>
 <button type="button" class="btn btn-outline-info">Info</button>
 <button type="button" class="btn btn-outline-warning">Warning</button>
 <button type="button" class="btn btn-outline-danger">Danger</button>
-{% endexample %}
+{% endhighlight %}
 
 
 ## Sizes

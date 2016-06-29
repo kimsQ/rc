@@ -5,14 +5,14 @@ title: Bar
 group: components
 ---
 
-The navbar is a simple wrapper for positioning branding, navigation, and other elements into a concise navigation header. It's easily extensible and, with the help of our collapse plugin, it can easily integrate offscreen content.
+Bar is a fixed regions at the top of a screen that can contain a title label, and left/right buttons for navigation or to carry out various actions.
 
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Basics
+## Title bar
 
 Here's what you need to know before getting started with the navbar:
 
@@ -21,262 +21,196 @@ Here's what you need to know before getting started with the navbar:
 - Use `.pull-*-left` and `.pull-*-right` to quickly align sub-components.
 - Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
 
-## Supported content
-
-Navbars come with built-in support for a handful of sub-components. Mix and match from the following as you need:
-
-- `.navbar-brand` for your company, product, or project name
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns)
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#collapsing-content) behaviors.
-
-Here's an example of all the sub-components included in a default, light navbar:
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <ul class="nav navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-  </ul>
-  <form class="form-inline pull-xs-right">
-    <input class="form-control" type="text" placeholder="Search">
-    <button class="btn btn-outline-success" type="submit">Search</button>
-  </form>
-</nav>
-{% endexample %}
-
-### Brand
-
-The `.navbar-brand` can be applied to most elements, but an anchor works best as some elements might require utility classes or custom styles.
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Navbar</a>
-</nav>
-
-<nav class="navbar navbar-light bg-faded">
-  <h1 class="navbar-brand m-b-0">Navbar</h1>
-</nav>
-
-{% endexample %}
-
-### Nav
-
-Navbar navigation is similar to our regular nav options—use the `.nav` base class with a modifier to achieve a particular look. In this case you'll want `.nav.navbar-nav`.
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <ul class="nav navbar-nav">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Pricing</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">About</a>
-    </li>
-  </ul>
-</nav>
-{% endexample %}
-
-And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <div class="nav navbar-nav">
-    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-    <a class="nav-item nav-link" href="#">Features</a>
-    <a class="nav-item nav-link" href="#">Pricing</a>
-    <a class="nav-item nav-link" href="#">About</a>
-  </div>
-</nav>
-{% endexample %}
-
-
-## Color schemes
-
-Theming the navbar has never been easier thanks to the combination of a simple link color modifier class and `background-color` utilities. Put another way, you specify light or dark and apply a background color.
-
-Here are some examples to show what we mean.
-
-<div class="bd-example">
-  <nav class="navbar navbar-dark bg-inverse">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-outline-info" type="submit">Search</button>
-    </form>
-  </nav>
-  <nav class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-outline-secondary" type="submit">Search</button>
-    </form>
-  </nav>
-  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-outline-primary" type="submit">Search</button>
-    </form>
-  </nav>
-</div>
+### Basic
+Title bars are full width and docked to the top of the viewport.
 
 {% highlight html %}
-<nav class="navbar navbar-dark bg-inverse">
-  <!-- Navbar content -->
-</nav>
+<header class="bar bar-nav bar-light bg-faded">
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
 
-<nav class="navbar navbar-dark bg-primary">
-  <!-- Navbar content -->
-</nav>
+### Title bar with buttons
 
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-  <!-- Navbar content -->
+Buttons in a title bar are left or right aligned and should be used for actions. Use the `.pull-right` or `.pull-left` utility classes to float the buttons. Also, be sure to place any floated elements before the title.
+
+{% highlight html %}
+<header class="bar bar-nav bar-light bg-faded">
+  <button class="btn btn-secondary pull-left">
+    Left
+  </button>
+  <button class="btn btn-secondary pull-right">
+    Right
+  </button>
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+### Title bar with icons
+
+Icons can also be used for actions in toolbars. Again, be sure to use utility classes to float the icons into position.
+
+{% highlight html %}
+<header class="bar bar-nav bar-light bg-faded">
+  <a class="icon icon-left-nav pull-left"></a>
+  <a class="icon icon-compose pull-right"></a>
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+### Title bar with link buttons and icons
+Link buttons can be used in tool bars to remove the outline. Use these in conjuction with icons to recreate the nav feel from iOS7. Note the use of `.btn-nav` to bring the buttons a little bit closer to the edge of the viewport.
+
+{% highlight html %}
+<header class="bar bar-nav bar-light bg-faded">
+  <button class="btn btn-link btn-nav pull-left">
+    <span class="icon icon-left-nav"></span>
+    Left
+  </button>
+  <button class="btn btn-link btn-nav pull-right">
+    Right
+    <span class="icon icon-right-nav"></span>
+  </button>
+  <h1 class="title">Title</h1>
+</header>
+{% endhighlight %}
+
+### Title bar with segmented control
+Title bars can also house segmented controls. Feel free to add accompanying buttons too. The control will automatically layout itself out correctly.
+
+{% highlight html %}
+<header class="bar bar-nav bar-light bg-faded">
+  <button class="btn btn-secondary pull-left">
+    Left
+  </button>
+  <button class="btn btn-secondary pull-right">
+    Right
+  </button>
+  <div class="segmented-control">
+    <a class="control-item active">One</a>
+    <a class="control-item">Two</a>
+    <a class="control-item">Three</a>
+  </div>
+</header>
+{% endhighlight %}
+
+
+## Tab bar
+Use Ratchicons in the `.tab-bar` to represent different sections of your app.
+
+{% highlight html %}
+<nav class="bar bar-tab bar-light bg-faded">
+  <a class="tab-item active" href="#">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-person"></span>
+    <span class="tab-label">Profile</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-star-filled"></span>
+    <span class="tab-label">Favorites</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-search"></span>
+    <span class="tab-label">Search</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
 </nav>
 {% endhighlight %}
 
-## Containers
+### Tab bar (labels only)
+If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.
 
-Although it's not required, you can wrap a navbar in a `.container` to center it on a page or add one within to only center the contents of a [fixed or static top navbar](#placement).
+{% highlight html %}
+<nav class="bar bar-tab bar-light bg-faded">
+  <a class="tab-item active" href="#">
+    Label
+  </a>
+  <a class="tab-item" href="#">
+    Label
+  </a>
+  <a class="tab-item" href="#">
+    Label
+  </a>
+</nav>
+{% endhighlight %}
 
-{% example html %}
-<div class="container">
-  <nav class="navbar navbar-light bg-faded">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>
+
+### Tab bar (inverse color)
+If you don't want to use icons, that's okay too. The text will appear larger to use the additional space.
+
+{% highlight html %}
+<nav class="bar bar-tab bar-dark bg-inverse">
+  <a class="tab-item active" href="#">
+    Label
+  </a>
+  <a class="tab-item" href="#">
+    Label
+  </a>
+  <a class="tab-item" href="#">
+    Label
+  </a>
+</nav>
+{% endhighlight %}
+
+## Standard bars
+Standard bars are basic fixed elements that can be positioned in four places. These can be used to house buttons, icons, or segmented controls (see following examples).
+
+{% highlight html %}
+<!-- Segmented control in standard bar fixed to top -->
+<nav class="bar bar-standard bar-light bg-faded">
+  <div class="segmented-control">
+    <a class="control-item active">Thing one</a>
+    <a class="control-item">Thing two</a>
+    <a class="control-item">Thing three</a>
+  </div>
+</nav>
+
+<!-- Block button in standard bar fixed below top bar -->
+<div class="bar bar-standard bar-header-secondary bar-light bg-faded">
+  <button class="btn btn-block">Block level button</button>
 </div>
-{% endexample %}
 
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </div>
-</nav>
-{% endexample %}
+<!-- Block button in standard bar fixed above the footer -->
+<div class="bar bar-standard bar-footer-secondary bar-light bg-faded">
+  <button class="btn btn-block">Block level button</button>
+</div>
 
-## Placement
+<!-- Icons in standard bar fixed to the bottom of the screen -->
+<div class="bar bar-standard bar-footer bar-light bg-faded">
+  <a class="icon icon-compose pull-left"></a>
+  <a class="icon icon-gear pull-right"></a>
+</div>
+{% endhighlight %}
 
-Navbars can be statically placed (their default behavior), static without rounded corners, or fixed to the top or bottom of the viewport.
+## Color schemes
+Theming the navbar has never been easier thanks to the combination of a simple link color modifier class and `background-color` utilities. Put another way, you specify light or dark and apply a background color.
 
-{% example html %}
-<nav class="navbar navbar-full navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Full width</a>
-</nav>
-{% endexample %}
+### Inverse color
 
-{% example html %}
-<nav class="navbar navbar-fixed-top navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Fixed top</a>
-</nav>
-{% endexample %}
+{% highlight html %}
+<header class="bar bar-nav bar-dark bg-inverse">
+  <h1 class="title">Inverse color</h1>
+</header>
+{% endhighlight %}
 
-{% example html %}
-<nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
-  <a class="navbar-brand" href="#">Fixed bottom</a>
-</nav>
-{% endexample %}
+### Primary color
 
+{% highlight html %}
+<header class="bar bar-nav bar-dark bg-primary">
+  <h1 class="title">Primary color</h1>
+</header>
+{% endhighlight %}
 
-## Collapsible content
+### Custom color
 
-Our collapse plugin allows you to use a `<button>` or `<a>` to toggle hidden content.
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-    &#9776;
-  </button>
-  <div class="collapse" id="exCollapsingNavbar">
-    <div class="bg-inverse p-a-1">
-      <h4>Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-</nav>
-{% endexample %}
-
-For more complex navbar patterns, like those used in Bootstrap v3, use the `.navbar-toggleable-*` classes in conjunction with the `.navbar-toggler`. These classes override our responsive utilities to show navigation only when content is meant to be shown.
-
-{% example html %}
-<nav class="navbar navbar-light bg-faded">
-  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-    &#9776;
-  </button>
-  <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-    <a class="navbar-brand" href="#">Responsive navbar</a>
-    <ul class="nav navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-{% endexample %}
+{% highlight html %}
+<header class="bar bar-nav bar-light" style="background-color: #e3f2fd;">
+  <h1 class="title">Custom color</h1>
+</header>
+{% endhighlight %}

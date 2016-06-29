@@ -3,7 +3,7 @@
   <head>
     {% include header.html %}
   </head>
-  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+  <body class="bd-docs">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -24,7 +24,7 @@
         <div class="col-xs-12 col-md-2 bd-sidebar">
           {% include nav-docs.html %}
         </div>
-        <div class="col-xs-12 col-md-8 bd-content">
+        <div class="col-xs-12 col-md-7 bd-content">
           <h1 class="bd-title" id="content">{{ page.title }}</h1>
           {{ content }}
         </div>
