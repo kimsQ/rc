@@ -1020,6 +1020,7 @@
   <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
   <li><a href="#button-tags" id="markdown-toc-button-tags">Button tags</a></li>
   <li><a href="#outline-buttons" id="markdown-toc-outline-buttons">Outline buttons</a></li>
+  <li><a href="#circle-buttons" id="markdown-toc-circle-buttons">Circle buttons</a></li>
   <li><a href="#sizes" id="markdown-toc-sizes">Sizes</a></li>
   <li><a href="#active-state" id="markdown-toc-active-state">Active state</a></li>
   <li><a href="#disabled-state" id="markdown-toc-disabled-state">Disabled state</a></li>
@@ -1035,29 +1036,7 @@
 
 <p>Bootstrap includes six predefined button styles, each serving its own semantic purpose.</p>
 
-<div class="bd-example" data-example-id="">
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
-
-<!-- Secondary, outline button -->
-<button type="button" class="btn btn-secondary">Secondary</button>
-
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Success</button>
-
-<!-- Contextual button for informational alert messages -->
-<button type="button" class="btn btn-info">Info</button>
-
-<!-- Indicates caution should be taken with this action -->
-<button type="button" class="btn btn-warning">Warning</button>
-
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Danger</button>
-
-<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-<button type="button" class="btn btn-link">Link</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Secondary, outline button --&gt;</span>
@@ -1076,7 +1055,7 @@
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
 
 <span class="c">&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
 <div class="bd-callout bd-callout-warning">
 <h4 id="conveying-meaning-to-assistive-technologies">Conveying meaning to assistive technologies</h4>
@@ -1090,37 +1069,33 @@
 
 <p>When using button classes on <code class="highlighter-rouge">&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code class="highlighter-rouge">role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
 
-<div class="bd-example" data-example-id="">
-<a class="btn btn-primary" href="#" role="button">Link</a>
-<button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input" />
-<input class="btn btn-primary" type="submit" value="Submit" />
-<input class="btn btn-primary" type="reset" value="Reset" />
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Submit"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></div>
+<span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">type=</span><span class="s">"reset"</span> <span class="na">value=</span><span class="s">"Reset"</span><span class="nt">&gt;</span></code></pre></figure>
 
 <h2 id="outline-buttons">Outline buttons</h2>
 
 <p>In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code class="highlighter-rouge">.btn-outline-*</code> ones to remove all background images and colors on any button.</p>
 
-<div class="bd-example" data-example-id="">
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-secondary">Secondary</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-info">Info</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
-</div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-outline-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<h2 id="circle-buttons">Circle buttons</h2>
+
+<p>본 버튼은 Floating action buttons의 용도로 사용됩니다. 포지션 유틸리티와 같이 사용하면 좋습니다.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-primary"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-secondary"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-success"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-info"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-warning"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-circle-danger"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"icon icon-star-filled"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span></code></pre></figure>
 
 <h2 id="sizes">Sizes</h2>
 
@@ -1291,20 +1266,49 @@
             </div>
             <div class="col-md-4" style="padding-left: 0">
               <div class="device docs-scrollspy docs-affix" id="nav-device">
-                
-<ul class="nav device-content">
-  <li><div class="screen-bg"></div></li>
-  <li class="ratchet-body jsfiddle">
-      <a href="#basics" style="display: none"></a>
-      <iframe width="100%" height="580" src="//jsfiddle.net/gitaek/tbfehm48/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-      <button class="btn btn-link" data-history="back"><i class="fa fa-undo" aria-hidden="true" data-toggle="tooltip" title="Back"></i></button>
+                <ul class="nav device-content">
+  <li><a class="screen-bg"></a></li>
+  <li>
+    <a class="nav-link ratchet-body active" href="#content">
+      <iframe width="100%" height="555" src="/examples/components/buttons/basic.html" frameborder="0"></iframe>
+    </a>
   </li>
-  <li class="ratchet-body jsfiddle active">
-      <a href="#supported-content" style="display: none"></a>
-      <iframe width="100%" height="580" src="//jsfiddle.net/gitaek/tbfehm48/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-      <button class="btn btn-link" data-history="back"><i class="fa fa-undo" aria-hidden="true" data-toggle="tooltip" title="Back"></i></button>
+  <li>
+    <a class="nav-link ratchet-body" href="#button-tags">
+      <iframe width="100%" height="555" src="/examples/components/buttons/button-tags.html" frameborder="0"></iframe>
+    </a>
   </li>
-</li>
+  <li>
+    <a class="nav-link ratchet-body" href="#outline-buttons">
+      <iframe width="100%" height="555" src="/examples/components/buttons/outline-buttons.html" frameborder="0"></iframe>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link ratchet-body" href="#circle-buttons">
+      <iframe width="100%" height="555" src="/examples/components/buttons/circle-buttons.html" frameborder="0"></iframe>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link ratchet-body" href="#sizes">
+      <iframe width="100%" height="555" src="/examples/components/buttons/sizes.html" frameborder="0"></iframe>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link ratchet-body" href="#active-state">
+      <iframe width="100%" height="555" src="/examples/components/buttons/active-state.html" frameborder="0"></iframe>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link ratchet-body" href="#disabled-state">
+      <iframe width="100%" height="555" src="/examples/components/buttons/disabled-state.html" frameborder="0"></iframe>
+    </a>
+  </li>
+  <li>
+    <a class="nav-link ratchet-body" href="#button-plugin">
+
+    </a>
+  </li>
+</ul>
 
               </div>
             </div>

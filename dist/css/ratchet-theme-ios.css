@@ -36,14 +36,14 @@ p {
   background-color: rgba(247, 247, 247, .98);
   border: 1px solid #929292;
   -webkit-transition: all;
-     -moz-transition: all;
+          -o-transition: all;
           transition: all;
   -webkit-transition-timing-function: linear;
-     -moz-transition-timing-function: linear;
-          transition-timing-function: linear;
+          -o-transition-timing-function: linear;
+     transition-timing-function: linear;
   -webkit-transition-duration: .2s;
-     -moz-transition-duration: .2s;
-          transition-duration: .2s;
+          -o-transition-duration: .2s;
+     transition-duration: .2s;
 }
 .btn:active, .btn.active {
   color: #fff;
@@ -300,7 +300,7 @@ textarea,
   color: #929292;
   border-color: #929292;
   -webkit-transition: background-color .1s linear;
-     -moz-transition: background-color .1s linear;
+          -o-transition: background-color .1s linear;
           transition: background-color .1s linear;
 }
 .segmented-control .control-item:active {
@@ -359,7 +359,6 @@ textarea,
 .popover {
   border-radius: 12px;
   -webkit-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
-     -moz-transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
           transition: -webkit-transform .2s ease-in-out, opacity .2s ease-in-out;
 }
 .popover:before {
@@ -382,13 +381,13 @@ textarea,
 
 .modal {
   -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-     -moz-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-          transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+          -o-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+     transition-timing-function: cubic-bezier(.1, .5, .1, 1);
 }
 .modal.active {
   -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-     -moz-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-          transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+          -o-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+     transition-timing-function: cubic-bezier(.1, .5, .1, 1);
 }
 
 .toggle {
@@ -397,19 +396,25 @@ textarea,
   -webkit-box-shadow: inset 0 0 0 0 #e1e1e1;
           box-shadow: inset 0 0 0 0 #e1e1e1;
   -webkit-transition-duration: .2s;
-     -moz-transition-duration: .2s;
-          transition-duration: .2s;
+          -o-transition-duration: .2s;
+     transition-duration: .2s;
   -webkit-transition-property: box-shadow, border;
-     -moz-transition-property: box-shadow, border;
+          -webkit-transition-property: border, -webkit-box-shadow;
+          transition-property: border, -webkit-box-shadow;
+          -o-transition-property: box-shadow, border;
           transition-property: box-shadow, border;
+          transition-property: box-shadow, border, -webkit-box-shadow;
 }
 .toggle .toggle-handle {
   border: 1px solid rgba(0, 0, 0, .2);
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, .08);
           box-shadow: 0 3px 3px rgba(0, 0, 0, .08);
   -webkit-transition-property: -webkit-transform, border, width;
-     -moz-transition-property:    -moz-transform, border, width;
-          transition-property:         transform, border, width;
+          -webkit-transition-property: border, width, -webkit-transform;
+          transition-property: border, width, -webkit-transform;
+          -o-transition-property: transform, border, width, -o-transform;
+          transition-property: transform, border, width;
+          transition-property:         transform, border, width, -webkit-transform, -o-transform;
 }
 .toggle:before {
   display: none;
@@ -431,26 +436,26 @@ textarea,
 
 .content.fade {
   -webkit-transition: opacity .2s ease-in-out;
-     -moz-transition: opacity .2s ease-in-out;
+          -o-transition: opacity .2s ease-in-out;
           transition: opacity .2s ease-in-out;
 }
 .content.sliding {
   -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-     -moz-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
-          transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+          -o-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+     transition-timing-function: cubic-bezier(.1, .5, .1, 1);
 }
 .content.sliding.sliding-in, .content.sliding.right:not([class*="sliding-in"]) {
   -webkit-animation-name: fadeOverlay;
-     -moz-animation-name: fadeOverlay;
-          animation-name: fadeOverlay;
+          -o-animation-name: fadeOverlay;
+     animation-name: fadeOverlay;
   -webkit-animation-duration: .4s;
-     -moz-animation-duration: .4s;
-          animation-duration: .4s;
+          -o-animation-duration: .4s;
+     animation-duration: .4s;
 }
 .content.sliding.right:not([class*="sliding-in"]) {
   -webkit-animation-direction: reverse;
-     -moz-animation-direction: reverse;
-          animation-direction: reverse;
+          -o-animation-direction: reverse;
+     animation-direction: reverse;
 }
 .content.sliding.left {
   -webkit-transform: translate3d(-20%, 0, 0);
@@ -469,3 +474,4 @@ textarea,
             box-shadow: 0 0 10px rgba(0, 0, 0, .3), -320px 0 0 rgba(0, 0, 0, .1);
   }
 }
+/*# sourceMappingURL=ratchet-theme-ios.css.map */

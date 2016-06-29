@@ -1499,8 +1499,11 @@ a.bg-danger:focus, a.bg-danger:hover {
     background-color: #fff;
     opacity: 0;
     -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
-    -moz-transition: -moz-transform .25s, opacity 1ms .25s;
+    -webkit-transition: opacity 1ms .25s, -webkit-transform .25s;
+    transition: opacity 1ms .25s, -webkit-transform .25s;
+    -o-transition: transform .25s, opacity 1ms .25s, -o-transform .25s;
     transition: transform .25s, opacity 1ms .25s;
+    transition: transform .25s, opacity 1ms .25s, -webkit-transform .25s, -o-transform .25s;
     -webkit-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -1509,8 +1512,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     height: 100%;
     opacity: 1;
     -webkit-transition: -webkit-transform .25s;
-    -moz-transition: -moz-transform .25s;
+    transition: -webkit-transform .25s;
+    -o-transition: transform .25s, -o-transform .25s;
     transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s, -o-transform .25s;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1518,23 +1523,22 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .modal.zoom {
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     visibility: hidden;
     -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
     -ms-transform: scale(0.7);
-    transform: scale(0.7);
+    -o-transform: scale(0.7);
+       transform: scale(0.7);
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 .modal.zoom.active {
     visibility: visible;
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
     -ms-transform: scale(1);
-    transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
 }
 
 /*
@@ -1553,18 +1557,18 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 20;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+       transform: translateX(-50%) translateY(-50%);
 }
 .popup.active {
     visibility: visible;
 }
 .popup.active .popup-content {
-    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.1);
+            box-shadow: 0 0 15px rgba(0,0,0,.1);
     position: relative;
     border-radius: 3px;
     margin: 0 auto;
@@ -1573,63 +1577,59 @@ a.bg-danger:focus, a.bg-danger:hover {
 /*zoom*/
 .popup.zoom.active .popup-content {
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
     -ms-transform: scale(1);
-    transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
     opacity: 1;
 }
 .popup.zoom .popup-content {
     opacity: 0;
     -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
     -ms-transform: scale(0.7);
-    transform: scale(0.7);
+    -o-transform: scale(0.7);
+       transform: scale(0.7);
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 /*slide-up*/
 .popup.slide-up.active .popup-content {
     -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
     -ms-transform: translateY(0);
-    transform: translateY(0);
+    -o-transform: translateY(0);
+       transform: translateY(0);
     opacity: 1;
 }
 .popup.slide-up .popup-content {
     -webkit-transform: translateY(20%);
-    -moz-transform: translateY(20%);
     -ms-transform: translateY(20%);
-    transform: translateY(20%);
+    -o-transform: translateY(20%);
+       transform: translateY(20%);
     opacity: 0;
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 /*fall*/
 .popup.fall {
     -webkit-perspective: 1300px;
-    -moz-perspective: 1300px;
     perspective: 1300px;
 }
 .popup.fall .popup-content {
     -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: translateZ(600px) rotateX(20deg);
-    -moz-transform: translateZ(600px) rotateX(20deg);
     -ms-transform: translateZ(600px) rotateX(20deg);
     transform: translateZ(600px) rotateX(20deg);
     opacity: 0;
 }
 .popup.fall.active .popup-content {
     -webkit-transition: all 0.3s ease-in;
-    -moz-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     -webkit-transform: translateZ(0px) rotateX(0deg);
-    -moz-transform: translateZ(0px) rotateX(0deg);
     -ms-transform: translateZ(0px) rotateX(0deg);
     transform: translateZ(0px) rotateX(0deg);
     opacity: 1;
@@ -1638,25 +1638,21 @@ a.bg-danger:focus, a.bg-danger:hover {
 /*flip*/
 .popup.flip {
     -webkit-perspective: 1300px;
-    -moz-perspective: 1300px;
     perspective: 1300px;
 }
 .popup.flip  .popup-content {
     -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-transform: rotateY(-70deg);
-    -moz-transform: rotateY(-70deg);
     -ms-transform: rotateY(-70deg);
     transform: rotateY(-70deg);
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
     opacity: 0;
 }
 .popup.flip.active .popup-content {
     -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     transform: rotateY(0deg);
     opacity: 1;
@@ -1729,7 +1725,11 @@ a.bg-danger:focus, a.bg-danger:hover {
     opacity: 0;
     -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
     -o-transition: -o-transform .25s, opacity 1ms .25s;
+    -webkit-transition: opacity 1ms .25s, -webkit-transform .25s;
+    transition: opacity 1ms .25s, -webkit-transform .25s;
+    -o-transition: transform .25s, opacity 1ms .25s, -o-transform .25s;
     transition: transform .25s, opacity 1ms .25s;
+    transition: transform .25s, opacity 1ms .25s, -webkit-transform .25s, -o-transform .25s;
     -webkit-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
@@ -1741,7 +1741,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     opacity: 1;
     -webkit-transition: -webkit-transform .25s;
     -o-transition: -o-transform .25s;
+    transition: -webkit-transform .25s;
+    -o-transition: transform .25s, -o-transform .25s;
     transition: transform .25s;
+    transition: transform .25s, -webkit-transform .25s, -o-transform .25s;
     -webkit-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1766,7 +1769,7 @@ a.bg-danger:focus, a.bg-danger:hover {
           box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   opacity: 0;
   -webkit-transition: all .25s linear;
-     -moz-transition: all .25s linear;
+          -o-transition: all .25s linear;
           transition: all .25s linear;
   -webkit-transform: translate3d(0, -15px, 0);
       -ms-transform: translate3d(0, -15px, 0);
@@ -1849,7 +1852,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .page.transition {
     -webkit-transition-duration: .4s;
-    transition-duration: .4s;
+    -o-transition-duration: .4s;
+       transition-duration: .4s;
 }
 
 
@@ -1860,36 +1864,48 @@ a.bg-danger:focus, a.bg-danger:hover {
  */
 
 .fbutton-tl{
-    animation: fromTop 1s 1;
+    -o-animation: fromTop 1s 1;
+       animation: fromTop 1s 1;
     -webkit-animation: fromTop 1s 1;
 }
 .fbutton-tr{
-    animation: fromTop 1.3s 1;
+    -o-animation: fromTop 1.3s 1;
+       animation: fromTop 1.3s 1;
     -webkit-animation: fromTop 1.3s 1;
 } 
 .fbutton-br{
-    animation: fromBottom 1.6s 1;
+    -o-animation: fromBottom 1.6s 1;
+       animation: fromBottom 1.6s 1;
     -webkit-animation: fromBottom 1.6s 1;
 }
 .fbutton-bl{
-    animation: fromBottom 0.5s 1;
+    -o-animation: fromBottom 0.5s 1;
+       animation: fromBottom 0.5s 1;
     -webkit-animation: fromBottom 0.5s 1;
 }        
+@-o-keyframes fromBottom {
+    0% {-o-transform: translateY(250px);transform: translateY(250px)}
+    100% {-o-transform: translateY(0);transform: translateY(0)}
+}        
 @keyframes fromBottom {
-    0% {transform: translateY(250px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform: translateY(250px);-o-transform: translateY(250px);transform: translateY(250px)}
+    100% {-webkit-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0)}
+}
+@-o-keyframes fromTop {
+    0% {-o-transform: translateY(-250px);transform: translateY(-250px)}
+    100% {-o-transform: translateY(0);transform: translateY(0)}
 }
 @keyframes fromTop {
-    0% {transform: translateY(-250px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform: translateY(-250px);-o-transform: translateY(-250px);transform: translateY(-250px)}
+    100% {-webkit-transform: translateY(0);-o-transform: translateY(0);transform: translateY(0)}
 }
 @-webkit-keyframes fromBottom {
-    0% {transform: translateY(250px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform: translateY(250px);transform: translateY(250px)}
+    100% {-webkit-transform: translateY(0);transform: translateY(0)}
 }    
 @-webkit-keyframes fromTop {
-    0% {transform: translateY(-250px)}
-    100% {transform: translateY(0)}
+    0% {-webkit-transform: translateY(-250px);transform: translateY(-250px)}
+    100% {-webkit-transform: translateY(0);transform: translateY(0)}
 }   
 
 .fbutton, 
@@ -1897,7 +1913,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-tr, 
 .fbutton-bl, 
 .fbutton-br {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 25px;
     position: fixed;
     white-space: nowrap;
@@ -1929,7 +1946,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     position: relative;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     cursor: pointer;
     outline: none;
     padding: 0;
@@ -1982,7 +2000,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-tr *:after, 
 .fbutton-bl *:after, 
 .fbutton-br *:after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 .fbutton-button-main:active {
@@ -2002,16 +2021,23 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-main-icon-active, 
 .fbutton-main-icon-resting {
     -webkit-transform: scale(1) rotate(360deg);
-    transform: scale(1) rotate(360deg);
+    -ms-transform: scale(1) rotate(360deg);
+     -o-transform: scale(1) rotate(360deg);
+        transform: scale(1) rotate(360deg);
     -webkit-transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 1, 1);
+    transition: -webkit-transform 150ms cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: transform 150ms cubic-bezier(0.4, 0, 1, 1), -o-transform 150ms cubic-bezier(0.4, 0, 1, 1);
     transition: transform 150ms cubic-bezier(0.4, 0, 1, 1);
+    transition: transform 150ms cubic-bezier(0.4, 0, 1, 1), -webkit-transform 150ms cubic-bezier(0.4, 0, 1, 1), -o-transform 150ms cubic-bezier(0.4, 0, 1, 1);
 }
 
 .fbutton.active .fbutton-main-icon-active, 
 .fbutton.active .fbutton-main-icon-resting, 
 .fbutton.active .fbutton-child-icon {
     -webkit-transform: scale(1) rotate(0deg);
-    transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+     -o-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
 }
 
 
@@ -2056,7 +2082,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     position: relative;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     cursor: pointer;
     outline: none;
     padding: 0;
@@ -2069,6 +2096,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 [data-mfb-label]:after {
     content: attr(data-mfb-label);
     opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     background: rgba(0, 0, 0, 0.4);
     padding: 4px 10px;
@@ -2085,6 +2114,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton.active [data-mfb-label]:after {
     content: attr(data-mfb-label);
     opacity: 1;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -2105,50 +2136,82 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-bl.zoomin .fbutton-list li, 
 .fbutton-br.zoomin .fbutton-list li {
     -webkit-transform: scale(0);
-    transform: scale(0);
+    -ms-transform: scale(0);
+     -o-transform: scale(0);
+        transform: scale(0);
 }
 
 .fbutton-bl.zoomin .fbutton-list li:nth-child(1), 
 .fbutton-br.zoomin .fbutton-list li:nth-child(1) {
     -webkit-transform: translateY(-70px) scale(0);
-    transform: translateY(-70px) scale(0);
+    -ms-transform: translateY(-70px) scale(0);
+     -o-transform: translateY(-70px) scale(0);
+        transform: translateY(-70px) scale(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
-    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
 }
 .fbutton-bl.zoomin .fbutton-list li:nth-child(2),  
 .fbutton-br.zoomin .fbutton-list li:nth-child(2) {
     -webkit-transform: translateY(-140px) scale(0);
-    transform: translateY(-140px) scale(0);
+    -ms-transform: translateY(-140px) scale(0);
+     -o-transform: translateY(-140px) scale(0);
+        transform: translateY(-140px) scale(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
-    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+         -o-transition-delay: 0.1s;
+            transition-delay: 0.1s;
 }
 .fbutton-bl.zoomin .fbutton-list li:nth-child(3), 
 .fbutton-br.zoomin .fbutton-list li:nth-child(3) {
     -webkit-transform: translateY(-210px) scale(0);
-    transform: translateY(-210px) scale(0);
+    -ms-transform: translateY(-210px) scale(0);
+     -o-transform: translateY(-210px) scale(0);
+        transform: translateY(-210px) scale(0);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
-    transition-delay: 0.05s;
+    -webkit-transition-delay: 0.05s;
+         -o-transition-delay: 0.05s;
+            transition-delay: 0.05s;
 }
 
 .fbutton-bl.zoomin.active .fbutton-list li:nth-child(1), 
 .fbutton-br.zoomin.active .fbutton-list li:nth-child(1) {
     -webkit-transform: translateY(-70px) scale(1);
-    transform: translateY(-70px) scale(1);
-    transition-delay: 0.05s;
+    -ms-transform: translateY(-70px) scale(1);
+     -o-transform: translateY(-70px) scale(1);
+        transform: translateY(-70px) scale(1);
+    -webkit-transition-delay: 0.05s;
+         -o-transition-delay: 0.05s;
+            transition-delay: 0.05s;
 }
 
 .fbutton-bl.zoomin.active .fbutton-list li:nth-child(2),  
 .fbutton-br.zoomin.active .fbutton-list li:nth-child(2) {
     -webkit-transform: translateY(-140px) scale(1);
-    transform: translateY(-140px) scale(1);
-    transition-delay: 0.1s;
+    -ms-transform: translateY(-140px) scale(1);
+     -o-transform: translateY(-140px) scale(1);
+        transform: translateY(-140px) scale(1);
+    -webkit-transition-delay: 0.1s;
+         -o-transition-delay: 0.1s;
+            transition-delay: 0.1s;
 }
 
 .fbutton-bl.zoomin.active .fbutton-list li:nth-child(3), 
 .fbutton-br.zoomin.active .fbutton-list li:nth-child(3) {
     -webkit-transform: translateY(-210px) scale(1);
-    transform: translateY(-210px) scale(1);
-    transition-delay: 0.15s;
+    -ms-transform: translateY(-210px) scale(1);
+     -o-transform: translateY(-210px) scale(1);
+        transform: translateY(-210px) scale(1);
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
 }
 
 
@@ -2158,6 +2221,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-bl.slidein .fbutton-list li, 
 .fbutton-br.slidein .fbutton-list li {
     opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -2169,19 +2234,25 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-bl.slidein.active .fbutton-list li:nth-child(1), 
 .fbutton-br.slidein.active .fbutton-list li:nth-child(1) {
     -webkit-transform: translateY(-70px);
-    transform: translateY(-70px);
+    -ms-transform: translateY(-70px);
+     -o-transform: translateY(-70px);
+        transform: translateY(-70px);
 }
 
 .fbutton-bl.slidein.active .fbutton-list li:nth-child(2),  
 .fbutton-br.slidein.active .fbutton-list li:nth-child(2) {
     -webkit-transform: translateY(-140px);
-    transform: translateY(-140px);
+    -ms-transform: translateY(-140px);
+     -o-transform: translateY(-140px);
+        transform: translateY(-140px);
 }
 
 .fbutton-bl.slidein.active .fbutton-list li:nth-child(3), 
 .fbutton-br.slidein.active .fbutton-list li:nth-child(3) {
     -webkit-transform: translateY(-210px);
-    transform: translateY(-210px);
+    -ms-transform: translateY(-210px);
+     -o-transform: translateY(-210px);
+        transform: translateY(-210px);
 }
 
 
@@ -2190,8 +2261,12 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fbutton-bl.slidein-spring .fbutton-list li, 
 .fbutton-br.slidein-spring .fbutton-list li {
     opacity: 0;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+         -o-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .fbutton-bl.slidein-spring.active .fbutton-list li, 
@@ -2201,36 +2276,54 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .fbutton-bl.slidein-spring .fbutton-list li:nth-child(1), 
 .fbutton-br.slidein-spring .fbutton-list li:nth-child(1) {
-    transition-delay: 0.05s;
+    -webkit-transition-delay: 0.05s;
+         -o-transition-delay: 0.05s;
+            transition-delay: 0.05s;
 }
 .fbutton-bl.slidein-spring .fbutton-list li:nth-child(2),  
 .fbutton-br.slidein-spring .fbutton-list li:nth-child(2) {
-    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+         -o-transition-delay: 0.1s;
+            transition-delay: 0.1s;
 }
 .fbutton-bl.slidein-spring .fbutton-list li:nth-child(3), 
 .fbutton-br.slidein-spring .fbutton-list li:nth-child(3) {
-    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
 }
 
 .fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(1), 
 .fbutton-br.slidein-spring.active .fbutton-list li:nth-child(1) {
-    transition-delay: 0.05s;
+    -webkit-transition-delay: 0.05s;
+         -o-transition-delay: 0.05s;
+            transition-delay: 0.05s;
     -webkit-transform: translateY(-70px);
-    transform: translateY(-70px);
+    -ms-transform: translateY(-70px);
+     -o-transform: translateY(-70px);
+        transform: translateY(-70px);
 }
 
 .fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(2),  
 .fbutton-br.slidein-spring.active .fbutton-list li:nth-child(2) {
-    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s;
+         -o-transition-delay: 0.1s;
+            transition-delay: 0.1s;
     -webkit-transform: translateY(-140px);
-    transform: translateY(-140px);
+    -ms-transform: translateY(-140px);
+     -o-transform: translateY(-140px);
+        transform: translateY(-140px);
 }
 
 .fbutton-bl.slidein-spring.active .fbutton-list li:nth-child(3), 
 .fbutton-br.slidein-spring.active .fbutton-list li:nth-child(3) {
-    transition-delay: 0.15s;
+    -webkit-transition-delay: 0.15s;
+         -o-transition-delay: 0.15s;
+            transition-delay: 0.15s;
     -webkit-transform: translateY(-210px);
-    transform: translateY(-210px);
+    -ms-transform: translateY(-210px);
+     -o-transform: translateY(-210px);
+        transform: translateY(-210px);
 }
 
 
@@ -2250,4 +2343,4 @@ a.bg-danger:focus, a.bg-danger:hover {
   top: 45px;
   z-index: 10
 }
-
+/*# sourceMappingURL=rc-plus.css.map */

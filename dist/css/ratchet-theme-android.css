@@ -494,11 +494,15 @@ textarea,
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
           box-shadow: 0 0 3px rgba(0, 0, 0, .2);
   -webkit-transition: -webkit-transform .1s ease-in-out, opacity .2s ease-in-out;
-     -moz-transition:    -moz-transform .1s ease-in-out, opacity .2s ease-in-out;
-          transition:         transform .1s ease-in-out, opacity .2s ease-in-out;
+          -webkit-transition: opacity .2s ease-in-out, -webkit-transform .1s ease-in-out;
+          transition: opacity .2s ease-in-out, -webkit-transform .1s ease-in-out;
+          -o-transition: transform .1s ease-in-out, opacity .2s ease-in-out, -o-transform .1s ease-in-out;
+          transition: transform .1s ease-in-out, opacity .2s ease-in-out;
+          transition:         transform .1s ease-in-out, opacity .2s ease-in-out, -webkit-transform .1s ease-in-out, -o-transform .1s ease-in-out;
   -webkit-transform: scale(.75);
       -ms-transform: scale(.75);
-          transform: scale(.75);
+          -o-transform: scale(.75);
+     transform: scale(.75);
 }
 .popover:before {
   display: none;
@@ -506,7 +510,8 @@ textarea,
 .popover.visible {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
-          transform: scale(1);
+          -o-transform: scale(1);
+     transform: scale(1);
 }
 
 .backdrop {
@@ -620,3 +625,4 @@ textarea,
 .icon-up-nav:before {
   content: '\e809';
 }
+/*# sourceMappingURL=ratchet-theme-android.css.map */
