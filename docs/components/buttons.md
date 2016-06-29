@@ -71,6 +71,18 @@ In need of a button, but not the hefty background colors they bring? Replace the
 <button type="button" class="btn btn-outline-danger">Danger</button>
 {% endhighlight %}
 
+## Circle buttons
+
+본 버튼은 Floating action buttons의 용도로 사용됩니다. 포지션 유틸리티와 같이 사용하면 좋습니다.
+
+{% highlight html %}
+<button type="button" class="btn btn-circle-primary"><span class="icon icon-star-filled"></span></button>
+<button type="button" class="btn btn-circle-secondary"><span class="icon icon-star-filled"></span></button>
+<button type="button" class="btn btn-circle-success"><span class="icon icon-star-filled"></span></button>
+<button type="button" class="btn btn-circle-info"><span class="icon icon-star-filled"></span></button>
+<button type="button" class="btn btn-circle-warning"><span class="icon icon-star-filled"></span></button>
+<button type="button" class="btn btn-circle-danger"><span class="icon icon-star-filled"></span></button>
+{% endhighlight %}
 
 ## Sizes
 

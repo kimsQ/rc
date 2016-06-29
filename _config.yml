@@ -37,10 +37,10 @@ themes:           http://rcstore.kimsq.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            http://maxcdn.kimsq.com/rc/1.0.0-alpha.1/css/ratchet-plus.css
-  css_hash:       "sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
-  js:             http://maxcdn.kimsq.com/rc/1.0.0-alpha.1/js/ratchet-plus.js
-  js_hash:        "sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+  css:            http://cdn.kimsq.com/rc/1.0.0-alpha.1/css/ratchet-plus.css
+  css_hash:       ""
+  js:             http://cdn.kimsq.com/rc/1.0.0-alpha.1/js/ratchet-plus.js
+  js_hash:        ""
   jquery:         https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js
   jquery_hash:    "sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
   tether:         https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js

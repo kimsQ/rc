@@ -4,7 +4,7 @@ title: Download
 group: getting-started
 ---
 
-**Bootstrap v{{ site.current_version}}** is available for download in several ways, including some of your favorite package managers. Choose from the options below to snag just what you need.
+**ratchet-plus v{{ site.current_version}}** is available for download in several ways, including some of your favorite package managers. Choose from the options below to snag just what you need.
 
 <div class="row m-t-2">
   <div class="col-sm-6">
@@ -13,7 +13,7 @@ group: getting-started
 Download just the compiled and minified CSS and JavaScript. Doesn't include any documentation or original source files.
 
 {% comment %}
-<a href="{{ site.download.dist }}" class="btn btn-bs btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download Bootstrap</a>
+<a href="{{ site.download.dist }}" class="btn btn-bs btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download ratchet-plus</a>
 {% endcomment %}
 <span class="text-muted">Coming soon!</span>
 {% endmarkdown %}
@@ -30,79 +30,79 @@ Download everything: source Sass, JavaScript, and documentation files. **Require
 
 ## Package managers
 
-Pull in Bootstrap's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, Bootstrap will **require a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)** for a setup that matches our official compiled versions.
+Pull in 's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, ratchet-plus will **require a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)** for a setup that matches our official compiled versions.
 
 {% callout warning %}
-**Heads up!** Not all package managers have the v4 alpha published yet, but we should have them up shortly!
+**Heads up!** Not all package managers have the v1 alpha published yet, but we should have them up shortly!
 {% endcallout %}
 
 ### npm
 
-Install Bootstrap in your Node powered apps with [the npm package](https://www.npmjs.org/package/bootstrap):
+Install ratchet-plus in your Node powered apps with [the npm package](https://www.npmjs.org/package/ratchet-plus):
 
 {% highlight bash %}
-$ npm install bootstrap@{{ site.current_version }}
+$ npm install ratchet-plus@{{ site.current_version }}
 {% endhighlight %}
 
-`require('bootstrap')` will load all of Bootstrap's jQuery plugins onto the jQuery object. The `bootstrap` module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
+`require('ratchet-plus')` will load all of ratchet-plus's jQuery plugins onto the jQuery object. The `ratchet-plus` module itself does not export anything. You can manually load ratchet-plus's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
 
-Bootstrap's `package.json` contains some additional metadata under the following keys:
+ratchet-plus's `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to Bootstrap's main [Sass](http://sass-lang.com/) source file
-- `style` - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` - path to ratchet-plus's main [Sass](http://sass-lang.com/) source file
+- `style` - path to ratchet-plus's non-minified CSS that's been precompiled using the default settings (no customization)
 
 ### RubyGems
 
-Install Bootstrap in your Ruby apps using [Bundler](http://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](http://bundler.io/gemfile.html):
+Install ratchet-plus in your Ruby apps using [Bundler](http://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](http://bundler.io/gemfile.html):
 
 {% highlight ruby %}
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'ratchet-plus', '~> 1.0.0.alpha1'
 {% endhighlight %}
 
 Alternatively, if you're not using Bundler, you can install the gem by running this command:
 
 {% highlight bash %}
-$ gem install bootstrap -v 4.0.0.alpha3
+$ gem install ratchet-plus -v 1.0.0.alpha1
 {% endhighlight %}
 
-[See the gem's README](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md) for further details.
+[See the gem's README](https://github.com/kimsQ/ratchet-plus-rubygem/blob/master/README.md) for further details.
 
 ### Meteor
 
 {% highlight bash %}
-$ meteor add twbs:bootstrap@={{ site.current_version }}
+$ meteor add kimsQ:ratchet-plus@={{ site.current_version }}
 {% endhighlight %}
 
 ### Composer
 
-You can also install and manage Bootstrap's Sass and JavaScript using [Composer](https://getcomposer.org):
+You can also install and manage ratchet-plus's Sass and JavaScript using [Composer](https://getcomposer.org):
 
 {% highlight bash %}
-$ composer require twbs/bootstrap
+$ composer require kimsQ/ratchet-plus
 {% endhighlight %}
 
 ### Bower
 
-Install and manage Bootstrap's Sass and JavaScript using [Bower](http://bower.io).
+Install and manage ratchet-plus's Sass and JavaScript using [Bower](http://bower.io).
 
 {% highlight bash %}
-$ bower install bootstrap#v{{ site.current_version }}
+$ bower install ratchet-plus#v{{ site.current_version }}
 {% endhighlight %}
 
 ### NuGet
 
-If you develop in .NET, you can also install and manage Bootstrap's [CSS](https://www.nuget.org/packages/bootstrap/) or [Sass](https://www.nuget.org/packages/bootstrap.sass/) and JavaScript using [NuGet](https://www.nuget.org):
+If you develop in .NET, you can also install and manage ratchet-plus's [CSS](https://www.nuget.org/packages/ratchet-plus/) or [Sass](https://www.nuget.org/packages/ratchet-plus.sass/) and JavaScript using [NuGet](https://www.nuget.org):
 
 {% highlight powershell %}
-PM> Install-Package bootstrap -Pre
-PM> Install-Package bootstrap.sass -Pre
+PM> Install-Package ratchet-plus -Pre
+PM> Install-Package ratchet-plus.sass -Pre
 {% endhighlight %}
 
-The `-Pre` is required until Bootstrap v4 has a stable release.
+The `-Pre` is required until ratchet-plus v1 has a stable release.
 
 ## Custom builds
 
-Need only a part of Bootstrap's CSS or JS? Use one of the custom builds to snag just what you need.
+Need only a part of ratchet-plus's CSS or JS? Use one of the custom builds to snag just what you need.
 
 <div class="row">
   <div class="col-sm-4">
@@ -117,8 +117,7 @@ Need only a part of Bootstrap's CSS or JS? Use one of the custom builds to snag 
   </div>
   <div class="col-sm-4">
     <h3>Flexbox</h3>
-    <p>All of Bootstrap with flexbox enabled and <strong>lower browser support</strong>.</p>
+    <p>All of ratchet-plus with flexbox enabled and <strong>lower browser support</strong>.</p>
     <a class="btn btn-bs btn-outline" href="#">Download</a>
   </div>
 </div>
-

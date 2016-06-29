@@ -173,12 +173,12 @@ Standard bars are basic fixed elements that can be positioned in four places. Th
 
 <!-- Block button in standard bar fixed below top bar -->
 <div class="bar bar-standard bar-header-secondary bar-light bg-faded">
-  <button class="btn btn-block">Block level button</button>
+  <button class="btn btn-secondary btn-block">Block level button</button>
 </div>
 
 <!-- Block button in standard bar fixed above the footer -->
 <div class="bar bar-standard bar-footer-secondary bar-light bg-faded">
-  <button class="btn btn-block">Block level button</button>
+  <button class="btn btn-secondary btn-block">Block level button</button>
 </div>
 
 <!-- Icons in standard bar fixed to the bottom of the screen -->

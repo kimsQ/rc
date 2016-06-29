@@ -100,6 +100,30 @@ fieldset[disabled] a.btn {
 
 
 //
+// Circle buttons
+//
+
+.btn-circle-primary {
+  @include button-circle-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-circle-secondary {
+  @include button-circle-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-circle-info {
+  @include button-circle-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-circle-success {
+  @include button-circle-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-circle-warning {
+  @include button-circle-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-circle-danger {
+  @include button-circle-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+
+//
 // Link buttons
 //
 
