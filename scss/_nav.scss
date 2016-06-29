@@ -209,3 +209,155 @@
     display: block;
   }
 }
+
+//
+// Nav controllers
+// --------------------------------------------------
+
+.bar {
+  .nav-control{
+    top: $btn-padding-y
+  }
+}
+
+.nav-control {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  font-size: .75rem;
+  font-weight: $font-weight-light;
+  background-color: $gray-lighter;
+  border: .0625rem solid $btn-secondary-border;
+  border-radius: $border-radius;
+
+  // Section within controller
+  .nav-link {
+    display: table-cell;
+    width: 1%;
+    padding-top: .375rem;
+    padding-bottom: .4375rem;
+    overflow: hidden;
+    line-height: 1;
+    background-color: $gray-lighter;;
+    color: $gray-light;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: .0625rem solid $btn-secondary-border;
+
+    // Remove border-left and shadow from first section
+    &:first-child {
+      border-left-width: 0;
+    }
+
+    // Tap state of segmented controller
+    &:active {
+      background-color: lighten($gray-light, 35%);
+    }
+
+    // Selected state of segmented controller
+    &.active {
+      background-color: #fff;
+      color: $gray;
+    }
+  }
+
+    // Other nav controller types
+    // --------------------------------------------------
+
+    // Primary
+    &.bg-primary {
+      border-color: $brand-primary;
+
+      .nav-link {
+        color: $brand-primary;
+        background-color: #fff;
+        border-color: $brand-primary;
+
+        &:active {
+          background-color: lighten($brand-primary, 35%);
+        }
+        &.active {
+          color: $gray-lightest;
+          background-color: $brand-primary;
+        }
+      }
+    }
+
+    // Success
+    &.bg-success {
+      border-color: $brand-success;
+
+      .nav-link {
+        color: $brand-success;
+        background-color: #fff;
+        border-color: $brand-success;
+
+        &:active {
+          background-color: lighten($brand-success, 35%);
+        }
+        &.active {
+          color: $gray-lightest;
+          background-color: $brand-success;
+        }
+      }
+    }
+
+    // Info
+    &.bg-info {
+      border-color: $brand-info;
+
+      .nav-link {
+        color: $brand-info;
+        background-color: #fff;
+        border-color: $brand-info;
+
+        &:active {
+          background-color: lighten($brand-info, 35%);
+        }
+        &.active {
+          color: #fff;
+          background-color: $brand-info;
+        }
+      }
+    }
+
+    // Warning
+    &.bg-warning {
+      border-color: $brand-warning;
+
+      .nav-link {
+        color: $brand-warning;
+        background-color: #fff;
+        border-color: $brand-warning;
+
+        &:active {
+          background-color: lighten($brand-warning, 35%);
+        }
+        &.active {
+          color: $gray-lightest;
+          background-color: $brand-warning;
+        }
+      }
+    }
+
+    // Danger
+    &.bg-danger {
+      border-color: $brand-danger;
+
+      .nav-link {
+        color: $brand-danger;
+        background-color: #fff;
+        border-color: $brand-danger;
+
+        &:active {
+          background-color: lighten($brand-danger, 35%);
+        }
+        &.active {
+          color: $gray-lightest;
+          background-color: $brand-danger;
+        }
+      }
+    }
+
+}

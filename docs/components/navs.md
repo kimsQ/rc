@@ -82,6 +82,17 @@ The same works for a navigation built with lists. bar 영역 내부에서 사용
 </ul>
 {% endexample %}
 
+## Controls
+Title bars can also house segmented controls. Feel free to add accompanying buttons too. The control will automatically layout itself out correctly.
+
+{% highlight html %}
+<div class="nav nav-control">
+  <a class="nav-link active">One</a>
+  <a class="nav-link">Two</a>
+  <a class="nav-link">Three</a>
+</div>
+{% endhighlight %}
+
 
 
 ## Tabs

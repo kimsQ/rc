@@ -377,7 +377,7 @@ select {
   cursor: pointer;
   user-select: none;
   border: 0.0625rem solid transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.53125rem 1rem;
   font-size: 1rem;
   border-radius: 0.125rem;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1252,7 +1252,7 @@ input[type="button"].btn-block {
 
 .bar .btn {
   position: relative;
-  top: .5rem;
+  top: 0.53125rem;
   z-index: 20;
   padding: .375rem .75rem .4375rem;
   margin-top: 0;
@@ -1482,6 +1482,94 @@ input[type="button"].btn-block {
 
 .tab-content > .active {
   display: block; }
+
+.bar .nav-control {
+  top: 0.53125rem; }
+
+.nav-control {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  font-size: .75rem;
+  font-weight: 400;
+  background-color: #eceeef;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.125rem; }
+  .nav-control .nav-link {
+    display: table-cell;
+    width: 1%;
+    padding-top: .375rem;
+    padding-bottom: .4375rem;
+    overflow: hidden;
+    line-height: 1;
+    background-color: #eceeef;
+    color: #818a91;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-left: 0.0625rem solid #ccc; }
+    .nav-control .nav-link:first-child {
+      border-left-width: 0; }
+    .nav-control .nav-link:active {
+      background-color: #e0e2e4; }
+    .nav-control .nav-link.active {
+      background-color: #fff;
+      color: #55595c; }
+  .nav-control.bg-primary {
+    border-color: #0275d8; }
+    .nav-control.bg-primary .nav-link {
+      color: #0275d8;
+      background-color: #fff;
+      border-color: #0275d8; }
+      .nav-control.bg-primary .nav-link:active {
+        background-color: #8fcafe; }
+      .nav-control.bg-primary .nav-link.active {
+        color: #f7f7f9;
+        background-color: #0275d8; }
+  .nav-control.bg-success {
+    border-color: #5cb85c; }
+    .nav-control.bg-success .nav-link {
+      color: #5cb85c;
+      background-color: #fff;
+      border-color: #5cb85c; }
+      .nav-control.bg-success .nav-link:active {
+        background-color: #d8eed8; }
+      .nav-control.bg-success .nav-link.active {
+        color: #f7f7f9;
+        background-color: #5cb85c; }
+  .nav-control.bg-info {
+    border-color: #5bc0de; }
+    .nav-control.bg-info .nav-link {
+      color: #5bc0de;
+      background-color: #fff;
+      border-color: #5bc0de; }
+      .nav-control.bg-info .nav-link:active {
+        background-color: #f0f9fc; }
+      .nav-control.bg-info .nav-link.active {
+        color: #fff;
+        background-color: #5bc0de; }
+  .nav-control.bg-warning {
+    border-color: #f0ad4e; }
+    .nav-control.bg-warning .nav-link {
+      color: #f0ad4e;
+      background-color: #fff;
+      border-color: #f0ad4e; }
+      .nav-control.bg-warning .nav-link:active {
+        background-color: #fef9f3; }
+      .nav-control.bg-warning .nav-link.active {
+        color: #f7f7f9;
+        background-color: #f0ad4e; }
+  .nav-control.bg-danger {
+    border-color: #d9534f; }
+    .nav-control.bg-danger .nav-link {
+      color: #d9534f;
+      background-color: #fff;
+      border-color: #d9534f; }
+      .nav-control.bg-danger .nav-link:active {
+        background-color: #f9e2e2; }
+      .nav-control.bg-danger .nav-link.active {
+        color: #f7f7f9;
+        background-color: #d9534f; }
 
 .badge {
   display: inline-block;
@@ -1831,94 +1919,6 @@ input[type="button"].btn-block {
 
 .content > .table-view:first-child {
   margin-top: 15px; }
-
-.segmented-control {
-  position: relative;
-  display: table;
-  overflow: hidden;
-  font-size: .75rem;
-  font-weight: 400;
-  background-color: #eceeef;
-  border: .0625rem solid #ccc;
-  border-radius: .1875rem; }
-  .segmented-control .control-item {
-    display: table-cell;
-    width: 1%;
-    padding-top: .375rem;
-    padding-bottom: .4375rem;
-    overflow: hidden;
-    line-height: 1;
-    color: #333;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    border-left: .0625rem solid #ccc; }
-    .segmented-control .control-item:first-child {
-      border-left-width: 0; }
-    .segmented-control .control-item:active {
-      background-color: #eee; }
-    .segmented-control .control-item.active {
-      background-color: #ccc; }
-
-.segmented-control-primary {
-  border-color: #0275d8; }
-  .segmented-control-primary .control-item {
-    color: #0275d8;
-    border-color: inherit; }
-    .segmented-control-primary .control-item:active {
-      background-color: #8fcafe; }
-    .segmented-control-primary .control-item.active {
-      color: #fff;
-      background-color: #0275d8; }
-
-.segmented-control-success {
-  border-color: #5cb85c; }
-  .segmented-control-success .control-item {
-    color: #5cb85c;
-    border-color: inherit; }
-    .segmented-control-success .control-item:active {
-      background-color: #d8eed8; }
-    .segmented-control-success .control-item.active {
-      color: #fff;
-      background-color: #5cb85c; }
-
-.segmented-control-info {
-  border-color: #5bc0de; }
-  .segmented-control-info .control-item {
-    color: #5bc0de;
-    border-color: inherit; }
-    .segmented-control-info .control-item:active {
-      background-color: #f0f9fc; }
-    .segmented-control-info .control-item.active {
-      color: #fff;
-      background-color: #5bc0de; }
-
-.segmented-control-warning {
-  border-color: #f0ad4e; }
-  .segmented-control-warning .control-item {
-    color: #f0ad4e;
-    border-color: inherit; }
-    .segmented-control-warning .control-item:active {
-      background-color: #fef9f3; }
-    .segmented-control-warning .control-item.active {
-      color: #fff;
-      background-color: #f0ad4e; }
-
-.segmented-control-danger {
-  border-color: #d9534f; }
-  .segmented-control-danger .control-item {
-    color: #d9534f;
-    border-color: inherit; }
-    .segmented-control-danger .control-item:active {
-      background-color: #f9e2e2; }
-    .segmented-control-danger .control-item.active {
-      color: #fff;
-      background-color: #d9534f; }
-
-.control-content {
-  display: none; }
-  .control-content.active {
-    display: block; }
 
 /*
  * modal 모달  

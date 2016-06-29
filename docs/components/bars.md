@@ -86,10 +86,10 @@ Title bars can also house segmented controls. Feel free to add accompanying butt
   <button class="btn btn-secondary pull-right">
     Right
   </button>
-  <div class="segmented-control">
-    <a class="control-item active">One</a>
-    <a class="control-item">Two</a>
-    <a class="control-item">Three</a>
+  <div class="nav nav-control">
+    <a class="nav-link active">One</a>
+    <a class="nav-link">Two</a>
+    <a class="nav-link">Three</a>
   </div>
 </header>
 {% endhighlight %}
@@ -164,10 +164,10 @@ Standard bars are basic fixed elements that can be positioned in four places. Th
 {% highlight html %}
 <!-- Segmented control in standard bar fixed to top -->
 <nav class="bar bar-standard bar-light bg-faded">
-  <div class="segmented-control">
-    <a class="control-item active">Thing one</a>
-    <a class="control-item">Thing two</a>
-    <a class="control-item">Thing three</a>
+  <div class="nav nav-control">
+    <a class="nav-link active">One</a>
+    <a class="nav-link">Two</a>
+    <a class="nav-link">Three</a>
   </div>
 </nav>
 
