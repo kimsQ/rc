@@ -1,0 +1,26 @@
+- name: basic-example
+  path: components/table-view
+
+- name: table-view-with-chevrons
+  path: components/table-view
+
+- name: table-view-with-badges
+  path: components/table-view
+
+- name: table-view-with-badges-and-chevrons
+  path: components/table-view
+
+- name: table-view-with-media-images
+  path: components/table-view
+
+- name: table-view-with-media-icons
+  path: components/table-view
+
+- name: table-view-with-buttons
+  path: components/table-view
+
+- name: table-view-with-toggles
+  path: components/table-view
+
+- name: carded-table-views
+  path: components/table-view
