@@ -1,4 +1,4 @@
-- name: Content
+- name: content
   path: components/toggle
   jsfiddle: kimsQ/0odhbtzv/
   history: true

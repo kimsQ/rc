@@ -1,4 +1,4 @@
-- name: Content
+- name: content
   path: extensions/photoswipe
   jsfiddle: kimsQ/0odhbtzv/
   history: true

@@ -1,4 +1,4 @@
-- name: Content
+- name: content
   path: extensions/swiper
   jsfiddle: kimsQ/0odhbtzv/
   history: true

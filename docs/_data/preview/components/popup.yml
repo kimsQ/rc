@@ -1,4 +1,4 @@
-- name: Content
+- name: content
   path: components/popup
   jsfiddle: kimsQ/0odhbtzv/
   history: true
