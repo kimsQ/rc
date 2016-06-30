@@ -3,3 +3,36 @@
 
 - name: title-bar-with-buttons
   path: components/bars/bar-nav
+
+- name: title-bar-with-buttons
+  path: components/bars/bar-nav
+
+- name: title-bar-with-icons
+  path: components/bars/bar-nav
+
+- name: title-bar-with-link-buttons-and-icons
+  path: components/bars/bar-nav
+
+- name: title-bar-with-segmented-control
+  path: components/bars/bar-nav
+
+- name: tab-bar
+  path: components/bars/bar-tab
+
+- name: tab-bar-labels-only
+  path: components/bars/bar-tab
+
+- name: tab-bar-inverse-color
+  path: components/bars/bar-tab
+
+- name: standard-bars
+  path: components/bars/bar-standard
+
+- name: color-schemes
+  path: components/bars/bar-nav
+
+- name: primary-color
+  path: components/bars/bar-nav
+
+- name: custom-color
+  path: components/bars/bar-nav
