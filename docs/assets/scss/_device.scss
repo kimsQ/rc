@@ -31,16 +31,22 @@
   position: absolute;
   z-index: 999
 }
-.device .device-content > li [data-history="back"] {
+.device .device-content .device-button {
   position: absolute;
   z-index: 9999;
-  bottom: -60px;
+  left: 35px;
+  right: 30px;
+  bottom: 65px;
   top: auto;
-  right: 10px;
-  left: auto;
-  color: #fff;
-  font-size: 30px
 }
+.device .device-content .device-button .pager a {
+  background-color: transparent;;
+  padding: 0.5rem;
+  font-size: 25px;
+  color: #fff;
+  border: none
+}
+
 .ratchet-body {
   opacity: 0;
   transition: opacity .2s ease-in-out;

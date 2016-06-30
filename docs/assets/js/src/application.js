@@ -27,6 +27,8 @@
 
     $('[data-toggle="popover"]').popover()
 
+    $('[data-toggle="tooltip"]').tooltip()
+
     // Demos within modals
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
