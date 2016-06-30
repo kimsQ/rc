@@ -988,15 +988,20 @@
   position: absolute;
   z-index: 999; }
 
-.device .device-content > li [data-history="back"] {
+.device .device-content .device-button {
   position: absolute;
   z-index: 9999;
-  bottom: -60px;
-  top: auto;
-  right: 10px;
-  left: auto;
+  left: 35px;
+  right: 30px;
+  bottom: 65px;
+  top: auto; }
+
+.device .device-content .device-button .pager a {
+  background-color: transparent;
+  padding: 0.5rem;
+  font-size: 25px;
   color: #fff;
-  font-size: 30px; }
+  border: none; }
 
 .ratchet-body {
   opacity: 0;
@@ -1022,6 +1027,51 @@
     opacity: 1; }
   .component .page-header {
     padding: 100px 0 10px; } }
+
+.pager {
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  list-style: none; }
+
+.pager::after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.pager li {
+  display: inline; }
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px; }
+
+.pager li > a:focus, .pager li > a:hover {
+  text-decoration: none;
+  background-color: #eceeef; }
+
+.pager .disabled > a, .pager .disabled > a:focus, .pager .disabled > a:hover {
+  color: #818a91;
+  cursor: not-allowed;
+  background-color: #fff; }
+
+.pager .disabled > span {
+  color: #818a91;
+  cursor: not-allowed;
+  background-color: #fff; }
+
+.pager-next > a,
+.pager-next > span {
+  float: right; }
+
+.pager-prev > a,
+.pager-prev > span {
+  float: left; }
 
 .hll {
   background-color: #ffc; }
