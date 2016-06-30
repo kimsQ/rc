@@ -990,11 +990,15 @@
 
 .device .device-content .device-button {
   position: absolute;
+  display: none;
   z-index: 9999;
   left: 35px;
   right: 30px;
   bottom: 65px;
   top: auto; }
+
+.device .device-content .ratchet-body.active + .device-button {
+  display: block; }
 
 .device .device-content .device-button .pager a {
   background-color: transparent;
