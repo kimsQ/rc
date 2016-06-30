@@ -1,4 +1,4 @@
 - name: Content
-  path: control/push
+  path: controls/push
   jsfiddle: kimsQ/0odhbtzv/
   history: true

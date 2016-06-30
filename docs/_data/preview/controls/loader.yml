@@ -1,4 +1,4 @@
 - name: Content
-  path: control/loader
+  path: controls/loader
   jsfiddle: kimsQ/0odhbtzv/
   history: true

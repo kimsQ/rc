@@ -1,4 +1,4 @@
 - name: Content
-  path: controls/infinite-scroll
+  path: components/pagination
   jsfiddle: kimsQ/0odhbtzv/
   history: true
