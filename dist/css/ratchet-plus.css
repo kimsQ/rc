@@ -2040,7 +2040,12 @@ input[type="button"].btn-block {
     .table-view-cell > a:not(.btn):active {
       background-color: #eee; }
   .table-view-cell p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: .875rem;
+    color: #818a91; }
+  .table-view-cell .btn {
+    padding: .375rem .5rem .4375rem;
+    font-size: .75rem; }
 
 .table-view-divider {
   padding-top: 6px;
@@ -2113,7 +2118,7 @@ input[type="button"].btn-block {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 0.75rem 1.25rem;
+  padding: .75rem 1.25rem;
   margin-bottom: -0.0625rem;
   background-color: #fff;
   border: 0.0625rem solid #ddd; }
@@ -2124,44 +2129,56 @@ input[type="button"].btn-block {
     margin-bottom: 0;
     border-bottom-right-radius: 0.125rem;
     border-bottom-left-radius: 0.125rem; }
-  .list-group-item.disabled, .list-group-item.disabled:focus, .list-group-item.disabled:hover {
-    color: #818a91;
-    cursor: not-allowed;
-    background-color: #eceeef; }
-    .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading {
-      color: inherit; }
-    .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text {
-      color: #818a91; }
-  .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
-    z-index: 2;
-    color: #fff;
-    text-decoration: none;
-    background-color: #0275d8;
-    border-color: #0275d8; }
-    .list-group-item.active .list-group-item-heading,
-    .list-group-item.active .list-group-item-heading > small,
-    .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading,
-    .list-group-item.active:focus .list-group-item-heading > small,
-    .list-group-item.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
-    .list-group-item.active:hover .list-group-item-heading > small,
-    .list-group-item.active:hover .list-group-item-heading > .small {
-      color: inherit; }
-    .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text {
-      color: #a8d6fe; }
 
 .list-group-flush .list-group-item {
+  border-width: 0.0625rem 0;
   border-radius: 0; }
 
-.list-group-item-action {
+.list-group-flush:first-child .list-group-item:first-child {
+  border-top: 0; }
+
+.list-group-flush:last-child .list-group-item:last-child {
+  border-bottom: 0; }
+
+a.list-group-item,
+button.list-group-item {
   width: 100%;
   color: #555;
   text-align: inherit; }
-  .list-group-item-action .list-group-item-heading {
+  a.list-group-item .list-group-item-heading,
+  button.list-group-item .list-group-item-heading {
     color: #333; }
-  .list-group-item-action:focus, .list-group-item-action:hover {
+  a.list-group-item:focus, a.list-group-item:hover,
+  button.list-group-item:focus,
+  button.list-group-item:hover {
     color: #555;
     text-decoration: none;
     background-color: #f5f5f5; }
+
+.list-group-item.disabled, .list-group-item.disabled:focus, .list-group-item.disabled:hover {
+  color: #818a91;
+  cursor: not-allowed;
+  background-color: #eceeef; }
+  .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading {
+    color: inherit; }
+  .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text {
+    color: #818a91; }
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+  z-index: 2;
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8; }
+  .list-group-item.active .list-group-item-heading,
+  .list-group-item.active .list-group-item-heading > small,
+  .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading,
+  .list-group-item.active:focus .list-group-item-heading > small,
+  .list-group-item.active:focus .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading,
+  .list-group-item.active:hover .list-group-item-heading > small,
+  .list-group-item.active:hover .list-group-item-heading > .small {
+    color: inherit; }
+  .list-group-item.active .list-group-item-text, .list-group-item.active:focus .list-group-item-text, .list-group-item.active:hover .list-group-item-text {
+    color: #a8d6fe; }
 
 .list-group-item-success {
   color: #3c763d;
@@ -2697,6 +2714,61 @@ button.list-group-item-danger {
   position: fixed;
   top: 45px;
   z-index: 10; }
+
+.content.fade {
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s; }
+  .content.fade.in {
+    opacity: 1; }
+
+.content.sliding {
+  z-index: 2;
+  -webkit-transition: -webkit-transform .4s;
+  -moz-transition: -moz-transform .4s;
+  transition: transform .4s;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+  .content.sliding.left {
+    z-index: 1;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  .content.sliding.right {
+    z-index: 3;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0); }
+
+.navigate-left:after,
+.navigate-right:after,
+.push-left:after,
+.push-right:after {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  font-family: Ratchicons;
+  font-size: inherit;
+  line-height: 1;
+  color: #bbb;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.navigate-left:after,
+.push-left:after {
+  left: 15px;
+  content: '\e822'; }
+
+.navigate-right:after,
+.push-right:after {
+  right: 15px;
+  content: '\e826'; }
 
 .bg-inverse {
   background-color: #373a3c; }
