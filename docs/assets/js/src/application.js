@@ -89,6 +89,9 @@
         .tooltip('_fixTitle')
     })
 
+    // demo default preview 
+    $(".device-content li:first-child > a").addClass('active')
+
   })
 
 }(jQuery)
