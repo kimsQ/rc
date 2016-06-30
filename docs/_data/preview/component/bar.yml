@@ -1,0 +1,5 @@
+- name: title-bar
+  path: components/bars/bar-nav
+
+- name: title-bar-with-buttons
+  path: components/bars/bar-nav

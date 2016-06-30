@@ -1,0 +1,38 @@
+- name: base-nav
+  path: components/nav
+
+- name: inline
+  path: components/nav
+
+- name: inline-with-lists
+  path: components/nav
+
+- name: tabs
+  path: components/nav
+
+- name: pills
+  path: components/nav
+
+- name: stacked-pills
+  path: components/nav
+
+- name: controls
+  path: components/nav
+
+- name: javascript-behavior
+  path: components/nav
+
+- name: using-data-attributes
+  path: components/nav
+
+- name: via-javascript
+  path: components/nav
+
+- name: fade-effect
+  path: components/nav
+
+- name: methods
+  path: components/nav
+
+- name: events
+  path: components/nav

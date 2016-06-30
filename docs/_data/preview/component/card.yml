@@ -1,0 +1,68 @@
+- name: content
+  path: components/card
+
+- name: content-types
+  path: components/card
+
+- name: list-group
+  path: components/card
+
+- name: image-top
+  path: components/card
+
+- name: block
+  path: components/card
+
+- name: sub-title
+  path: components/card
+
+- name: sizing
+  path: components/card
+
+- name: custom-widths
+  path: components/card
+
+- name: text-alignment
+  path: components/card
+
+- name: header-and-footer
+  path: components/card
+
+- name: heading
+  path: components/card
+
+- name: quote
+  path: components/card
+
+- name: text-center
+  path: components/card
+
+- name: header-tabs
+  path: components/card
+
+- name: header-pills
+  path: components/card
+
+- name: image-caps
+  path: components/card
+
+- name: image-overlays
+  path: components/card
+
+- name: inverted-text
+  path: components/card
+
+- name: background-variants
+  path: components/card
+
+- name: outline-variants
+  path: components/card
+
+- name: groups
+  path: components/card
+
+- name: decks
+  path: components/card
+
+- name: columns
+  path: components/card

@@ -1,80 +1,23 @@
 <ul class="nav device-content">
-  <li><a class="screen-bg"></a></li>
+
+  {% for preview in site.data.preview.component.navs %}
   <li>
-    <a class="nav-link ratchet-body active" href="#content">
-      <iframe width="100%" height="555" src="/examples/components/nav/base-nav.html" frameborder="0"></iframe>
+    <a class="nav-link ratchet-body" href="#{{ preview.name }}">
+      <iframe width="100%" height="555" src="/examples/{{ preview.path }}/{{ preview.name }}.html" frameborder="0"></iframe>
     </a>
     <div class="device-button">
       <ul class="pager">
         <li class="pager-prev">
-          <a href="https://github.com/kimsQ/rc/blob/gh-pages/examples/components/bars/bar-nav/title-bar.html" target="_blank" data-toggle="tooltip" title="View code">
+          <a href="{{ preview.path }}/{{ preview.name }}" target="_blank" data-toggle="tooltip" title="View code">
             <i class="fa fa-code" aria-hidden="true"></i>
           </a>
-          <a href="http://rc.kimsq.com/examples/components/bars/bar-nav/title-bar.html" target="_blank" data-toggle="tooltip" title="New window">
+          <a href="{{ preview.path }}/{{ preview.name }}" target="_blank" data-toggle="tooltip" title="New window">
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
     </div>
   </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#inline">
-      <iframe width="100%" height="555" src="/examples/components/nav/inline.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#inline-with-lists">
-      <iframe width="100%" height="555" src="/examples/components/nav/inline-with-lists.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#tabs">
-      <iframe width="100%" height="555" src="/examples/components/nav/tabs.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#pills">
-      <iframe width="100%" height="555" src="/examples/components/nav/pills.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#stacked-pills">
-      <iframe width="100%" height="555" src="/examples/components/nav/stacked-pills.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#controls">
-      <iframe width="100%" height="555" src="/examples/components/nav/controls.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#javascript-behavior">
-      <iframe width="100%" height="555" src="/examples/components/nav/javascript-behavior.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#using-data-attributes">
-      <iframe width="100%" height="555" src="/examples/components/nav/using-data-attributes.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#via-javascript">
-      <iframe width="100%" height="555" src="/examples/components/nav/via-javascript.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#fade-effect">
-      <iframe width="100%" height="555" src="/examples/components/nav/fade-effect.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#methods">
-      <iframe width="100%" height="555" src="/examples/components/nav/methods.html" frameborder="0"></iframe>
-    </a>
-  </li>
-  <li>
-    <a class="nav-link ratchet-body" href="#events">
-      <iframe width="100%" height="555" src="/examples/components/nav/events.html" frameborder="0"></iframe>
-    </a>
-  </li>
+  {% endfor %}
+
 </ul>

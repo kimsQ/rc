@@ -1,23 +1,26 @@
 
 <ul class="nav device-content">
-  <li><a class="screen-bg"></a></li>
+
+  {% for preview in site.data.preview.component.bar %}
   <li>
-    <a class="nav-link ratchet-body active" href="#content">
+    <a class="nav-link ratchet-body" href="#{{ preview.name }}">
       <iframe width="100%" height="555" src="/examples/components/bars/bar-nav/title-bar.html" frameborder="0"></iframe>
     </a>
     <div class="device-button">
       <ul class="pager">
         <li class="pager-prev">
-          <a href="https://github.com/kimsQ/rc/blob/gh-pages/examples/components/bars/bar-nav/title-bar.html" target="_blank" data-toggle="tooltip" title="View code">
+          <a href="{{ preview.path }}/{{ preview.name }}" target="_blank" data-toggle="tooltip" title="View code">
             <i class="fa fa-code" aria-hidden="true"></i>
           </a>
-          <a href="http://rc.kimsq.com/examples/components/bars/bar-nav/title-bar.html" target="_blank" data-toggle="tooltip" title="New window">
+          <a href="{{ preview.path }}/{{ preview.name }}" target="_blank" data-toggle="tooltip" title="New window">
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
     </div>
   </li>
+  {% endfor %}
+
   <li>
     <a class="nav-link ratchet-body" href="#title-bar-with-buttons">
       <iframe width="100%" height="555" src="/examples/components/bars/bar-nav/title-bar-with-buttons.html" frameborder="0"></iframe>

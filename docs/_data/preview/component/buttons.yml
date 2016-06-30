@@ -1,0 +1,23 @@
+- name: basic
+  path: components/buttons
+
+- name: button-tags
+  path: components/buttons
+
+- name: outline-buttons
+  path: components/buttons
+
+- name: circle-buttons
+  path: components/buttons
+
+- name: sizes
+  path: components/buttons
+
+- name: active-state
+  path: components/buttons
+
+- name: disabled-state
+  path: components/buttons
+
+- name: button-plugin
+  path: components/buttons
