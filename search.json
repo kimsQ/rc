@@ -55,13 +55,6 @@
 
     
         {
-            "title" : "Breadcrumb",
-            "url"   : "/components/breadcrumb/"
-        } ,
-    
-
-    
-        {
             "title" : "Browsers and devices",
             "url"   : "/getting-started/browsers-devices/"
         } ,
@@ -323,13 +316,6 @@
         {
             "title" : "Popup",
             "url"   : "/components/popup/"
-        } ,
-    
-
-    
-        {
-            "title" : "Progress",
-            "url"   : "/components/progress/"
         } ,
     
 
