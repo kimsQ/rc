@@ -1,4 +1,14 @@
 - name: content
   path: components/pagination
   jsfiddle: kimsQ/0odhbtzv/
-  history: true
+  history: false
+
+- name: disabled-and-active-states
+  path: components/pagination
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: sizing
+  path: components/pagination
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
