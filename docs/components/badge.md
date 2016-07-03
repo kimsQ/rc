@@ -94,7 +94,6 @@ Use the `.badge-pill` modifier class to make tags more rounded (with a larger `b
   Badge button
   <span class="badge badge-danger badge-pill">1</span>
 </button>
-
 {% endhighlight %}
 
 ### Outline buttons with badges
