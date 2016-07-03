@@ -1,0 +1,12 @@
+// Tags
+
+@mixin badge-variant($color) {
+  background-color: $color;
+  color: #fff;
+
+  &[href] {
+    @include hover-focus {
+      background-color: darken($color, 10%);
+    }
+  }
+}

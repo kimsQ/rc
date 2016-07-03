@@ -2,3 +2,38 @@
   path: components/badge
   jsfiddle: kimsQ/0odhbtzv/
   history: false
+
+- name: contextual-variations
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: pill-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: inverted-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: buttons-with-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: outline-buttons-with-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: block-buttons-with-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: table-view-with-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

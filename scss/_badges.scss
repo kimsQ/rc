@@ -4,70 +4,86 @@
 
 .badge {
   display: inline-block;
-  padding: 2px 9px 3px;
-  font-size: 12px;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
   line-height: 1;
-  color: #333;
+  color: $badge-color;
   background-color: rgba(0,0,0,.15);
-  border-radius: 100px;
+  @include border-radius();
+
+  // Empty tags collapse automatically
+  &:empty {
+    display: none;
+  }
 
   // Inverted badges have no background.
   &.badge-inverted {
-    padding: 0 5px 0 0;
+    padding: 0 .3125rem 0 0;
     background-color: transparent;
   }
 }
 
 
-// Badge modifiers
-// --------------------------------------------------
+// Colors
+//
+// Contextual variations (linked tags get darker on :hover).
 
-// Main badge
-.badge-primary {
-  color: #fff;
-  background-color: $brand-primary;
+.badge-default {
+  @include badge-variant($badge-default-bg);
 
   &.badge-inverted {
-    color: $brand-primary;
+    color: $badge-default-bg;
+  }
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary-bg);
+
+  &.badge-inverted {
+    color: $badge-primary-bg;
   }
 }
 
 // Success badge
 .badge-success {
-  color: #fff;
-  background-color: $brand-success;
+  @include badge-variant($badge-success-bg);
 
   &.badge-inverted {
-    color: $brand-success;
+    color: $badge-success-bg;
   }
 }
 
 // Info badge
 .badge-info {
-  color: #fff;
-  background-color: $brand-info;
+  @include badge-variant($badge-info-bg);
 
   &.badge-inverted {
-    color: $brand-info;
+    color: $badge-info-bg;
   }
 }
 
 // Warning badge
 .badge-warning {
-  color: #fff;
-  background-color: $brand-warning;
+  @include badge-variant($badge-warning-bg);
 
   &.badge-inverted {
-    color: $brand-warning;
+    color: $badge-warning-bg;
   }
 }
 
 // Danger badge
 .badge-danger {
-  color: #fff;
-  background-color: $brand-danger;
+  @include badge-variant($badge-danger-bg);
 
   &.badge-inverted {
-    color: $brand-danger;
+    color: $badge-danger-bg;
   }
+}
+
+
+.badge-pill {
+  padding-right: $badge-pill-padding-x;
+  padding-left: $badge-pill-padding-x;
+  @include border-radius($badge-pill-border-radius);
 }

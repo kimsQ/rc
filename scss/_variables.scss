@@ -294,9 +294,14 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  1rem !default;
-$btn-padding-y:                  .53125rem !default;
-$btn-line-height:                1.25 !default;
+$btn-font-size-base: .875rem !default;
+$btn-font-size-lg:   1rem !default;
+$btn-font-size-sm:   .75rem !default;
+$btn-font-size-block: 1.125rem !default;
+
+$btn-padding-x:                  .5rem !default;
+$btn-padding-y:                  .4375rem !default;
+$btn-line-height:                1 !default;
 $btn-font-weight:                normal !default;
 $btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
 $btn-fab-shadow:                 0px 2px 10px rgba(0,0,0,.3),0px 0px 1px rgba(0,0,0,.1),inset 0px 1px 0px rgba(255,255,255,.25),inset 0px -1px 0px rgba(0,0,0,.15);
@@ -334,6 +339,9 @@ $btn-padding-y-sm:               .25rem !default;
 $btn-padding-x-lg:               1.5rem !default;
 $btn-padding-y-lg:               .75rem !default;
 
+$btn-padding-x-block:            0 !default;
+$btn-padding-y-block:            .9375rem !default;
+
 $btn-block-spacing-y:            .5rem !default;
 $btn-toolbar-margin:             .5rem !default;
 
@@ -341,6 +349,7 @@ $btn-toolbar-margin:             .5rem !default;
 $btn-border-radius:              $border-radius !default;
 $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
+$btn-border-radius-block:        $border-radius-lg !default;
 
 
 // Forms
@@ -596,26 +605,27 @@ $popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
 $popover-arrow-outer-color:           fade-in($popover-border-color, .05) !default;
 
 
-// Tags
+// Badges
 
-$tag-default-bg:            $gray-light !default;
-$tag-primary-bg:            $brand-primary !default;
-$tag-success-bg:            $brand-success !default;
-$tag-info-bg:               $brand-info !default;
-$tag-warning-bg:            $brand-warning !default;
-$tag-danger-bg:             $brand-danger !default;
+$badge-default-bg:            $gray-light !default;
+$badge-primary-bg:            $brand-primary !default;
+$badge-success-bg:            $brand-success !default;
+$badge-info-bg:               $brand-info !default;
+$badge-warning-bg:            $brand-warning !default;
+$badge-danger-bg:             $brand-danger !default;
 
-$tag-color:                 #fff !default;
-$tag-link-hover-color:      #fff !default;
-$tag-font-size:             75% !default;
-$tag-font-weight:           bold !default;
-$tag-padding-x:             .4em !default;
-$tag-padding-y:             .25em !default;
+$badge-color:                 #333 !default;
+$badge-link-hover-color:      #fff !default;
+$badge-font-size:             75% !default;
+$badge-font-weight:           bold !default;
+$badge-padding-x:             .4rem !default;
+$badge-padding-y:             .25rem !default;
 
-$tag-pill-padding-x:        .6em !default;
+$badge-pill-padding-x:        .6rem !default;
 // Use a higher than normal value to ensure completely rounded edges when
 // customizing padding or font-size on labels.
-$tag-pill-border-radius:    10rem !default;
+$badge-pill-border-radius:    10rem !default;
+
 
 // Modals
 

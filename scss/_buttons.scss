@@ -14,7 +14,7 @@
   cursor: pointer;
   user-select: none;
   border: $input-btn-border-width solid transparent;
-  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size-base, $btn-border-radius);
   @include transition(all .2s ease-in-out);
 
   &,
@@ -168,11 +168,11 @@ fieldset[disabled] a.btn {
 
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius-lg);
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-border-radius-sm);
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
 
 
@@ -183,6 +183,7 @@ fieldset[disabled] a.btn {
 .btn-block {
   display: block;
   width: 100%;
+  @include button-size($btn-padding-y-block, $btn-padding-x-block, $btn-font-size-block, $btn-border-radius-block);
 }
 
 // Vertically space out multiple block buttons
@@ -197,4 +198,45 @@ input[type="button"] {
   &.btn-block {
     width: 100%;
   }
+}
+
+// Buttons with badges
+// --------------------------------------------------
+
+// Generic styles for all badges within default buttons
+.btn .badge {
+  margin: -.125rem -.25rem -.125rem .25rem;
+  font-size: .75rem;
+  background-color: rgba(0,0,0,.15);
+}
+
+.btn {
+  @include hover-focus {
+    .badge-inverted {
+      color: #fff;
+    }
+  }
+}
+
+
+// Buttons with inverted badges
+.btn .badge-inverted,
+.btn:active .badge-inverted {
+  background-color: transparent;
+}
+.btn-primary:active .badge-inverted,
+.btn-success:active .badge-inverted,
+.btn-info:active .badge-inverted,
+.btn-warning:active .badge-inverted,
+.btn-danger:active .badge-inverted {
+  color: #fff;
+}
+
+// Position badges within block level buttons
+// Note: These are absolutely positioned so that text of button isn't "pushed" by badge and always
+// stays at the center of button
+.btn-block .badge {
+  position: absolute;
+  right: 0;
+  margin-right: .625rem;
 }
