@@ -2,3 +2,68 @@
   path: components/utilities
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: text-alignment
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: text-transform
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: font-weight-and-italics
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: contextual-colors-and-backgrounds
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: widths
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: css-display-block-inline-inline-block
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: responsive-floats
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: clearfix
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: fixed-positioning
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: invisible-content
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: screen-readers-and-keyboard-users
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: image-replacement
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: responsive-embeds
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
