@@ -58,9 +58,18 @@ Badges are a great way of showing data.
 
 {% highlight html %}
 <ul class="table-view">
-  <li class="table-view-cell">Item 1 <span class="badge">4</span></li>
-  <li class="table-view-cell">Item 2 <span class="badge">1</span></li>
-  <li class="table-view-cell">Item 3 <span class="badge">5</span></li>
+  <li class="table-view-cell">
+    Item 1
+    <span class="badge badge-pill">4</span>
+  </li>
+  <li class="table-view-cell">
+    Item 2
+    <span class="badge badge-pill">1</span>
+  </li>
+  <li class="table-view-cell">
+    Item 3
+    <span class="badge badge-pill">5</span>
+  </li>
 </ul>
 {% endhighlight %}
 
@@ -72,19 +81,19 @@ Feel free to use chevrons and badges together. They'll automatically positon the
 <ul class="table-view">
   <li class="table-view-cell">
     <a class="navigate-right">
-      <span class="badge">5</span>
+      <span class="badge badge-pill">5</span>
       Item 1
     </a>
   </li>
   <li class="table-view-cell">
     <a class="navigate-right">
-      <span class="badge">5</span>
+      <span class="badge badge-pill">5</span>
       Item 2
     </a>
   </li>
   <li class="table-view-cell">
     <a class="navigate-right">
-      <span class="badge">5</span>
+      <span class="badge badge-pill">5</span>
       Item 3
     </a>
   </li>
