@@ -2,3 +2,13 @@
   path: components/toggle
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: table-view-with-toggles
+  path: components/toggle
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: event-binding
+  path: components/toggle
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
