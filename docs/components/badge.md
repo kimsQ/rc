@@ -65,33 +65,108 @@ Use the `.badge-pill` modifier class to make tags more rounded (with a larger `b
 ## Buttons with badges
 
 {% highlight html %}
-<button class="btn">Badge button <span class="badge">1</span></button>
-<button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
-<button class="btn btn-success">Badge button <span class="badge badge-positive">1</span></button>
-<button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
+<button class="btn btn-secondary">
+  Badge button
+  <span class="badge">1</span>
+</button>
 
-<button class="btn btn-outlined">Badge button <span class="badge badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-primary">Badge button <span class="badge badge-primary badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-positive">Badge button <span class="badge badge-positive badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-negative">Badge button <span class="badge badge-negative badge-inverted">1</span></button>
+<button class="btn btn-primary">
+  Badge button
+  <span class="badge badge-primary">1</span>
+</button>
+
+<button class="btn btn-success">
+  Badge button
+  <span class="badge badge-success">1</span>
+</button>
+
+<button class="btn btn-info">
+  Badge button
+  <span class="badge badge-info badge-pill">1</span>
+</button>
+
+<button class="btn btn-warning">
+  Badge button
+  <span class="badge badge-warning badge-pill">1</span>
+</button>
+
+<button class="btn btn-danger">
+  Badge button
+  <span class="badge badge-danger badge-pill">1</span>
+</button>
+
 {% endhighlight %}
 
 ### Outline buttons with badges
 {% highlight html %}
-<button class="btn">Badge button <span class="badge">1</span></button>
-<button class="btn btn-primary">Badge button <span class="badge badge-primary">1</span></button>
-<button class="btn btn-success">Badge button <span class="badge badge-positive">1</span></button>
-<button class="btn btn-negative">Badge button <span class="badge badge-negative">1</span></button>
+<button class="btn btn-outline-secondary">
+  Badge button
+  <span class="badge badge-inverted">1</span>
+</button>
 
-<button class="btn btn-outlined">Badge button <span class="badge badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-primary">Badge button <span class="badge badge-primary badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-positive">Badge button <span class="badge badge-positive badge-inverted">1</span></button>
-<button class="btn btn-outlined btn-negative">Badge button <span class="badge badge-negative badge-inverted">1</span></button>
+<button class="btn btn-outline-primary">
+  Badge button
+  <span class="badge badge-primary badge-inverted">1</span>
+</button>
+
+<button class="btn btn-outline-success">
+  Badge button
+  <span class="badge badge-success badge-inverted">1</span>
+</button>
+
+<button class="btn btn-outline-info">
+  Badge button
+  <span class="badge badge-info badge-inverted">1</span>
+</button>
+
+<button class="btn btn-outline-warning">
+  Badge button
+  <span class="badge badge-warning badge-inverted">1</span>
+</button>
+
+<button class="btn btn-outline-danger">
+  Badge button
+  <span class="badge badge-danger badge-inverted">1</span>
+</button>
 {% endhighlight %}
 
 ### Block buttons with badges
 {% highlight html %}
-<button class="btn btn-secondary btn-block">Badge button <span class="badge">1</span></button>
+<button class="btn btn-secondary btn-block">
+  Badge button
+  <span class="badge">1</span>
+</button>
+
+<button class="btn btn-primary btn-block">
+  Badge button
+  <span class="badge badge-primary">1</span>
+</button>
+
+<button class="btn btn-success btn-block">
+  Badge button
+  <span class="badge badge-success">1</span>
+</button>
+
+<button class="btn btn-info btn-block">
+  Badge button
+  <span class="badge badge-info badge-pill">1</span>
+</button>
+
+<button class="btn btn-warning btn-block">
+  Badge button
+  <span class="badge badge-warning badge-pill">1</span>
+</button>
+
+<button class="btn btn-danger btn-block">
+  Badge button
+  <span class="badge badge-danger badge-pill">1</span>
+</button>
+
+<button class="btn btn-outline-primary btn-block">
+  Badge button
+  <span class="badge badge-primary badge-inverted">1</span>
+</button>
+
 {% endhighlight %}
 
 
