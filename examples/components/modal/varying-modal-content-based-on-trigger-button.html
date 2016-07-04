@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>modal</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  	<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="bar bar-nav bar-light bg-faded">
+        <h1 class="title">Varying modal content</h1>
+    </header>
+
+    <div class="content">
+
+    	<div class="content-padded">
+    		<p>Varying modal content based on trigger button</p>
+
+    		<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@kimsQ">
+    			Open modal for @kimsQ
+    		</button>
+    		<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@Redblock">
+    			Open modal for @Redblock
+    		</button>
+    		<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@github">
+    			Open modal for @github
+    		</button>
+
+    	</div>
+
+    </div>
+
+    <!-- modal 시작 -->
+    <div id="exampleModal" class="modal">
+    	<header class="bar bar-nav bar-light bg-faded">
+    		<a class="icon icon-close pull-right" data-history="back"></a>
+    		<h1 class="title">New message</h1>
+    	</header>
+
+    	<div class="content">
+    		<form class="content-padded">
+    			<input type="text" placeholder="Full name">
+    			<textarea rows="5"></textarea>
+    			<button class="btn btn-primary btn-block">send</button>
+    		</form>
+    	</div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../../../dist/js/rc-control.js"></script>
+    <script src="../../../dist/js/rc-component.js"></script>
+    <script src="../../../dist/js/rc-extension.js"></script>
+
+    <script type="text/javascript">
+
+    $('#exampleModal').on('show.rc.modal', function (event) {
+    	var button = $(event.relatedTarget) // Button that triggered the modal
+    	var recipient = button.data('whatever') // Extract info from data-* attributes
+    	// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    	// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    	var modal = $(this)
+    	modal.find('.title').text('New message to ' + recipient)
+    	modal.find('.content input').val(recipient)
+    })
+
+    </script>
+
+  </body>
+</html>

@@ -58,7 +58,7 @@
 
     // History Back
     $('body').on('click', '[data-history="back"]', function() {
-        window.history.back();
+        history.back();
     });
 
     var clipboard = new Clipboard('.btn-clipboard', {
@@ -89,7 +89,7 @@
         .tooltip('_fixTitle')
     })
 
-    // demo default preview 
+    // demo default preview
     $(".device-content li:first-child > a").addClass('active')
 
   })
