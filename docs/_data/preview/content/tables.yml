@@ -1,0 +1,44 @@
+- name: content
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: table-head-options
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: striped-rows
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: bordered-table
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: hoverable-rows
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: small-table
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: contextual-classes
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: responsive-tables
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: reflow
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

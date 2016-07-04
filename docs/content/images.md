@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: images
 title: Images
 group: content
 ---

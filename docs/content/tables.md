@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: tables
 title: Tables
 group: content
 ---

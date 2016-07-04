@@ -1,0 +1,69 @@
+- name: content
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: heading-classes
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: customizing-headings
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: display-headings
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: lead
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: inline-text-elements
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: abbreviations
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: blockquotes
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: naming-a-source
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: reverse-layout
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: unstyled
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: inline
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: description-list-alignment
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: responsive-typography
+  path: content/typography
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

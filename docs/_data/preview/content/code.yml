@@ -1,0 +1,24 @@
+- name: content
+  path: content/code
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: code-blocks
+  path: content/code
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: variables
+  path: content/code
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: user-input
+  path: content/code
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: sample-output
+  path: content/code
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

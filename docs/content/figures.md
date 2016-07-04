@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: figures
 title: Figures
 group: content
 ---
@@ -14,6 +15,8 @@ Use the included `.figure` , `.figure-img` and `.figure-caption` classes to prov
   <figcaption class="figure-caption">A caption for the above image.</figcaption>
 </figure>
 {% endexample %}
+
+## with text utilities.
 
 Aligning the figure's caption is easy with our [text utilities]({{ site.baseurl }}/components/utilities/#text-alignment).
 

@@ -1,0 +1,9 @@
+- name: content
+  path: content/figures
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: with-text-utilities
+  path: content/figures
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

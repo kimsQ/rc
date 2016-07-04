@@ -63,20 +63,6 @@ Here are some representative examples of these classes:
 }
 {% endhighlight %}
 
-### Horizontal centering
-Additionally, Bootstrap also includes an `.m-x-auto` class for horizontally centering fixed-width block level content by setting the horizontal margins to `auto`.
-
-<div class="bd-example">
-  <div class="m-x-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
-    Centered element
-  </div>
-</div>
-
-{% highlight html %}
-<div class="m-x-auto" style="width: 200px;">
-  Centered element
-</div>
-{% endhighlight %}
 
 ## Text alignment
 
@@ -196,15 +182,6 @@ To make an element `display: none`, use our [responsive utilities](../layout/res
 </div>
 {% endexample %}
 
-## Close icon
-
-Use a generic close icon for dismissing content like modals and alerts. **Be sure to include text for screen readers**, as we've done with `aria-label`.
-
-{% example html %}
-<button type="button" class="close" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
-{% endexample %}
 
 ## Responsive floats
 

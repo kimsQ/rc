@@ -1,10 +1,11 @@
 ---
-layout: docs
+layout: preview
+preview: typography
 title: Typography
 group: content
 ---
 
-Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the [textual utility classes]({{ site.baseurl }}/components/utilities/).
+includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the [textual utility classes]({{ site.baseurl }}/components/utilities/).
 
 ## Contents
 
@@ -13,7 +14,7 @@ Bootstrap includes simple and easily customized typography for headings, body te
 
 ## Global settings
 
-Bootstrap sets basic global display, typography, and link styles. Specifically, we:
+sets basic global display, typography, and link styles. Specifically, we:
 
 - Use a [native font stack](/content/reboot/#native-font-stack) that selects the best `font-family` for each OS and device.
 - Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
@@ -30,27 +31,27 @@ All HTML headings, `<h1>` through `<h6>`, are available.
   <table class="table">
     <tbody>
       <tr>
-        <td><h1>h1. Bootstrap heading</h1></td>
+        <td><h1>h1. heading</h1></td>
         <td class="type-info">Semibold 36px</td>
       </tr>
       <tr>
-        <td><h2>h2. Bootstrap heading</h2></td>
+        <td><h2>h2. heading</h2></td>
         <td class="type-info">Semibold 30px</td>
       </tr>
       <tr>
-        <td><h3>h3. Bootstrap heading</h3></td>
+        <td><h3>h3. heading</h3></td>
         <td class="type-info">Semibold 24px</td>
       </tr>
       <tr>
-        <td><h4>h4. Bootstrap heading</h4></td>
+        <td><h4>h4. heading</h4></td>
         <td class="type-info">Semibold 18px</td>
       </tr>
       <tr>
-        <td><h5>h5. Bootstrap heading</h5></td>
+        <td><h5>h5. heading</h5></td>
         <td class="type-info">Semibold 14px</td>
       </tr>
       <tr>
-        <td><h6>h6. Bootstrap heading</h6></td>
+        <td><h6>h6. heading</h6></td>
         <td class="type-info">Semibold 12px</td>
       </tr>
     </tbody>
@@ -58,28 +59,30 @@ All HTML headings, `<h1>` through `<h6>`, are available.
 </div>
 
 {% highlight html %}
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
+<h1>h1. heading</h1>
+<h2>h2. heading</h2>
+<h3>h3. heading</h3>
+<h4>h4. heading</h4>
+<h5>h5. heading</h5>
+<h6>h6. heading</h6>
 {% endhighlight %}
+
+### Heading classes
 
 `.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {% example html %}
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="h1">h1. heading</p>
+<p class="h2">h2. heading</p>
+<p class="h3">h3. heading</p>
+<p class="h4">h4. heading</p>
+<p class="h5">h5. heading</p>
+<p class="h6">h6. heading</p>
 {% endexample %}
 
 ### Customizing headings
 
-Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
+Use the included utility classes to recreate the small secondary heading text from 3.
 
 {% example html %}
 <h3>
@@ -263,7 +266,7 @@ Align terms and descriptions horizontally by using our grid system's predefined 
 
 ## Responsive typography
 
-*Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. Bootstrap doesn't do this for you, but it's fairly easy to add if you need it.
+*Responsive typography* refers to scaling text and components by simply adjusting the root element's `font-size` within a series of media queries. doesn't do this for you, but it's fairly easy to add if you need it.
 
 Here's an example of it in practice. Choose whatever `font-size`s and media queries you wish.
 

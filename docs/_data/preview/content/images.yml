@@ -1,0 +1,14 @@
+- name: content
+  path: content/images
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: image-shapes
+  path: content/images
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: aligning-images
+  path: content/images
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

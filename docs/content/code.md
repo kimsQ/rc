@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: code
 title: Code
 group: content
 ---
