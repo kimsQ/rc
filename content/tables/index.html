@@ -38,7 +38,7 @@
 </script>
 
   </head>
-  <body class="bd-docs">
+  <body class="bd-docs" data-spy="scroll" data-target="#nav-device" data-offset="180">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -64,7 +64,7 @@
             <a class="nav-item nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"><strong>Ratchet plus</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link active" href="/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            <a class="nav-item nav-link " href="/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link " href="/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
@@ -993,16 +993,23 @@
 </nav>
 
         </div>
-        <div class="col-xs-12 col-md-7 bd-content">
-          <h1 class="bd-title" id="content">Tables</h1>
-          <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
+        <div class="col-xs-12 col-md-10">
+          <div class="row">
+            <div class="col-md-8 bd-content" style="padding-bottom: 300px">
+              <h1 class="bd-title" id="content">Tables</h1>
+              <p>Due to the widespread use of tables across third-party widgets like calendars and date pickers, we’ve designed our tables to be <strong>opt-in</strong>. Just add the base class <code class="highlighter-rouge">.table</code> to any <code class="highlighter-rouge">&lt;table&gt;</code>, then extend with custom styles or our various included modifier classes.</p>
 
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
-  <li><a href="#table-head-options" id="markdown-toc-table-head-options">Table head options</a></li>
+  <li><a href="#invert-the-colors" id="markdown-toc-invert-the-colors">Invert the colors</a></li>
+  <li><a href="#table-head-options" id="markdown-toc-table-head-options">Table head options</a>    <ul>
+      <li><a href="#table-head-inverse" id="markdown-toc-table-head-inverse">Table head inverse</a></li>
+      <li><a href="#table-head-defalt" id="markdown-toc-table-head-defalt">Table head defalt</a></li>
+    </ul>
+  </li>
   <li><a href="#striped-rows" id="markdown-toc-striped-rows">Striped rows</a></li>
   <li><a href="#bordered-table" id="markdown-toc-bordered-table">Bordered table</a></li>
   <li><a href="#hoverable-rows" id="markdown-toc-hoverable-rows">Hoverable rows</a></li>
@@ -1081,6 +1088,8 @@
   <span class="nt">&lt;/tbody&gt;</span>
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
+<h2 id="invert-the-colors">Invert the colors</h2>
+
 <p>You can also invert the colors—with light text on dark backgrounds—with <code class="highlighter-rouge">.table-inverse</code>.</p>
 
 <div class="bd-example" data-example-id="">
@@ -1150,40 +1159,11 @@
 
 <p>Similar to default and inverse tables, use one of two modifier classes to make <code class="highlighter-rouge">&lt;thead&gt;</code>s appear light or dark gray.</p>
 
+<h3 id="table-head-inverse">Table head inverse</h3>
+
 <div class="bd-example" data-example-id="">
 <table class="table">
   <thead class="thead-inverse">
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="table">
-  <thead class="thead-default">
     <tr>
       <th>#</th>
       <th>First Name</th>
@@ -1242,9 +1222,43 @@
       <span class="nt">&lt;td&gt;</span>@twitter<span class="nt">&lt;/td&gt;</span>
     <span class="nt">&lt;/tr&gt;</span>
   <span class="nt">&lt;/tbody&gt;</span>
-<span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
 
-<span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<h3 id="table-head-defalt">Table head defalt</h3>
+
+<div class="bd-example" data-example-id="">
+<table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;thead</span> <span class="na">class=</span><span class="s">"thead-default"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;tr&gt;</span>
       <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
@@ -2256,6 +2270,217 @@
 <span class="nt">&lt;/table&gt;</span></code></pre></div>
 
 
+            </div>
+            <div class="col-md-4" style="padding-left: 0">
+              <div class="device docs-scrollspy docs-affix" id="nav-device">
+                
+<ul class="nav device-content">
+
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#content">
+      <iframe width="100%" height="555" src="/examples/content/tables/content.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/content.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/content.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#invert-the-colors">
+      <iframe width="100%" height="555" src="/examples/content/tables/invert-the-colors.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/invert-the-colors.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/invert-the-colors.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#table-head-options">
+      <iframe width="100%" height="555" src="/examples/content/tables/table-head-options.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/table-head-options.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/table-head-options.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#table-head-defalt">
+      <iframe width="100%" height="555" src="/examples/content/tables/table-head-defalt.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/table-head-defalt.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/table-head-defalt.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#striped-rows">
+      <iframe width="100%" height="555" src="/examples/content/tables/striped-rows.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/striped-rows.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/striped-rows.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#bordered-table">
+      <iframe width="100%" height="555" src="/examples/content/tables/bordered-table.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/bordered-table.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/bordered-table.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#hoverable-rows">
+      <iframe width="100%" height="555" src="/examples/content/tables/hoverable-rows.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/hoverable-rows.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/hoverable-rows.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#small-table">
+      <iframe width="100%" height="555" src="/examples/content/tables/small-table.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/small-table.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/small-table.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#contextual-classes">
+      <iframe width="100%" height="555" src="/examples/content/tables/contextual-classes.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/contextual-classes.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/contextual-classes.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#responsive-tables">
+      <iframe width="100%" height="555" src="/examples/content/tables/responsive-tables.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/responsive-tables.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/responsive-tables.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#reflow">
+      <iframe width="100%" height="555" src="/examples/content/tables/reflow.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/tables/reflow.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/tables/reflow.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+
+</ul>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -2300,18 +2525,6 @@
 <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
-
-<script src="/assets/js/vendor/jekyll-search.min.js"></script>
-
-<script>
-SimpleJekyllSearch.init({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('search-results'),
-  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
-  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
-  json: '/search.json'
-})
-</script>
 
 
 <script>

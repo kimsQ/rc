@@ -38,7 +38,7 @@
 </script>
 
   </head>
-  <body class="bd-docs">
+  <body class="bd-docs" data-spy="scroll" data-target="#nav-device" data-offset="180">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content">
       <div class="container">
         <span class="skiplink-text">Skip to main content</span>
@@ -64,7 +64,7 @@
             <a class="nav-item nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"><strong>Ratchet plus</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-link active" href="/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
+            <a class="nav-item nav-link " href="/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Documentation</a>
           </li>
           <li class="nav-item">
             <a class="nav-item nav-link " href="/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Examples</a>
@@ -993,9 +993,11 @@
 </nav>
 
         </div>
-        <div class="col-xs-12 col-md-7 bd-content">
-          <h1 class="bd-title" id="content">Typography</h1>
-          <p>Bootstrap includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the <a href="/components/utilities/">textual utility classes</a>.</p>
+        <div class="col-xs-12 col-md-10">
+          <div class="row">
+            <div class="col-md-8 bd-content" style="padding-bottom: 300px">
+              <h1 class="bd-title" id="content">Typography</h1>
+              <p>includes simple and easily customized typography for headings, body text, lists, and more. For even more control, check out the <a href="/components/utilities/">textual utility classes</a>.</p>
 
 <h2 id="contents">Contents</h2>
 
@@ -1003,6 +1005,7 @@
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#global-settings" id="markdown-toc-global-settings">Global settings</a></li>
   <li><a href="#headings" id="markdown-toc-headings">Headings</a>    <ul>
+      <li><a href="#heading-classes" id="markdown-toc-heading-classes">Heading classes</a></li>
       <li><a href="#customizing-headings" id="markdown-toc-customizing-headings">Customizing headings</a></li>
     </ul>
   </li>
@@ -1027,7 +1030,7 @@
 
 <h2 id="global-settings">Global settings</h2>
 
-<p>Bootstrap sets basic global display, typography, and link styles. Specifically, we:</p>
+<p>sets basic global display, typography, and link styles. Specifically, we:</p>
 
 <ul>
   <li>Use a <a href="/content/reboot/#native-font-stack">native font stack</a> that selects the best <code class="highlighter-rouge">font-family</code> for each OS and device.</li>
@@ -1046,60 +1049,62 @@
   <table class="table">
     <tbody>
       <tr>
-        <td><h1>h1. Bootstrap heading</h1></td>
+        <td><h1>h1. heading</h1></td>
         <td class="type-info">Semibold 36px</td>
       </tr>
       <tr>
-        <td><h2>h2. Bootstrap heading</h2></td>
+        <td><h2>h2. heading</h2></td>
         <td class="type-info">Semibold 30px</td>
       </tr>
       <tr>
-        <td><h3>h3. Bootstrap heading</h3></td>
+        <td><h3>h3. heading</h3></td>
         <td class="type-info">Semibold 24px</td>
       </tr>
       <tr>
-        <td><h4>h4. Bootstrap heading</h4></td>
+        <td><h4>h4. heading</h4></td>
         <td class="type-info">Semibold 18px</td>
       </tr>
       <tr>
-        <td><h5>h5. Bootstrap heading</h5></td>
+        <td><h5>h5. heading</h5></td>
         <td class="type-info">Semibold 14px</td>
       </tr>
       <tr>
-        <td><h6>h6. Bootstrap heading</h6></td>
+        <td><h6>h6. heading</h6></td>
         <td class="type-info">Semibold 12px</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Bootstrap heading<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;h2&gt;</span>h2. Bootstrap heading<span class="nt">&lt;/h2&gt;</span>
-<span class="nt">&lt;h3&gt;</span>h3. Bootstrap heading<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;h4&gt;</span>h4. Bootstrap heading<span class="nt">&lt;/h4&gt;</span>
-<span class="nt">&lt;h5&gt;</span>h5. Bootstrap heading<span class="nt">&lt;/h5&gt;</span>
-<span class="nt">&lt;h6&gt;</span>h6. Bootstrap heading<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. heading<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. heading<span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+
+<h3 id="heading-classes">Heading classes</h3>
 
 <p><code class="highlighter-rouge">.h1</code> through <code class="highlighter-rouge">.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
 
 <div class="bd-example" data-example-id="">
-<p class="h1">h1. Bootstrap heading</p>
-<p class="h2">h2. Bootstrap heading</p>
-<p class="h3">h3. Bootstrap heading</p>
-<p class="h4">h4. Bootstrap heading</p>
-<p class="h5">h5. Bootstrap heading</p>
-<p class="h6">h6. Bootstrap heading</p>
+<p class="h1">h1. heading</p>
+<p class="h2">h2. heading</p>
+<p class="h3">h3. heading</p>
+<p class="h4">h4. heading</p>
+<p class="h5">h5. heading</p>
+<p class="h6">h6. heading</p>
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>h1. Bootstrap heading<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>h2. Bootstrap heading<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>h3. Bootstrap heading<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>h4. Bootstrap heading<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>h5. Bootstrap heading<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>h6. Bootstrap heading<span class="nt">&lt;/p&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>h1. heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>h2. heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>h3. heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>h4. heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>h5. heading<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>h6. heading<span class="nt">&lt;/p&gt;</span></code></pre></div>
 
 <h3 id="customizing-headings">Customizing headings</h3>
 
-<p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
+<p>Use the included utility classes to recreate the small secondary heading text from 3.</p>
 
 <div class="bd-example" data-example-id="">
 <h3>
@@ -1353,7 +1358,7 @@
 
 <h2 id="responsive-typography">Responsive typography</h2>
 
-<p><em>Responsive typography</em> refers to scaling text and components by simply adjusting the root element’s <code class="highlighter-rouge">font-size</code> within a series of media queries. Bootstrap doesn’t do this for you, but it’s fairly easy to add if you need it.</p>
+<p><em>Responsive typography</em> refers to scaling text and components by simply adjusting the root element’s <code class="highlighter-rouge">font-size</code> within a series of media queries. doesn’t do this for you, but it’s fairly easy to add if you need it.</p>
 
 <p>Here’s an example of it in practice. Choose whatever <code class="highlighter-rouge">font-size</code>s and media queries you wish.</p>
 
@@ -1380,6 +1385,271 @@
 <span class="p">}</span></code></pre></figure>
 
 
+            </div>
+            <div class="col-md-4" style="padding-left: 0">
+              <div class="device docs-scrollspy docs-affix" id="nav-device">
+                
+<ul class="nav device-content">
+
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#content">
+      <iframe width="100%" height="555" src="/examples/content/typography/content.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/content.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/content.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#heading-classes">
+      <iframe width="100%" height="555" src="/examples/content/typography/heading-classes.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/heading-classes.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/heading-classes.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#customizing-headings">
+      <iframe width="100%" height="555" src="/examples/content/typography/customizing-headings.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/customizing-headings.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/customizing-headings.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#display-headings">
+      <iframe width="100%" height="555" src="/examples/content/typography/display-headings.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/display-headings.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/display-headings.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#lead">
+      <iframe width="100%" height="555" src="/examples/content/typography/lead.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/lead.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/lead.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#inline-text-elements">
+      <iframe width="100%" height="555" src="/examples/content/typography/inline-text-elements.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/inline-text-elements.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/inline-text-elements.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#abbreviations">
+      <iframe width="100%" height="555" src="/examples/content/typography/abbreviations.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/abbreviations.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/abbreviations.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#blockquotes">
+      <iframe width="100%" height="555" src="/examples/content/typography/blockquotes.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/blockquotes.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/blockquotes.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#naming-a-source">
+      <iframe width="100%" height="555" src="/examples/content/typography/naming-a-source.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/naming-a-source.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/naming-a-source.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#reverse-layout">
+      <iframe width="100%" height="555" src="/examples/content/typography/reverse-layout.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/reverse-layout.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/reverse-layout.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#unstyled">
+      <iframe width="100%" height="555" src="/examples/content/typography/unstyled.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/unstyled.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/unstyled.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#inline">
+      <iframe width="100%" height="555" src="/examples/content/typography/inline.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/inline.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/inline.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#description-list-alignment">
+      <iframe width="100%" height="555" src="/examples/content/typography/description-list-alignment.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/description-list-alignment.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/description-list-alignment.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#responsive-typography">
+      <iframe width="100%" height="555" src="/examples/content/typography/responsive-typography.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/content/typography/responsive-typography.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/content/typography/responsive-typography.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+
+</ul>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1424,18 +1694,6 @@
 <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 
-
-<script src="/assets/js/vendor/jekyll-search.min.js"></script>
-
-<script>
-SimpleJekyllSearch.init({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('search-results'),
-  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
-  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
-  json: '/search.json'
-})
-</script>
 
 
 <script>
