@@ -26,6 +26,7 @@ gems:
 current_version:  1.0.0-alpha.1
 repo:             https://github.com/kimsQ/rc
 slack:            https://kimsq-slack.herokuapp.com
+fiddle:           https://jsfiddle.net
 
 download:
   source:         https://github.com/kimsQ/rc/archive/v1.0.0-alpha.1.zip

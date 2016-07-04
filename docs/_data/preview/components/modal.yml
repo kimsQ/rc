@@ -2,3 +2,78 @@
   path: components/modal
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: via-data-attributes
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: via-javascript
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: animation
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: title
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: url
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: history
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: template
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: modalshow
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: modalhide
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: showrcmodal
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: shownrcmodal
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: hidercmodal
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: hiddenrcmodal
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: loadedrcmodal
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: varying-modal-content-based-on-trigger-button
+  path: components/modal
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
