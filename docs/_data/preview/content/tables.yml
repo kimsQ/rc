@@ -3,7 +3,17 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: invert-the-colors
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: table-head-options
+  path: content/tables
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: table-head-defalt
   path: content/tables
   jsfiddle: kimsQ/0odhbtzv/
   history: false

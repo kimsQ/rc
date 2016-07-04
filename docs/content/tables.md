@@ -49,6 +49,8 @@ Using the most basic table markup, here's how `.table`-based tables look in Boot
 </table>
 {% endexample %}
 
+## Invert the colors
+
 You can also invert the colors—with light text on dark backgrounds—with `.table-inverse`.
 
 {% example html %}
@@ -88,6 +90,8 @@ You can also invert the colors—with light text on dark backgrounds—with `.ta
 
 Similar to default and inverse tables, use one of two modifier classes to make `<thead>`s appear light or dark gray.
 
+### Table head inverse
+
 {% example html %}
 <table class="table">
   <thead class="thead-inverse">
@@ -119,7 +123,11 @@ Similar to default and inverse tables, use one of two modifier classes to make `
     </tr>
   </tbody>
 </table>
+{% endexample %}
 
+### Table head defalt
+
+{% example html %}
 <table class="table">
   <thead class="thead-default">
     <tr>
@@ -151,6 +159,7 @@ Similar to default and inverse tables, use one of two modifier classes to make `
   </tbody>
 </table>
 {% endexample %}
+
 
 ## Striped rows
 
