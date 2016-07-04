@@ -132,6 +132,8 @@ Contextual text classes also work well on anchors with the provided hover and fo
 <a href="#" class="text-danger">Danger link</a>
 {% endexample %}
 
+### Contextual backgrounds
+
 Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.
 
 {% example html %}

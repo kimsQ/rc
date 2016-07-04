@@ -23,6 +23,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
+- name: contextual-backgrounds
+  path: components/utilities
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
 - name: widths
   path: components/utilities
   jsfiddle: kimsQ/0odhbtzv/
