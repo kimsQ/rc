@@ -2,3 +2,8 @@
   path: components/popover
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: via-data-attributes
+  path: components/popover
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
