@@ -146,3 +146,44 @@ Fancy larger or smaller pagination? Add `.pagination-lg` or `.pagination-sm` for
   </ul>
 </nav>
 {% endexample %}
+
+
+## Pager
+Quick previous and next links for simple pagination implementations with light markup and styles. It’s great for simple sites like blogs or magazines.
+
+### Default example
+By default, the pager centers links.
+
+{% example html %}
+<nav>
+  <ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</nav>
+{% endexample %}
+
+### Aligned links
+Alternatively, you can align each link to the sides:
+
+{% example html %}
+<nav>
+  <ul class="pager">
+    <li class="pager-prev"><a href="#">Older</a></li>
+    <li class="pager-next"><a href="#">Newer</a></li>
+  </ul>
+</nav>
+{% endexample %}
+
+### Optional disabled state
+
+Pager links also use the `.disabled` class.
+
+{% example html %}
+<nav>
+  <ul class="pager">
+    <li class="pager-prev disabled"><a href="#">Older</a></li>
+    <li class="pager-next"><a href="#">Newer</a></li>
+  </ul>
+</nav>
+{% endexample %}

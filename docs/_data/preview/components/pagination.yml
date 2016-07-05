@@ -12,3 +12,18 @@
   path: components/pagination
   jsfiddle: kimsQ/0odhbtzv/
   history: false
+
+- name: pager
+  path: components/pagination
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: aligned-links
+  path: components/pagination
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: optional-disabled-state
+  path: components/pagination
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
