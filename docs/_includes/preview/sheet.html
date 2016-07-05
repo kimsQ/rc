@@ -15,6 +15,16 @@
           <a href="/examples/{{ preview.path }}/{{ preview.name }}.html" target="_blank" data-toggle="tooltip" title="New window">
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
+          {% if preview.jsfiddle %}
+          <a href="{{ site.fiddle }}/{{ preview.jsfiddle }}" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          {% endif %}
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
         </li>
       </ul>
     </div>
