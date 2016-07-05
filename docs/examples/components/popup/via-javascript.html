@@ -13,11 +13,19 @@
 
   <body>
 
-		<div class="content">
+		<header class="bar bar-nav bar-light bg-faded">
+		  <h1 class="title">Via JavaScript</h1>
+		</header>
 
+		<div class="content">
+		  <div class="content-padded">
+
+		    <button class="btn btn-primary btn-block">Launch popup</button>
+
+		  </div>
 		</div>
 
-		<!-- popup -->
+		<!-- popup 시작 -->
 		<div id="myPopup" class="popup zoom">
 		  <div class="popup-content">
 		    <header class="bar bar-nav bar-light bg-faded">
@@ -35,9 +43,13 @@
 	  <script src="../../../dist/js/rc-component.js"></script>
 	  <script src="../../../dist/js/rc-extension.js"></script>
 
-	  <script>
-	    $('#myPopup').popup('show')
-	  </script>
+		<script type="text/javascript">
+
+    $('.btn').tap(function(){
+    	$('#myPopup').popup('show');
+    });
+
+    </script>
 
   </body>
 </html>

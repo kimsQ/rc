@@ -5,389 +5,130 @@ title: Popup
 group: components
 ---
 
-Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
+Popups are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.
 
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-**Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals.** To achieve the same effect, use some custom JavaScript:
+## Usage
 
-{% highlight js %}
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
+모달은 요구에 따라 data 속성이나 자바스크립트를 통해 숨겨진 콘텐츠를 토글 합니다.
+The popup plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds `.popup-open` to the `<body>` to override default scrolling behavior and generates a `.popup-backdrop` to provide a click area for dismissing shown popups when clicking outside the popup.
+
+### Static example
+A rendered popup with title, set of actions in the header and content.
+
+{% highlight html %}
+<!-- Popup -->
+<div id="myPopup" class="popup zoom">
+  <div class="popup-content">
+    <header class="bar bar-nav">
+      <a class="icon icon-close pull-right" data-history="back"></a>
+      <h1 class="title">Popup</h1>
+    </header>
+    <div class="content">
+      <p class="content-padded">The contents of my popup go here.</p>
+    </div>
+  </div>
+</div>
+
 {% endhighlight %}
 
-{% callout warning %}
-#### Multiple open modals not supported
+### Via data attributes
 
-Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires custom code.
+Activate a popup without writing JavaScript. Set `data-toggle="popup"` on a controller element, like a button, along with a `data-target="#foo"` or `href="#foo"` to target a specific popup to toggle.
+
+**Button trigger type**
+{% highlight html %}
+<button type="button" data-toggle="popup" data-target="#myPopup">
+  Launch popup
+</button>
+{% endhighlight %}
+
+**Link trigger type**
+{% highlight html %}
+<a href="#myPopup" data-toggle="popup" >
+  Launch popup
+</a>
+{% endhighlight %}
+
+
+### Via JavaScript
+
+Call a popup with id `myPopup` with a single line of JavaScript:
+
+{% highlight js %}$('#myPopup').popup('show'){% endhighlight %}
+
+
+
+{% callout warning %}
+#### Multiple open popups not supported
+
+Be sure not to open a popup while another is still visible. Showing more than one popup at a time requires custom code.
 {% endcallout %}
 
 {% callout warning %}
-#### Modal markup placement
+#### Popup markup placement
 
-Always try to place a modal's HTML code in a top-level position in your document to avoid other components affecting the modal's appearance and/or functionality.
+Always try to place a popup's HTML code in a top-level position in your document to avoid other components affecting the popup's appearance and/or functionality.
 {% endcallout %}
 
 {% callout warning %}
 #### Mobile device caveats
 
-There are some caveats regarding using modals on mobile devices. [See our browser support docs]({{ site.baseurl }}/getting-started/browsers-devices/#modals-and-dropdowns-on-mobile) for details.
+There are some caveats regarding using popups on mobile devices. [See our browser support docs]({{ site.baseurl }}/getting-started/browsers-devices/#popups-and-dropdowns-on-mobile) for details.
 {% endcallout %}
 
-### Static example
 
-A rendered modal with header, body, and set of actions in the footer.
 
-<div class="bd-example bd-example-modal">
-  <div class="modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          <p>One fine body&hellip;</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-</div>
 
+
+## Animation
+
+팝업이 호출될 때, 에니메이션 효과를 적용합니다. 지정된 값은 팝업 컨테이너에 class 에 적용되며, 미 지정시 애니메이션 효과가 사라집니다.
+
+### Zoom
 {% highlight html %}
-<div class="modal fade">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<!-- popup -->
+<div id="myPopup" class="popup zoom">
+...
+</div>
 {% endhighlight %}
 
-### Live demo
-
-Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.
-
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <h4>Text in a modal</h4>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-
-        <h4>Popover in a modal</h4>
-        <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
-
-        <h4>Tooltips in a modal</h4>
-        <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
-
-        <hr>
-
-        <h4>Overflowing text to show scroll behavior</h4>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div>
-
-<div class="bd-example" style="padding-bottom: 24px;">
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-  </button>
-</div>
-
+### Slide-up
 {% highlight html %}
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+<!-- popup -->
+<div id="myPopup" class="popup slide-up">
+...
 </div>
 {% endhighlight %}
 
-{% callout warning %}
-#### Make modals accessible
 
-Be sure to add `role="dialog"` and `aria-labelledby="..."`, referencing the modal title, to `.modal`, and `role="document"` to the `.modal-dialog` itself.
-
-Additionally, you may give a description of your modal dialog with `aria-describedby` on `.modal`.
-{% endcallout %}
-
-{% callout info %}
-#### Embedding YouTube videos
-
-Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information.
-{% endcallout %}
-
-## Optional sizes
-
-Modals have two optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
-
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
-</div>
-
+### Fall
 {% highlight html %}
-<!-- Large modal -->
-<button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
+<!-- popup -->
+<div id="myPopup" class="popup fall">
+...
 </div>
 {% endhighlight %}
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
 
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-    </div>
-  </div>
-</div>
-
-## Remove animation
-
-For modals that simply appear rather than fade in to view, remove the `.fade` class from your modal markup.
-
+### Flip
 {% highlight html %}
-<div class="modal" tabindex="-1" role="dialog" aria-labelledby="..." aria-hidden="true">
-  ...
+<!-- popup -->
+<div id="myPopup" class="popup flip">
+...
 </div>
 {% endhighlight %}
 
-## Using the grid system
 
-To take advantage of the Bootstrap grid system within a modal, just nest `.container-fluid` within the `.modal-body` and then use the normal grid system classes within this container.
 
-{% example html %}
-<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid bd-example-row">
-          <div class="row">
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-            <div class="col-md-2 col-md-offset-4">.col-md-2 .col-md-offset-4</div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-          </div>
-          <div class="row">
-            <div class="col-sm-9">
-              Level 1: .col-sm-9
-              <div class="row">
-                <div class="col-xs-8 col-sm-6">
-                  Level 2: .col-xs-8 .col-sm-6
-                </div>
-                <div class="col-xs-4 col-sm-6">
-                  Level 2: .col-xs-4 .col-sm-6
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="bd-example bd-example-padded-bottom">
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gridSystemModal">
-    Launch demo modal
-  </button>
-</div>
-{% endexample %}
 
-## Varying modal content based on trigger button
+## Options
 
-Have a bunch of buttons that all trigger the same modal, just with slightly different contents? Use `event.relatedTarget` and [HTML `data-*` attributes](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes) (possibly [via jQuery](https://api.jquery.com/data/)) to vary the contents of the modal depending on which button was clicked. See the Modal Events docs for details on `relatedTarget`.
-
-{% example html %}
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="recipient-name" class="form-control-label">Recipient:</label>
-              <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="form-group">
-              <label for="message-text" class="form-control-label">Message:</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send message</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endexample %}
-
-{% highlight js %}
-$('#exampleModal').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-  var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
-})
-{% endhighlight %}
-
-## Modals with dynamic heights
-
-If the height of a modal changes while it is open, you should call `$('#myModal').data('bs.modal').handleUpdate()` to readjust the modal's position in case a scrollbar appears.
-
-## Usage
-
-The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also adds `.modal-open` to the `<body>` to override default scrolling behavior and generates a `.modal-backdrop` to provide a click area for dismissing shown modals when clicking outside the modal.
-
-### Via data attributes
-
-Activate a modal without writing JavaScript. Set `data-toggle="modal"` on a controller element, like a button, along with a `data-target="#foo"` or `href="#foo"` to target a specific modal to toggle.
-
-{% highlight html %}
-<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
-{% endhighlight %}
-
-### Via JavaScript
-
-Call a modal with id `myModal` with a single line of JavaScript:
-
-{% highlight js %}$('#myModal').modal(options){% endhighlight %}
-
-### Options
-
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-backdrop=""`.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-history=""`. 옵션은 data 속성이나 자바스크립트로 전해질 수 있다. data 속성은 data-selector="" 처럼 data- 에 옵션명을 덧붙히면 됩니다.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -401,60 +142,207 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </thead>
     <tbody>
      <tr>
-       <td>backdrop</td>
-       <td>boolean or the string <code>'static'</code></td>
-       <td>true</td>
-       <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
-     </tr>
-     <tr>
-       <td>keyboard</td>
-       <td>boolean</td>
-       <td>true</td>
-       <td>Closes the modal when escape key is pressed</td>
-     </tr>
-     <tr>
        <td>show</td>
        <td>boolean</td>
        <td>true</td>
-       <td>Shows the modal when initialized.</td>
+       <td>모달을 호출하는 역할을 합니다.<br> 기본값이 <code>true</code> 이기 때문에 호출시 설정하지 않아도 됩니다.</td>
+     </tr>
+     <tr>
+       <td>title</td>
+       <td>string</td>
+       <td>null</td>
+       <td></td>
+     </tr>
+     <tr>
+       <td>url</td>
+       <td>string</td>
+       <td>null</td>
+       <td><code>true</code> 인 경우 브라우저의 url 에 적용됩니다. <br> <code>true</code> 인데 값이 없는 경우 기본값 <code>#</code> 이 적용됩니다.</td>
+     </tr>
+     <tr>
+       <td>history</td>
+       <td>boolean</td>
+       <td>true</td>
+       <td><code>window.history</code> 객체에 적용되어 back 버튼을 사용해서 컴포넌트를 닫을 수 있게 해줍니다. <br> 기본값이 <code>true</code> 이므로 설정하지 않기 위해서는는 아래와 같이 2가지 방법이 있습니다.|</td>
+     </tr>
+     <tr>
+       <td>template</td>
+       <td>string</td>
+       <td>null</td>
+       <td>컴포넌트를 호출한 후에 외부의 파일을 <code>load</code> 해야 할 경우 사용하면 됩니다.</td>
+     </tr>
+     <tr>
+       <td>backdrop</td>
+       <td>boolean or the string</td>
+       <td>true</td>
+       <td>배경을 포함합니다. 팝업을 닫지 않는 배경이 필요할 경우 <code>static</code> 를 명시하세요.</td>
      </tr>
     </tbody>
   </table>
 </div>
 
-### Methods
+### Title
 
-#### `.modal(options)`
+- 용도 : 팝업의 타이틀과 브라우저의 타이틀을 동적으로 변경할 수 있습니다.
+- 유형 : `string`
+- 기본값 : `null`
+- 적용방법 : `data-title="값"` 으로 값을 전달하고 출력을 원하는 엘리먼트에 `data-role="title"` 로 받아서 출력합니다.
 
-Activates your content as a modal. Accepts an optional options `object`.
+
+Via data attributes
+{% highlight html %}
+<button ... data-title="My title">Launch demo popup </button>
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$(".btn").tap(function(){
+  $("#myPopup").popup({
+    title: 'My title'
+  });
+});
+{% endhighlight %}
+
+
+전달된 타이틀 값은 모달 내부에 `data-role="title"`이 적용된 요소에 출력됩니다.
+{% highlight html %}
+<!-- popup -->
+...
+<h1 class="title" data-role="title"></h1>
+...
+{% endhighlight %}
+
+
+### URL
+
+- 용도 : 팝업 호출시 URL을 지정 또는 변경할 수 있습니다.
+- 유형 : `string`
+- 기본값 : `null`
+- 유의사항 : 값이 없는 경우 `#` (기본값) 이 적용되며 history 옵션이 `true` 인 경우만 작동됩니다.
+
+Via data attributes
+{% highlight html %}
+<button data-toggle='popup' data-url='값'>Launch demo popup </button>
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$('.btn').tap(function(){
+  $("#myPopup").popup({
+    url :'값'
+  });
+});
+{% endhighlight %}
+
+
+### History
+
+- 용도 : 팝업호출 시 `window.history` 객체에 기록되어 스마트폰의 back 버튼을 사용해서 팝업을 닫을 수 있게 해줍니다.
+- 유형 : `boolean`
+- 기본값 : `ture`
+
+Via data attributes
+{% highlight html %}
+<button data-toggle="popup" data-history="false">Launch demo popup </button>
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$(".btn").tap(function(){
+  $("#myPopup").popup({
+    history :'false'
+  });
+});
+{% endhighlight %}
+
+
+history가 기록되지 않은 모달을 닫을 때는 `data-dismiss="popup"` 을 사용합니다.
+{% highlight html %}
+<!-- popup -->
+...
+<a class="icon icon-close pull-right" data-dismiss="popup"></a>
+...
+{% endhighlight %}
+
+
+### Template
+
+Via data attributes
+{% highlight html %}
+<button  
+  data-toggle="popup"
+  data-target="#myPopup"
+  data-template="./template/01.html"
+  data-title=".."
+  data-content="..">
+  Launch demo popup
+</button>
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$('.btn').tap(function(){
+  $('#myPopup').popup({
+    title: '..',
+    content: '..',
+    template: './template/01.html'
+  });
+});
+{% endhighlight %}
+
+
+### Backdrop
+
+- 용도 : 팝업 호출시 배경을 제어합니다.팝업을 닫지 않는 배경을 위해 `static` 를 명시하세요.
+- 유형 : `boolean` 또는 `string` ( true , false , static )
+- 기본값 : `true`
+
+Via data attributes
+{% highlight html %}
+<button data-toggle="popup" data-backdrop="false">
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$(‘#foo’).popup({
+    backdrop :'false'
+});
+{% endhighlight %}
+
+
+## Methods
+
+### `.popup(options)`
+
+Activates your content as a popup. Accepts an optional options `object`.
 
 {% highlight js %}
-$('#myModal').modal({
-  keyboard: false
+$('#myPopup').popup({
+  title : ‘My title’
 })
 {% endhighlight %}
 
-#### `.modal('toggle')`
+### `.popup('toggle')`
 
-Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs).
+Manually toggles a popup. **Returns to the caller before the popup has actually been shown or hidden** (i.e. before the `shown.rc.popup` or `hidden.rc.popup` event occurs).
 
-{% highlight js %}$('#myModal').modal('toggle'){% endhighlight %}
+{% highlight js %}$('#myPopup').popup('toggle'){% endhighlight %}
 
-#### `.modal('show')`
+### `.popup('show')`
 
-Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs).
+Manually opens a popup. **Returns to the caller before the popup has actually been shown** (i.e. before the `shown.rc.popup` event occurs).
 
-{% highlight js %}$('#myModal').modal('show'){% endhighlight %}
+{% highlight js %}$('#myPopup').popup('show'){% endhighlight %}
 
-#### `.modal('hide')`
+### `.popup('hide')`
 
-Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs).
+Manually hides a popup. **Returns to the caller before the popup has actually been hidden** (i.e. before the `hidden.rc.popup` event occurs).
 
-{% highlight js %}$('#myModal').modal('hide'){% endhighlight %}
+{% highlight js %}$('#myPopup').popup('hide'){% endhighlight %}
 
-### Events
+## Events
 
-Bootstrap's modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
+Bootstrap's popup class exposes a few events for hooking into popup functionality. All popup events are fired at the popup itself (i.e. at the `<div class="popup">`).
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -466,27 +354,94 @@ Bootstrap's modal class exposes a few events for hooking into modal functionalit
     </thead>
     <tbody>
      <tr>
-       <td>show.bs.modal</td>
+       <td>show.rc.popup</td>
        <td>This event fires immediately when the <code>show</code> instance method is called. If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
      </tr>
      <tr>
-       <td>shown.bs.modal</td>
-       <td>This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
+       <td>shown.rc.popup</td>
+       <td>This event is fired when the popup has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the <code>relatedTarget</code> property of the event.</td>
      </tr>
      <tr>
-       <td>hide.bs.modal</td>
+       <td>hide.rc.popup</td>
        <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
      </tr>
      <tr>
-       <td>hidden.bs.modal</td>
-       <td>This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+       <td>hidden.rc.popup</td>
+       <td>This event is fired when the popup has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+     </tr>
+     <tr>
+       <td>loaded.rc.popup</td>
+       <td>data-template 값으로 정해진 원격 마크업이 load 된 후 실행되는 이벤트</td>
      </tr>
     </tbody>
   </table>
 </div>
 
+### `show.rc.popup`
+
+This event fires immediately when the `show` instance method is called. If caused by a click, the clicked element is available as the `relatedTarget` property of the event.
+
 {% highlight js %}
-$('#myModal').on('hidden.bs.modal', function (e) {
+$('#myPopup').on('show.rc.popup', function () {
+  $('#myInput').focus()
+})
+{% endhighlight %}
+
+
+### `shown.rc.popup`
+
+This event is fired when the popup has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the `relatedTarget` property of the event.
+
+**Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap popups.** To achieve the same effect, use some custom JavaScript:
+
+{% highlight js %}
+$('#myPopup').on('shown.rc.popup', function () {
+  $('#myInput').focus()
+})
+{% endhighlight %}
+
+### `hide.rc.popup`
+This event is fired immediately when the hide instance method has been called.
+{% highlight js %}
+$('#myPopup').on('hide.rc.popup', function (e) {
   // do something...
+})
+{% endhighlight %}
+
+
+### `hidden.rc.popup`
+This event is fired when the popup has finished being hidden from the user (will wait for CSS transitions to complete).
+
+{% highlight js %}
+$('#myPopup').on('hidden.rc.popup', function (e) {
+  // do something...
+})
+{% endhighlight %}
+
+
+### `loaded.rc.popup`
+data-template 값으로 정해진 원격 마크업이 load 된 후 실행되는 이벤트
+{% highlight js %}
+$('#myPopup').on('loaded.rc.popup', function (e) {
+  // do something...
+})
+{% endhighlight %}
+
+
+## 응용방법
+
+### Varying popup content based on trigger button
+
+Have a bunch of buttons that all trigger the same popup, just with slightly different contents? Use `event.relatedTarget` and [HTML `data-*` attributes](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes) (possibly [via jQuery](https://api.jquery.com/data/)) to vary the contents of the popup depending on which button was clicked. See the Popup Events docs for details on `relatedTarget`. 거의 같은 모달을 작동시키는 몇개의 버튼을 가지고 싶으세요? 버튼이 터치 됨에 따라 달라지는 내용을 위해서 `event.relatedTarget` 와 `HTML data-*` 속성을 사용하세요. `relatedTarget` 에 자세한 것은 팝업 이벤트 문서를 보세요
+
+{% highlight js %}
+$('#examplePopup').on('show.rc.popup', function(event) {
+  var button = $(event.relatedTarget) // Button that triggered the popup
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the popup's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var popup = $(this)
+    popup.find('.title').text('New message to ' + recipient)
+    popup.find('.content input').val(recipient)
 })
 {% endhighlight %}

@@ -13,11 +13,20 @@
 
   <body>
 
-		<div class="content">
+		<header class="bar bar-nav bar-light bg-faded">
+		  <h1 class="title">Via data attributes</h1>
+		</header>
 
+		<div class="content">
+		  <div class="content-padded">
+
+		    <button class="btn btn-primary btn-block" data-toggle="popup" data-target="#myPopup">Launch popup (button type)</button>
+				<a class="btn btn-primary btn-block" data-toggle="popup" href="#myPopup">Launch popup (link type)</a>
+
+		  </div>
 		</div>
 
-		<!-- popup -->
+		<!-- popup 시작 -->
 		<div id="myPopup" class="popup zoom">
 		  <div class="popup-content">
 		    <header class="bar bar-nav bar-light bg-faded">
@@ -34,10 +43,6 @@
 	  <script src="../../../dist/js/rc-control.js"></script>
 	  <script src="../../../dist/js/rc-component.js"></script>
 	  <script src="../../../dist/js/rc-extension.js"></script>
-
-	  <script>
-	    $('#myPopup').popup('show')
-	  </script>
 
   </body>
 </html>

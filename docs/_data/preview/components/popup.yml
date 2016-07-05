@@ -2,3 +2,98 @@
   path: components/popup
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: via-data-attributes
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: via-javascript
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: zoom
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: slide-up
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: fall
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: flip
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: title
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: url
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: history
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: template
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: backdrop
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: popupshow
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: popuphide
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: showrcpopup
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: shownrcpopup
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: hidercpopup
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: hiddenrcpopup
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: loadedrcpopup
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: varying-popup-content-based-on-trigger-button
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

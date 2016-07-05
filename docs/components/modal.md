@@ -59,7 +59,7 @@ Activate a modal without writing JavaScript. Set `data-toggle="modal"` on a cont
 
 Call a modal with id `myModal` with a single line of JavaScript:
 
-{% highlight js %}$('#myModal').modal(options){% endhighlight %}
+{% highlight js %}$('#myModal').modal('show'){% endhighlight %}
 
 
 
@@ -107,7 +107,7 @@ There are some caveats regarding using modals on mobile devices. [See our browse
 
 ## Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-backdrop=""`. 옵션은 data 속성이나 자바스크립트로 전해질 수 있다. data 속성은 data-selector="" 처럼 data- 에 옵션명을 덧붙히면 됩니다.
+Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-history=""`. 옵션은 data 속성이나 자바스크립트로 전해질 수 있다. data 속성은 data-selector="" 처럼 data- 에 옵션명을 덧붙히면 됩니다.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
