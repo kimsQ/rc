@@ -5,7 +5,7 @@ title: Collapse
 group: components
 ---
 
-The Bootstrap collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.
+The ratchet-plus collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.
 
 ## Contents
 
@@ -22,7 +22,7 @@ Click the buttons below to show and hide another element via class changes:
 
 You can use a link with the `href` attribute, or a button with the `data-target` attribute. In both cases, the `data-toggle="collapse"` is required.
 
-{% example html %}
+{% highlight html %}
 <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Link with href
@@ -32,56 +32,56 @@ You can use a link with the `href` attribute, or a button with the `data-target`
   </button>
 </p>
 <div class="collapse" id="collapseExample">
-  <div class="card card-block">
+  <p class="bg-faded p-a-1">
     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-  </div>
+  </p>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Accordion example
 
 Extend the default collapse behavior to create an accordion.
 
-{% example html %}
-<div id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </h4>
+{% highlight html %}
+<div id="accordion" class="card-group-collapse" role="tablist" aria-multiselectable="true">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Collapsible Group Item #1
+      </a>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    <div id="collapseOne" class="card-block collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <p class="card-text">
+        ...
+      </p>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </h4>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Collapsible Group Item #2
+      </a>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    <div id="collapseTwo" class="card-block collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <p class="card-text">
+        ...
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </div>
+    <div id="collapseThree" class="card-block collapse" role="tabpanel" aria-labelledby="headingThree">
+      <p class="card-text">
+        ...
+      </p>
     </div>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Accessibility
 
@@ -182,21 +182,21 @@ Bootstrap's collapse class exposes a few events for hooking into collapse functi
     </thead>
     <tbody>
      <tr>
-       <td>show.bs.collapse</td>
+       <td>show.rc.collapse</td>
        <td>This event fires immediately when the <code>show</code> instance method is called.</td>
      </tr>
      <tr>
-       <td>shown.bs.collapse</td>
+       <td>shown.rc.collapse</td>
        <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
      </tr>
      <tr>
-       <td>hide.bs.collapse</td>
+       <td>hide.rc.collapse</td>
        <td>
         This event is fired immediately when the <code>hide</code> method has been called.
        </td>
      </tr>
      <tr>
-       <td>hidden.bs.collapse</td>
+       <td>hidden.rc.collapse</td>
        <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
      </tr>
     </tbody>
@@ -204,7 +204,7 @@ Bootstrap's collapse class exposes a few events for hooking into collapse functi
 </div>
 
 {% highlight js %}
-$('#myCollapsible').on('hidden.bs.collapse', function () {
+$('#myCollapsible').on('hidden.rc.collapse', function () {
   // do something…
 })
 {% endhighlight %}
