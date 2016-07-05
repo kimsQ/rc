@@ -12,9 +12,39 @@
 	</head>
 	<body>
 
-		<header class="bar bar-nav bar-light bg-faded">
-		  <a href class="title">page</a>
-		</header>
+		<!-- Start Page -->
+		<div id="page-start" class="page center">
+		  <header class="bar bar-nav bar-light bg-faded">
+		    <h1 class="title"> Page </h1>
+		  </header>
+		  <div class="content">
+		    <div class="content-padded">
+		      Start Page 내용
+		      <button class="btn btn-primary btn-block" data-toggle="page" data-start="#page-start" data-target="#page-target">Launch demo page
+		      </button>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- Target Page -->
+		<div id="page-target" class="page right">
+		  <header class="bar bar-nav bar-light bg-faded">
+		    <button class="btn btn-primary pull-left" data-history="back">
+		      Back
+		    </button>
+		    <h1 class="title">Target Page</h1>
+		  </header>
+		  <div class="content">
+		    <div class="content-padded">
+		      Target Page 내용
+		    </div>
+		  </div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	  <script src="../../../dist/js/rc-control.js"></script>
+	  <script src="../../../dist/js/rc-component.js"></script>
+	  <script src="../../../dist/js/rc-extension.js"></script>
 
 	</body>
 </html>
