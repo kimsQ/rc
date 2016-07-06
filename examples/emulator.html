@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Device Emulator</title>
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+		<!-- Font -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+		<style>
+
+		body, html {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.rb-full-overlay {
+			position: fixed;
+			overflow: visible;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			-webkit-transition-property: left,right,top,bottom,width,margin;
+			        transition-property: left,right,top,bottom,width,margin;
+			-webkit-transition-duration: .2s;
+			        transition-duration: .2s;
+		}
+
+		.rb-full-overlay-main {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			height: 100%;
+		}
+
+		#site-preview {
+			-webkit-transition: all .2s;
+					transition: all .2s;
+		}
+
+		#site-preview.desktop,
+		#site-preview.tablet,
+		#site-preview.mobile {
+			background: #555;
+		}
+
+		#site-preview iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+			-webkit-transition: all ease 1s;
+			   -moz-transition: all ease 1s;
+			        transition: all ease 1s;
+		}
+
+		#site-preview.desktop iframe {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		#site-preview.tablet iframe {
+			display: block;
+			margin: 0 auto;
+			width: 783px;
+		}
+
+		#site-preview.mobile iframe {
+			display: block;
+			margin: 0 auto;
+			width: 360px;
+			padding-top: 8vw;
+			padding-bottom: 8vw;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+		}
+
+		#devices-buttons {
+			margin-left: -85px;
+			position: fixed;
+			bottom: 20px;
+			left: 50%;
+			z-index: 1000000;
+		}
+
+		#devices-buttons .btn-default {
+			color: #ccc;
+			background-color: #555555;
+			border-color: #424242;
+			background-image: none;
+			text-shadow: none;
+		}
+
+		#devices-buttons .active {
+			color: #fff;
+			background-color: #222;
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="rb-full-overlay">
+			<div id="site-preview" class="rb-full-overlay-main tablet">
+				<iframe src=""></iframe>
+			</div>
+		</div>
+
+		<!-- device 전환버튼 -->
+		<div class="btn-group" data-toggle="buttons" id="devices-buttons">
+			<label class="btn btn-default rb-btn-desktop" title="desktop">
+				<input type="radio" name="options" id="option1"> <i class="fa fa-desktop fa-3x"></i>
+			</label>
+			<label class="btn btn-default active rb-btn-tablet" title="tablet">
+				<input type="radio" name="options" id="option2" checked> <i class="fa fa-tablet fa-3x"></i>
+			</label>
+			<label class="btn btn-default rb-btn-mobile" title="mobile">
+				<input type="radio" name="options" id="option3"> <i class="fa fa-mobile fa-3x"></i>
+			</label>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="../assets/js/bootstrap.min.js"></script>
+
+		<script>
+
+			$(document).ready(function(){
+
+				temp=location.href.split("?")
+				demo=temp[1].split("=")
+				$("#site-preview iframe").attr("src",demo[1]);
+
+
+				$(".rb-btn-desktop").click(function(){
+					$(".rb-full-overlay-main").removeClass( "mobile tablet" ).addClass( "desktop" );
+				});
+
+				$(".rb-btn-tablet").click(function(){
+					$(".rb-full-overlay-main").removeClass( "mobile desktop" ).addClass( "tablet" );
+				});
+
+				$(".rb-btn-mobile").click(function(){
+					$(".rb-full-overlay-main").removeClass( "tablet desktop" ).addClass( "mobile" );
+				});
+
+			});
+
+		</script>
+
+	</body>
+</html>
