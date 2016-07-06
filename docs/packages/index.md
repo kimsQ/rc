@@ -12,14 +12,14 @@ Examples that focus on implementing uses of built-in components provided by Ratc
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/starter-template/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/packages/screenshots/01.png" alt="">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
     <h4>Landing-pages</h4>
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/grid/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/packages/screenshots/02.png" alt="">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
     <h4>Business</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
@@ -28,7 +28,7 @@ Examples that focus on implementing uses of built-in components provided by Ratc
 
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/jumbotron/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/packages/screenshots/03.png" alt="">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
     <h4>E-commerce</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
