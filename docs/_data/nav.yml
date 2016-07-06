@@ -74,6 +74,6 @@
   pages:
     - title: History
     - title: Team
-    - title: Brand
+    # - title: Brand
     - title: License
-    - title: Translations
+    # - title: Translations
