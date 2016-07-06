@@ -29,11 +29,12 @@
 <script src="https://use.fontawesome.com/00e99c286e.js"></script>
 
 <script>
+  // google analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-146052-10', 'getbootstrap.com');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72461431-3', 'rc.kimsq.com');
   ga('send', 'pageview');
 </script>
 
@@ -90,7 +91,7 @@
         
   <h1>Getting started</h1>
   <p class="lead">
-    An overview of Bootstrap, including how to download and use it, some basic templates and examples, and more.
+    An overview of Ratchet plus, including how to download and use it, some basic templates and examples, and more.
   </p>
 
 
@@ -967,16 +968,16 @@
         </div>
         <div class="col-xs-12 col-md-7 bd-content">
           <h1 class="bd-title" id="content">Build tools</h1>
-          <p>Bootstrap uses <a href="http://gruntjs.com">Grunt</a> for its CSS and JavaScript build system and Jekyll for the written documentation. Our Gruntfile includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
+          <p>Ratchet plus uses <a href="http://gruntjs.com">Grunt</a> for its CSS and JavaScript build system and Jekyll for the written documentation. Our Gruntfile includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
 
 <h2 id="tooling-setup">Tooling setup</h2>
 
-<p>To use our Gruntfile and run our documentation locally, you’ll need a copy of Bootstrap’s source files, Node, and Grunt. Follow these steps and you should be ready to rock:</p>
+<p>To use our Gruntfile and run our documentation locally, you’ll need a copy of Ratchet plus’s source files, Node, and Grunt. Follow these steps and you should be ready to rock:</p>
 
 <ol>
   <li><a href="https://nodejs.org/download">Download and install Node</a>, which we use to manage our dependencies.</li>
   <li>Install the Grunt command line tools, <code class="highlighter-rouge">grunt-cli</code>, with <code class="highlighter-rouge">npm install -g grunt-cli</code>.</li>
-  <li>Navigate to the root <code class="highlighter-rouge">/bootstrap</code> directory and run <code class="highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/twbs/bootstrap/blob/master/package.json">package.json</a>.</li>
+  <li>Navigate to the root <code class="highlighter-rouge">/Ratchet plus</code> directory and run <code class="highlighter-rouge">npm install</code> to install our local dependencies listed in <a href="https://github.com/twbs/Ratchet plus/blob/master/package.json">package.json</a>.</li>
   <li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="http://bundler.io/">Bundler</a> with <code class="highlighter-rouge">gem install bundler</code>, and finally run <code class="highlighter-rouge">bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.
     <ul>
       <li><strong>Windows users:</strong> Read <a href="http://jekyll-windows.juthilo.com/">this unofficial guide</a> to get Jekyll up and running without problems.</li>
@@ -1023,20 +1024,20 @@
 
 <h2 id="switching-sass-compilers">Switching Sass compilers</h2>
 
-<p>Bootstrap will be compiled with <a href="https://github.com/sass/libsass">libsass</a> by default, but you can opt into traditional Ruby Sass by setting the <code class="highlighter-rouge">TWBS_SASS</code> environment variable. Two options are supported:</p>
+<p>Ratchet plus will be compiled with <a href="https://github.com/sass/libsass">libsass</a> by default, but you can opt into traditional Ruby Sass by setting the <code class="highlighter-rouge">TWBS_SASS</code> environment variable. Two options are supported:</p>
 
 <ul>
   <li><code class="highlighter-rouge">libsass</code> (default) to use <a href="https://github.com/sass/libsass">libsass</a> via <a href="https://github.com/sindresorhus/grunt-sass">grunt-sass</a>.</li>
   <li><code class="highlighter-rouge">sass</code> to use <a href="https://github.com/sass/sass">Ruby Sass</a> via <a href="https://github.com/gruntjs/grunt-contrib-sass">grunt-contrib-sass</a>.</li>
 </ul>
 
-<p>For example, run <code class="highlighter-rouge">TWBS_SASS=sass grunt</code> to test and build Bootstrap with Ruby Sass.</p>
+<p>For example, run <code class="highlighter-rouge">TWBS_SASS=sass grunt</code> to test and build Ratchet plus with Ruby Sass.</p>
 
 <h2 id="autoprefixer">Autoprefixer</h2>
 
-<p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our Gruntfile and build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
+<p>Ratchet plus uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our Gruntfile and build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
 
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/twbs/bootstrap/blob/master/grunt/postcss.js"><code class="highlighter-rouge">/grunt/postcss.js</code></a> for details.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/twbs/Ratchet plus/blob/master/grunt/postcss.js"><code class="highlighter-rouge">/grunt/postcss.js</code></a> for details.</p>
 
 <h2 id="local-documentation">Local documentation</h2>
 
@@ -1044,7 +1045,7 @@
 
 <ol>
   <li>Run through the <a href="#tooling-setup">tooling setup</a> above to install Jekyll (the site builder) and other Ruby dependencies with <code class="highlighter-rouge">bundle install</code>.</li>
-  <li>From the root <code class="highlighter-rouge">/bootstrap</code> directory, run <code class="highlighter-rouge">bundle exec jekyll serve</code> in the command line.</li>
+  <li>From the root <code class="highlighter-rouge">/Ratchet plus</code> directory, run <code class="highlighter-rouge">bundle exec jekyll serve</code> in the command line.</li>
   <li>Open <a href="http://localhost:9001">http://localhost:9001</a> in your browser, and voilà.</li>
 </ol>
 
@@ -1154,7 +1155,7 @@ body, html {
     top: 30px;
     bottom: auto;
     right: 30px;
-    left: auto;
+    left: auto;``
     padding: 2px 5px 5px;
     border-radius: 4px;
     opacity: 1;
@@ -1278,15 +1279,6 @@ SimpleJekyllSearch.init({
 
 
 <script>
-
-  // google analytics
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72461431-3', 'auto');
-  ga('send', 'pageview');
 
   // holder
   Holder.addTheme('gray', {

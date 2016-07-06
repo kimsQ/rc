@@ -29,11 +29,12 @@
 <script src="https://use.fontawesome.com/00e99c286e.js"></script>
 
 <script>
+  // google analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-146052-10', 'getbootstrap.com');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72461431-3', 'rc.kimsq.com');
   ga('send', 'pageview');
 </script>
 
@@ -90,7 +91,7 @@
         
   <h1>Getting started</h1>
   <p class="lead">
-    An overview of Bootstrap, including how to download and use it, some basic templates and examples, and more.
+    An overview of Ratchet plus, including how to download and use it, some basic templates and examples, and more.
   </p>
 
 
@@ -967,7 +968,7 @@
         </div>
         <div class="col-xs-12 col-md-7 bd-content">
           <h1 class="bd-title" id="content">JavaScript</h1>
-          <p>Bootstrap includes a handful of JavaScript to help bring some of our components to life. Learn more about how to include it, our data and programmatic API options, and more.</p>
+          <p>Ratchet plus includes a handful of JavaScript to help bring some of our components to life. Learn more about how to include it, our data and programmatic API options, and more.</p>
 
 <h2 id="contents">Contents</h2>
 
@@ -989,7 +990,7 @@
 
 <h2 id="individual-or-compiled">Individual or compiled</h2>
 
-<p>Plugins can be included individually (using Bootstrap’s individual <code class="highlighter-rouge">*.js</code> files), or all at once using <code class="highlighter-rouge">bootstrap.js</code> or the minified <code class="highlighter-rouge">bootstrap.min.js</code> (don’t include both).</p>
+<p>Plugins can be included individually (using Ratchet plus’s individual <code class="highlighter-rouge">*.js</code> files), or all at once using <code class="highlighter-rouge">Ratchet plus.js</code> or the minified <code class="highlighter-rouge">Ratchet plus.min.js</code> (don’t include both).</p>
 
 <h2 id="dependencies">Dependencies</h2>
 
@@ -997,7 +998,7 @@
 
 <h2 id="data-attributes">Data attributes</h2>
 
-<p>Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to <strong>only use one set of data attributes on a single element</strong> (e.g., you cannot trigger a tooltip and modal from the same button.)</p>
+<p>Nearly all Ratchet plus plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to <strong>only use one set of data attributes on a single element</strong> (e.g., you cannot trigger a tooltip and modal from the same button.)</p>
 
 <p>However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with <code class="highlighter-rouge">data-api</code> like so:</p>
 
@@ -1009,7 +1010,7 @@
 
 <h2 id="programmatic-api">Programmatic API</h2>
 
-<p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+<p>We also believe you should be able to use all Ratchet plus plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span></code></pre></figure>
 
@@ -1028,14 +1029,14 @@
 
 <h2 id="no-conflict">No conflict</h2>
 
-<p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code class="highlighter-rouge">.noConflict</code> on the plugin you wish to revert the value of.</p>
+<p>Sometimes it is necessary to use Ratchet plus plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code class="highlighter-rouge">.noConflict</code> on the plugin you wish to revert the value of.</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span>            <span class="c1">// give $().bootstrapBtn the Bootstrap functionality</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Ratchet</span> <span class="nx">plusButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">Ratchet</span> <span class="nx">plusBtn</span> <span class="o">=</span> <span class="nx">Ratchet</span> <span class="nx">plusButton</span>            <span class="c1">// give $().Ratchet plusBtn the Ratchet plus functionality</span></code></pre></figure>
 
 <h2 id="events">Events</h2>
 
-<p>Bootstrap provides custom events for most plugins’ unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code class="highlighter-rouge">show</code>) is triggered at the start of an event, and its past participle form (ex. <code class="highlighter-rouge">shown</code>) is triggered on the completion of an action.</p>
+<p>Ratchet plus provides custom events for most plugins’ unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code class="highlighter-rouge">show</code>) is triggered at the start of an event, and its past participle form (ex. <code class="highlighter-rouge">shown</code>) is triggered on the completion of an action.</p>
 
 <p>All infinitive events provide <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code class="highlighter-rouge">preventDefault()</code></a> functionality. This provides the ability to stop the execution of an action before it starts.</p>
 
@@ -1045,23 +1046,23 @@
 
 <h2 id="version-numbers">Version numbers</h2>
 
-<p>The version of each of Bootstrap’s jQuery plugins can be accessed via the <code class="highlighter-rouge">VERSION</code> property of the plugin’s constructor. For example, for the tooltip plugin:</p>
+<p>The version of each of Ratchet plus’s jQuery plugins can be accessed via the <code class="highlighter-rouge">VERSION</code> property of the plugin’s constructor. For example, for the tooltip plugin:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "1.0.0-alpha.1"</span></code></pre></figure>
 
 <h2 id="no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</h2>
 
-<p>Bootstrap’s plugins don’t fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code class="highlighter-rouge">&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+<p>Ratchet plus’s plugins don’t fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code class="highlighter-rouge">&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
 
 <div class="bd-callout bd-callout-warning">
 <h4 id="third-party-libraries">Third-party libraries</h4>
 
-<p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code class="highlighter-rouge">.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
+<p><strong>Ratchet plus does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code class="highlighter-rouge">.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
 </div>
 
 <h2 id="transitions">Transitions</h2>
 
-<p>For simple transition effects, include <code class="highlighter-rouge">transition.js</code> once alongside the other JS files. If you’re using the compiled (or minified) <code class="highlighter-rouge">bootstrap.js</code>, there is no need to include this—it’s already there.</p>
+<p>For simple transition effects, include <code class="highlighter-rouge">transition.js</code> once alongside the other JS files. If you’re using the compiled (or minified) <code class="highlighter-rouge">Ratchet plus.js</code>, there is no need to include this—it’s already there.</p>
 
 <p>Transition.js is a basic helper for <code class="highlighter-rouge">transitionEnd</code> events as well as a CSS transition emulator. It’s used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
 
@@ -1164,7 +1165,7 @@ body, html {
     top: 30px;
     bottom: auto;
     right: 30px;
-    left: auto;
+    left: auto;``
     padding: 2px 5px 5px;
     border-radius: 4px;
     opacity: 1;
@@ -1288,15 +1289,6 @@ SimpleJekyllSearch.init({
 
 
 <script>
-
-  // google analytics
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72461431-3', 'auto');
-  ga('send', 'pageview');
 
   // holder
   Holder.addTheme('gray', {
