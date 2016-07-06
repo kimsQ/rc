@@ -11,7 +11,7 @@ Bootstrap is maintained by the founding team and a small group of invaluable cor
     <div class="list-group-item">
       <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user={{ member.user }}&amp;type=follow"></iframe>
       <a class="team-member" href="https://github.com/{{ member.user }}">
-        <img src="https://secure.gravatar.com/avatar/{{ member.gravatar }}" alt="@{{ member.user }}" width="32" height="32">
+        <img src="https://avatars1.githubusercontent.com/u/{{ member.avatar }}?v=3&s=160" alt="@{{ member.user }}" width="32" height="32">
         <strong>{{ member.name }}</strong> <small>@{{ member.user }}</small>
       </a>
     </div>

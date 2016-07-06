@@ -34,7 +34,7 @@ download:
 
 blog:             http://blog.kimsq.com
 expo:             http://expo.kimsq.com
-themes:           http://www.kimsq.com
+packages:           http://www.kimsq.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes

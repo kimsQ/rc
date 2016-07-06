@@ -1,12 +1,39 @@
 ---
 layout: docs
-title: History
+title: Ratchet plus
 group: about
 redirect_from: "/about/"
 ---
 
-Originally created by a designer and a developer at Twitter, Bootstrap has become one of the most popular front-end frameworks and open source projects in the world.
 
-Bootstrap was created at Twitter in mid-2010 by [@mdo](https://twitter.com/mdo) and [@fat](https://twitter.com/fat). Prior to being an open-sourced framework, Bootstrap was known as _Twitter Blueprint_. A few months into development, Twitter held its [first Hack Week](https://blog.twitter.com/2010/hack-week) and the project exploded as developers of all skill levels jumped in without any external guidance. It served as the style guide for internal tools development at the company for over a year before its public release, and continues to do so today.
+Makes front-end mobile web & apps development faster and easier.
+Ratchet plus is the function extended version of [Ratchet](http://goratchet.com/).
 
-Originally [released](https://blog.twitter.com/2011/bootstrap-twitter) on [<time datetime="2011-08-19 11:25">Friday, August 19, 2011</time>](https://twitter.com/mdo/statuses/104620039650557952), we've since had over [twenty releases](https://github.com/twbs/bootstrap/releases), including two major rewrites with v2 and v3. With Bootstrap 2, we added responsive functionality to the entire framework as an optional stylesheet. Building on that with Bootstrap 3, we rewrote the library once more to make it responsive by default with a mobile first approach.
+## Special thanks
+Ratchet plus would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
+
+* [Ratchet](https://github.com/twbs/ratchet)
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [History.js](https://github.com/browserstate/history.js)
+* [jquery.finger](https://github.com/ngryman/jquery.finger)
+* [Fuel UX](https://github.com/ExactTarget/fuelux/)
+* [Bootstrap Notify](https://github.com/mouse0270/bootstrap-notify)
+* [jQuery is-loading](https://github.com/hekigan/is-loading)
+
+## Offical site & Community
+- [rc.kimsq.com](http://rc.kimsq.com)
+
+
+## Repository
+- [{{ site.repo }}]({{ site.repo }})
+
+## Q&A
+- For help using Ratchet plus, ask on StackOverflow using the tag [ratchet-plus](http://stackoverflow.com/questions/tagged/ratchet-plus)
+
+## Author & Maintainers
+[@gitaeks](https://github.com/gitaeks), [@kieregh](https://github.com/kieregh)
+
+
+## Contact
+* Email :  [contact@kimsq.com](mailto:contact@kimsq.com)
+* Facebook : [https://www.facebook.com/kimsQ.Platform](https://www.facebook.com/kimsQ.Platform)
