@@ -4,7 +4,7 @@ title: JavaScript
 group: getting-started
 ---
 
-Bootstrap includes a handful of JavaScript to help bring some of our components to life. Learn more about how to include it, our data and programmatic API options, and more.
+Ratchet plus includes a handful of JavaScript to help bring some of our components to life. Learn more about how to include it, our data and programmatic API options, and more.
 
 ## Contents
 
@@ -13,7 +13,7 @@ Bootstrap includes a handful of JavaScript to help bring some of our components 
 
 ## Individual or compiled
 
-Plugins can be included individually (using Bootstrap's individual `*.js` files), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
+Plugins can be included individually (using Ratchet plus's individual `*.js` files), or all at once using `Ratchet plus.js` or the minified `Ratchet plus.min.js` (don't include both).
 
 ## Dependencies
 
@@ -21,7 +21,7 @@ Some plugins and CSS components depend on other plugins. If you include plugins 
 
 ## Data attributes
 
-Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
+Nearly all Ratchet plus plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
 
 However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with `data-api` like so:
 
@@ -37,7 +37,7 @@ $(document).off('.alert.data-api')
 
 ## Programmatic API
 
-We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.
+We also believe you should be able to use all Ratchet plus plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.
 
 {% highlight js %}
 $('.btn.danger').button('toggle').addClass('fat')
@@ -62,16 +62,16 @@ $.fn.modal.Constructor.DEFAULTS.keyboard = false // changes default for the moda
 
 ## No conflict
 
-Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
+Sometimes it is necessary to use Ratchet plus plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
 
 {% highlight js %}
-var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the Bootstrap functionality
+var Ratchet plusButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+$.fn.Ratchet plusBtn = Ratchet plusButton            // give $().Ratchet plusBtn the Ratchet plus functionality
 {% endhighlight %}
 
 ## Events
 
-Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
+Ratchet plus provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
 
 All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts.
 
@@ -83,7 +83,7 @@ $('#myModal').on('show.bs.modal', function (e) {
 
 ## Version numbers
 
-The version of each of Bootstrap's jQuery plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
+The version of each of Ratchet plus's jQuery plugins can be accessed via the `VERSION` property of the plugin's constructor. For example, for the tooltip plugin:
 
 {% highlight js %}
 $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
@@ -91,16 +91,16 @@ $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 
 ## No special fallbacks when JavaScript is disabled
 
-Bootstrap's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
+Ratchet plus's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.
 
 {% callout warning %}
 #### Third-party libraries
 
-**Bootstrap does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
+**Ratchet plus does not officially support third-party JavaScript libraries** like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
 {% endcallout %}
 
 ## Transitions
 
-For simple transition effects, include `transition.js` once alongside the other JS files. If you're using the compiled (or minified) `bootstrap.js`, there is no need to include this—it's already there.
+For simple transition effects, include `transition.js` once alongside the other JS files. If you're using the compiled (or minified) `Ratchet plus.js`, there is no need to include this—it's already there.
 
 Transition.js is a basic helper for `transitionEnd` events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.

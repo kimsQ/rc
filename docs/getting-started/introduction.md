@@ -5,9 +5,9 @@ group: getting-started
 redirect_from: "/getting-started/"
 ---
 
-Bootstrap is the world's most popular framework for building responsive, mobile-first sites and applications. Inside you'll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever.
+Ratchet plus is the world's most popular framework for building responsive, mobile-first sites and applications. Inside you'll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever.
 
-Here's how to quickly get started with the Bootstrap CDN and a template starter page.
+Here's how to quickly get started with the Ratchet plus CDN and a template starter page.
 
 ## Contents
 
@@ -16,7 +16,7 @@ Here's how to quickly get started with the Bootstrap CDN and a template starter 
 
 ## Quick start
 
-Looking to quickly add Bootstrap to your project? Use the Bootstrap CDN, provided for free by the folks at MaxCDN. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/getting-started/download)
+Looking to quickly add Ratchet plus to your project? Use the Ratchet plus CDN, provided for free by the folks at MaxCDN. Using a package manager or need to download the source files? [Head to the downloads page.]({{ site.baseurl }}/getting-started/download)
 
 Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
 
@@ -32,7 +32,7 @@ Add our JavaScript plugins, jQuery, and Tether near the end of your pages, right
 <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
 {% endhighlight %}
 
-And that's it—you're on your way to a fully Bootstrapped site. If you're at all unsure about the general page structure, keep reading for an example page template.
+And that's it—you're on your way to a fully Ratchet plusped site. If you're at all unsure about the general page structure, keep reading for an example page template.
 
 ## Starter template
 
@@ -53,13 +53,13 @@ Put it all together and your pages should look like this:
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
+    <!-- Ratchet plus CSS -->
     <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- jQuery first, then Tether, then Ratchet plus JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.tether }}" integrity="{{ site.cdn.tether_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
@@ -71,11 +71,11 @@ That's all you need for overall page requirements. Visit the [Layout docs]({{ si
 
 ## Important globals
 
-Bootstrap employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
+Ratchet plus employs a handful of important global styles and settings that you'll need to be aware of when using it, all of which are almost exclusively geared towards the *normalization* of cross browser styles. Let's dive in.
 
 ### HTML5 doctype
 
-Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
+Ratchet plus requires the use of the HTML5 doctype. Without it, you'll see some funky incomplete styling, but including it shouldn't cause any considerable hiccups.
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -86,7 +86,7 @@ Bootstrap requires the use of the HTML5 doctype. Without it, you'll see some fun
 
 ### Responsive meta tag
 
-Bootstrap is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
+Ratchet plus is developed *mobile first*, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, **add the responsive viewport meta tag** to your `<head>`.
 
 {% highlight html %}
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -118,13 +118,13 @@ For improved cross-browser rendering, we use [Normalize.css](http://necolas.gith
 
 ## Community
 
-Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.
+Stay up to date on the development of Ratchet plus and reach out to the community with these helpful resources.
 
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog]({{ site.blog }}).
+- Follow [@getRatchet plus on Twitter](https://twitter.com/getRatchet plus).
+- Read and subscribe to [The Official Ratchet plus Blog]({{ site.blog }}).
 - Join [the official Slack room]({{ site.slack }}).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
+- Chat with fellow Ratchet pluspers in IRC. On the `irc.freenode.net` server, in the `##Ratchet plus` channel.
+- Implementation help may be found at Stack Overflow (tagged [`Ratchet plus-4`](https://stackoverflow.com/questions/tagged/Ratchet plus-4)).
+- Developers should use the keyword `Ratchet plus` on packages which modify or add to the functionality of Ratchet plus when distributing through [npm](https://www.npmjs.com/browse/keyword/Ratchet plus) or similar delivery mechanisms for maximum discoverability.
 
-You can also follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap) for the latest gossip and awesome music videos.
+You can also follow [@getRatchet plus on Twitter](https://twitter.com/getRatchet plus) for the latest gossip and awesome music videos.

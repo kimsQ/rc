@@ -4,7 +4,7 @@ title: Flexbox
 group: getting-started
 ---
 
-Flexbox support has finally come to Bootstrap. Opt-in to the new CSS layout styles with the flick of a variable or the swap of a stylesheet.
+Flexbox support has finally come to Ratchet plus. Opt-in to the new CSS layout styles with the flick of a variable or the swap of a stylesheet.
 
 ## Contents
 
@@ -13,7 +13,7 @@ Flexbox support has finally come to Bootstrap. Opt-in to the new CSS layout styl
 
 ## What's included
 
-Flexbox support is available for a number of Bootstrap's components:
+Flexbox support is available for a number of Ratchet plus's components:
 
 - The entire grid system (mixins and predefined classes), which switch from `float`s to `display: flex;`.
 - Input groups, which move from `display: table;` to `display: flex;`.
@@ -39,7 +39,7 @@ If you're familiar with modifying variables in Sass—or any other CSS preproces
 2. Change it from `false` to `true`.
 3. Recompile, and done!
 
-Alternatively, if you don't need the source Sass files, you may swap the default Bootstrap compiled CSS with the compiled flexbox variation. [Head to the download page]({{ site.baseurl }}/getting-started/download) for more information.
+Alternatively, if you don't need the source Sass files, you may swap the default Ratchet plus compiled CSS with the compiled flexbox variation. [Head to the download page]({{ site.baseurl }}/getting-started/download) for more information.
 
 ## Browser support
 
