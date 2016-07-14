@@ -970,16 +970,53 @@
           <div class="row">
             <div class="col-md-8 bd-content" style="padding-bottom: 300px">
               <h1 class="bd-title" id="content">Push</h1>
-              <p>The navbar is a simple wrapper for positioning branding, navigation, and other elements into a concise navigation header. It’s easily extensible and, with the help of our collapse plugin, it can easily integrate offscreen content.</p>
+              <p>Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it’s included and link something in your project up.</p>
 
-<h2 id="contents">Contents</h2>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- A one.html link --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"two.html"</span> <span class="na">data-control=</span><span class="s">"push"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/a&gt;</span></code></pre></figure>
 
-<ul id="markdown-toc">
-  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#basics" id="markdown-toc-basics">Basics</a></li>
-</ul>
+<p>This will use push to replace everything in the .content div with the .content of two.html. Also, it will either update or remove .bar-nav and .bar-tab according to their presences in two.html.</p>
 
-<h2 id="basics">Basics</h2>
+<p>A working version of push:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Page one<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navigate-right"</span> <span class="na">href=</span><span class="s">"./two.html"</span> <span class="na">data-control=</span><span class="s">"push"</span><span class="nt">&gt;</span>
+          Load new page with push
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="transitions">Transitions</h2>
+
+<p>Now that pages are being loaded through push, it’s easy to specify transitions for animations between pages. There are three different transitions to chose from: <code class="highlighter-rouge">fade</code>, <code class="highlighter-rouge">slide-in</code>, or <code class="highlighter-rouge">slide-out</code>.</p>
+
+<h3 id="fade-transition">Fade transition</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- An one.html link that animates to two.html --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"two.html"</span> <span class="na">data-control=</span><span class="s">"push"</span> <span class="na">data-transition=</span><span class="s">"fade"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<h3 id="slide-transition">Slide transition</h3>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- An one.html link that animates to two.html --&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"two.html"</span> <span class="na">data-control=</span><span class="s">"push"</span> <span class="na">data-transition=</span><span class="s">"slide-in"</span><span class="nt">&gt;</span>Two<span class="nt">&lt;/a&gt;</span></code></pre></figure>
+
+<h2 id="push-bind">Push bind</h2>
+
+<p>push 작동 후 DOM 이 변경되므로  기존에   onload 타입이나 초기화를 해주는 기능들을 통해 인지되었던 외부 익스텐션을 기억못하는 현상. Push bind를 위해 addEventListner 는 push 작동후 callback 함수 개념으로 해당 함수를 한번더 초기화 하라는 의미</p>
+
+<p>Push.js binds an event to the document that returns a detail object and can be used to fire a callback.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Only needed if you want to fire a callback</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'push'</span><span class="p">,</span> <span class="nx">myFunction</span><span class="p">);</span></code></pre></figure>
+
 
             </div>
             <div class="col-md-4" style="padding-left: 0">
@@ -1002,6 +1039,68 @@
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/controls/push/content" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#transitions">
+      <iframe width="100%" height="555" src="/examples/controls/push/transitions.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/controls/push/transitions.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/controls/push/transitions.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/controls/push/transitions" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#slide-transition">
+      <iframe width="100%" height="555" src="/examples/controls/push/slide-transition.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/controls/push/slide-transition.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/controls/push/slide-transition.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/controls/push/slide-transition" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
           
