@@ -2,3 +2,13 @@
   path: controls/push
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: transitions
+  path: controls/push
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: slide-transition
+  path: controls/push
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
