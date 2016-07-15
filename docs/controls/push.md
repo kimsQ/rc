@@ -7,6 +7,12 @@ group: controls
 
 Push.js is the engine that connects Ratchet pages together with AJAX and the history api. Push.js is listening to all clicks on a page, so just make sure it's included and link something in your project up.
 
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+## Usage
 
 {% highlight html %}
 <!-- A one.html link -->
