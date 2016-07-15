@@ -2,3 +2,8 @@
   path: controls/infinite-scroll
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: loads-with-button
+  path: controls/infinite-scroll
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
