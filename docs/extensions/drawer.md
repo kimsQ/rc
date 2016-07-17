@@ -50,7 +50,7 @@ The navigation drawer is a panel that displays the app’s main navigation optio
 </div>
 
 <div class="snap-content" data-extension="drawer">
-  <header class="bar bar-nav">
+  <header class="bar bar-nav bar-light bg-faded">
     <a class="icon icon-bars pull-left"></a>
     <h1 class="title">Title</h1>
   </header>
@@ -104,7 +104,7 @@ $('.btn').tap(function() {
 
 
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table table-bordered table-striped">
     <thead>
      <tr>
        <th style="width: 100px;">Name</th>
@@ -211,7 +211,7 @@ $('#myDrawer').drawer('hide')
 ## Events
 
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table table-bordered table-striped">
     <thead>
      <tr>
        <th style="width: 170px;">Name</th>
