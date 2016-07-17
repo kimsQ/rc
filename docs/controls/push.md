@@ -50,8 +50,12 @@ Now that pages are being loaded through push, it's easy to specify transitions f
 ### Fade transition
 
 {% highlight html %}
-<!-- An one.html link that animates to two.html -->
-<a href="two.html" data-control="push" data-transition="fade">Two</a>
+<nav class="nav nav-inline">
+  <a href="01.html" data-control="push" data-transition="fade" class="nav-link active" >01</a>
+  <a href="02.html" data-control="push" data-transition="fade" class="nav-link" >02</a>
+  <a href="03.html" data-control="push" data-transition="fade" class="nav-link" >03</a>
+  <a href="04.html" data-control="push" data-transition="fade" class="nav-link" >04</a>
+</nav>
 {% endhighlight %}
 
 
@@ -62,6 +66,13 @@ Now that pages are being loaded through push, it's easy to specify transitions f
 <!-- An one.html link that animates to two.html -->
 <a href="two.html" data-control="push" data-transition="slide-in">Two</a>
 {% endhighlight %}
+
+
+{% highlight html %}
+<!-- An two.html link that animates to one.html -->
+<a href="one.html" data-control="push" data-transition="slide-out">One</a>
+{% endhighlight %}
+
 
 ## Push bind
 
