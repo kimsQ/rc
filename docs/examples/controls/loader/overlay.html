@@ -13,12 +13,17 @@
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <a href class="title">Basic Loading</a>
+		  <a href class="title">Overlay</a>
 		</header>
 
 		<div class="content">
 			<div class="content-padded">
-				<button type="button" class="btn btn-secondary btn-lg">Test</button>
+
+				<div id="demo">
+					<p class="bg-faded p-a-2">Content</p>
+					<button type="button" class="btn btn-secondary btn-lg">Test</button>
+				</div>
+
 			</div>
 		</div>
 
@@ -28,22 +33,27 @@
 
 		<script>
 
-			$(function() {
+		$(function() {
 
-			  // Action on Click
-			  $(".btn").click(function() {
+		  // Action on Click
+		  $("#demo .btn").click(function() {
 
-			    $(this).loader();
 
-			    // Data Loaded, re-enable event
-			    setTimeout(function() {
-			      // Deactivate the loading plugin
-			      $(".btn").loader("hide");
-			    }, 1000);
-			  });
+		    // Setup Loading plugin
+		    $("#demo p").removeClass("bg-primary").loader({
+		      text: "Loading"
+		    });
 
-			});
+		    // Re-enabling event
+		    setTimeout(function() {
+		      $("#demo p").loader("hide")
+		        .html("Content Loaded")
+		        .addClass("bg-primary");
+		    }, 1000);
 
+		  });
+
+		});
 		</script>
 
 	</body>

@@ -55,7 +55,8 @@
     - title: Infinite-Scroll
     - title: Loader
     - title: Feedback
-    - title: Scroll
+    - title: Affix
+    - title: Updown
     - title: Utility
 
 - title: Extensions

@@ -2,3 +2,23 @@
   path: controls/loader
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: load-in-element
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: overlay
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: overlay-on-element
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: disable-some-extra-elements
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true

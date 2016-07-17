@@ -1,4 +1,4 @@
 - name: content
-  path: controls/scroll
+  path: controls/affix
   jsfiddle: kimsQ/0odhbtzv/
   history: true
