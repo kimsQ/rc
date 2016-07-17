@@ -20,6 +20,13 @@
 
     
         {
+            "title" : "Affix",
+            "url"   : "/controls/affix/"
+        } ,
+    
+
+    
+        {
             "title" : "Approach",
             "url"   : "/extend/approach/"
         } ,
@@ -363,13 +370,6 @@
 
     
         {
-            "title" : "Scroll",
-            "url"   : "/controls/scroll/"
-        } ,
-    
-
-    
-        {
             "title" : "Sheet",
             "url"   : "/components/sheet/"
         } ,
@@ -421,6 +421,13 @@
         {
             "title" : "Typography",
             "url"   : "/content/typography/"
+        } ,
+    
+
+    
+        {
+            "title" : "Updown",
+            "url"   : "/controls/updown/"
         } ,
     
 

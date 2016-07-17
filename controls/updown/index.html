@@ -9,7 +9,7 @@
 
 <title>
   
-    Feedback &middot; Ratchet plus
+    Updown &middot; Ratchet plus
   
 </title>
 
@@ -89,11 +89,11 @@
     <div class="bd-pageheader">
       <div class="container">
         
-  <h1>Components</h1>
+  <h1>Controls</h1>
   <p class="lead">
     Design patterns that serve as basic building blocks.
   </p>
-
+  
 
         
       </div>
@@ -463,7 +463,7 @@
 
   
 
-  <div class="bd-toc-item active">
+  <div class="bd-toc-item ">
     
         <a class="bd-toc-link" href="/components/bars">
       
@@ -688,7 +688,7 @@
 
           
 
-          <li class="active bd-sidenav-active">
+          <li class="">
             <a href="/components/feedback">
               Feedback
             </a>
@@ -733,7 +733,7 @@
 
   
 
-  <div class="bd-toc-item ">
+  <div class="bd-toc-item active">
     
         <a class="bd-toc-link" href="/controls/push">
       
@@ -790,7 +790,7 @@
 
           
 
-          <li class="active bd-sidenav-active">
+          <li class="">
             <a href="/controls/feedback">
               Feedback
             </a>
@@ -818,7 +818,7 @@
 
           
 
-          <li class="">
+          <li class="active bd-sidenav-active">
             <a href="/controls/updown">
               Updown
             </a>
@@ -983,8 +983,102 @@
         <div class="col-xs-12 col-md-10">
           <div class="row">
             <div class="col-md-8 bd-content" style="padding-bottom: 300px">
-              <h1 class="bd-title" id="content">Feedback</h1>
-              
+              <h1 class="bd-title" id="content">Updown</h1>
+              <p>이 기능은 스크롤 이벤트의 방향성에 초점을 두어 이벤트 발생 시점의 상태가 Scroll Up 인지 Scrioll Down 인지를 체크하여 각 상황별로 별도의 추가 이벤트를 컨트롤할 수 있도록 해당 이벤트를 트리거를 제공한다.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#options" id="markdown-toc-options">Options</a></li>
+  <li><a href="#events" id="markdown-toc-events">Events</a></li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+
+<p>Via <code class="highlighter-rouge">data-*</code> 속성을 이용한 방법</p>
+
+<p>적용할 대상 엘리먼트에 아래와 같이 data-속성을 마크업 해준다.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">data-control=</span><span class="s">"scroll"</span> <span class="na">data-type=</span><span class="s">"updown"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<p>Via JavaScript 이용한 방법</p>
+
+<p>Default</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'selector'</span><span class="p">).</span><span class="nx">scroll</span><span class="p">({</span><span class="na">type</span><span class="p">:</span><span class="s1">'updown'</span><span class="p">});</span></code></pre></figure>
+
+<h2 id="options">Options</h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 100px;">Name</th>
+       <th style="width: 50px;">Type</th>
+       <th style="width: 50px;">Default</th>
+       <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+       <td>delta</td>
+       <td>number</td>
+       <td>5</td>
+       <td>
+       Scroll 이벤트로 간주되는 최소 기준값.
+       즉, 어느 정도 범위의 스크롤바 높이의 변동사항을 이벤트로 간주할지에 대한 기준 값이 된다. 다시 말해서 사용자의 의도치 않은 약간의 스크롤 움직임에 대해 어느 정도까지는 무시할 것인지의 기준값이다.
+       </td>
+     </tr>
+     <tr>
+       <td>defaultHeight</td>
+       <td>number</td>
+       <td>280</td>
+       <td>
+        Scroll 이벤트로 간주되지만 추가 이벤트를 발생시키지 않아도 되는 범위 값이다. 예를 들어 화면 범위 내에서 발생하는 작은 스크롤 이벤트에 대해서는 별도의 이벤트를 적용하지 않아야 할 상황에 필요한 값이다.  
+       </td>
+     </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<h2 id="events">Events</h2>
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 215px;">Name</th>
+       <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+       <td>default.rc.scroll </td>
+       <td>
+        defaultHeight 값 내에서 이벤트 발생할 경우에 트리거 된 이벤트
+       </td>
+     </tr>
+     <tr>
+       <td>up.rc.scroll</td>
+       <td>
+        Scroll Up 이벤트로 간주되는 상황에 트리거 된 이벤트
+       </td>
+     </tr>
+
+     <tr>
+       <td>down.rc.scroll</td>
+       <td>
+        Scroll Down 이벤트로 간주되는 상황에 트리거 된 이벤트
+       </td>
+     </tr>
+    </tbody>
+  </table>
+</div>
 
             </div>
             <div class="col-md-4" style="padding-left: 0">
@@ -995,18 +1089,18 @@
   
   <li>
     <a class="nav-link ratchet-body" href="#content">
-      <iframe width="100%" height="555" src="/examples/components/feedback/content.html" frameborder="0"></iframe>
+      <iframe width="100%" height="555" src="/examples/controls/updown/content.html" frameborder="0"></iframe>
     </a>
     <div class="device-button">
       <ul class="pager">
         <li class="pager-prev">
-          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/feedback/content.html" target="_blank" data-toggle="tooltip" title="View code">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/controls/updown/content.html" target="_blank" data-toggle="tooltip" title="View code">
             <i class="fa fa-code" aria-hidden="true"></i>
           </a>
-          <a href="/examples/components/feedback/content.html" target="_blank" data-toggle="tooltip" title="New window">
+          <a href="/examples/controls/updown/content.html" target="_blank" data-toggle="tooltip" title="New window">
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
-          <a data-src="/examples/components/feedback/content" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+          <a data-src="/examples/controls/updown/content" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
           
