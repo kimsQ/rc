@@ -12,7 +12,7 @@ The navigation drawer is a panel that displays the app’s main navigation optio
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
-     <tr>
+     <tr class="bg-faded">
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>

@@ -11,7 +11,7 @@ Swiper is the free and most modern mobile touch slider with hardware accelerated
 <div class="table-responsive">
   <table class="table table-bordered">
     <thead>
-     <tr>
+     <tr class="bg-faded">
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
