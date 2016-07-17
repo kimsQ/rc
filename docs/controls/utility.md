@@ -5,21 +5,19 @@ title: Utility
 group: controls
 ---
 
-
-
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## History back
+## History Back
 이전화면으로 이동. 스마트폰 백버튼, 브라우저 백버튼, 키보드 백버튼과 같은 역할
 {% highlight html %}
  <button class="btn btn-primary" data-history="back">Back</button>
 {% endhighlight %}
 
 
-## Reload
+## Document Reload
 문서 전체를 새로고침 합니다.
 {% highlight html %}
 <button class="btn btn-primary" data-location="reload">reload</button>
@@ -27,7 +25,7 @@ group: controls
 
 
 
-## Scroll top
+## Scroll Top
 본문(`.content`) 영역 상단으로 애니메이션을 적용하여 이동합니다.
 {% highlight html %}
 <button class="btn btn-primary" data-scroll="top">Top</button>
