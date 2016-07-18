@@ -15,7 +15,7 @@ JavaScript image gallery for mobile and desktop
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
-       <th>repository</th>
+       <th>Repository</th>
      </tr>
     </thead>
     <tbody>

@@ -16,7 +16,7 @@ The navigation drawer is a panel that displays the app’s main navigation optio
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
-       <th>repository</th>
+       <th>Repository</th>
      </tr>
     </thead>
     <tbody>
@@ -51,7 +51,7 @@ The navigation drawer is a panel that displays the app’s main navigation optio
 
 <div class="snap-content" data-extension="drawer">
   <header class="bar bar-nav bar-light bg-faded">
-    <a class="icon icon-bars pull-left"></a>
+    <a href="#myDrawer" data-toggle="drawer" class="icon icon-bars pull-left"></a>
     <h1 class="title">Title</h1>
   </header>
   <div class="content">
@@ -256,14 +256,80 @@ $('#myDrawer').drawer('hide')
 ## Examples
 
 
-### Google 스타일
 
-### 왼쪽 드로어 열기
+### Dual side drawers
 
-### 오른쪽 드로어 열기
+{% highlight html %}
+<div class="snap-drawers">
+  <div class="snap-drawer snap-drawer-left" id="leftDrawer">
+    ...
+  </div>
+  <div class="snap-drawer snap-drawer-right" id="rightDrawer">
+    ...
+  </div>
+</div>
 
-### 왼쪽 드로어 확장 열기
+<div class="snap-content" data-extension="drawer">
+  <header class="bar bar-nav bar-light bg-faded">
+    <a href="#leftDrawer" data-toggle="drawer" class="icon icon-bars pull-left"></a>
+    <a href="#rightDrawer" data-toggle="drawer" data-direction="right" class="icon icon-gear pull-right"></a>
+    <h1 class="title">Title</h1>
+  </header>
+  <div class="content">
+    ...
+  </div>
+</div>
+{% endhighlight %}
 
-### 오른쪽 드로어  확장 열기
 
-### backdrop 제어
+### Expand drawer
+
+{% highlight html %}
+<div class="snap-drawers">
+  <div class="snap-drawer snap-drawer-left" id="leftDrawer">
+
+    <button data-toggle="drawer" data-target="#myDrawer" data-showType="expand" class="btn btn-primary btn-block" type="button">
+      Expand
+    </button>
+    <button id="close" class="btn btn-secondary btn-block" type="button" >
+      Close
+    </button>
+
+  </div>
+</div>
+
+<div class="snap-content" data-extension="drawer">
+  <header class="bar bar-nav bar-light bg-faded">
+    <a href="#leftDrawer" data-toggle="drawer" class="icon icon-bars pull-left"></a>
+    <h1 class="title">Title</h1>
+  </header>
+  <div class="content">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+
+{% highlight js %}
+$('#close').tap(function() {
+  $('#myDrawer').drawer('hide')
+});
+{% endhighlight %}
+
+
+### Backdrop option
+
+Via data attributes
+
+{% highlight html %}
+<button data-toggle="drawer" data-target="#myDrawer" data-backdrop="false" type="button" >
+  Launch Drawer
+</button>
+{% endhighlight %}
+
+
+Via JavaScript
+{% highlight js %}
+..
+{% endhighlight %}
+
+### Material design style

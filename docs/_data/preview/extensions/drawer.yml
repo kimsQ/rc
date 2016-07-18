@@ -2,3 +2,18 @@
   path: extensions/drawer
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: dual-side-drawers
+  path: extensions/drawer
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: expand-drawer
+  path: extensions/drawer
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: backdrop-option
+  path: extensions/drawer
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true

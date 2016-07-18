@@ -15,7 +15,7 @@ Effect that spreads like a wave in touch or click.
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
-       <th>repository</th>
+       <th>Repository</th>
      </tr>
     </thead>
     <tbody>

@@ -2,3 +2,8 @@
   path: extensions/swiper
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: call-modal-in-the-swiper
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true

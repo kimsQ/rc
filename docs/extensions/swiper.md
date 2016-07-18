@@ -5,7 +5,7 @@ title: Swiper
 group: extensions
 ---
 
-Swiper is the free and most modern mobile touch slider with hardware accelerated transitions and amazing native behavior. It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps. Designed mostly for iOS, but also works great on latest Android, Windows Phone 8 and modern Desktop browsers
+Swiper is the most modern mobile touch slider with hardware accelerated transitions and amazing native behavior. It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps. Designed mostly for iOS, but also works great on latest Android, Windows Phone 8 and modern Desktop browsers
 
 
 <div class="table-responsive">
@@ -15,7 +15,7 @@ Swiper is the free and most modern mobile touch slider with hardware accelerated
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
-       <th>repository</th>
+       <th>Repository</th>
      </tr>
     </thead>
     <tbody>
@@ -41,7 +41,7 @@ Swiper is the free and most modern mobile touch slider with hardware accelerated
 ### Markup
 Create a basic markup
 {% highlight html %}
-<div class="swiper-container" data-extension="swiper">
+<div class="swiper-container">
   <div class="swiper-wrapper">
     <div class="swiper-slider">Slide 1</div>
     <div class="swiper-slider">Slide 2</div>
@@ -61,6 +61,17 @@ Create a basic markup
 </div>
 {% endhighlight %}
 
+### Via data attributes
+{% highlight html %}
+<div class="swiper-container" data-extension="swiper">
+  ...
+</div>
+{% endhighlight %}
+
+### Via JavaScript
+{% highlight js %}
+..
+{% endhighlight %}
 
 ### Initialize
 초기화 함수를 추가 합니다.
@@ -70,7 +81,7 @@ RC_initSwiper();
 
 
 
-## Swiper slide에서 Component 호출
+## Call modal in the swiper
 
 `.swiper-slide` 에서 컨포넌트 호출시에 Swipe와 Tap 제스츄어가 중복으로 적용됩니다. 충돌을 회피하기 위해 `data-toggle` 대신 `data-component` 를 사용합니다.
 
