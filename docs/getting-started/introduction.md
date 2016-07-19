@@ -58,7 +58,7 @@ Put it all together and your pages should look like this:
   <body>
     <h1>Hello, world!</h1>
 
-    <!-- jQuery first, then Tether, then Ratchet plus JS. -->
+    <!-- jQuery first, then Ratchet plus JS. -->
     <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
     <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
   </body>
