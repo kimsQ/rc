@@ -92,7 +92,7 @@ $(function () {
 
 
 ### Markup
-Create a basic markup
+Below is a basic markup that list of links
 {% highlight html %}
 <div class="my-gallery" data-extension="photoswipe">
   <figure class="figure">
@@ -104,6 +104,7 @@ Create a basic markup
   ...
 </div>
 {% endhighlight %}
+
 
 
 ## Options
@@ -254,8 +255,50 @@ Create a basic markup
 
 ## Examples
 
-### 스크립트 방식
 
-### 링크목록 방식  
+### Script type
+{% highlight html %}
+ <button id="btn" data-toggle="photoswipe">Open PhotoSwipe</button>
+{% endhighlight %}
+
+{% highlight js %}
+// build items array
+var items = [{
+    src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+    w: 964,
+    h: 1024,
+  }, {
+    src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+    w: 1024,
+    h: 683
+  }
+];
+
+RC_initPhotoSwipe({
+  items: items
+});
+{% endhighlight %}
+
 
 ### Custom HTML Content in Slides
+
+
+{% highlight html %}
+ <button id="btn" data-toggle="photoswipe">Open PhotoSwipe</button>
+{% endhighlight %}
+
+{% highlight js %}
+// build items array
+var items = [{
+    html: '<div class="hello-slide"><h1>Hello world <a href="http://example.com">example.com</a></h1></div>'
+  }, {
+    src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+    w: 1024,
+    h: 683
+  }
+];
+
+RC_initPhotoSwipe({
+  items: items
+});
+{% endhighlight %}

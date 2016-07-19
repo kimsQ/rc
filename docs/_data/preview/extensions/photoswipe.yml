@@ -2,3 +2,13 @@
   path: extensions/photoswipe
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: script-type
+  path: extensions/photoswipe
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: custom-html-content-in-slides
+  path: extensions/photoswipe
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
