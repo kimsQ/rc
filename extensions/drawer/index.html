@@ -993,7 +993,7 @@
        <th style="width: 150px;">Name</th>
        <th>Version</th>
        <th>License</th>
-       <th>repository</th>
+       <th>Repository</th>
      </tr>
     </thead>
     <tbody>
@@ -1031,12 +1031,10 @@
   </li>
   <li><a href="#events" id="markdown-toc-events">Events</a></li>
   <li><a href="#examples" id="markdown-toc-examples">Examples</a>    <ul>
-      <li><a href="#google-" id="markdown-toc-google-">Google 스타일</a></li>
-      <li><a href="#section" id="markdown-toc-section">왼쪽 드로어 열기</a></li>
-      <li><a href="#section-1" id="markdown-toc-section-1">오른쪽 드로어 열기</a></li>
-      <li><a href="#section-2" id="markdown-toc-section-2">왼쪽 드로어 확장 열기</a></li>
-      <li><a href="#section-3" id="markdown-toc-section-3">오른쪽 드로어  확장 열기</a></li>
-      <li><a href="#backdrop-" id="markdown-toc-backdrop-">backdrop 제어</a></li>
+      <li><a href="#dual-side-drawers" id="markdown-toc-dual-side-drawers">Dual side drawers</a></li>
+      <li><a href="#expand-drawer" id="markdown-toc-expand-drawer">Expand drawer</a></li>
+      <li><a href="#backdrop-option" id="markdown-toc-backdrop-option">Backdrop option</a></li>
+      <li><a href="#material-design-style" id="markdown-toc-material-design-style">Material design style</a></li>
     </ul>
   </li>
 </ul>
@@ -1053,7 +1051,7 @@
 
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-content"</span> <span class="na">data-extension=</span><span class="s">"drawer"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav bar-light bg-faded"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"icon icon-bars pull-left"</span><span class="nt">&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#myDrawer"</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">class=</span><span class="s">"icon icon-bars pull-left"</span><span class="nt">&gt;&lt;/a&gt;</span>
     <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
   <span class="nt">&lt;/header&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
@@ -1234,17 +1232,70 @@
 
 <h2 id="examples">Examples</h2>
 
-<h3 id="google-">Google 스타일</h3>
+<h3 id="dual-side-drawers">Dual side drawers</h3>
 
-<h3 id="section">왼쪽 드로어 열기</h3>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-drawers"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-drawer snap-drawer-left"</span> <span class="na">id=</span><span class="s">"leftDrawer"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-drawer snap-drawer-right"</span> <span class="na">id=</span><span class="s">"rightDrawer"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 
-<h3 id="section-1">오른쪽 드로어 열기</h3>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-content"</span> <span class="na">data-extension=</span><span class="s">"drawer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav bar-light bg-faded"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#leftDrawer"</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">class=</span><span class="s">"icon icon-bars pull-left"</span><span class="nt">&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#rightDrawer"</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">data-direction=</span><span class="s">"right"</span> <span class="na">class=</span><span class="s">"icon icon-gear pull-right"</span><span class="nt">&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
-<h3 id="section-2">왼쪽 드로어 확장 열기</h3>
+<h3 id="expand-drawer">Expand drawer</h3>
 
-<h3 id="section-3">오른쪽 드로어  확장 열기</h3>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-drawers"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-drawer snap-drawer-left"</span> <span class="na">id=</span><span class="s">"leftDrawer"</span><span class="nt">&gt;</span>
 
-<h3 id="backdrop-">backdrop 제어</h3>
+    <span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">data-target=</span><span class="s">"#myDrawer"</span> <span class="na">data-showType=</span><span class="s">"expand"</span> <span class="na">class=</span><span class="s">"btn btn-primary btn-block"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+      Expand
+    <span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"close"</span> <span class="na">class=</span><span class="s">"btn btn-secondary btn-block"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="nt">&gt;</span>
+      Close
+    <span class="nt">&lt;/button&gt;</span>
+
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"snap-content"</span> <span class="na">data-extension=</span><span class="s">"drawer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"bar bar-nav bar-light bg-faded"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#leftDrawer"</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">class=</span><span class="s">"icon icon-bars pull-left"</span><span class="nt">&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Title<span class="nt">&lt;/h1&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    ...
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#close'</span><span class="p">).</span><span class="nx">tap</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myDrawer'</span><span class="p">).</span><span class="nx">drawer</span><span class="p">(</span><span class="s1">'hide'</span><span class="p">)</span>
+<span class="p">});</span></code></pre></figure>
+
+<h3 id="backdrop-option">Backdrop option</h3>
+
+<p>Via data attributes</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"drawer"</span> <span class="na">data-target=</span><span class="s">"#myDrawer"</span> <span class="na">data-backdrop=</span><span class="s">"false"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="nt">&gt;</span>
+  Launch Drawer
+<span class="nt">&lt;/button&gt;</span></code></pre></figure>
+
+<p>Via JavaScript</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">..</span></code></pre></figure>
+
+<h3 id="material-design-style">Material design style</h3>
 
             </div>
             <div class="col-md-4" style="padding-left: 0">
@@ -1267,6 +1318,99 @@
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/extensions/drawer/content" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#dual-side-drawers">
+      <iframe width="100%" height="555" src="/examples/extensions/drawer/dual-side-drawers.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/extensions/drawer/dual-side-drawers.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/extensions/drawer/dual-side-drawers.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/extensions/drawer/dual-side-drawers" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#expand-drawer">
+      <iframe width="100%" height="555" src="/examples/extensions/drawer/expand-drawer.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/extensions/drawer/expand-drawer.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/extensions/drawer/expand-drawer.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/extensions/drawer/expand-drawer" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#backdrop-option">
+      <iframe width="100%" height="555" src="/examples/extensions/drawer/backdrop-option.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/extensions/drawer/backdrop-option.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/extensions/drawer/backdrop-option.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/extensions/drawer/backdrop-option" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
           

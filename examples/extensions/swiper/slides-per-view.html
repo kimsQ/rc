@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>swiper</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
+
+    <style>
+      /* domo */
+      .swiper-container {
+        margin-bottom: 40px
+      }
+
+      /*Auto Slides Per View*/
+      .swiper-container.auto .swiper-slide {
+        width: 75%;
+        height: auto;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <header class="bar bar-nav bar-light bg-faded">
+      <h1 class="title">Slides per view</h1>
+    </header>
+
+    <div class="content">
+      <div class="content-padded">
+
+        <h4>Slides Per View</h4>
+        <div class="swiper-container" data-extension="swiper" data-slidesPerView="2" data-spaceBetween="10" data-pagination="true">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+        <h4>Auto Slides Per View</h4>
+        <div class="swiper-container auto" data-extension="swiper" data-slidesperview="auto" data-spaceBetween="10">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://placehold.it/400x250" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x250" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x250" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x250" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="http://placehold.it/400x250" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../../../dist/js/rc-control.js"></script>
+    <script src="../../../dist/js/rc-component.js"></script>
+    <script src="../../../dist/js/rc-extension.js"></script>
+
+    <script>
+      RC_initSwiper();
+    </script>
+  </body>
+</html>

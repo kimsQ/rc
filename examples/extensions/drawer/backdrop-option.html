@@ -15,10 +15,9 @@
     <div class="snap-drawers">
       <div class="snap-drawer snap-drawer-left" id="myDrawer">
 				<ul class="table-view">
-					<li class="table-view-divider">Divider</li>
+					<li class="table-view-divider">My Drawer</li>
 				  <li class="table-view-cell">Item 1</li>
 				  <li class="table-view-cell table-view-cell">Item 2</li>
-				  <li class="table-view-divider">Divider</li>
 				  <li class="table-view-cell">Item 3</li>
 					<li class="table-view-cell">
 				    <a class="navigate-right">
@@ -39,22 +38,18 @@
 				    </a>
 				  </li>
 				</ul>
-
       </div>
     </div>
 
     <div class="snap-content" data-extension="drawer">
       <header class="bar bar-nav bar-light bg-faded">
-        <a href="#myDrawer" class="icon icon-bars pull-left" data-toggle="drawer"></a>
-        <h1 class="title">Drawer Default</h1>
+        <a href="#myDrawer" data-toggle="drawer" data-target="#myDrawer" data-backdrop="false" class="icon icon-bars pull-left"></a>
+        <h1 class="title">Backdrop option</h1>
       </header>
       <div class="content">
 				<div class="content-padded">
-        	<a href="#myDrawer" class="btn btn-secondary btn-block" data-toggle="drawer">
-						Via data attributes
-        	</a>
-					<button type="button" class="btn btn-secondary btn-block" id="myButton">
-						Via JavaScript
+					<button type="button" data-toggle="drawer" data-target="#myDrawer" data-backdrop="false" class="btn btn-secondary btn-block">
+						Launch Drawer
 					</button>
 				</div>
       </div>
@@ -69,10 +64,6 @@
 
 			// Initialize drawer
       RC_initDrawer();
-
-			$('#myButton').tap(function() {
-			  $('#myDrawer').drawer('toggle');
-			});
 
     </script>
 

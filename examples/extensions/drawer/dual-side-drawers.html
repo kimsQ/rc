@@ -13,9 +13,9 @@
 	<body>
 
     <div class="snap-drawers">
-      <div class="snap-drawer snap-drawer-left" id="myDrawer">
+      <div class="snap-drawer snap-drawer-left" id="leftDrawer">
 				<ul class="table-view">
-					<li class="table-view-divider">Divider</li>
+					<li class="table-view-divider">Left Drawer</li>
 				  <li class="table-view-cell">Item 1</li>
 				  <li class="table-view-cell table-view-cell">Item 2</li>
 				  <li class="table-view-divider">Divider</li>
@@ -39,22 +39,51 @@
 				    </a>
 				  </li>
 				</ul>
-
       </div>
+
+			<div class="snap-drawer snap-drawer-right" id="rightDrawer">
+				<ul class="table-view">
+					<li class="table-view-divider">Right drawer</li>
+				  <li class="table-view-cell">Item 1</li>
+				  <li class="table-view-cell table-view-cell">Item 2</li>
+				  <li class="table-view-divider">Divider</li>
+				  <li class="table-view-cell">Item 3</li>
+					<li class="table-view-cell">
+				    <a class="navigate-right">
+				      <span class="badge badge-pill">5</span>
+				      Item 4
+				    </a>
+				  </li>
+				  <li class="table-view-cell">
+				    <a class="navigate-right">
+				      <span class="badge badge-pill">5</span>
+				      Item 5
+				    </a>
+				  </li>
+				  <li class="table-view-cell">
+				    <a class="navigate-right">
+				      <span class="badge badge-pill">5</span>
+				      Item 6
+				    </a>
+				  </li>
+				</ul>
+      </div>
+
     </div>
 
     <div class="snap-content" data-extension="drawer">
       <header class="bar bar-nav bar-light bg-faded">
-        <a href="#myDrawer" class="icon icon-bars pull-left" data-toggle="drawer"></a>
-        <h1 class="title">Drawer Default</h1>
+        <a href="#leftDrawer" class="icon icon-bars pull-left" data-toggle="drawer"></a>
+				<a href="#rightDrawer" class="icon icon-gear pull-right" data-toggle="drawer" data-direction="right"></a>
+        <h1 class="title">Dual side drawer</h1>
       </header>
       <div class="content">
 				<div class="content-padded">
-        	<a href="#myDrawer" class="btn btn-secondary btn-block" data-toggle="drawer">
-						Via data attributes
-        	</a>
-					<button type="button" class="btn btn-secondary btn-block" id="myButton">
-						Via JavaScript
+					<button type="button" class="btn btn-secondary btn-block" data-toggle="drawer" data-target="#leftDrawer">
+						Launch left drawer
+					</button>
+					<button type="button" class="btn btn-secondary btn-block" data-toggle="drawer" data-target="#rightDrawer" data-direction="right">
+						Launch right drawer
 					</button>
 				</div>
       </div>
@@ -69,10 +98,6 @@
 
 			// Initialize drawer
       RC_initDrawer();
-
-			$('#myButton').tap(function() {
-			  $('#myDrawer').drawer('toggle');
-			});
 
     </script>
 
