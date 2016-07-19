@@ -344,6 +344,9 @@ module.exports = function (grunt) {
   }
   grunt.registerTask('test', testSubtasks);
 
+  // test js concat
+  grunt.registerTask('test-concat', ['concat', 'uglify:core']);
+
   // JS distribution task.
   grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'uglify:core']);
 
