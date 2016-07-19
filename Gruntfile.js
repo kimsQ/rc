@@ -34,17 +34,17 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n' +
+            ' * Ratchet-plus v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') {\n' +
-                 '  throw new Error(\'Bootstrap\\\'s JavaScript requires jQuery\')\n' +
+                 '  throw new Error(\'Ratchet-plus\\\'s JavaScript requires jQuery\')\n' +
                  '}\n',
     jqueryVersionCheck: '+function ($) {\n' +
                         '  var version = $.fn.jquery.split(\' \')[0].split(\'.\')\n' +
                         '  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 3)) {\n' +
-                        '    throw new Error(\'Bootstrap\\\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0\')\n' +
+                        '    throw new Error(\'Ratchet-plus\\\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0\')\n' +
                         '  }\n' +
                         '}(jQuery);\n\n',
 
@@ -62,17 +62,9 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          'js/dist/util.js'      : 'js/src/util.js',
-          'js/dist/alert.js'     : 'js/src/alert.js',
-          'js/dist/button.js'    : 'js/src/button.js',
-          'js/dist/carousel.js'  : 'js/src/carousel.js',
-          'js/dist/collapse.js'  : 'js/src/collapse.js',
-          'js/dist/dropdown.js'  : 'js/src/dropdown.js',
-          'js/dist/modal.js'     : 'js/src/modal.js',
-          'js/dist/scrollspy.js' : 'js/src/scrollspy.js',
-          'js/dist/tab.js'       : 'js/src/tab.js',
-          'js/dist/tooltip.js'   : 'js/src/tooltip.js',
-          'js/dist/popover.js'   : 'js/src/popover.js'
+          'js/dist/control.js'      : 'js/src/control.js',
+          'js/dist/component.js'     : 'js/src/component.js',
+          'js/dist/extension.js'   : 'js/src/extension.js'
         }
       },
       dist: {
@@ -80,7 +72,7 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          '<%= concat.bootstrap.dest %>' : '<%= concat.bootstrap.dest %>'
+          '<%= concat.ratchet-plus.dest %>' : '<%= concat.ratchet-plus.dest %>'
         }
       }
     },
@@ -90,9 +82,9 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>\n+function ($) {\n',
         footer: '\n}(jQuery);'
       },
-      bootstrap: {
+      ratchet_plus: {
         files: {
-          src: '<%= concat.bootstrap.dest %>'
+          src: '<%= concat.ratchet-plus.dest %>'
         }
       }
     },
@@ -105,19 +97,11 @@ module.exports = function (grunt) {
         },
         stripBanners: false
       },
-      bootstrap: {
+      ratchet_plus: {
         src: [
-          'js/src/util.js',
-          'js/src/alert.js',
-          'js/src/button.js',
-          'js/src/carousel.js',
-          'js/src/collapse.js',
-          'js/src/dropdown.js',
-          'js/src/modal.js',
-          'js/src/scrollspy.js',
-          'js/src/tab.js',
-          'js/src/tooltip.js',
-          'js/src/popover.js'
+          'js/src/control.js',
+          'js/src/component.js',
+          'js/src/extension.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
@@ -132,7 +116,7 @@ module.exports = function (grunt) {
         preserveComments: /^!|@preserve|@license|@cc_on/i
       },
       core: {
-        src: '<%= concat.bootstrap.dest %>',
+        src: '<%= concat.ratchet-plus.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       docsJs: {
@@ -245,7 +229,7 @@ module.exports = function (grunt) {
 
     watch: {
       src: {
-        files: '<%= concat.bootstrap.src %>',
+        files: '<%= concat.ratchet-plus.src %>',
         tasks: ['babel:dev']
       },
       sass: {
@@ -289,7 +273,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:twbs/derpstrap.git',
+          remote: 'git@github.com:kimsq/derpstrap.git',
           branch: 'gh-pages'
         }
       }
@@ -298,7 +282,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
+          archive: 'ratchet-plus-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -308,7 +292,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'bootstrap-<%= pkg.version %>-dist'
+            dest: 'ratchet-plus-<%= pkg.version %>-dist'
           }
         ]
       }
