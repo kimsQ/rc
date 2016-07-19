@@ -1287,13 +1287,28 @@
 
 <h3 id="customized-pagination">Customized Pagination</h3>
 
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'mySelector'</span><span class="p">).</span><span class="nx">RC_initSwiper</span><span class="p">({</span>
+  <span class="na">pagination</span><span class="p">:</span> <span class="s1">'.custom-pagination'</span><span class="p">,</span>
+<span class="p">})</span></code></pre></figure>
+
 <h3 id="fraction-pagination">Fraction Pagination</h3>
 
 <h3 id="progress-pagination">Progress Pagination</h3>
 
 <h3 id="slide-change-event">Slide change event</h3>
 
-<p><code class="highlighter-rouge">onSlideChangeEnd</code> 예제</p>
+<p><code class="highlighter-rouge">onSlideChangeEnd</code> 이벤트를 활용하여 특정 슬라이드에서 버튼을 출력 함.</p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'mySelector'</span><span class="p">).</span><span class="nx">RC_initSwiper</span><span class="p">({</span>
+  <span class="na">onSlideChangeEnd</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">swiper</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">swiper</span><span class="p">.</span><span class="nx">activeIndex</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'#start'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">'#start'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">"active"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
+
 
             </div>
             <div class="col-md-4" style="padding-left: 0">
