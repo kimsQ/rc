@@ -3,7 +3,52 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
+- name: multi-swiper
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
 - name: call-modal-in-the-swiper
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: slides-per-view
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: pager
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: swiper-in-template-loaded-modal
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: swiper-on-push
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: customized-pagination
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: fraction-pagination
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: progress-pagination
+  path: extensions/swiper
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: slide-change-event
   path: extensions/swiper
   jsfiddle: kimsQ/0odhbtzv/
   history: true

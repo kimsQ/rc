@@ -38,10 +38,20 @@ Swiper is the most modern mobile touch slider with hardware accelerated transiti
 
 ## Usage
 
+### Initialize
+One way to initialize all swiper on a page would be to select them by  `data-extension` attribute:
+
+{% highlight js %}
+$(function () {
+  $('[data-extension="swiper"]').RC_initSwiper()
+})
+{% endhighlight %}
+
+
 ### Markup
 Create a basic markup
 {% highlight html %}
-<div class="swiper-container">
+<div class="swiper-container" data-extension="swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slider">Slide 1</div>
     <div class="swiper-slider">Slide 2</div>
@@ -61,25 +71,31 @@ Create a basic markup
 </div>
 {% endhighlight %}
 
-### Via data attributes
+
+## Multi swiper
+Multi swiper in single page
+
+Via data attributes
+
 {% highlight html %}
+<!-- first swiper -->
+<div class="swiper-container" data-extension="swiper">
+  ...
+</div>
+
+<!-- Second swiper -->
 <div class="swiper-container" data-extension="swiper">
   ...
 </div>
 {% endhighlight %}
 
-### Via JavaScript
+or Via JavaScript
+
 {% highlight js %}
-..
+$('mySelector1').RC_initSwiper(option)
+
+$('mySelector2').RC_initSwiper(option)
 {% endhighlight %}
-
-### Initialize
-초기화 함수를 추가 합니다.
-{% highlight js %}
-RC_initSwiper();
-{% endhighlight %}
-
-
 
 ## Call modal in the swiper
 
@@ -88,6 +104,8 @@ RC_initSwiper();
 {% highlight html %}
 <div class="swiper-slider" data-component="modal">Slide 1</div>
 {% endhighlight %}
+
+
 
 
 ## Options
@@ -156,7 +174,7 @@ RC_initSwiper();
        </td>
      </tr>
      <tr>
-       <td>button</td>
+       <td>pager</td>
        <td>boolean</td>
        <td>false</td>
        <td>
@@ -209,18 +227,94 @@ RC_initSwiper();
   </table>
 </div>
 
-## Methods
+
+### Slides per view
+
+한 화면에 출력 되는 슬라이더 아이템 수량을 설정합니다.
+
+Via data attributes
+
+{% highlight html %}
+<div class="swiper-container" data-extension="swiper" data-slidesPerView="3" data-spaceBetween="10">
+  <div class="swiper-wrapper">
+    ...
+  </div>
+</div>
+{% endhighlight %}
+
+
+OR Via JavaScript
+{% highlight js %}
+$('mySelector').RC_initSwiper({
+  slidesPerView: '3',
+  spaceBetween:  '10'
+});
+{% endhighlight %}
+
+### Pager
+좌우로 navigation buttons 을 출력합니다.
+
+{% highlight html %}
+<div class="swiper-container" data-extension="swiper">
+  <div class="swiper-wrapper">
+    ....
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+{% endhighlight %}
+
+## Events
+
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+     <tr>
+       <th style="width: 170px;">Name</th>
+       <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+       <td>onInit(swiper)</td>
+       <td>
+        Callback function, will be executed right after Swiper initialization
+       </td>
+     </tr>
+     <tr>
+       <td>onSlideChangeStart(swiper)</td>
+       <td>
+        Callback function, will be executed in the beginning of animation to other slide (next or previous). Receives swiper instance as an argument.
+       </td>
+     </tr>
+     <tr>
+       <td>onSlideChangeEnd(swiper)</td>
+       <td>
+        Callback function, will be executed after animation to other slide (next or previous). Receives slider instance as an argument.
+       </td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+
+
 
 ## Examples
 
-### 모달에서의 swipe
 
-### 단일 페이지 복수 swipe
+### Swiper in template loaded modal
 
-### 모달내부 템플릿 로드 환경에서의 swipe
+### Swiper on push
 
-### push 환경에서의 swipe
+### Customized Pagination
 
-### 페이지네이션 커스텀 예제
+### Fraction Pagination
 
-### 스와이퍼 메소드 사용 예제
+### Progress Pagination
+
+### Slide change event
+
+`onSlideChangeEnd` 예제

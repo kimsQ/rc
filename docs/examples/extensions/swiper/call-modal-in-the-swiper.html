@@ -8,22 +8,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
+    <style>
 
-    <style type="text/css">
-
+      /* domo */
       .swiper-container {
-          height: 100px;
-          text-align: center;
-          margin-bottom: 20px;
+        margin-bottom: 15px
       }
-
-      .swiper-slide {
-          border: solid 1px #d9d9d9;
-          padding: 40px 0;
-      }
-
     </style>
-
   </head>
   <body>
 
@@ -34,20 +25,17 @@
     <div class="content">
       <div class="content-padded">
 
-        <div class="swiper-container" data-extension="swiper" data-slidesPerView="3" data-spaceBetween="10">
+        <div class="swiper-container" data-extension="swiper" data-pagination="true">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 1</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 2</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 3</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 4</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 5</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 6</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 7</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 8</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 9</div>
-            <div class="swiper-slide" data-component="modal" data-target="#myModal">Slide 10</div>
+            <div class="swiper-slide" data-component="modal" data-target="#myModal"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide" data-component="modal" data-target="#myModal"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
+            <div class="swiper-slide" data-component="modal" data-target="#myModal"><img src="http://placehold.it/400x400" class="img-fluid" alt=""></div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+
+        <p>슬라이더 아이템을 탭하세요.</p>
 
       </div>
     </div>
@@ -74,7 +62,9 @@
     <script src="../../../dist/js/rc-extension.js"></script>
 
     <script>
-      RC_initSwiper();
+
+      RC_initSwiper()
+
     </script>
   </body>
 </html>
