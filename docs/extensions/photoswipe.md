@@ -52,18 +52,7 @@ JavaScript image gallery for mobile and desktop
        <td>
        <ul>
           <li>photoswipe 가 출력 될때 각각의 개체(이미지 or html)들의 그룹을 의미한다.</li>
-          <li>아래 3-3-2. 리스트 방식 기준으로 보면 data-extension=”photoswipe” 속성이 표기된 container 단위</li>
-          <li>pswp DOM 을 기준으로 보면 이 DOM 전체가 하나의 틀이 되어 gallery 의 역할을 한다.</li>
-        </ul>
-       </td>
-     </tr>
-     <tr>
-      <td>Item</td>
-       <td>
-       <ul>
-          <li>위에서 설명한 gallery 틀 안에서 보여지는 각 개체들을 의미한다.</li>
-          <li>photoswipe 는 기본적으로 이 item 을  image 로 고려하여 만들어졌다. 그럼에도 불구하고 html 같은 별도의 마크업 요소를 포함할 수 있다.</li>
-          <li>스크립트 방식에서 해당 Items 값을 설정할 때 각 개체들의 구성내용에는 제한이 없다. 예를 들어, id 값을 추가해서 향후 추가적인 기능에 활용할 수 있다.</li>
+          <li><code>data-extension="photoswipe"</code> 속성이 표기된 container 단위</li>
         </ul>
        </td>
      </tr>
@@ -76,14 +65,14 @@ JavaScript image gallery for mobile and desktop
 ### Extension Import
 
 {% highlight html %}
-<link href="path/photoswipe.css" rel="stylesheet">
-<link href="path/default-skin/default-skin.css" rel="stylesheet" >
+<link href="path/to/photoswipe.css" rel="stylesheet">
+<link href="path/to/default-skin/default-skin.css" rel="stylesheet" >
 {% endhighlight %}
 
 
 {% highlight html %}
-<script src="path/photoswipe.min.js"></script>
-<script src="path/photoswipe-ui-default.min.js"></script>
+<script src="path/to/photoswipe.min.js"></script>
+<script src="path/to/photoswipe-ui-default.min.js"></script>
 {% endhighlight %}
 
 
@@ -207,26 +196,26 @@ JavaScript image gallery for mobile and desktop
      <tr>
       <td>galleryOpened.rc.photoswipe</td>
        <td>
-        photoswipe 가 오픈 시 해당 gallery (data-extension=”photoswipe”) 에 triggered 된 이벤트
+        photoswipe 오픈 시 해당 gallery <code>data-extension="photoswipe"</code> 에 triggered 된 이벤트
        </td>
      </tr>
      <tr>
       <td>galleryClosed.rc.photoswipe</td>
        <td>
-       photoswipe 가 닫힐 때 해당 gallery (data-extension=”photoswipe”) 에 triggered 된 이벤트
+       photoswipe 가 닫힐 때 해당 gallery <code>data-extension="photoswipe"</code> 에 triggered 된 이벤트
        </td>
      </tr>
 
      <tr>
       <td>imageLoaded.rc.photoswipe</td>
        <td>
-       photoswipe 내 image load 가 완료된 후 해당 gallery (.pswp__container) 에 trigged 된 이벤트.
+       photoswipe 내 image load 가 완료된 후 해당 gallery <code>.pswp__container</code> 에 trigged 된 이벤트.
        </td>
      </tr>
      <tr>
       <td>slideChanged.rc.photoswipe</td>
        <td>
-        각 슬라이드가 변경(drag or 화살표 클릭)될때 해당 슬라이드에 trigged 된 이벤트이다.  
+        각 슬라이드가 변경(drag or 화살표 tap)될때 해당 슬라이드에 trigged 된 이벤트.  
        </td>
      </tr>
     </tbody>

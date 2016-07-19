@@ -9,35 +9,56 @@
 
 		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
 
-    <link href="../../../extension/photoSwipe/4.1.1/photoswipe.css" rel="stylesheet">
-    <link href="../../../extension/photoSwipe/4.1.1/default-skin/default-skin.css" rel="stylesheet" >
+    <link href="../../../dist/extension/photoSwipe/4.1.1/photoswipe.css" rel="stylesheet">
+    <link href="../../../dist/extension/photoSwipe/4.1.1/default-skin/default-skin.css" rel="stylesheet" >
 
   </head>
   <body>
 
     <header class="bar bar-nav bar-light bg-faded">
-      <h1 class="title">PhotoSwipe</h1>
+      <h1 class="title">List of links</h1>
     </header>
 
     <div class="content">
       <div class="content-padded">
+        <div class="my-gallery" data-extension="photoswipe" itemscope itemtype="http://schema.org/ImageGallery">
 
-        <button id="btn" class="btn btn-secondary btn-block">Open image gallery</button>
+          <figure class="figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+              <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="thumbnail" alt="Image description" class="figure-img img-fluid img-rounded">
+            </a>
+            <figcaption class="figure-caption" itemprop="caption description">Image caption 2</figcaption>
+          </figure>
+
+          <figure class="figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+              <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="thumbnail" alt="Image description" class="figure-img img-fluid img-rounded">
+            </a>
+            <figcaption class="figure-caption" itemprop="caption description">Image caption 3</figcaption>
+          </figure>
+
+          <figure class="figure" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+              <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="thumbnail" alt="Image description" class="figure-img img-fluid img-rounded">
+            </a>
+            <figcaption class="figure-caption" itemprop="caption description">Image caption 4</figcaption>
+          </figure>
+        </div>
 
       </div>
     </div>
+
 
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="../../../dist/js/rc-control.js"></script>
     <script src="../../../dist/js/rc-component.js"></script>
     <script src="../../../dist/js/rc-extension.js"></script>
 
-    <script src="../../../extension/photoSwipe/4.1.1/photoswipe.min.js"></script>
-    <script src="../../../extension/photoSwipe/4.1.1/photoswipe-ui-default.min.js"></script>
+    <script src="../../../dist/extension/photoSwipe/4.1.1/photoswipe.min.js"></script>
+    <script src="../../../dist/extension/photoSwipe/4.1.1/photoswipe-ui-default.min.js"></script>
 
     <script type="text/javascript">
-
-
+      RC_initPhotoSwipe();
     </script>
 
   </body>
