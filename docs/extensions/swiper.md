@@ -311,10 +311,27 @@ $('mySelector').RC_initSwiper({
 
 ### Customized Pagination
 
+{% highlight js %}
+$('mySelector').RC_initSwiper({
+  pagination: '.custom-pagination',
+})
+{% endhighlight %}
+
 ### Fraction Pagination
 
 ### Progress Pagination
 
 ### Slide change event
 
-`onSlideChangeEnd` 예제
+`onSlideChangeEnd` 이벤트를 활용하여 특정 슬라이드에서 버튼을 출력 함.
+{% highlight js %}
+$('mySelector').RC_initSwiper({
+  onSlideChangeEnd: function(swiper) {
+    if (swiper.activeIndex == 0) {
+      $('#start').removeClass("active");
+    } else {
+      $('#start').addClass("active");
+    }
+  }
+})
+{% endhighlight %}
