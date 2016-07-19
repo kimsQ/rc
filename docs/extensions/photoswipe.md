@@ -31,12 +31,8 @@ JavaScript image gallery for mobile and desktop
   </table>
 </div>
 
-## Contents
 
-* Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
-
-## 용어설명
+용어설명
 
 <div class="table-responsive">
   <table class="table table-bordered">
@@ -60,6 +56,16 @@ JavaScript image gallery for mobile and desktop
   </table>
 </div>
 
+## Contents
+
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
+
+
+
+
+
+
 ## Usage
 
 ### Extension Import
@@ -73,6 +79,30 @@ JavaScript image gallery for mobile and desktop
 {% highlight html %}
 <script src="path/to/photoswipe.min.js"></script>
 <script src="path/to/photoswipe-ui-default.min.js"></script>
+{% endhighlight %}
+
+### Initialize
+One way to initialize all photoSwipe on a page would be to select them by  `data-extension` attribute:
+
+{% highlight js %}
+$(function () {
+  $('[data-extension="photoswipe"]').RC_initPhotoSwipe()
+})
+{% endhighlight %}
+
+
+### Markup
+Create a basic markup
+{% highlight html %}
+<div class="my-gallery" data-extension="photoswipe">
+  <figure class="figure">
+    <a href="path/to/01-big.jpg" data-size="">
+      <img src="path/to/01.jpg"  class="figure-img img-fluid">
+    </a>
+    <figcaption class="figure-caption">Image caption</figcaption>
+  </figure>
+  ...
+</div>
 {% endhighlight %}
 
 
