@@ -3,25 +3,22 @@ layout: simple
 title: Examples
 ---
 
-[Download the Bootstrap source code]({{ site.download.source }}) to snag these examples.
+[Download the Ratchet plus source code]({{ site.download.source }}) to snag these examples.
 
-## Componets
 
-Examples that focus on implementing uses of built-in components provided by Bootstrap.
+Checkout out the examples on a desktop browser or visit on your mobile device see the apps as intended.
 
-### bars
+## Framework
 
-#### bar-nav
-* [basic](./components/bars/bar-nav/basic.html)
-
+Examples that focus on implementing uses of built-in components provided by Ratchet plus.
 
 
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/components/bar/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/starter-template.jpg" alt="">
+    <a href="{{ site.baseurl }}/examples/blank-starter/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/blank-starter.png" alt="">
     </a>
-    <h4>Bar</h4>
+    <h4>Blank Starter</h4>
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
@@ -35,7 +32,7 @@ Examples that focus on implementing uses of built-in components provided by Boot
 
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/jumbotron/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.png" alt="">
     </a>
     <h4>Jumbotron</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
