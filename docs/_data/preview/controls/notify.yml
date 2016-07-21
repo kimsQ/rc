@@ -1,4 +1,4 @@
 - name: content
-  path: controls/feedback
+  path: controls/notify
   jsfiddle: kimsQ/0odhbtzv/
   history: true

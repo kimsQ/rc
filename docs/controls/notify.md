@@ -1,7 +1,7 @@
 ---
 layout: preview
-preview: feedback
-title: Feedback
+preview: notify
+title: Notify
 group: controls
 ---
 

@@ -45,7 +45,6 @@
     - title: Popover
     - title: Collapse
     - title: Toggle
-    - title: Feedback
     - title: Icons
     - title: Utilities
 
@@ -54,7 +53,7 @@
     - title: Push
     - title: Infinite-Scroll
     - title: Loader
-    - title: Feedback
+    - title: Notify
     - title: Affix
     - title: Updown
     - title: Utility
