@@ -2,3 +2,48 @@
   path: controls/notify
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: content
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: passing-in-a-title
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: passing-html
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: using-a-font-icon
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: using-images-instead-of-font-icons
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: using-offset
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: using-alert-types
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: animating-notify
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: customized-notifications
+  path: controls/notify
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true

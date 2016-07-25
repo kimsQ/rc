@@ -22,7 +22,7 @@
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Basic Notify</h1>
+		  <h1 class="title">Animating notify</h1>
 		</header>
 
     <div class="content">
@@ -34,7 +34,12 @@
 		<script>
 
 			$('.btn').tap(function(){
-				$.notify("Hello World");
+        $.notify("Enter: Bounce In from TopExit: Bounce Up and Out", {
+          animate: {
+            enter: 'animated bounceInDown',
+            exit: 'animated bounceOutUp'
+          }
+        });
 			});
 
 		</script>

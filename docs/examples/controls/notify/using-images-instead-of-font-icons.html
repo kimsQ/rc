@@ -22,7 +22,7 @@
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Basic Notify</h1>
+		  <h1 class="title">Using images instead of font icons</h1>
 		</header>
 
     <div class="content">
@@ -34,7 +34,11 @@
 		<script>
 
 			$('.btn').tap(function(){
-				$.notify("Hello World");
+        $.notify({
+          icon: "img/growl_64x.png",
+          message: ".."
+        },{
+          icon_type: 'image'
 			});
 
 		</script>

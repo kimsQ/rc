@@ -1,0 +1,24 @@
+- name: content
+  path: components/alerts
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: link-color
+  path: components/alerts
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: additional-content
+  path: components/alerts
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: dismissing
+  path: components/alerts
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: javascript-behavior
+  path: components/alerts
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true

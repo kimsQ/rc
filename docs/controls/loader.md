@@ -6,7 +6,30 @@ group: controls
 ---
 
 Simple jQuery plugin to show visual feedback when loading data or any action that would take time
-[is-loading](https://github.com/hekigan/is-loading)
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+     <tr class="bg-faded">
+       <th style="width: 150px;">Name</th>
+       <th>Version</th>
+       <th>License</th>
+       <th>Repository</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>isLoading</td>
+      <td>1.0.6</td>
+      <td>MIT</td>
+       <td>
+        <a href="https://github.com/hekigan/is-loading">https://github.com/hekigan/is-loading</a>
+       </td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+
 
 
 [http://break.kimsq.co.kr/rc-html-examples/loader/03.html](http://break.kimsq.co.kr/rc-html-examples/loader/03.html)  보완 필요

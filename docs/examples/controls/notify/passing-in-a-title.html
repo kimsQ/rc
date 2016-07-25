@@ -22,7 +22,7 @@
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Basic Notify</h1>
+		  <h1 class="title">Passing in a title</h1>
 		</header>
 
     <div class="content">
@@ -34,7 +34,10 @@
 		<script>
 
 			$('.btn').tap(function(){
-				$.notify("Hello World");
+        $.notify({
+          title: "Welcome:",
+            message: "Hello World"
+          });
 			});
 
 		</script>

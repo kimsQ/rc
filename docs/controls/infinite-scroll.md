@@ -6,7 +6,31 @@ group: controls
 ---
 
 Turn any element into an infinite scrolling region with content that loads on demand. 필요에 따라 로드 내용에 무한 스크롤 영역으로 모든 요소를 켭니다.
-[Fuel UX ( Infinite Scoll)](http://getfuelux.com/javascript.html#infinite-scroll)
+
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+     <tr class="bg-faded">
+       <th style="width: 100px;">Name</th>
+       <th>Version</th>
+       <th>License</th>
+       <th>URL</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Fuel UX</td>
+      <td>3.15.5</td>
+      <td><a href="https://github.com/ExactTarget/fuelux/blob/master/LICENSE">BSD-3</a></td>
+       <td>
+        <a href="http://getfuelux.com/javascript.html#infinite-scroll">http://getfuelux.com/javascript.html#infinite-scroll</a>
+       </td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+
 
 ## Contents
 
