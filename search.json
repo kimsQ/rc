@@ -27,6 +27,13 @@
 
     
         {
+            "title" : "Alerts",
+            "url"   : "/components/alerts/"
+        } ,
+    
+
+    
+        {
             "title" : "Approach",
             "url"   : "/extend/approach/"
         } ,
@@ -146,20 +153,6 @@
 
     
         {
-            "title" : "Feedback",
-            "url"   : "/controls/feedback/"
-        } ,
-    
-
-    
-        {
-            "title" : "Feedback",
-            "url"   : "/components/feedback/"
-        } ,
-    
-
-    
-        {
             "title" : "Figures",
             "url"   : "/content/figures/"
         } ,
@@ -274,6 +267,13 @@
         {
             "title" : "Navs",
             "url"   : "/components/navs/"
+        } ,
+    
+
+    
+        {
+            "title" : "Notify",
+            "url"   : "/controls/notify/"
         } ,
     
 
