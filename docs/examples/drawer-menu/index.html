@@ -26,19 +26,54 @@
 
 	<body>
 
-		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Welcome</h1>
-		</header>
-
-    <div class="content">
-
-      <div class="content-padded">
-        <p class="lead">
-          Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.
-        </p>
+    <div class="snap-drawers">
+      <div class="snap-drawer snap-drawer-left" id="myDrawer">
+        <header class="bar bar-nav bar-light bg-faded">
+          <h1 class="title">Left Menu</h1>
+        </header>
+        <div class="content">
+          <ul class="table-view">
+  				  <li class="table-view-cell">Item 1</li>
+  				  <li class="table-view-cell table-view-cell">Item 2</li>
+  				  <li class="table-view-divider">Divider</li>
+  				  <li class="table-view-cell">Item 3</li>
+  					<li class="table-view-cell">
+  				    <a class="navigate-right">
+  				      <span class="badge badge-pill">5</span>
+  				      Item 4
+  				    </a>
+  				  </li>
+  				  <li class="table-view-cell">
+  				    <a class="navigate-right">
+  				      <span class="badge badge-pill">5</span>
+  				      Item 5
+  				    </a>
+  				  </li>
+  				  <li class="table-view-cell">
+  				    <a class="navigate-right">
+  				      <span class="badge badge-pill">5</span>
+  				      Item 6
+  				    </a>
+  				  </li>
+  				</ul>
+        </div>
       </div>
+    </div>
 
-    </div><!-- /.content -->
+    <div class="snap-content" data-extension="drawer">
+      <header class="bar bar-nav bar-light bg-faded">
+        <button class="btn btn-link btn-nav pull-left" data-toggle="drawer" data-target="#myDrawer">
+          <span class="icon icon-bars"></span>
+        </button>
+        <h1 class="title">Title</h1>
+      </header>
+      <div class="content">
+        <div class="content-padded">
+          <p>Swipe to the right to reveal the left menu.</p>
+          <p>(On desktop click and drag from left to right)</p>
+        </div>
+      </div>
+    </div>
 
 	</body>
 </html>
