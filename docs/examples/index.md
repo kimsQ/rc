@@ -23,7 +23,7 @@ Examples that focus on implementing uses of built-in components provided by Ratc
   </div>
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/tab-bar/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/grid.jpg" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/tab-bar.png" alt="">
     </a>
     <h4>Tab bar</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
@@ -32,7 +32,7 @@ Examples that focus on implementing uses of built-in components provided by Ratc
 
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/drawer-menu/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.png" alt="">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/drawer-menu.png" alt="">
     </a>
     <h4>Drawer menu</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
