@@ -1,2 +1,16 @@
 - name: content
   path: components/progress
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: contextual-alternatives
+  path: components/progress
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: striped
+  path: components/progress
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: animated-stripes
+  path: components/progress
+  jsfiddle: kimsQ/0odhbtzv/
+  
