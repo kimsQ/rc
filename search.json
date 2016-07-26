@@ -328,6 +328,13 @@
 
     
         {
+            "title" : "Progress",
+            "url"   : "/components/progress/"
+        } ,
+    
+
+    
+        {
             "title" : "Push",
             "url"   : "/controls/push/"
         } ,
