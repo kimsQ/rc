@@ -1,1 +1,5 @@
 /* Your app's CSS, make it your own */
+
+body {
+  cursor: url('/assets/img/finger.png'), auto;
+}
