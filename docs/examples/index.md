@@ -22,19 +22,19 @@ Examples that focus on implementing uses of built-in components provided by Ratc
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/grid/">
+    <a href="{{ site.baseurl }}/examples/tab-bar/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/grid.jpg" alt="">
     </a>
-    <h4>Grids</h4>
+    <h4>Tab bar</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
   </div>
   <div class="clearfix hidden-sm-up"></div>
 
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/jumbotron/">
+    <a href="{{ site.baseurl }}/examples/drawer-menu/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.png" alt="">
     </a>
-    <h4>Jumbotron</h4>
+    <h4>Drawer menu</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
   </div>
   <div class="col-xs-6 col-md-4">
