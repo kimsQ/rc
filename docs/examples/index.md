@@ -38,11 +38,11 @@ Examples that focus on implementing uses of built-in components provided by Ratc
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
   </div>
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/narrow-jumbotron/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron-narrow.jpg" alt="">
+    <a href="{{ site.baseurl }}/examples/jumbotron/">
+      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.png" alt="">
     </a>
-    <h4>Narrow jumbotron</h4>
-    <p>Build a more custom page by narrowing the default container and jumbotron.</p>
+    <h4>Jumbotron</h4>
+    <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
   </div>
 </div>
 
