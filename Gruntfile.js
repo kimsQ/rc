@@ -133,13 +133,33 @@ module.exports = function (grunt) {
     },
 
     // CSS build configuration
+    csscomb: {
+      options: {
+        config: 'sass/.csscomb.json'
+      },
+      dist: {
+        expand: true,
+        cwd: 'dist/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'dist/css/'
+      },
+      examples: {
+        expand: true,
+        cwd: 'docs/examples/',
+        src: '**/*.css',
+        dest: 'docs/examples/'
+      },
+      docs: {
+        src: 'docs/assets/css/src/docs.css',
+        dest: 'docs/assets/css/src/docs.css'
+      }
+    },
 
     autoprefixer: {
       options: {
         browsers: configBridge.config.autoprefixerBrowsers
       },
       core: {
-        // src: 'dist/css/<%= pkg.name %>.css'
         src: 'dist/css/<%= pkg.name %>.css'
       },
       docs: {

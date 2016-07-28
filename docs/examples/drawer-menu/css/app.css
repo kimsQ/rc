@@ -1,12 +1,15 @@
 /* Your app's CSS, make it your own */
 
-body {
-  cursor: url('/assets/img/finger.png'), auto;
+body
+{
+    cursor: url('/assets/img/finger.png'), auto;
 }
 
-.bar-nav .btn-nav {
-  width: 2.75rem
+.bar-nav .btn-nav
+{
+    width: 2.75rem;
 }
-.bar .btn-nav.pull-left {
+.bar .btn-nav.pull-left
+{
     margin-left: -.625rem;
 }

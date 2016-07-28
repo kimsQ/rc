@@ -1,23 +1,29 @@
 /* Your app's CSS, make it your own */
-h3 {
-  margin-top: 2rem;
+h3
+{
+    margin-top: 2rem;
 }
 
-.row {
-  margin-bottom: 1rem;
+.row
+{
+    margin-bottom: 1rem;
 }
-.row .row {
-  margin-top: 1rem;
-  margin-bottom: 0;
+.row .row
+{
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
-[class*="col-"] {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #f7f7f9;
-  border: 1px solid rgba(0, 0, 0, 0.075);
+[class*='col-']
+{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    border: 1px solid rgba(0, 0, 0, .075);
+    background-color: #f7f7f9;
 }
 
-hr {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+hr
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
