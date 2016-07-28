@@ -133,6 +133,26 @@ module.exports = function (grunt) {
     },
 
     // CSS build configuration
+
+    autoprefixer: {
+      options: {
+        browsers: configBridge.config.autoprefixerBrowsers
+      },
+      core: {
+        // src: 'dist/css/<%= pkg.name %>.css'
+        src: 'dist/css/<%= pkg.name %>.css'
+      },
+      docs: {
+        src: ['docs/assets/css/src/docs.css']
+      },
+      examples: {
+        expand: true,
+        cwd: 'docs/examples/',
+        src: ['**/*.css'],
+        dest: 'docs/examples/'
+      }
+    },
+
     scsslint: {
       options: {
         bundleExec: true,
@@ -343,6 +363,8 @@ module.exports = function (grunt) {
     testSubtasks.push('saucelabs-qunit');
   }
   grunt.registerTask('test', testSubtasks);
+
+  grunt.registerTask('autoprefixer-css', ['autoprefixer:core', 'autoprefixer:docs', 'autoprefixer:examples']);
 
   // test js concat
   grunt.registerTask('test-concat', ['concat', 'uglify:core']);
