@@ -14,7 +14,7 @@ h3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #f7f7f9;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.075);
 }
 
 hr {
