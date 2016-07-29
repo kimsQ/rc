@@ -62,9 +62,26 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          'js/dist/control.js'      : 'js/src/control.js',
-          'js/dist/component.js'     : 'js/src/component.js',
-          'js/dist/extension.js'   : 'js/src/extension.js'
+          'js/dist/history.js'                    : 'js/src/history,js',
+          'js/dist/tap.js'                        : 'js/src/tap.js',
+          'js/dist/utility.js'                    : 'js/src/utility.js',
+          'js/dist/push.js'                       : 'js/src/push.js',
+          'js/dist/infinite-scroll.js'            : 'js/src/infinite-scroll.js',
+          'js/dist/loader.js'                     : 'js/src/loader.js',
+          'js/dist/notify.js'                     : 'js/src/notify.js',
+          'js/dist/scroll.js'                     : 'js/src/scroll.js',
+          'js/dist/modal.js'                      : 'js/src/modal.js',
+          'js/dist/popup.js'                      : 'js/src/popup.js',
+          'js/dist/page.js'                       : 'js/src/page.js',
+          'js/dist/sheet.js'                      : 'js/src/sheet.js',
+          'js/dist/popover.js'                    : 'js/src/popover.js',
+          'js/dist/fbutton.js'                    : 'js/src/fbutton.js',
+          'js/dist/collapse.js'                   : 'js/src/collapse.js',
+          'js/dist/toggles.js'                    : 'js/src/toggles.js',
+          'js/dist/segmented-controllers.js'      : 'js/src/segmented-controllers.js',
+          'js/dist/drawer.js'                     : 'js/src/drawer.js',
+          'js/dist/swiper.js'                     : 'js/src/swiper.js',
+          'js/dist/photoswipe.js'                 : 'js/src/photoswipe.js'
         }
       },
       dist: {
@@ -286,7 +303,7 @@ module.exports = function (grunt) {
 
     watch: {
       src: {
-        files: '<%= concat.ratchet-plus.src %>',
+        files: '<%= concat.core.src %>',
         tasks: ['babel:dev']
       },
       sass: {
