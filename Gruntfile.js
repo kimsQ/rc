@@ -72,7 +72,7 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          '<%= concat.ratchet-plus.dest %>' : '<%= concat.ratchet-plus.dest %>'
+          '<%=  %>' : '<%= concat.core.dest %>'
         }
       }
     },
@@ -84,7 +84,7 @@ module.exports = function (grunt) {
       },
       ratchet_plus: {
         files: {
-          src: '<%= concat.ratchet-plus.dest %>'
+          src: '<%= concat.core.dest %>'
         }
       }
     },
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
         },
         stripBanners: false
       },
-      ratchet_plus: {
+      core: {
         src: [
           'js/src/history,js',
           'js/src/tap.js',
@@ -133,7 +133,7 @@ module.exports = function (grunt) {
         preserveComments: /^!|@preserve|@license|@cc_on/i
       },
       core: {
-        src: '<%= concat.ratchet-plus.dest %>',
+        src: '<%= concat.core.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       docsJs: {
