@@ -62,7 +62,7 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          'js/dist/history.js'                    : 'js/src/history,js',
+          'js/dist/history.js'                    : 'js/src/history.js',
           'js/dist/tap.js'                        : 'js/src/tap.js',
           'js/dist/utility.js'                    : 'js/src/utility.js',
           'js/dist/push.js'                       : 'js/src/push.js',
@@ -89,7 +89,7 @@ module.exports = function (grunt) {
           modules: 'ignore'
         },
         files: {
-          '<%=  %>' : '<%= concat.core.dest %>'
+          '<%= concat.core.dest %>' : '<%= concat.core.dest %>'
         }
       }
     },
