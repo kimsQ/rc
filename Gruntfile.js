@@ -50,8 +50,8 @@ module.exports = function (grunt) {
 
     // Task configuration.
     clean: {
-      // dist: 'dist',
-      // docs: 'docs/dist'
+      dist: 'dist',
+      docs: 'docs/dist'
     },
 
     // JS build configuration
@@ -78,10 +78,7 @@ module.exports = function (grunt) {
           'js/dist/fbutton.js'                    : 'js/src/fbutton.js',
           'js/dist/collapse.js'                   : 'js/src/collapse.js',
           'js/dist/toggles.js'                    : 'js/src/toggles.js',
-          'js/dist/segmented-controllers.js'      : 'js/src/segmented-controllers.js',
-          'js/dist/drawer.js'                     : 'js/src/drawer.js',
-          'js/dist/swiper.js'                     : 'js/src/swiper.js',
-          'js/dist/photoswipe.js'                 : 'js/src/photoswipe.js'
+          'js/dist/segmented-controllers.js'      : 'js/src/segmented-controllers.js'
         }
       },
       dist: {
@@ -416,9 +413,6 @@ module.exports = function (grunt) {
   grunt.registerTask('test', testSubtasks);
 
   grunt.registerTask('autoprefixer-css', ['autoprefixer:core', 'autoprefixer:docs', 'autoprefixer:examples']);
-
-  // test js concat
-  grunt.registerTask('test-js', ['concat', 'stamp','uglify:core']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'uglify:core']);
