@@ -82,7 +82,7 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>\n+function ($) {\n',
         footer: '\n}(jQuery);'
       },
-      ratchet_plus: {
+      core: {
         files: {
           src: '<%= concat.core.dest %>'
         }
@@ -404,7 +404,7 @@ module.exports = function (grunt) {
   grunt.registerTask('autoprefixer-css', ['autoprefixer:core', 'autoprefixer:docs', 'autoprefixer:examples']);
 
   // test js concat
-  grunt.registerTask('test-concat', ['concat', 'uglify:core']);
+  grunt.registerTask('test-js', ['concat', 'stamp','uglify:core']);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'uglify:core']);
