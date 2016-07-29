@@ -132,10 +132,7 @@ module.exports = function (grunt) {
           'js/src/fbutton.js',
           'js/src/collapse.js',
           'js/src/toggles.js',
-          'js/src/segmented-controllers.js',
-          'js/src/drawer.js',
-          'js/src/swiper.js',
-          'js/src/photoswipe.js'
+          'js/src/segmented-controllers.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
