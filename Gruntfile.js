@@ -99,9 +99,26 @@ module.exports = function (grunt) {
       },
       ratchet_plus: {
         src: [
-          'js/src/control.js',
-          'js/src/component.js',
-          'js/src/extension.js'
+          'js/src/history,js',
+          'js/src/tap.js',
+          'js/src/utility.js',
+          'js/src/push.js',
+          'js/src/infinite-scroll.js',
+          'js/src/loader.js',
+          'js/src/notify.js',
+          'js/src/scroll.js',
+          'js/src/modal.js',
+          'js/src/popup.js',
+          'js/src/page.js',
+          'js/src/sheet.js',
+          'js/src/popover.js',
+          'js/src/fbutton.js',
+          'js/src/collapse.js',
+          'js/src/toggles.js',
+          'js/src/segmented-controllers.js',
+          'js/src/drawer.js',
+          'js/src/swiper.js',
+          'js/src/photoswipe.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       }
