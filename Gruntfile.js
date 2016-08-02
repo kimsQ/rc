@@ -35,7 +35,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
             ' * Ratchet-plus v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') {\n' +
@@ -242,6 +242,11 @@ module.exports = function (grunt) {
     },
 
     copy: {
+      fonts: {
+        expand: true,
+        src: 'fonts/**',
+        dest: 'dist/'
+      },
       docs: {
         expand: true,
         cwd: 'dist/',
