@@ -9,6 +9,7 @@
   width: 100%;
   // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   // height: $input-height;
+  margin-bottom: $input-margin-bottom;
   padding: $input-padding-y $input-padding-x;
   font-size: $font-size-base;
   line-height: $input-line-height;
@@ -70,6 +71,10 @@ select.form-control {
     color: $input-color;
     background-color: $input-bg;
   }
+}
+
+.form-group .form-control {
+  margin-bottom: 0
 }
 
 // Make file inputs better match text inputs by forcing them to new lines.
