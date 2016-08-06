@@ -5,7 +5,7 @@
 Package.describe({
   name: 'kimsQ:ratchet-plus',  // http://atmospherejs.com/twbs/bootstrap
   summary: 'The most popular front-end framework for developing responsive, mobile only projects on the web.',
-  version: '1.0.0-alpha.1',
+  version: '1.0.0-alpha.2',
   git: 'https://github.com/kimsQ/rc.git'
 });
 
