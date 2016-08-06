@@ -8,22 +8,26 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
-
 	</head>
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Form controls</h1>
+		  <h1 class="title">Readonly inputs</h1>
 		</header>
 
 		<div class="content">
 			<div class="content-padded">
+
 				<form>
-				  <input class="form-control" type="text" placeholder="Full name">
-				  <input class="form-control" type="search" placeholder="Search">
-				  <textarea class="form-control" rows="5"></textarea>
-				  <button class="btn btn-primary btn-block">Choose existing</button>
+				  <fieldset disabled>
+				    <div class="form-group">
+				      <label for="disabledTextInput">Readonly input</label>
+							<input class="form-control" type="text" placeholder="Readonly input here…" readonly>
+				    </div>
+				    <button type="submit" class="btn btn-primary">Submit</button>
+				  </fieldset>
 				</form>
+
 			</div>
 		</div>
 
