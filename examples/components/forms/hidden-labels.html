@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>forms</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<header class="bar bar-nav bar-light bg-faded">
+		  <h1 class="title">Hidden labels</h1>
+		</header>
+
+		<div class="content">
+			<div class="content-padded">
+
+				<form class="form-inline">
+				  <div class="form-group">
+				    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+				    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+				    <label class="sr-only" for="exampleInputPassword3">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+				  </div>
+				  <div class="form-check">
+				    <label class="form-check-label">
+				      <input class="form-check-input" type="checkbox"> Remember me
+				    </label>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Sign in</button>
+				</form>
+
+				<hr>
+
+				<form class="form-inline">
+				  <div class="form-group">
+				    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				    <div class="input-group">
+				      <div class="input-group-addon">$</div>
+				      <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+				      <div class="input-group-addon">.00</div>
+				    </div>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Transfer cash</button>
+				</form>				
+
+			</div>
+		</div>
+
+	</body>
+</html>

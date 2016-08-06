@@ -132,13 +132,6 @@
 
     
         {
-            "title" : "Drawer",
-            "url"   : "/extensions/drawer/"
-        } ,
-    
-
-    
-        {
             "title" : "Examples",
             "url"   : "/examples/"
         } ,
@@ -379,6 +372,13 @@
         {
             "title" : "Sheet",
             "url"   : "/components/sheet/"
+        } ,
+    
+
+    
+        {
+            "title" : "Snap",
+            "url"   : "/extensions/snap/"
         } ,
     
 
