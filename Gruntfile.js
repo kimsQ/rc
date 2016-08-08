@@ -218,7 +218,12 @@ module.exports = function (grunt) {
           '**/*'
         ],
         dest: 'docs/dist/'
-      }
+      },
+      extensions: {
+        expand: true,
+        src: 'extensions/**',
+        dest: 'dist/'
+      },
     },
 
     connect: {
@@ -397,8 +402,10 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'cssmin:core', 'cssmin:docs']);
 
+  grunt.registerTask('dist-ext', ['copy:extensions']);
+
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist','copy:extensions', 'dist-css', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);
