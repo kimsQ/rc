@@ -3,6 +3,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
+- name: load-side-element
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
 - name: load-in-element
   path: controls/loader
   jsfiddle: kimsQ/0odhbtzv/
@@ -14,6 +19,11 @@
   history: true
 
 - name: overlay-on-element
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
+- name: add-a-text-in-the-loader
   path: controls/loader
   jsfiddle: kimsQ/0odhbtzv/
   history: true
