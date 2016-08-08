@@ -45,6 +45,18 @@
   }
 }
 
+.loader-wrapper.loader-block {
+  display: block;
+  margin: 30px auto;
+
+  .loader {
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-width: .4rem
+  }
+}
+
 .loader-wrapper.loader-right {
   margin-left:10px;
 

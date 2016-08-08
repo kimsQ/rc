@@ -37,10 +37,10 @@
     // Create the defaults once
     var pluginName = "loader",
         defaults = {
-            'position': "right",        // right | inside | overlay
+            'position': "block",        // right | inside | overlay
             'text': "",                 // Text to display next to the loader
             'iconTheme': "default",    // loader CSS class
-            'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><span class="loader">Loading...</span></span>%text%</span>',    // loader base Tag
+            'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>',    // loader base Tag
             'disableSource': true,      // true | false
             'disableOthers': []
         };
