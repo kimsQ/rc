@@ -11,45 +11,44 @@
 
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="../../../dist/js/ratchet-plus.js"></script>
-		
+
 	</head>
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <a href class="title">Overlay</a>
+		  <a href class="title">Load side element</a>
 		</header>
 
 		<div class="content">
 			<div class="content-padded">
-
-				<div id="demo">
-					<p class="bg-faded p-a-2">Content</p>
-					<button type="button" class="btn btn-secondary btn-lg">Test</button>
-				</div>
-
+				<button type="button" class="btn btn-secondary btn-lg">Test</button>
 			</div>
 		</div>
 
 		<script>
 
-		$(function() {
+			$(function() {
 
-		  // Action on Click
-		  $("#demo .btn").click(function() {
+			  // Action on Click
+			  $(".btn").click(function() {
 
-		    // Setup Loading plugin
-				$.loader({ text: "Loading..." });
+			    $(this).loader({
+						position: "right",
+						disableOthers: [
+							$(".btn")
+						]
+					});
 
-		    // Re-enabling event
-		    setTimeout(function() {
-				  $.loader( "hide" );
-		      $("#demo p").html("Content Loaded")
-		                  .addClass("bg-faded");
-		    }, 1000);
+			    // Data Loaded, re-enable event
+			    setTimeout(function() {
+			      // Deactivate the loading plugin
+			      $(".btn").loader("hide");
+			    }, 1000);
 
-		  });
+			  });
 
-		});
+			});
+
 		</script>
 
 	</body>

@@ -9,11 +9,14 @@
 
 		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
 
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../../../dist/js/ratchet-plus.js"></script>
+		
 	</head>
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <a href class="title">Overlay on element</a>
+		  <a href class="title">Overlay on <code>.content</code></a>
 		</header>
 
 		<div class="content">
@@ -27,8 +30,6 @@
 			</div>
 		</div>
 
-		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="../../../dist/js/ratchet-plus.js"></script>
 
 		<script>
 
@@ -37,22 +38,18 @@
 		  // Action on Click
 		  $("#demo .btn").click(function() {
 
-				$( "#demo" ).loader({
-					text:       "Loading",
+				$(".content").loader({
+					text:       "Loading...",
 					position:   "overlay",
 					disableOthers: [
 						$("#demo .btn")
 					]
 				});
 
-		    // Setup Loading plugin
-		    $("#demo p").removeClass("bg-primary");
-
 		    // Re-enabling event
 		    setTimeout(function() {
-					$("#demo").loader( "hide" );
+					$(".content").loader("hide");
 		      $("#demo p").html("Content Loaded")
-		                  .addClass("bg-primary");
 		    }, 1000);
 
 		  });
