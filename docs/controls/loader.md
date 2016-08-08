@@ -177,5 +177,25 @@ defaults = {
 ## Exampls
 
 ### Loader in modal
+{% highlight js %}
+$(".btn").tap(function() {
+
+  $('#myModal').modal('show');
+  $("#myModal .content").loader({
+    text:       "Loading...",
+    position:   "overlay"
+  });
+
+  // Re-enabling event
+  setTimeout(function() {
+    $("#myModal .content").loader("hide");
+    $("#myModal p").html("Content Loaded")
+  }, 1000);
+
+});
+{% endhighlight %}
+<br><br><br><br><br><br>
 
 ### Loader in Page
+
+<br><br><br><br><br><br>

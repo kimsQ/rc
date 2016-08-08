@@ -16,20 +16,16 @@
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Overlay on <code>.content</code></h1>
+		  <h1 class="title">Loader in Page</h1>
 		</header>
 
 		<div class="content">
 			<div class="content-padded">
 
-				<div id="demo">
-					<p class="bg-faded p-a-2">Content</p>
-					<button type="button" class="btn btn-secondary btn-lg btn-block">Test</button>
-				</div>
+
 
 			</div>
 		</div>
-
 
 		<script>
 
@@ -38,18 +34,14 @@
 		  // Action on Click
 		  $("#demo .btn").click(function() {
 
-				$(".content").loader({
-					text:       "Loading...",
-					position:   "overlay",
-					disableOthers: [
-						$("#demo .btn")
-					]
-				});
+		    // Setup Loading plugin
+				$.loader({ text: "Loading..." });
 
 		    // Re-enabling event
 		    setTimeout(function() {
-					$(".content").loader("hide");
+				  $.loader( "hide" );
 		      $("#demo p").html("Content Loaded")
+		                  .addClass("bg-faded");
 		    }, 1000);
 
 		  });
