@@ -47,8 +47,11 @@
 @import "sheet";
 @import "page";
 @import "toggles";
-@import "affix";
+
+// Controls
 @import "push";
+@import "loader";
+@import "affix";
 
 // Utility classes
 @import "utilities";
