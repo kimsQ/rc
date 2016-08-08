@@ -12,47 +12,65 @@
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="../../../dist/js/ratchet-plus.js"></script>
 
+		<style>
+
+		/* only demo */
+		body {
+    	cursor: url('/assets/img/finger.png'), auto;
+		}
+		</style>
+
 	</head>
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">Overlay on <code>.content</code></h1>
+		  <h1 class="title">Loader in modal</h1>
 		</header>
 
 		<div class="content">
 			<div class="content-padded">
 
-				<div id="demo">
-					<p class="bg-faded p-a-2">Content</p>
-					<button type="button" class="btn btn-secondary btn-lg btn-block">Test</button>
-				</div>
+				<button class="btn btn-primary btn-block" type="button">
+				  Launch modal
+				</button>
 
 			</div>
 		</div>
 
+		<!-- Modal -->
+		<div id="myModal" class="modal">
+		  <header class="bar bar-nav bar-light bg-faded">
+		    <a class="icon icon-left-nav pull-left" data-history="back"></a>
+		    <h1 class="title">Modal</h1>
+		  </header>
+		  <div class="content">
+		    <p class="content-padded">
+
+		    </p>
+		  </div>
+		</div>
 
 		<script>
 
 		$(function() {
 
 		  // Action on Click
-		  $("#demo .btn").click(function() {
+		  $(".btn").tap(function() {
 
-				$(".content").loader({
+				$('#myModal').modal('show');
+				$("#myModal p").html("");
+				$("#myModal .content").loader({
 					text:       "Loading...",
-					position:   "overlay",
-					disableOthers: [
-						$("#demo .btn")
-					]
+					position:   "overlay"
 				});
 
 		    // Re-enabling event
 		    setTimeout(function() {
-					$(".content").loader("hide");
-		      $("#demo p").html("Content Loaded")
+					$("#myModal .content").loader("hide");
+		      $("#myModal p").html("Content Loaded")
 		    }, 1000);
 
-		  });
+	  	});
 
 		});
 		</script>

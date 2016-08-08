@@ -1181,7 +1181,27 @@ When your action (data loading, etc…) is done, just call <code class="highligh
 
 <h3 id="loader-in-modal">Loader in modal</h3>
 
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">".btn"</span><span class="p">).</span><span class="nx">tap</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">({</span>
+    <span class="na">text</span><span class="p">:</span>       <span class="s2">"Loading..."</span><span class="p">,</span>
+    <span class="na">position</span><span class="p">:</span>   <span class="s2">"overlay"</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Re-enabling event</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s2">"hide"</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal p"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">"Content Loaded"</span><span class="p">)</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+
+<span class="p">});</span></code></pre></figure>
+
+<p><br /><br /><br /><br /><br /><br /></p>
+
 <h3 id="loader-in-page">Loader in Page</h3>
+
+<p><br /><br /><br /><br /><br /><br /></p>
 
             </div>
             <div class="col-lg-4 hidden-md-down" style="padding-left: 0">
@@ -1390,6 +1410,68 @@ When your action (data loading, etc…) is done, just call <code class="highligh
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/controls/loader/disable-some-extra-elements" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#loader-in-modal">
+      <iframe width="100%" height="555" src="/examples/controls/loader/loader-in-modal.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/controls/loader/loader-in-modal.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/controls/loader/loader-in-modal.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/controls/loader/loader-in-modal" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#loader-in-page">
+      <iframe width="100%" height="555" src="/examples/controls/loader/loader-in-page.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/controls/loader/loader-in-page.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/controls/loader/loader-in-page.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/controls/loader/loader-in-page" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
           
