@@ -37,6 +37,8 @@
 		  // Action on Click
 		  $("#demo .btn").click(function() {
 
+				$("#demo p").html("Content")
+
 		    // Setup Loading plugin
 				$.loader({ text: "Loading..." });
 
@@ -44,7 +46,6 @@
 		    setTimeout(function() {
 				  $.loader( "hide" );
 		      $("#demo p").html("Content Loaded")
-		                  .addClass("bg-faded");
 		    }, 1000);
 
 		  });
