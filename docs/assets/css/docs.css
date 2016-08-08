@@ -1277,3 +1277,14 @@
 .anchorjs-link:focus {
   text-decoration: none;
   opacity: 1; }
+
+
+/*custom bootstrap for demo*/
+
+.form-control {
+  margin-bottom: 1rem
+}
+
+.form-group .form-control {
+  margin-bottom: 0
+}

@@ -77,7 +77,7 @@ JavaScript image gallery for mobile and desktop
 
 
 {% highlight html %}
-<script src="path/to/photoswipe.min.js"></script>
+<script src="path/to/photoswipe.rc.min.js"></script>
 <script src="path/to/photoswipe-ui-default.min.js"></script>
 {% endhighlight %}
 

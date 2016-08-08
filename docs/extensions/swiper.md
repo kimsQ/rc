@@ -38,6 +38,17 @@ Swiper is the most modern mobile touch slider with hardware accelerated transiti
 
 ## Usage
 
+### Extension Import
+
+{% highlight html %}
+<link href="path/to/swiper.css" rel="stylesheet">
+{% endhighlight %}
+
+{% highlight html %}
+<script src="path/to/swiper.rc.min.js"></script>
+{% endhighlight %}
+
+
 ### Initialize
 One way to initialize all swiper on a page would be to select them by  `data-extension` attribute:
 

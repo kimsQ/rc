@@ -32,8 +32,6 @@ Simple jQuery plugin to show visual feedback when loading data or any action tha
 
 
 
-[http://break.kimsq.co.kr/rc-html-examples/loader/03.html](http://break.kimsq.co.kr/rc-html-examples/loader/03.html)  보완 필요
-
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
@@ -54,34 +52,41 @@ Stop:
 {% highlight js %}
 $('selector').loader('hide');
 {% endhighlight %}
+<br><br>
 
+### Load side element
+This demo shows how to show the loading message inside the target.
+
+{% highlight js %}
+$('selector').loader({ position: 'right' });
+{% endhighlight %}
+<br><br>
 
 ### Load in element
 This demo shows how to show the loading message inside the target.
 
 {% highlight js %}
-$('selector').loader({ text: 'Loading', position: 'inside' });
+$('selector').loader({ position: 'inside' });
 {% endhighlight %}
+<br><br>
 
 ### Overlay
 {% highlight js %}
-$.loader({ text: 'Loading' });
+$.loader();
 {% endhighlight %}
-
+<br><br>
 
 ### Overlay on element
 {% highlight js %}
-$('selector').loader({
-  text:       'Loading',
-  position:   'overlay'
-});
+$('selector').loader({ position: 'overlay' });
 {% endhighlight %}
+<br><br>
 
 ### Add a text in the loader
 {% highlight js %}
-$('selector').loader({ text: 'Loading', position: 'inside' });
+$('selector').loader({ text: 'Sending...' });
 {% endhighlight %}
-
+<br><br>
 
 
 ### Disable some extra elements
@@ -90,8 +95,8 @@ If you want to disable some extra tags/input/etc... while the loading is active,
 $('selector').loader({
   text: 'Sending',
   disableOthers: [
-  $('#demo .form-control'),
-  $('#demo .btn')
+    $('#demo .form-control'),
+    $('#demo .btn')
   ]
 });
 {% endhighlight %}
@@ -113,43 +118,37 @@ $('selector').loader({
      <tr>
        <td>position</td>
        <td>boolean</td>
-       <td>right</td>
+       <td>block</td>
        <td>
        loader 출력 위치 및 형태 설정.
-       <code>right</code> | <code>inside</code> | <code>overlay</code> 3 가지 사용 가능
+       <code>block</code> | <code>right</code> | <code>inside</code> | <code>overlay</code> 3 가지 사용 가능
        </td>
      </tr>
      <tr>
        <td>text</td>
        <td>string</td>
-       <td>Loding...</td>
+       <td></td>
        <td>
         loader 출력시 표시되는 문구
        </td>
      </tr>
      <tr>
-       <td>prefix</td>
+       <td>theme</td>
        <td>string</td>
-       <td>rc</td>
-       <td>	css 독립성을 강화하기 위해서 특정 prefix 를 사용할 수 있다.  </td>
-     </tr>
-     <tr>
-       <td>iconClass</td>
-       <td>string</td>
-       <td>rc-icon spinner</td>
-       <td>Loader 아이콘에 class 명을 설정할 수 있다.</td>
+       <td>default</td>
+       <td>Theme를 설정 할 수 있다.</td>
      </tr>
      <tr>
        <td>tpl</td>
        <td>string</td>
-       <td>{% highlight html %}<span class="isloading-wrapper %wrapper%">%text%<i class="%class% icon-spin"></i></span>{% endhighlight %}</td>
+       <td>{% highlight html %}<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>'{% endhighlight %}</td>
        <td>Loader 템플릿</td>
      </tr>
      <tr>
        <td>disableSource</td>
        <td>boolen</td>
        <td>true</td>
-       <td>Loder 출력시 주변 엘리먼트에 <code>disabled</code> attribute 또는 class를 추가</td>
+       <td>loader 출력시 주변 엘리먼트에 <code>disabled</code> attribute 또는 class를 추가</td>
      </tr>
      <tr>
        <td>disableOthers</td>
@@ -165,10 +164,10 @@ $('selector').loader({
 
 {% highlight js %}
 defaults = {
-  'position': 'right',        // right | inside | overlay
+  'position': 'block',        // block | right | inside | overlay
   'text': '',                 // Text to display next to the loader
-  'class': 'icon-refresh',    // loader CSS class
-  'tpl': '<span class="isloading-wrapper %wrapper%">%text%<i class="%class% icon-spin"></i></span>',
+  'iconTheme': 'default',    // loader CSS theme
+  'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>',
   'disableSource': true,      // true | false
   'disableOthers': []
 };

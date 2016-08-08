@@ -1089,10 +1089,10 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     // Create the defaults once
     var pluginName = "loader",
         defaults = {
-            'position': "right",        // right | inside | overlay
+            'position': "block",        // right | inside | overlay
             'text': "",                 // Text to display next to the loader
             'iconTheme': "default",    // loader CSS class
-            'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><span class="loader">Loading...</span></span>%text%</span>',    // loader base Tag
+            'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>',    // loader base Tag
             'disableSource': true,      // true | false
             'disableOthers': []
         };
@@ -1269,419 +1269,419 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * Ratchet Plus: Notify.js v1.0.0
  * http://rc.kimsq.com/controls/notify/
  * ========================================================================
-/*
-* Project: Bootstrap Notify = v3.1.5
-* Description: Turns standard Bootstrap alerts into "Growl-like" notifications.
-* Author: Mouse0270 aka Robert McIntosh
-* License: MIT License
-* Website: https://github.com/mouse0270/bootstrap-growl
-*/
+ /*
+ * Project: Bootstrap Notify = v3.1.5
+ * Description: Turns standard Bootstrap alerts into "Growl-like" notifications.
+ * Author: Mouse0270 aka Robert McIntosh
+ * License: MIT License
+ * Website: https://github.com/mouse0270/bootstrap-growl
+ */
 
-/* global define:false, require: false, jQuery:false */
+ /* global define:false, require: false, jQuery:false */
 
-(function (factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD. Register as an anonymous module.
-		define(['jquery'], factory);
-	} else if (typeof exports === 'object') {
-		// Node/CommonJS
-		factory(require('jquery'));
-	} else {
-		// Browser globals
-		factory(jQuery);
-	}
-}(function ($) {
-	// Create the defaults once
-	var defaults = {
-		element: 'body',
-		position: null,
-		type: "info",
-		allow_dismiss: true,
-		allow_duplicates: true,
-		newest_on_top: false,
-		showProgressbar: false,
-		placement: {
-			from: "bottom",
-			align: "center"
-		},
-		offset: 20,
-		spacing: 10,
-		z_index: 1031,
-		delay: 1000,
-		timer: 1000,
-		url_target: '_blank',
-		mouse_over: null,
-		animate: {
-			enter: 'animated fadeInUp',
-			exit: 'animated fadeOutDown'
-		},
-		onShow: null,
-		onShown: null,
-		onClose: null,
-		onClosed: null,
-          onClick: null,
-		icon_type: 'class',
-		template: '<span data-notify="container" class="alert alert-{0}">{2}</span>'
-	};
+ (function (factory) {
+ 	if (typeof define === 'function' && define.amd) {
+ 		// AMD. Register as an anonymous module.
+ 		define(['jquery'], factory);
+ 	} else if (typeof exports === 'object') {
+ 		// Node/CommonJS
+ 		factory(require('jquery'));
+ 	} else {
+ 		// Browser globals
+ 		factory(jQuery);
+ 	}
+ }(function ($) {
+ 	// Create the defaults once
+ 	var defaults = {
+ 		element: 'body',
+ 		position: null,
+ 		type: "info",
+ 		allow_dismiss: true,
+ 		allow_duplicates: true,
+ 		newest_on_top: false,
+ 		showProgressbar: false,
+ 		placement: {
+ 			from: "bottom",
+ 			align: "center"
+ 		},
+ 		offset: 20,
+ 		spacing: 10,
+ 		z_index: 1031,
+ 		delay: 1000,
+ 		timer: 1000,
+ 		url_target: '_blank',
+ 		mouse_over: null,
+ 		animate: {
+ 			enter: 'animated fadeInUp',
+ 			exit: 'animated fadeOutDown'
+ 		},
+ 		onShow: null,
+ 		onShown: null,
+ 		onClose: null,
+ 		onClosed: null,
+           onClick: null,
+ 		icon_type: 'class',
+ 		template: '<span data-notify="container" class="alert alert-{0}">{2}</span>'
+ 	};
 
-	String.format = function () {
-		var str = arguments[0];
-		for (var i = 1; i < arguments.length; i++) {
-			str = str.replace(RegExp("\\{" + (i - 1) + "\\}", "gm"), arguments[i]);
-		}
-		return str;
-	};
+ 	String.format = function () {
+ 		var str = arguments[0];
+ 		for (var i = 1; i < arguments.length; i++) {
+ 			str = str.replace(RegExp("\\{" + (i - 1) + "\\}", "gm"), arguments[i]);
+ 		}
+ 		return str;
+ 	};
 
-	function isDuplicateNotification(notification) {
-		var isDupe = false;
+ 	function isDuplicateNotification(notification) {
+ 		var isDupe = false;
 
-		$('[data-notify="container"]').each(function (i, el) {
-			var $el = $(el);
-			var title = $el.find('[data-notify="title"]').html().trim();
-			var message = $el.find('[data-notify="message"]').html().trim();
+ 		$('[data-notify="container"]').each(function (i, el) {
+ 			var $el = $(el);
+ 			var title = $el.find('[data-notify="title"]').html().trim();
+ 			var message = $el.find('[data-notify="message"]').html().trim();
 
-			// The input string might be different than the actual parsed HTML string!
-			// (<br> vs <br /> for example)
-			// So we have to force-parse this as HTML here!
-			var isSameTitle = title === $("<div>" + notification.settings.content.title + "</div>").html().trim();
-			var isSameMsg = message === $("<div>" + notification.settings.content.message + "</div>").html().trim();
-			var isSameType = $el.hasClass('alert-' + notification.settings.type);
+ 			// The input string might be different than the actual parsed HTML string!
+ 			// (<br> vs <br /> for example)
+ 			// So we have to force-parse this as HTML here!
+ 			var isSameTitle = title === $("<div>" + notification.settings.content.title + "</div>").html().trim();
+ 			var isSameMsg = message === $("<div>" + notification.settings.content.message + "</div>").html().trim();
+ 			var isSameType = $el.hasClass('alert-' + notification.settings.type);
 
-			if (isSameTitle && isSameMsg && isSameType) {
-				//we found the dupe. Set the var and stop checking.
-				isDupe = true;
-			}
-			return !isDupe;
-		});
+ 			if (isSameTitle && isSameMsg && isSameType) {
+ 				//we found the dupe. Set the var and stop checking.
+ 				isDupe = true;
+ 			}
+ 			return !isDupe;
+ 		});
 
-		return isDupe;
-	}
+ 		return isDupe;
+ 	}
 
-	function Notify(element, content, options) {
-		// Setup Content of Notify
-		var contentObj = {
-			content: {
-				message: typeof content === 'object' ? content.message : content,
-				title: content.title ? content.title : '',
-				icon: content.icon ? content.icon : '',
-				url: content.url ? content.url : '#',
-				target: content.target ? content.target : '-'
-			}
-		};
+ 	function Notify(element, content, options) {
+ 		// Setup Content of Notify
+ 		var contentObj = {
+ 			content: {
+ 				message: typeof content === 'object' ? content.message : content,
+ 				title: content.title ? content.title : '',
+ 				icon: content.icon ? content.icon : '',
+ 				url: content.url ? content.url : '#',
+ 				target: content.target ? content.target : '-'
+ 			}
+ 		};
 
-		options = $.extend(true, {}, contentObj, options);
-		this.settings = $.extend(true, {}, defaults, options);
-		this._defaults = defaults;
-		if (this.settings.content.target === "-") {
-			this.settings.content.target = this.settings.url_target;
-		}
-		this.animations = {
-			start: 'webkitAnimationStart oanimationstart MSAnimationStart animationstart',
-			end: 'webkitAnimationEnd oanimationend MSAnimationEnd animationend'
-		};
+ 		options = $.extend(true, {}, contentObj, options);
+ 		this.settings = $.extend(true, {}, defaults, options);
+ 		this._defaults = defaults;
+ 		if (this.settings.content.target === "-") {
+ 			this.settings.content.target = this.settings.url_target;
+ 		}
+ 		this.animations = {
+ 			start: 'webkitAnimationStart oanimationstart MSAnimationStart animationstart',
+ 			end: 'webkitAnimationEnd oanimationend MSAnimationEnd animationend'
+ 		};
 
-		if (typeof this.settings.offset === 'number') {
-			this.settings.offset = {
-				x: this.settings.offset,
-				y: this.settings.offset
-			};
-		}
+ 		if (typeof this.settings.offset === 'number') {
+ 			this.settings.offset = {
+ 				x: this.settings.offset,
+ 				y: this.settings.offset
+ 			};
+ 		}
 
-		//if duplicate messages are not allowed, then only continue if this new message is not a duplicate of one that it already showing
-		if (this.settings.allow_duplicates || (!this.settings.allow_duplicates && !isDuplicateNotification(this))) {
-			this.init();
-		}
-	}
+ 		//if duplicate messages are not allowed, then only continue if this new message is not a duplicate of one that it already showing
+ 		if (this.settings.allow_duplicates || (!this.settings.allow_duplicates && !isDuplicateNotification(this))) {
+ 			this.init();
+ 		}
+ 	}
 
-	$.extend(Notify.prototype, {
-		init: function () {
-			var self = this;
+ 	$.extend(Notify.prototype, {
+ 		init: function () {
+ 			var self = this;
 
-			this.buildNotify();
-			if (this.settings.content.icon) {
-				this.setIcon();
-			}
-			if (this.settings.content.url != "#") {
-				this.styleURL();
-			}
-			this.styleDismiss();
-			this.placement();
-			this.bind();
+ 			this.buildNotify();
+ 			if (this.settings.content.icon) {
+ 				this.setIcon();
+ 			}
+ 			if (this.settings.content.url != "#") {
+ 				this.styleURL();
+ 			}
+ 			this.styleDismiss();
+ 			this.placement();
+ 			this.bind();
 
-			this.notify = {
-				$ele: this.$ele,
-				update: function (command, update) {
-					var commands = {};
-					if (typeof command === "string") {
-						commands[command] = update;
-					} else {
-						commands = command;
-					}
-					for (var cmd in commands) {
-						switch (cmd) {
-							case "type":
-								this.$ele.removeClass('alert-' + self.settings.type);
-								this.$ele.find('[data-notify="progressbar"] > .progress-bar').removeClass('progress-bar-' + self.settings.type);
-								self.settings.type = commands[cmd];
-								this.$ele.addClass('alert-' + commands[cmd]).find('[data-notify="progressbar"] > .progress-bar').addClass('progress-bar-' + commands[cmd]);
-								break;
-							case "icon":
-								var $icon = this.$ele.find('[data-notify="icon"]');
-								if (self.settings.icon_type.toLowerCase() === 'class') {
-									$icon.removeClass(self.settings.content.icon).addClass(commands[cmd]);
-								} else {
-									if (!$icon.is('img')) {
-										$icon.find('img');
-									}
-									$icon.attr('src', commands[cmd]);
-								}
-								self.settings.content.icon = commands[command];
-								break;
-							case "progress":
-								var newDelay = self.settings.delay - (self.settings.delay * (commands[cmd] / 100));
-								this.$ele.data('notify-delay', newDelay);
-								this.$ele.find('[data-notify="progressbar"] > div').attr('aria-valuenow', commands[cmd]).css('width', commands[cmd] + '%');
-								break;
-							case "url":
-								this.$ele.find('[data-notify="url"]').attr('href', commands[cmd]);
-								break;
-							case "target":
-								this.$ele.find('[data-notify="url"]').attr('target', commands[cmd]);
-								break;
-							default:
-								this.$ele.find('[data-notify="' + cmd + '"]').html(commands[cmd]);
-						}
-					}
-					var posX = this.$ele.outerHeight() + parseInt(self.settings.spacing) + parseInt(self.settings.offset.y);
-					self.reposition(posX);
-				},
-				close: function () {
-					self.close();
-				}
-			};
+ 			this.notify = {
+ 				$ele: this.$ele,
+ 				update: function (command, update) {
+ 					var commands = {};
+ 					if (typeof command === "string") {
+ 						commands[command] = update;
+ 					} else {
+ 						commands = command;
+ 					}
+ 					for (var cmd in commands) {
+ 						switch (cmd) {
+ 							case "type":
+ 								this.$ele.removeClass('alert-' + self.settings.type);
+ 								this.$ele.find('[data-notify="progressbar"] > .progress-bar').removeClass('progress-bar-' + self.settings.type);
+ 								self.settings.type = commands[cmd];
+ 								this.$ele.addClass('alert-' + commands[cmd]).find('[data-notify="progressbar"] > .progress-bar').addClass('progress-bar-' + commands[cmd]);
+ 								break;
+ 							case "icon":
+ 								var $icon = this.$ele.find('[data-notify="icon"]');
+ 								if (self.settings.icon_type.toLowerCase() === 'class') {
+ 									$icon.removeClass(self.settings.content.icon).addClass(commands[cmd]);
+ 								} else {
+ 									if (!$icon.is('img')) {
+ 										$icon.find('img');
+ 									}
+ 									$icon.attr('src', commands[cmd]);
+ 								}
+ 								self.settings.content.icon = commands[command];
+ 								break;
+ 							case "progress":
+ 								var newDelay = self.settings.delay - (self.settings.delay * (commands[cmd] / 100));
+ 								this.$ele.data('notify-delay', newDelay);
+ 								this.$ele.find('[data-notify="progressbar"] > div').attr('aria-valuenow', commands[cmd]).css('width', commands[cmd] + '%');
+ 								break;
+ 							case "url":
+ 								this.$ele.find('[data-notify="url"]').attr('href', commands[cmd]);
+ 								break;
+ 							case "target":
+ 								this.$ele.find('[data-notify="url"]').attr('target', commands[cmd]);
+ 								break;
+ 							default:
+ 								this.$ele.find('[data-notify="' + cmd + '"]').html(commands[cmd]);
+ 						}
+ 					}
+ 					var posX = this.$ele.outerHeight() + parseInt(self.settings.spacing) + parseInt(self.settings.offset.y);
+ 					self.reposition(posX);
+ 				},
+ 				close: function () {
+ 					self.close();
+ 				}
+ 			};
 
-		},
-		buildNotify: function () {
-			var content = this.settings.content;
-			this.$ele = $(String.format(this.settings.template, this.settings.type, content.title, content.message, content.url, content.target));
-			this.$ele.attr('data-notify-position', this.settings.placement.from + '-' + this.settings.placement.align);
-			if (!this.settings.allow_dismiss) {
-				this.$ele.find('[data-notify="dismiss"]').css('display', 'none');
-			}
-			if ((this.settings.delay <= 0 && !this.settings.showProgressbar) || !this.settings.showProgressbar) {
-				this.$ele.find('[data-notify="progressbar"]').remove();
-			}
-		},
-		setIcon: function () {
-			if (this.settings.icon_type.toLowerCase() === 'class') {
-				this.$ele.find('[data-notify="icon"]').addClass(this.settings.content.icon);
-			} else {
-				if (this.$ele.find('[data-notify="icon"]').is('img')) {
-					this.$ele.find('[data-notify="icon"]').attr('src', this.settings.content.icon);
-				} else {
-					this.$ele.find('[data-notify="icon"]').append('<img src="' + this.settings.content.icon + '" alt="Notify Icon" />');
-				}
-			}
-		},
-		styleDismiss: function () {
-			this.$ele.find('[data-notify="dismiss"]').css({
-				position: 'absolute',
-				right: '10px',
-				top: '5px',
-				zIndex: this.settings.z_index + 2
-			});
-		},
-		styleURL: function () {
-			this.$ele.find('[data-notify="url"]').css({
-				backgroundImage: 'url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)',
-				height: '100%',
-				left: 0,
-				position: 'absolute',
-				top: 0,
-				width: '100%',
-				zIndex: this.settings.z_index + 1
-			});
-		},
-		placement: function () {
-			var self = this,
-				offsetAmt = this.settings.offset.y,
-				css = {
-					display: 'inline-block',
-					margin: '0px auto',
-					position: this.settings.position ? this.settings.position : (this.settings.element === 'body' ? 'fixed' : 'absolute'),
-					transition: 'all .5s ease-in-out',
-					zIndex: this.settings.z_index
-				},
-				hasAnimation = false,
-				settings = this.settings;
+ 		},
+ 		buildNotify: function () {
+ 			var content = this.settings.content;
+ 			this.$ele = $(String.format(this.settings.template, this.settings.type, content.title, content.message, content.url, content.target));
+ 			this.$ele.attr('data-notify-position', this.settings.placement.from + '-' + this.settings.placement.align);
+ 			if (!this.settings.allow_dismiss) {
+ 				this.$ele.find('[data-notify="dismiss"]').css('display', 'none');
+ 			}
+ 			if ((this.settings.delay <= 0 && !this.settings.showProgressbar) || !this.settings.showProgressbar) {
+ 				this.$ele.find('[data-notify="progressbar"]').remove();
+ 			}
+ 		},
+ 		setIcon: function () {
+ 			if (this.settings.icon_type.toLowerCase() === 'class') {
+ 				this.$ele.find('[data-notify="icon"]').addClass(this.settings.content.icon);
+ 			} else {
+ 				if (this.$ele.find('[data-notify="icon"]').is('img')) {
+ 					this.$ele.find('[data-notify="icon"]').attr('src', this.settings.content.icon);
+ 				} else {
+ 					this.$ele.find('[data-notify="icon"]').append('<img src="' + this.settings.content.icon + '" alt="Notify Icon" />');
+ 				}
+ 			}
+ 		},
+ 		styleDismiss: function () {
+ 			this.$ele.find('[data-notify="dismiss"]').css({
+ 				position: 'absolute',
+ 				right: '10px',
+ 				top: '5px',
+ 				zIndex: this.settings.z_index + 2
+ 			});
+ 		},
+ 		styleURL: function () {
+ 			this.$ele.find('[data-notify="url"]').css({
+ 				backgroundImage: 'url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)',
+ 				height: '100%',
+ 				left: 0,
+ 				position: 'absolute',
+ 				top: 0,
+ 				width: '100%',
+ 				zIndex: this.settings.z_index + 1
+ 			});
+ 		},
+ 		placement: function () {
+ 			var self = this,
+ 				offsetAmt = this.settings.offset.y,
+ 				css = {
+ 					display: 'inline-block',
+ 					margin: '0px auto',
+ 					position: this.settings.position ? this.settings.position : (this.settings.element === 'body' ? 'fixed' : 'absolute'),
+ 					transition: 'all .5s ease-in-out',
+ 					zIndex: this.settings.z_index
+ 				},
+ 				hasAnimation = false,
+ 				settings = this.settings;
 
-			$('[data-notify-position="' + this.settings.placement.from + '-' + this.settings.placement.align + '"]:not([data-closing="true"])').each(function () {
-				offsetAmt = Math.max(offsetAmt, parseInt($(this).css(settings.placement.from)) + parseInt($(this).outerHeight()) + parseInt(settings.spacing));
-			});
-			if (this.settings.newest_on_top === true) {
-				offsetAmt = this.settings.offset.y;
-			}
-			css[this.settings.placement.from] = offsetAmt + 'px';
+ 			$('[data-notify-position="' + this.settings.placement.from + '-' + this.settings.placement.align + '"]:not([data-closing="true"])').each(function () {
+ 				offsetAmt = Math.max(offsetAmt, parseInt($(this).css(settings.placement.from)) + parseInt($(this).outerHeight()) + parseInt(settings.spacing));
+ 			});
+ 			if (this.settings.newest_on_top === true) {
+ 				offsetAmt = this.settings.offset.y;
+ 			}
+ 			css[this.settings.placement.from] = offsetAmt + 'px';
 
-			switch (this.settings.placement.align) {
-				case "left":
-				case "right":
-					css[this.settings.placement.align] = this.settings.offset.x + 'px';
-					break;
-				case "center":
-					css.left = 0;
-					css.right = 0;
-					break;
-			}
-			this.$ele.css(css).addClass(this.settings.animate.enter);
-			$.each(Array('webkit-', 'moz-', 'o-', 'ms-', ''), function (index, prefix) {
-				self.$ele[0].style[prefix + 'AnimationIterationCount'] = 1;
-			});
+ 			switch (this.settings.placement.align) {
+ 				case "left":
+ 				case "right":
+ 					css[this.settings.placement.align] = this.settings.offset.x + 'px';
+ 					break;
+ 				case "center":
+ 					css.left = 0;
+ 					css.right = 0;
+ 					break;
+ 			}
+ 			this.$ele.css(css).addClass(this.settings.animate.enter);
+ 			$.each(Array('webkit-', 'moz-', 'o-', 'ms-', ''), function (index, prefix) {
+ 				self.$ele[0].style[prefix + 'AnimationIterationCount'] = 1;
+ 			});
 
-			$(this.settings.element).append(this.$ele);
+ 			$(this.settings.element).append(this.$ele);
 
-			if (this.settings.newest_on_top === true) {
-				offsetAmt = (parseInt(offsetAmt) + parseInt(this.settings.spacing)) + this.$ele.outerHeight();
-				this.reposition(offsetAmt);
-			}
+ 			if (this.settings.newest_on_top === true) {
+ 				offsetAmt = (parseInt(offsetAmt) + parseInt(this.settings.spacing)) + this.$ele.outerHeight();
+ 				this.reposition(offsetAmt);
+ 			}
 
-			if ($.isFunction(self.settings.onShow)) {
-				self.settings.onShow.call(this.$ele);
-			}
+ 			if ($.isFunction(self.settings.onShow)) {
+ 				self.settings.onShow.call(this.$ele);
+ 			}
 
-			this.$ele.one(this.animations.start, function () {
-				hasAnimation = true;
-			}).one(this.animations.end, function () {
-				self.$ele.removeClass(self.settings.animate.enter);
-				if ($.isFunction(self.settings.onShown)) {
-					self.settings.onShown.call(this);
-				}
-			});
+ 			this.$ele.one(this.animations.start, function () {
+ 				hasAnimation = true;
+ 			}).one(this.animations.end, function () {
+ 				self.$ele.removeClass(self.settings.animate.enter);
+ 				if ($.isFunction(self.settings.onShown)) {
+ 					self.settings.onShown.call(this);
+ 				}
+ 			});
 
-			setTimeout(function () {
-				if (!hasAnimation) {
-					if ($.isFunction(self.settings.onShown)) {
-						self.settings.onShown.call(this);
-					}
-				}
-			}, 600);
-		},
-		bind: function () {
-			var self = this;
+ 			setTimeout(function () {
+ 				if (!hasAnimation) {
+ 					if ($.isFunction(self.settings.onShown)) {
+ 						self.settings.onShown.call(this);
+ 					}
+ 				}
+ 			}, 600);
+ 		},
+ 		bind: function () {
+ 			var self = this;
 
-			this.$ele.find('[data-notify="dismiss"]').on('tap', function () {
-				self.close();
-			});
+ 			this.$ele.find('[data-notify="dismiss"]').on('tap', function () {
+ 				self.close();
+ 			});
 
-			if ($.isFunction(self.settings.onClick)) {
-			    this.$ele.on('tap', function (event) {
-			        if (event.target != self.$ele.find('[data-notify="dismiss"]')[0]) {
-			            self.settings.onClick.call(this, event);
-			        }
-			    });
-			}
+ 			if ($.isFunction(self.settings.onClick)) {
+ 			    this.$ele.on('tap', function (event) {
+ 			        if (event.target != self.$ele.find('[data-notify="dismiss"]')[0]) {
+ 			            self.settings.onClick.call(this, event);
+ 			        }
+ 			    });
+ 			}
 
-			this.$ele.mouseover(function () {
-				$(this).data('data-hover', "true");
-			}).mouseout(function () {
-				$(this).data('data-hover', "false");
-			});
-			this.$ele.data('data-hover', "false");
+ 			this.$ele.mouseover(function () {
+ 				$(this).data('data-hover', "true");
+ 			}).mouseout(function () {
+ 				$(this).data('data-hover', "false");
+ 			});
+ 			this.$ele.data('data-hover', "false");
 
-			if (this.settings.delay > 0) {
-				self.$ele.data('notify-delay', self.settings.delay);
-				var timer = setInterval(function () {
-					var delay = parseInt(self.$ele.data('notify-delay')) - self.settings.timer;
-					if ((self.$ele.data('data-hover') === 'false' && self.settings.mouse_over === "pause") || self.settings.mouse_over != "pause") {
-						var percent = ((self.settings.delay - delay) / self.settings.delay) * 100;
-						self.$ele.data('notify-delay', delay);
-						self.$ele.find('[data-notify="progressbar"] > div').attr('aria-valuenow', percent).css('width', percent + '%');
-					}
-					if (delay <= -(self.settings.timer)) {
-						clearInterval(timer);
-						self.close();
-					}
-				}, self.settings.timer);
-			}
-		},
-		close: function () {
-			var self = this,
-				posX = parseInt(this.$ele.css(this.settings.placement.from)),
-				hasAnimation = false;
+ 			if (this.settings.delay > 0) {
+ 				self.$ele.data('notify-delay', self.settings.delay);
+ 				var timer = setInterval(function () {
+ 					var delay = parseInt(self.$ele.data('notify-delay')) - self.settings.timer;
+ 					if ((self.$ele.data('data-hover') === 'false' && self.settings.mouse_over === "pause") || self.settings.mouse_over != "pause") {
+ 						var percent = ((self.settings.delay - delay) / self.settings.delay) * 100;
+ 						self.$ele.data('notify-delay', delay);
+ 						self.$ele.find('[data-notify="progressbar"] > div').attr('aria-valuenow', percent).css('width', percent + '%');
+ 					}
+ 					if (delay <= -(self.settings.timer)) {
+ 						clearInterval(timer);
+ 						self.close();
+ 					}
+ 				}, self.settings.timer);
+ 			}
+ 		},
+ 		close: function () {
+ 			var self = this,
+ 				posX = parseInt(this.$ele.css(this.settings.placement.from)),
+ 				hasAnimation = false;
 
-			this.$ele.attr('data-closing', 'true').addClass(this.settings.animate.exit);
-			self.reposition(posX);
+ 			this.$ele.attr('data-closing', 'true').addClass(this.settings.animate.exit);
+ 			self.reposition(posX);
 
-			if ($.isFunction(self.settings.onClose)) {
-				self.settings.onClose.call(this.$ele);
-			}
+ 			if ($.isFunction(self.settings.onClose)) {
+ 				self.settings.onClose.call(this.$ele);
+ 			}
 
-			this.$ele.one(this.animations.start, function () {
-				hasAnimation = true;
-			}).one(this.animations.end, function () {
-				$(this).remove();
-				if ($.isFunction(self.settings.onClosed)) {
-					self.settings.onClosed.call(this);
-				}
-			});
+ 			this.$ele.one(this.animations.start, function () {
+ 				hasAnimation = true;
+ 			}).one(this.animations.end, function () {
+ 				$(this).remove();
+ 				if ($.isFunction(self.settings.onClosed)) {
+ 					self.settings.onClosed.call(this);
+ 				}
+ 			});
 
-			setTimeout(function () {
-				if (!hasAnimation) {
-					self.$ele.remove();
-					if (self.settings.onClosed) {
-						self.settings.onClosed(self.$ele);
-					}
-				}
-			}, 600);
-		},
-		reposition: function (posX) {
-			var self = this,
-				notifies = '[data-notify-position="' + this.settings.placement.from + '-' + this.settings.placement.align + '"]:not([data-closing="true"])',
-				$elements = this.$ele.nextAll(notifies);
-			if (this.settings.newest_on_top === true) {
-				$elements = this.$ele.prevAll(notifies);
-			}
-			$elements.each(function () {
-				$(this).css(self.settings.placement.from, posX);
-				posX = (parseInt(posX) + parseInt(self.settings.spacing)) + $(this).outerHeight();
-			});
-		}
-	});
+ 			setTimeout(function () {
+ 				if (!hasAnimation) {
+ 					self.$ele.remove();
+ 					if (self.settings.onClosed) {
+ 						self.settings.onClosed(self.$ele);
+ 					}
+ 				}
+ 			}, 600);
+ 		},
+ 		reposition: function (posX) {
+ 			var self = this,
+ 				notifies = '[data-notify-position="' + this.settings.placement.from + '-' + this.settings.placement.align + '"]:not([data-closing="true"])',
+ 				$elements = this.$ele.nextAll(notifies);
+ 			if (this.settings.newest_on_top === true) {
+ 				$elements = this.$ele.prevAll(notifies);
+ 			}
+ 			$elements.each(function () {
+ 				$(this).css(self.settings.placement.from, posX);
+ 				posX = (parseInt(posX) + parseInt(self.settings.spacing)) + $(this).outerHeight();
+ 			});
+ 		}
+ 	});
 
-	$.notify = function (content, options) {
-		var plugin = new Notify(this, content, options);
-		return plugin.notify;
-	};
-	$.notifyDefaults = function (options) {
-		defaults = $.extend(true, {}, defaults, options);
-		return defaults;
-	};
+ 	$.notify = function (content, options) {
+ 		var plugin = new Notify(this, content, options);
+ 		return plugin.notify;
+ 	};
+ 	$.notifyDefaults = function (options) {
+ 		defaults = $.extend(true, {}, defaults, options);
+ 		return defaults;
+ 	};
 
-	$.notifyClose = function (selector) {
+ 	$.notifyClose = function (selector) {
 
-		if (typeof selector === "undefined" || selector === "all") {
-			$('[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
-		}else if(selector === 'success' || selector === 'info' || selector === 'warning' || selector === 'danger'){
-			$('.alert-' + selector + '[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
-		} else if(selector){
-			$(selector + '[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
-		}
-		else {
-			$('[data-notify-position="' + selector + '"]').find('[data-notify="dismiss"]').trigger('tap');
-		}
-	};
+ 		if (typeof selector === "undefined" || selector === "all") {
+ 			$('[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
+ 		}else if(selector === 'success' || selector === 'info' || selector === 'warning' || selector === 'danger'){
+ 			$('.alert-' + selector + '[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
+ 		} else if(selector){
+ 			$(selector + '[data-notify]').find('[data-notify="dismiss"]').trigger('tap');
+ 		}
+ 		else {
+ 			$('[data-notify-position="' + selector + '"]').find('[data-notify="dismiss"]').trigger('tap');
+ 		}
+ 	};
 
-	$.notifyCloseExcept = function (selector) {
+ 	$.notifyCloseExcept = function (selector) {
 
-		if(selector === 'success' || selector === 'info' || selector === 'warning' || selector === 'danger'){
-			$('[data-notify]').not('.alert-' + selector).find('[data-notify="dismiss"]').trigger('tap');
-		} else{
-			$('[data-notify]').not(selector).find('[data-notify="dismiss"]').trigger('tap');
-		}
-	};
+ 		if(selector === 'success' || selector === 'info' || selector === 'warning' || selector === 'danger'){
+ 			$('[data-notify]').not('.alert-' + selector).find('[data-notify="dismiss"]').trigger('tap');
+ 		} else{
+ 			$('[data-notify]').not(selector).find('[data-notify="dismiss"]').trigger('tap');
+ 		}
+ 	};
 
 
-}));
+ }));
 
 /* ========================================================================
  * Retchet Plust - Scroll.js
@@ -2954,363 +2954,218 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       })
 
 }(jQuery));
-/**
- * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-alpha.2): collapse.js
+/* ========================================================================
+ * Bootstrap: collapse.js v3.3.7
+ * http://getbootstrap.com/javascript/#collapse
+ * ========================================================================
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * --------------------------------------------------------------------------
- */
+ * ======================================================================== */
 
-var Collapse = (function ($) {
+/* jshint latedef: false */
 
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
++function ($) {
+  'use strict';
 
-  var NAME = 'collapse';
-  var VERSION = '4.0.0-alpha.2';
-  var DATA_KEY = 'bs.collapse';
-  var EVENT_KEY = '.' + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $.fn[NAME];
-  var TRANSITION_DURATION = 600;
+  // COLLAPSE PUBLIC CLASS DEFINITION
+  // ================================
 
-  var Default = {
-    toggle: true,
-    parent: ''
-  };
+  var Collapse = function (element, options) {
+    this.$element      = $(element)
+    this.options       = $.extend({}, Collapse.DEFAULTS, options)
+    this.$trigger      = $('[data-toggle="collapse"][href="#' + element.id + '"],' +
+                           '[data-toggle="collapse"][data-target="#' + element.id + '"]')
+    this.transitioning = null
 
-  var DefaultType = {
-    toggle: 'boolean',
-    parent: 'string'
-  };
-
-  var Event = {
-    SHOW: 'show' + EVENT_KEY,
-    SHOWN: 'shown' + EVENT_KEY,
-    HIDE: 'hide' + EVENT_KEY,
-    HIDDEN: 'hidden' + EVENT_KEY,
-    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
-  };
-
-  var ClassName = {
-    IN: 'in',
-    COLLAPSE: 'collapse',
-    COLLAPSING: 'collapsing',
-    COLLAPSED: 'collapsed'
-  };
-
-  var Dimension = {
-    WIDTH: 'width',
-    HEIGHT: 'height'
-  };
-
-  var Selector = {
-    ACTIVES: '.panel > .in, .panel > .collapsing',
-    DATA_TOGGLE: '[data-toggle="collapse"]'
-  };
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
-
-  var Collapse = (function () {
-    function Collapse(element, config) {
-      _classCallCheck(this, Collapse);
-
-      this._isTransitioning = false;
-      this._element = element;
-      this._config = this._getConfig(config);
-      this._triggerArray = $.makeArray($('[data-toggle="collapse"][href="#' + element.id + '"],' + ('[data-toggle="collapse"][data-target="#' + element.id + '"]')));
-
-      this._parent = this._config.parent ? this._getParent() : null;
-
-      if (!this._config.parent) {
-        this._addAriaAndCollapsedClass(this._element, this._triggerArray);
-      }
-
-      if (this._config.toggle) {
-        this.toggle();
-      }
+    if (this.options.parent) {
+      this.$parent = this.getParent()
+    } else {
+      this.addAriaAndCollapsedClass(this.$element, this.$trigger)
     }
 
-    /**
-     * ------------------------------------------------------------------------
-     * Data Api implementation
-     * ------------------------------------------------------------------------
-     */
+    if (this.options.toggle) this.toggle()
+  }
 
-    // getters
+  Collapse.VERSION  = '3.3.7'
 
-    _createClass(Collapse, [{
-      key: 'toggle',
+  Collapse.TRANSITION_DURATION = 350
 
-      // public
+  Collapse.DEFAULTS = {
+    toggle: true
+  }
 
-      value: function toggle() {
-        if ($(this._element).hasClass(ClassName.IN)) {
-          this.hide();
-        } else {
-          this.show();
-        }
-      }
-    }, {
-      key: 'show',
-      value: function show() {
-        var _this4 = this;
+  Collapse.prototype.dimension = function () {
+    var hasWidth = this.$element.hasClass('width')
+    return hasWidth ? 'width' : 'height'
+  }
 
-        if (this._isTransitioning || $(this._element).hasClass(ClassName.IN)) {
-          return;
-        }
+  Collapse.prototype.show = function () {
+    if (this.transitioning || this.$element.hasClass('in')) return
 
-        var actives = undefined;
-        var activesData = undefined;
+    var activesData
+    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
 
-        if (this._parent) {
-          actives = $.makeArray($(Selector.ACTIVES));
-          if (!actives.length) {
-            actives = null;
-          }
-        }
+    if (actives && actives.length) {
+      activesData = actives.data('bs.collapse')
+      if (activesData && activesData.transitioning) return
+    }
 
-        if (actives) {
-          activesData = $(actives).data(DATA_KEY);
-          if (activesData && activesData._isTransitioning) {
-            return;
-          }
-        }
+    var startEvent = $.Event('show.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
 
-        var startEvent = $.Event(Event.SHOW);
-        $(this._element).trigger(startEvent);
-        if (startEvent.isDefaultPrevented()) {
-          return;
-        }
+    if (actives && actives.length) {
+      Plugin.call(actives, 'hide')
+      activesData || actives.data('bs.collapse', null)
+    }
 
-        if (actives) {
-          Collapse._jQueryInterface.call($(actives), 'hide');
-          if (!activesData) {
-            $(actives).data(DATA_KEY, null);
-          }
-        }
+    var dimension = this.dimension()
 
-        var dimension = this._getDimension();
+    this.$element
+      .removeClass('collapse')
+      .addClass('collapsing')[dimension](0)
+      .attr('aria-expanded', true)
 
-        $(this._element).removeClass(ClassName.COLLAPSE).addClass(ClassName.COLLAPSING);
+    this.$trigger
+      .removeClass('collapsed')
+      .attr('aria-expanded', true)
 
-        this._element.style[dimension] = 0;
-        this._element.setAttribute('aria-expanded', true);
+    this.transitioning = 1
 
-        if (this._triggerArray.length) {
-          $(this._triggerArray).removeClass(ClassName.COLLAPSED).attr('aria-expanded', true);
-        }
+    var complete = function () {
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse in')[dimension]('')
+      this.transitioning = 0
+      this.$element
+        .trigger('shown.bs.collapse')
+    }
 
-        this.setTransitioning(true);
+    if (!$.support.transition) return complete.call(this)
 
-        var complete = function complete() {
-          $(_this4._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).addClass(ClassName.IN);
+    var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
-          _this4._element.style[dimension] = '';
+    this.$element
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
+  }
 
-          _this4.setTransitioning(false);
+  Collapse.prototype.hide = function () {
+    if (this.transitioning || !this.$element.hasClass('in')) return
 
-          $(_this4._element).trigger(Event.SHOWN);
-        };
+    var startEvent = $.Event('hide.bs.collapse')
+    this.$element.trigger(startEvent)
+    if (startEvent.isDefaultPrevented()) return
 
-        if (!Util.supportsTransitionEnd()) {
-          complete();
-          return;
-        }
+    var dimension = this.dimension()
 
-        var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
-        var scrollSize = 'scroll' + capitalizedDimension;
+    this.$element[dimension](this.$element[dimension]())[0].offsetHeight
 
-        $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
+    this.$element
+      .addClass('collapsing')
+      .removeClass('collapse in')
+      .attr('aria-expanded', false)
 
-        this._element.style[dimension] = this._element[scrollSize] + 'px';
-      }
-    }, {
-      key: 'hide',
-      value: function hide() {
-        var _this5 = this;
+    this.$trigger
+      .addClass('collapsed')
+      .attr('aria-expanded', false)
 
-        if (this._isTransitioning || !$(this._element).hasClass(ClassName.IN)) {
-          return;
-        }
+    this.transitioning = 1
 
-        var startEvent = $.Event(Event.HIDE);
-        $(this._element).trigger(startEvent);
-        if (startEvent.isDefaultPrevented()) {
-          return;
-        }
+    var complete = function () {
+      this.transitioning = 0
+      this.$element
+        .removeClass('collapsing')
+        .addClass('collapse')
+        .trigger('hidden.bs.collapse')
+    }
 
-        var dimension = this._getDimension();
-        var offsetDimension = dimension === Dimension.WIDTH ? 'offsetWidth' : 'offsetHeight';
+    if (!$.support.transition) return complete.call(this)
 
-        this._element.style[dimension] = this._element[offsetDimension] + 'px';
+    this.$element
+      [dimension](0)
+      .one('bsTransitionEnd', $.proxy(complete, this))
+      .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
+  }
 
-        Util.reflow(this._element);
+  Collapse.prototype.toggle = function () {
+    this[this.$element.hasClass('in') ? 'hide' : 'show']()
+  }
 
-        $(this._element).addClass(ClassName.COLLAPSING).removeClass(ClassName.COLLAPSE).removeClass(ClassName.IN);
+  Collapse.prototype.getParent = function () {
+    return $(this.options.parent)
+      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+      .each($.proxy(function (i, element) {
+        var $element = $(element)
+        this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
+      }, this))
+      .end()
+  }
 
-        this._element.setAttribute('aria-expanded', false);
+  Collapse.prototype.addAriaAndCollapsedClass = function ($element, $trigger) {
+    var isOpen = $element.hasClass('in')
 
-        if (this._triggerArray.length) {
-          $(this._triggerArray).addClass(ClassName.COLLAPSED).attr('aria-expanded', false);
-        }
+    $element.attr('aria-expanded', isOpen)
+    $trigger
+      .toggleClass('collapsed', !isOpen)
+      .attr('aria-expanded', isOpen)
+  }
 
-        this.setTransitioning(true);
+  function getTargetFromTrigger($trigger) {
+    var href
+    var target = $trigger.attr('data-target')
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '') // strip for ie7
 
-        var complete = function complete() {
-          _this5.setTransitioning(false);
-          $(_this5._element).removeClass(ClassName.COLLAPSING).addClass(ClassName.COLLAPSE).trigger(Event.HIDDEN);
-        };
+    return $(target)
+  }
 
-        this._element.style[dimension] = 0;
 
-        if (!Util.supportsTransitionEnd()) {
-          complete();
-          return;
-        }
+  // COLLAPSE PLUGIN DEFINITION
+  // ==========================
 
-        $(this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(TRANSITION_DURATION);
-      }
-    }, {
-      key: 'setTransitioning',
-      value: function setTransitioning(isTransitioning) {
-        this._isTransitioning = isTransitioning;
-      }
-    }, {
-      key: 'dispose',
-      value: function dispose() {
-        $.removeData(this._element, DATA_KEY);
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.collapse')
+      var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
-        this._config = null;
-        this._parent = null;
-        this._element = null;
-        this._triggerArray = null;
-        this._isTransitioning = null;
-      }
+      if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
+      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
 
-      // private
+  var old = $.fn.collapse
 
-    }, {
-      key: '_getConfig',
-      value: function _getConfig(config) {
-        config = $.extend({}, Default, config);
-        config.toggle = Boolean(config.toggle); // coerce string values
-        Util.typeCheckConfig(NAME, config, DefaultType);
-        return config;
-      }
-    }, {
-      key: '_getDimension',
-      value: function _getDimension() {
-        var hasWidth = $(this._element).hasClass(Dimension.WIDTH);
-        return hasWidth ? Dimension.WIDTH : Dimension.HEIGHT;
-      }
-    }, {
-      key: '_getParent',
-      value: function _getParent() {
-        var _this6 = this;
+  $.fn.collapse             = Plugin
+  $.fn.collapse.Constructor = Collapse
 
-        var parent = $(this._config.parent)[0];
-        var selector = '[data-toggle="collapse"][data-parent="' + this._config.parent + '"]';
 
-        $(parent).find(selector).each(function (i, element) {
-          _this6._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
-        });
+  // COLLAPSE NO CONFLICT
+  // ====================
 
-        return parent;
-      }
-    }, {
-      key: '_addAriaAndCollapsedClass',
-      value: function _addAriaAndCollapsedClass(element, triggerArray) {
-        if (element) {
-          var isOpen = $(element).hasClass(ClassName.IN);
-          element.setAttribute('aria-expanded', isOpen);
+  $.fn.collapse.noConflict = function () {
+    $.fn.collapse = old
+    return this
+  }
 
-          if (triggerArray.length) {
-            $(triggerArray).toggleClass(ClassName.COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
-          }
-        }
-      }
 
-      // static
+  // COLLAPSE DATA-API
+  // =================
 
-    }], [{
-      key: '_getTargetFromElement',
-      value: function _getTargetFromElement(element) {
-        var selector = Util.getSelectorFromElement(element);
-        return selector ? $(selector)[0] : null;
-      }
-    }, {
-      key: '_jQueryInterface',
-      value: function _jQueryInterface(config) {
-        return this.each(function () {
-          var $this = $(this);
-          var data = $this.data(DATA_KEY);
-          var _config = $.extend({}, Default, $this.data(), typeof config === 'object' && config);
+  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+    var $this   = $(this)
 
-          if (!data && _config.toggle && /show|hide/.test(config)) {
-            _config.toggle = false;
-          }
+    if (!$this.attr('data-target')) e.preventDefault()
 
-          if (!data) {
-            data = new Collapse(this, _config);
-            $this.data(DATA_KEY, data);
-          }
+    var $target = getTargetFromTrigger($this)
+    var data    = $target.data('bs.collapse')
+    var option  = data ? 'toggle' : $this.data()
 
-          if (typeof config === 'string') {
-            if (data[config] === undefined) {
-              throw new Error('No method named "' + config + '"');
-            }
-            data[config]();
-          }
-        });
-      }
-    }, {
-      key: 'VERSION',
-      get: function get() {
-        return VERSION;
-      }
-    }, {
-      key: 'Default',
-      get: function get() {
-        return Default;
-      }
-    }]);
+    Plugin.call($target, option)
+  })
 
-    return Collapse;
-  })();
-
-  $(document).on(Event.CLICK_DATA_API, Selector.DATA_TOGGLE, function (event) {
-    event.preventDefault();
-
-    var target = Collapse._getTargetFromElement(this);
-    var data = $(target).data(DATA_KEY);
-    var config = data ? 'toggle' : $(this).data();
-
-    Collapse._jQueryInterface.call($(target), config);
-  });
-
-  /**
-   * ------------------------------------------------------------------------
-   * jQuery
-   * ------------------------------------------------------------------------
-   */
-
-  $.fn[NAME] = Collapse._jQueryInterface;
-  $.fn[NAME].Constructor = Collapse;
-  $.fn[NAME].noConflict = function () {
-    $.fn[NAME] = JQUERY_NO_CONFLICT;
-    return Collapse._jQueryInterface;
-  };
-
-  return Collapse;
-})(jQuery);
+}(jQuery);
 
 /* ========================================================================
  * Ratchet: toggles.js v2.0.2
