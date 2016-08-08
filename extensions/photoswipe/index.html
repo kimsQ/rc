@@ -1073,14 +1073,14 @@
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"path/to/photoswipe.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"path/to/default-skin/default-skin.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="nt">&gt;</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/photoswipe.rc.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/rc.photoswipe.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"path/to/photoswipe-ui-default.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
 
 <h3 id="initialize">Initialize</h3>
 <p>One way to initialize all photoSwipe on a page would be to select them by  <code class="highlighter-rouge">data-extension</code> attribute:</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-extension="photoswipe"]'</span><span class="p">).</span><span class="nx">RC_initPhotoSwipe</span><span class="p">()</span>
+  <span class="nx">RC_initPhotoSwipe</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
 
 <h3 id="markup">Markup</h3>
