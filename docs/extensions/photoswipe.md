@@ -77,7 +77,7 @@ JavaScript image gallery for mobile and desktop
 
 
 {% highlight html %}
-<script src="path/to/photoswipe.rc.min.js"></script>
+<script src="path/to/rc.photoswipe.min.js"></script>
 <script src="path/to/photoswipe-ui-default.min.js"></script>
 {% endhighlight %}
 
@@ -86,7 +86,7 @@ One way to initialize all photoSwipe on a page would be to select them by  `data
 
 {% highlight js %}
 $(function () {
-  $('[data-extension="photoswipe"]').RC_initPhotoSwipe()
+  RC_initPhotoSwipe()
 })
 {% endhighlight %}
 

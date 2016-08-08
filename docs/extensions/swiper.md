@@ -45,7 +45,7 @@ Swiper is the most modern mobile touch slider with hardware accelerated transiti
 {% endhighlight %}
 
 {% highlight html %}
-<script src="path/to/swiper.rc.min.js"></script>
+<script src="path/to/rc.swiper.min.js"></script>
 {% endhighlight %}
 
 
@@ -54,7 +54,7 @@ One way to initialize all swiper on a page would be to select them by  `data-ext
 
 {% highlight js %}
 $(function () {
-  $('[data-extension="swiper"]').RC_initSwiper()
+  RC_initSwiper()
 })
 {% endhighlight %}
 
