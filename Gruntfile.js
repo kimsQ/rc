@@ -1,5 +1,5 @@
 /*!
- * Bootstrap's Gruntfile
+ * Ratchet-plus's Gruntfile
  * http://getbootstrap.com
  * Copyright 2013-2016 The Bootstrap Authors
  * Copyright 2013-2016 Twitter, Inc.
