@@ -1,19 +1,19 @@
 - name: content
-  path: extensions/drawer
+  path: extensions/snap
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: dual-side-drawers
-  path: extensions/drawer
+  path: extensions/snap
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: expand-drawer
-  path: extensions/drawer
+  path: extensions/snap
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: backdrop-option
-  path: extensions/drawer
+  path: extensions/snap
   jsfiddle: kimsQ/0odhbtzv/
   history: true
