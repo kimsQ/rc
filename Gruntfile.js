@@ -55,41 +55,6 @@ module.exports = function (grunt) {
     },
 
     // JS build configuration
-    babel: {
-      dev: {
-        options: {
-          sourceMap: true,
-          modules: 'ignore'
-        },
-        files: {
-          'js/dist/history.js'                    : 'js/src/history.js',
-          'js/dist/tap.js'                        : 'js/src/tap.js',
-          'js/dist/utility.js'                    : 'js/src/utility.js',
-          'js/dist/push.js'                       : 'js/src/push.js',
-          'js/dist/infinite-scroll.js'            : 'js/src/infinite-scroll.js',
-          'js/dist/loader.js'                     : 'js/src/loader.js',
-          'js/dist/notify.js'                     : 'js/src/notify.js',
-          'js/dist/scroll.js'                     : 'js/src/scroll.js',
-          'js/dist/modal.js'                      : 'js/src/modal.js',
-          'js/dist/popup.js'                      : 'js/src/popup.js',
-          'js/dist/page.js'                       : 'js/src/page.js',
-          'js/dist/sheet.js'                      : 'js/src/sheet.js',
-          'js/dist/popover.js'                    : 'js/src/popover.js',
-          'js/dist/fbutton.js'                    : 'js/src/fbutton.js',
-          'js/dist/collapse.js'                   : 'js/src/collapse.js',
-          'js/dist/toggles.js'                    : 'js/src/toggles.js',
-          'js/dist/segmented-controllers.js'      : 'js/src/segmented-controllers.js'
-        }
-      },
-      dist: {
-        options: {
-          modules: 'ignore'
-        },
-        files: {
-          '<%= concat.core.dest %>' : '<%= concat.core.dest %>'
-        }
-      }
-    },
 
     stamp: {
       options: {
@@ -302,8 +267,8 @@ module.exports = function (grunt) {
 
     watch: {
       src: {
-        files: '<%= concat.core.src %>',
-        tasks: ['babel:dev']
+        files: '<%= jshint.core.src %>',
+        tasks: ['jshint:core', 'qunit', 'concat']
       },
       sass: {
         files: 'scss/**/*.scss',
@@ -411,7 +376,6 @@ module.exports = function (grunt) {
       runSubset('sauce-js-unit') &&
       // Skip Sauce on Travis when [skip sauce] is in the commit message
       isUndefOrNonZero(process.env.TWBS_DO_SAUCE)) {
-    testSubtasks.push('babel:dev');
     testSubtasks.push('connect');
     testSubtasks.push('saucelabs-qunit');
   }
@@ -420,7 +384,7 @@ module.exports = function (grunt) {
   grunt.registerTask('autoprefixer-css', ['autoprefixer:core', 'autoprefixer:docs', 'autoprefixer:examples']);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dev', 'concat', 'babel:dist', 'stamp', 'uglify:core']);
+  grunt.registerTask('dist-js', ['concat', 'stamp', 'uglify:core']);
 
   grunt.registerTask('test-scss', ['scsslint:core']);
 
