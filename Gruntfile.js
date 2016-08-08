@@ -77,7 +77,7 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'js/history,js',
+          'js/history.js',
           'js/tap.js',
           'js/utility.js',
           'js/push.js',
