@@ -125,8 +125,8 @@ $.notify({
 {% highlight js %}
 $.notify("Enter: Bounce In from TopExit: Bounce Up and Out", {
   animate: {
-    enter: 'animated bounceInDown',
-    exit: 'animated bounceOutUp'
+    enter: 'animated bounceInUp',
+    exit: 'animated bounceOutDown'
   }
 });
 {% endhighlight %}
