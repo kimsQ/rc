@@ -2,3 +2,83 @@
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/
   history: false
+
+- name: form-group
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: textual-inputs
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: inline-forms
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: hidden-labels
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: using-the-grid
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: checkboxes-and-radios
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: static-controls
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: disabled-states
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: readonly-inputs
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: control-sizing
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: column-sizing
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: help-text
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: validation
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: custom-forms
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: select-menu
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: file-browser
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
