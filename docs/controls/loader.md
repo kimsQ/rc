@@ -206,7 +206,8 @@ $(".btn").tap(function() {
   // Re-enabling event
   setTimeout(function() {
     $("#myModal .content").loader("hide");
-    $("#myModal p").html("Content Loaded")
+    $("#myModal p").html("Hello World");
+    $.notify("Content Loaded")
   }, 1000);
 
 });
