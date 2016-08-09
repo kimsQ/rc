@@ -1188,7 +1188,7 @@ When your action (data loading, etc…) is done, just call <code class="highligh
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">defaults</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">'position'</span><span class="p">:</span> <span class="s1">'block'</span><span class="p">,</span>        <span class="c1">// block | right | inside | overlay</span>
   <span class="s1">'text'</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>                 <span class="c1">// Text to display next to the loader</span>
-  <span class="s1">'iconTheme'</span><span class="p">:</span> <span class="s1">'default'</span><span class="p">,</span>    <span class="c1">// loader CSS theme</span>
+  <span class="s1">'theme'</span><span class="p">:</span> <span class="s1">'default'</span><span class="p">,</span>    <span class="c1">// loader CSS theme</span>
   <span class="s1">'tpl'</span><span class="p">:</span> <span class="s1">'&lt;span class="loader-wrapper %wrapper% %theme%"&gt;&lt;i class="loader"&gt;Loading...&lt;/i&gt;%text%&lt;/span&gt;'</span><span class="p">,</span>
   <span class="s1">'disableSource'</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>      <span class="c1">// true | false</span>
   <span class="s1">'disableOthers'</span><span class="p">:</span> <span class="p">[]</span>
@@ -1213,12 +1213,12 @@ When your action (data loading, etc…) is done, just call <code class="highligh
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">".btn"</span><span class="p">).</span><span class="nx">tap</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
   <span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'show'</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal p"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
   <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">({</span>
     <span class="na">text</span><span class="p">:</span>       <span class="s2">"Loading..."</span><span class="p">,</span>
     <span class="na">position</span><span class="p">:</span>   <span class="s2">"overlay"</span>
   <span class="p">});</span>
 
-  <span class="c1">// Re-enabling event</span>
   <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s2">"hide"</span><span class="p">);</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">"#myModal p"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">);</span>
@@ -1227,9 +1227,24 @@ When your action (data loading, etc…) is done, just call <code class="highligh
 
 <span class="p">});</span></code></pre></figure>
 
-<p><br /><br /><br /><br /><br /><br /></p>
-
 <h3 id="loader-in-page">Loader in Page</h3>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s2">".btn"</span><span class="p">).</span><span class="nx">tap</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#page-target'</span><span class="p">).</span><span class="nx">page</span><span class="p">({</span><span class="na">start</span><span class="p">:</span> <span class="s2">"#page-start"</span><span class="p">});</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#page-target p"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s2">"#page-target .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">({</span>
+    <span class="na">text</span><span class="p">:</span>       <span class="s2">"Loading..."</span><span class="p">,</span>
+    <span class="na">position</span><span class="p">:</span>   <span class="s2">"overlay"</span>
+  <span class="p">});</span>
+
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#page-target .content"</span><span class="p">).</span><span class="nx">loader</span><span class="p">(</span><span class="s2">"hide"</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"#page-target p"</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">);</span>
+    <span class="nx">$</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s2">"Content Loaded"</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+
+<span class="p">});</span></code></pre></figure>
 
 <p><br /><br /><br /><br /><br /><br /></p>
 

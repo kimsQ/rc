@@ -44,37 +44,31 @@
 		    <h1 class="title">Target Page</h1>
 		  </header>
 		  <div class="content">
-		    <div class="content-padded">
+				<p class="content-padded">
 
-		    </div>
+		    </p>
 		  </div>
 		</div>
 
 
 		<script>
 
-			$(function() {
+		  $(".btn").tap(function() {
 
-			  // Action on Click
-			  $("#page-start .btn").tap(function() {
+				$('#page-target').page({start: "#page-start"});
+				$("#page-target p").html("");
+				$("#page-target .content").loader({
+					text:       "Loading...",
+					position:   "overlay"
+				});
 
-					// 페이지 호출
-					$('#page-target').page({start: "#page-start"});
-					$("#page-target .content-padded").html("");
-					$("#page-target .content").loader({
-						text:       "Loading...",
-						position:   "overlay"
-					});
+		    setTimeout(function() {
+					$("#page-target .content").loader("hide");
+		      $("#page-target p").html("Hello World");
+					$.notify("Content Loaded");
+		    }, 1000);
 
-			    // Re-enabling event
-			    setTimeout(function() {
-						$("#page-target .content").loader("hide");
-			      $("#page-target .content-padded").html("Hello World");
-						$.notify("Content Loaded");
-			    }, 1000);
-
-		  	});
-			});
+	  	});
 
 		</script>
 
