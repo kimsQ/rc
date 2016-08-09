@@ -168,7 +168,7 @@ $('selector').loader({
 defaults = {
   'position': 'block',        // block | right | inside | overlay
   'text': '',                 // Text to display next to the loader
-  'iconTheme': 'default',    // loader CSS theme
+  'theme': 'default',    // loader CSS theme
   'tpl': '<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>',
   'disableSource': true,      // true | false
   'disableOthers': []
@@ -198,12 +198,12 @@ $('selector').loader({
 $(".btn").tap(function() {
 
   $('#myModal').modal('show');
+  $("#myModal p").html("");
   $("#myModal .content").loader({
     text:       "Loading...",
     position:   "overlay"
   });
 
-  // Re-enabling event
   setTimeout(function() {
     $("#myModal .content").loader("hide");
     $("#myModal p").html("Hello World");
@@ -212,8 +212,25 @@ $(".btn").tap(function() {
 
 });
 {% endhighlight %}
-<br><br><br><br><br><br>
+
 
 ### Loader in Page
+{% highlight js %}
+$(".btn").tap(function() {
 
+  $('#page-target').page({start: "#page-start"});
+  $("#page-target p").html("");
+  $("#page-target .content").loader({
+    text:       "Loading...",
+    position:   "overlay"
+  });
+
+  setTimeout(function() {
+    $("#page-target .content").loader("hide");
+    $("#page-target p").html("Hello World");
+    $.notify("Content Loaded");
+  }, 1000);
+
+});
+{% endhighlight %}
 <br><br><br><br><br><br>
