@@ -4864,6 +4864,14 @@ input[type="button"].btn-block {
   color: inherit;
 }
 
+.alert-default {
+  color: #fff;
+  background-color: #222;
+  border-color: transparent;
+  text-align: center;
+  border-radius: 1.875rem;
+}
+
 .alert-success {
   background-color: #dff0d8;
   border-color: #d0e9c6;

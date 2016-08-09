@@ -2345,12 +2345,12 @@ if (typeof jQuery === 'undefined') {
             this.elem = elem;
             this.$elem = $(elem);
             this.options = options;
-            this.metadata=this.$elem.data('utility-option'); // 엘리먼트 기준  
+            this.metadata=this.$elem.data('utility-option'); // 엘리먼트 기준
        };
 
       Utility.VERSION  = '1.1.0'
       Utility.DEFAULTS = {}
-     
+
       Utility.prototype.init=function(){
             this.config=$.extend({}, this.defaults, this.options);
             return this;
@@ -2362,21 +2362,21 @@ if (typeof jQuery === 'undefined') {
                  var strVal=String(val);
                  var valArr=strVal.split('::');
                  if(valArr.length ==2){
-                     var valType=valArr[0]; 
+                     var valType=valArr[0];
                      var valName=valArr[1];
                      if(valType=='bg') $(target).css('background-image','url('+val+')');
                      else if(valType=='img') $(target).attr('src',val);
                      else if(valType=='inputText') $(target).val(val);
                      else if(valType=='html') $(target).html(val);
                  }else{
-                     $(target).text(val);                         
+                     $(target).text(val);
                  }
             });
       }
 
       Utility.prototype.addHistoryObject=function(object,title,url){
             var _url=url!=null?url:'##';
-            History.pushState(object, title, _url); 
+            History.pushState(object, title, _url);
       }
 
       Utility.prototype.resetHistoryObject=function(objType,objTarget){
@@ -2385,16 +2385,16 @@ if (typeof jQuery === 'undefined') {
                   var object=objTarget.load;
                   $(object).page('historyHide');
             }else if(objType=='modal'){
-                  var object=objTarget; 
+                  var object=objTarget;
                   $(object).removeClass('active');
-                  setTimeout(function(){$(object).hide();},ctime); 
+                  setTimeout(function(){$(object).hide();},ctime);
                   $(object).modal('historyHide');
             }else if(objType=='popover' || objType=='popup' || objType=='sheet' || objType=='fbutton' || objType=='drawer'  ){
                   var object=objTarget.id;
                   var bcontainer=objTarget.bcontainer;
                   var backdrop=objTarget.backdrop;
                   var placement=objTarget.placement;
-                  $(object).removeClass('active'); 
+                  $(object).removeClass('active');
                   if(objType!='fbutton' && objType!='drawer') setTimeout(function(){$(object).hide();},ctime);
                   if(backdrop) $(bcontainer).find('.backdrop').remove();
                   if(objType=='popover') $(object).popover('historyHide');
@@ -2403,25 +2403,25 @@ if (typeof jQuery === 'undefined') {
                   else if(objType=='fbutton') $(object).fbutton('historyHide');
                   else if(objType=='drawer') $(object).drawer('historyHide');
             }
-             // object 입력내용 초기화 (object 공통내용) 
+             // object 입력내용 초기화 (object 공통내용)
              $(object).find('[data-role="title"]').html('');
              $(object).find('[data-role="content"]').html('');
-             $(object).find('[data-role="coverImg"]').css('background-image','url()'); // 커버이미지 초기화(배경타입) 
+             $(object).find('[data-role="coverImg"]').css('background-image','url()'); // 커버이미지 초기화(배경타입)
              $(object).find('[data-role="cover-img"]').attr('src',''); // 커버이미지 초기화 (이미지 타입 )
-             $(object).find('[data-role="focus"]').blur();// 포커싱한 것 초기화  
+             $(object).find('[data-role="focus"]').blur();// 포커싱한 것 초기화
       }
 
       Utility.prototype.popComponentState=function(e){
             var CurrentIndex=History.getCurrentIndex();
             var ForwardIndex=parseInt(CurrentIndex)-1;
-            var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object 
+            var ForwardObj=History.getStateByIndex(ForwardIndex); // 직전 object
             var ForwardObj=JSON.stringify(ForwardObj);
             var result=$.parseJSON(ForwardObj);
             //History.log('직전 history : state =' +ForwardObj+'/ index='+ForwardIndex);
-            var objType=result.data.type; // modal, page, popover, popup,...     
+            var objType=result.data.type; // modal, page, popover, popup,...
             var objTarget=result.data.target; // modal, page, popover..의 id 정보
             var utility=new Utility(objTarget,null).init();
-            utility.resetHistoryObject(objType,objTarget);  
+            utility.resetHistoryObject(objType,objTarget);
       }
 
       // push bind Affix
@@ -2433,20 +2433,20 @@ if (typeof jQuery === 'undefined') {
 
 		      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
 		      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
-                 
+
                  $spy.scroll($(this).data());
 
 	    })
-      } 
-      
-      window.addEventListener('push', checkScroll);  
+      }
+
+      window.addEventListener('push', checkScroll);
 
        // history.back
       $(document).on('tap','[data-history="back"]',function(e){
              e.preventDefault();
              history.back();
        });
-      
+
       // Scroll Top
 	$(document).on('tap', '[data-scroll="top"]', function(e) {
 	       var target=e.currentTarget;
@@ -2461,11 +2461,12 @@ if (typeof jQuery === 'undefined') {
 	});
 
       var utility=new Utility(null,null).init();
-      window.addEventListener('popstate', utility.popComponentState);      
-      
+      window.addEventListener('popstate', utility.popComponentState);
+
       window.Utility = Utility;
 
 })(jQuery);
+
 /* ========================================================================
  * Ratchet Plus: Push.js v1.0.0
  * http://rc.kimsq.com/controls/push/
@@ -3418,7 +3419,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  	var defaults = {
  		element: 'body',
  		position: null,
- 		type: "info",
+ 		type: "default",
  		allow_dismiss: true,
  		allow_duplicates: true,
  		newest_on_top: false,
@@ -3444,7 +3445,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  		onClosed: null,
            onClick: null,
  		icon_type: 'class',
- 		template: '<span data-notify="container" class="alert alert-{0}">{2}</span>'
+ 		template: '<span data-notify="container" class="alert alert-{0} col-xs-11 col-sm-4">{2}</span>'
  	};
 
  	String.format = function () {
@@ -5289,128 +5290,6 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   })
 
 }(jQuery);
-
-/* ========================================================================
- * Ratchet: toggles.js v2.0.2
- * http://goratchet.com/components#toggles
- * ========================================================================
-   Adapted from Brad Birdsall's swipe
- * Copyright 2015 Connor Sears
- * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
- * ======================================================================== */
-
-!(function () {
-  'use strict';
-
-  var start     = {};
-  var touchMove = false;
-  var distanceX = false;
-  var toggle    = false;
-  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
-
-  var findToggle = function (target) {
-    var i;
-    var toggles = document.querySelectorAll('.toggle');
-
-    for (; target && target !== document; target = target.parentNode) {
-      for (i = toggles.length; i--;) {
-        if (toggles[i] === target) {
-          return target;
-        }
-      }
-    }
-  };
-
-  window.addEventListener('touchstart', function (e) {
-    e = e.originalEvent || e;
-
-    toggle = findToggle(e.target);
-
-    if (!toggle) {
-      return;
-    }
-
-    var handle      = toggle.querySelector('.toggle-handle');
-    var toggleWidth = toggle.clientWidth;
-    var handleWidth = handle.clientWidth;
-    var offset      = toggle.classList.contains('active') ? (toggleWidth - handleWidth) : 0;
-
-    start     = { pageX : e.touches[0].pageX - offset, pageY : e.touches[0].pageY };
-    touchMove = false;
-  });
-
-  window.addEventListener('touchmove', function (e) {
-    e = e.originalEvent || e;
-
-    if (e.touches.length > 1) {
-      return; // Exit if a pinch
-    }
-
-    if (!toggle) {
-      return;
-    }
-
-    var handle      = toggle.querySelector('.toggle-handle');
-    var current     = e.touches[0];
-    var toggleWidth = toggle.clientWidth;
-    var handleWidth = handle.clientWidth;
-    var offset      = toggleWidth - handleWidth;
-
-    touchMove = true;
-    distanceX = current.pageX - start.pageX;
-
-    if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) {
-      return;
-    }
-
-    e.preventDefault();
-
-    if (distanceX < 0) {
-      return (handle.style[transformProperty] = 'translate3d(0,0,0)');
-    }
-    if (distanceX > offset) {
-      return (handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)');
-    }
-
-    handle.style[transformProperty] = 'translate3d(' + distanceX + 'px,0,0)';
-
-    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
-  });
-
-  window.addEventListener('touchend', function (e) {
-    if (!toggle) {
-      return;
-    }
-
-    var handle      = toggle.querySelector('.toggle-handle');
-    var toggleWidth = toggle.clientWidth;
-    var handleWidth = handle.clientWidth;
-    var offset      = (toggleWidth - handleWidth);
-    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
-
-    if (slideOn) {
-      handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)';
-    } else {
-      handle.style[transformProperty] = 'translate3d(0,0,0)';
-    }
-
-    toggle.classList[slideOn ? 'add' : 'remove']('active');
-
-    e = new CustomEvent('toggle', {
-      detail: {
-        isActive: slideOn
-      },
-      bubbles: true,
-      cancelable: true
-    });
-
-    toggle.dispatchEvent(e);
-
-    touchMove = false;
-    toggle    = false;
-  });
-
-}());
 
 /* ========================================================================
  * Ratchet: segmented-controllers.js v2.0.2
