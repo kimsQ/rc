@@ -4,16 +4,16 @@ title: Customization options
 group: getting-started
 ---
 
-Customize Ratchet plus with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with the included Gruntfile as needed.
+Customize kimsQ RC with our built-in custom variables file and easily toggle global CSS preferences with new `$enable-*` Sass variables. Override a variable's value and recompile with the included Gruntfile as needed.
 
 ## Customizing variables
 
-Ratchet plus 4 ships with a `_custom.scss` file for easy variable overrides. Copy and paste relevant lines from `_variables.scss` into the custom file and recompile your Sass to change our default values. **Be sure to remove the `!default` flag from override values.**
+kimsQ RC 4 ships with a `_custom.scss` file for easy variable overrides. Copy and paste relevant lines from `_variables.scss` into the custom file and recompile your Sass to change our default values. **Be sure to remove the `!default` flag from override values.**
 
 For example, to change out the `background-color` and `color` for the `<body>`, you'd do the following:
 
 {% highlight scss %}
-// Ratchet plus overrides
+// kimsQ RC overrides
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.

@@ -4,7 +4,7 @@ title: Best practices
 group: getting-started
 ---
 
-We've designed and developed Ratchet plus to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
+We've designed and developed kimsQ RC to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
 
 {% callout info %}
 **Heads up!** This copy is a work in progress.

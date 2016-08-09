@@ -1,16 +1,16 @@
 ---
 layout: docs
-title: Ratchet plus
+title: kimsQ RC
 group: about
 redirect_from: "/about/"
 ---
 
 
 Makes front-end mobile web & apps development faster and easier.
-Ratchet plus is the function extended version of [Ratchet](http://goratchet.com/).
+kimsQ RC is the function extended version of [Ratchet](http://goratchet.com/).
 
 ## Special thanks
-Ratchet plus would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
+kimsQ RC would like to thank the authors of components that have gone into the making of this framework. Their contributions have helped make it great.
 
 * [Ratchet](https://github.com/twbs/ratchet)
 * [Bootstrap](https://github.com/twbs/bootstrap)
@@ -28,7 +28,7 @@ Ratchet plus would like to thank the authors of components that have gone into t
 - [{{ site.repo }}]({{ site.repo }})
 
 ## Q&A
-- For help using Ratchet plus, ask on StackOverflow using the tag [ratchet-plus](http://stackoverflow.com/questions/tagged/ratchet-plus)
+- For help using kimsQ RC, ask on StackOverflow using the tag [ratchet-plus](http://stackoverflow.com/questions/tagged/ratchet-plus)
 
 ## Author & Maintainers
 [@gitaeks](https://github.com/gitaeks), [@kieregh](https://github.com/kieregh)

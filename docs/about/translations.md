@@ -4,7 +4,7 @@ title: Translations
 group: about
 ---
 
-Community members have translated Ratchet plus's documentation into various languages. None are officially supported and they may not always be up to date.
+Community members have translated kimsQ RC's documentation into various languages. None are officially supported and they may not always be up to date.
 
 <ul>
 {% for language in site.data.translations %}

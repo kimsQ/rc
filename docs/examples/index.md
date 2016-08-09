@@ -3,14 +3,14 @@ layout: simple
 title: Examples
 ---
 
-[Download the Ratchet plus source code]({{ site.download.source }}) to snag these examples.
+[Download the kimsQ RC source code]({{ site.download.source }}) to snag these examples.
 
 
 Checkout out the examples on a desktop browser or visit on your mobile device see the apps as intended.
 
 ## Framework
 
-Examples that focus on implementing uses of built-in components provided by Ratchet plus.
+Examples that focus on implementing uses of built-in components provided by kimsQ RC.
 
 
 <div class="row bd-examples">

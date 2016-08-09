@@ -4,7 +4,7 @@ title: Accessibility
 group: getting-started
 ---
 
-Ratchet plus follows common web standards and—with minimal extra effort—can be used to create sites that are accessible to those using <abbr title="Assistive Technology" class="initialism">AT</abbr>.
+kimsQ RC follows common web standards and—with minimal extra effort—can be used to create sites that are accessible to those using <abbr title="Assistive Technology" class="initialism">AT</abbr>.
 
 ## Component requirements
 

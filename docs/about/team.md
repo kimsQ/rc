@@ -4,7 +4,7 @@ title: Team
 group: about
 ---
 
-Ratchet plus is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
+kimsQ RC is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
 
 <div class="list-group bd-team">
   {% for member in site.data.core-team %}
@@ -18,4 +18,4 @@ Ratchet plus is maintained by the founding team and a small group of invaluable 
   {% endfor %}
 </div>
 
-Get involved with Ratchet plus development by [opening an issue](https://github.com/kimsQ/rc/issues/new) or submitting a pull request. Read our [contributing guidelines](https://github.com/kimsQ/rc/blob/master/CONTRIBUTING.md) for information on how we develop.
+Get involved with kimsQ RC development by [opening an issue](https://github.com/kimsQ/rc/issues/new) or submitting a pull request. Read our [contributing guidelines](https://github.com/kimsQ/rc/blob/master/CONTRIBUTING.md) for information on how we develop.

@@ -3,11 +3,11 @@ layout: simple
 title: Packages
 ---
 
-[Download the Ratchet plus source code]({{ site.download.source }}) to snag these examples.
+[Download the kimsQ RC source code]({{ site.download.source }}) to snag these examples.
 
 ## Business
 
-Examples that focus on implementing uses of built-in components provided by Ratchet plus.
+Examples that focus on implementing uses of built-in components provided by kimsQ RC.
 
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">

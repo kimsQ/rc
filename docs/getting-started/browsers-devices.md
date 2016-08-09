@@ -4,7 +4,7 @@ title: Browsers and devices
 group: getting-started
 ---
 
-Ratchet plus supports a wide variety of modern browsers and devices, and some older ones. See which exact ones below, as well as detailed information on known quirks and bugs.
+kimsQ RC supports a wide variety of modern browsers and devices, and some older ones. See which exact ones below, as well as detailed information on known quirks and bugs.
 
 ## Contents
 
@@ -13,13 +13,13 @@ Ratchet plus supports a wide variety of modern browsers and devices, and some ol
 
 ## Supported browsers
 
-Ratchet plus supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 9-11 / Microsoft Edge**.
+kimsQ RC supports the **latest, stable releases** of all major browsers and platforms. On Windows, **we support Internet Explorer 9-11 / Microsoft Edge**.
 
-Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Ratchet plus should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
+Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, kimsQ RC should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.
 
 ### Mobile devices
 
-Generally speaking, Ratchet plus supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
+Generally speaking, kimsQ RC supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
@@ -104,9 +104,9 @@ Similarly, the latest versions of most desktop browsers are supported.
 
 For Firefox, in addition to the latest normal stable release, we also support the latest [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/organizations/faq/) version of Firefox.
 
-Unofficially, Ratchet plus should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 8 and below, though they are not officially supported.
+Unofficially, kimsQ RC should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 8 and below, though they are not officially supported.
 
-For a list of some of the browser bugs that Ratchet plus has to grapple with, see our [Wall of browser bugs]({{ site.baseurl }}/browser-bugs/).
+For a list of some of the browser bugs that kimsQ RC has to grapple with, see our [Wall of browser bugs]({{ site.baseurl }}/browser-bugs/).
 
 ## Internet Explorer 9 & 10
 
@@ -145,9 +145,9 @@ Visit [Can I use...](http://caniuse.com/) for details on browser support of CSS3
 
 ## Supporting Internet Explorer 8
 
-As of v4, Ratchet plus no longer supports IE8. **If you require IE8 support, we recommend you use Ratchet plus 3.** It's still supported by our team for bugfixes and documentation changes, but no new features will be added to it.
+As of v4, kimsQ RC no longer supports IE8. **If you require IE8 support, we recommend you use kimsQ RC 3.** It's still supported by our team for bugfixes and documentation changes, but no new features will be added to it.
 
-Alternatively, you may add some third party JavaScript to backfill support for IE8 to Ratchet plus 4. You'll need the following:
+Alternatively, you may add some third party JavaScript to backfill support for IE8 to kimsQ RC 4. You'll need the following:
 
 * [The HTML5 shiv](https://en.wikipedia.org/wiki/HTML5_Shiv)
 * [Respond.js](https://github.com/scottjehl/Respond)
@@ -157,7 +157,7 @@ No support will be provided for this, though you may find some help from the com
 
 ## IE Compatibility modes
 
-Ratchet plus is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate `<meta>` tag in your pages:
+kimsQ RC is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate `<meta>` tag in your pages:
 
 {% highlight html %}
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -165,18 +165,18 @@ Ratchet plus is not supported in the old Internet Explorer compatibility modes. 
 
 Confirm the document mode by opening the debugging tools: press <kbd>F12</kbd> and check the "Document Mode".
 
-This tag is included in all of Ratchet plus's documentation and examples to ensure the best rendering possible in each supported version of Internet Explorer.
+This tag is included in all of kimsQ RC's documentation and examples to ensure the best rendering possible in each supported version of Internet Explorer.
 
 See [this StackOverflow question](https://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge) for more information.
 
 ## Internet Explorer 10 in Windows Phone 8
 
-Internet Explorer 10 in Windows Phone 8 versions older than [Update 3 (a.k.a. GDR3)](http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx) doesn't differentiate **device width** from **viewport width** in `@-ms-viewport` at-rules, and thus doesn't properly apply the media queries in Ratchet plus's CSS. To address this, you'll need to **include the following JavaScript to work around the bug**.
+Internet Explorer 10 in Windows Phone 8 versions older than [Update 3 (a.k.a. GDR3)](http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx) doesn't differentiate **device width** from **viewport width** in `@-ms-viewport` at-rules, and thus doesn't properly apply the media queries in kimsQ RC's CSS. To address this, you'll need to **include the following JavaScript to work around the bug**.
 
 {% highlight js %}
-// Copyright 2014-2015 The Ratchet plus Authors
+// Copyright 2014-2015 The kimsQ RC Authors
 // Copyright 2014-2015 Twitter, Inc.
-// Licensed under MIT (https://github.com/twbs/Ratchet plus/blob/master/LICENSE)
+// Licensed under MIT (https://github.com/twbs/kimsQ RC/blob/master/LICENSE)
 if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
   var msViewportStyle = document.createElement('style')
   msViewportStyle.appendChild(
@@ -190,7 +190,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 
 For more information and usage guidelines, read [Windows Phone 8 and Device-Width](http://timkadlec.com/2013/01/windows-phone-8-and-device-width/).
 
-As a heads up, we include this in all of Ratchet plus's documentation and examples as a demonstration.
+As a heads up, we include this in all of kimsQ RC's documentation and examples as a demonstration.
 
 ## Modals and dropdowns on mobile
 
@@ -208,18 +208,18 @@ The `.dropdown-backdrop` element isn't used on iOS in the nav because of the com
 
 ## Browser zooming
 
-Page zooming inevitably presents rendering artifacts in some components, both in Ratchet plus and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
+Page zooming inevitably presents rendering artifacts in some components, both in kimsQ RC and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.
 
 ## Sticky `:hover`/`:focus` on mobile
 Even though real hovering isn't possible on most touchscreens, most mobile browsers emulate hovering support and make `:hover` "sticky". In other words, `:hover` styles start applying after tapping an element and only stop applying after the user taps some other element. On mobile-first sites, this behavior is normally undesirable.
 
-Ratchet plus includes a workaround for this, although it is disabled by default. By setting `$enable-hover-media-query` to `true` when compiling from Sass, Ratchet plus will use [mq4-hover-shim](https://github.com/twbs/mq4-hover-shim) to disable `:hover` styles in browsers that emulate hovering, thus preventing sticky `:hover` styles. There are some caveats to this workaround; see the shim's documentation for details.
+kimsQ RC includes a workaround for this, although it is disabled by default. By setting `$enable-hover-media-query` to `true` when compiling from Sass, kimsQ RC will use [mq4-hover-shim](https://github.com/twbs/mq4-hover-shim) to disable `:hover` styles in browsers that emulate hovering, thus preventing sticky `:hover` styles. There are some caveats to this workaround; see the shim's documentation for details.
 
 ## Printing
 
 Even in some modern browsers, printing can be quirky.
 
-As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to use an unusually small font size when printing. See [issue #14868](https://github.com/twbs/Ratchet plus/issues/14868) and [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) for more details. One potential workaround is the following CSS:
+As of Safari v8.0, use of the fixed-width `.container` class can cause Safari to use an unusually small font size when printing. See [issue #14868](https://github.com/twbs/kimsQ RC/issues/14868) and [WebKit bug #138192](https://bugs.webkit.org/show_bug.cgi?id=138192) for more details. One potential workaround is the following CSS:
 
 {% highlight css %}
 @media print {
@@ -253,7 +253,7 @@ Want to see an example? [Check out this JS Bin demo.](http://jsbin.com/OyaqoDO/2
 
 ## Validators
 
-In order to provide the best possible experience to old and buggy browsers, Ratchet plus uses [CSS browser hacks](http://browserhacks.com) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
+In order to provide the best possible experience to old and buggy browsers, kimsQ RC uses [CSS browser hacks](http://browserhacks.com) in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.
 
 These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.
 
