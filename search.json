@@ -34,6 +34,13 @@
 
     
         {
+            "title" : "Animation",
+            "url"   : "/components/animation/"
+        } ,
+    
+
+    
+        {
             "title" : "Approach",
             "url"   : "/extend/approach/"
         } ,
