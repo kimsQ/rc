@@ -1,0 +1,27 @@
+
+<ul class="nav device-content">
+
+  {% for preview in site.data.preview.components.animation %}
+  <li>
+    <a class="nav-link ratchet-body" href="#{{ preview.name }}">
+      <iframe width="100%" height="555" src="/examples/{{ preview.path }}/{{ preview.name }}.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="{{ site.repo }}/tree/gh-pages/examples/{{ preview.path }}/{{ preview.name }}.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/{{ preview.path }}/{{ preview.name }}.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/{{ preview.path }}/{{ preview.name }}" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  {% endfor %}
+
+</ul>

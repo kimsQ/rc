@@ -18,9 +18,9 @@ module.exports = function configureLibsass(grunt) {
       },
       extras: {
         files: {
-          'dist/css/<%= pkg.name %>-flex.css': 'scss/<%= pkg.name %>-flex.scss',
-          'dist/css/<%= pkg.name %>-grid.css': 'scss/<%= pkg.name %>-grid.scss',
-          'dist/css/<%= pkg.name %>-reboot.css': 'scss/<%= pkg.name %>-reboot.scss',
+          // 'dist/css/<%= pkg.name %>-flex.css': 'scss/<%= pkg.name %>-flex.scss',
+          // 'dist/css/<%= pkg.name %>-grid.css': 'scss/<%= pkg.name %>-grid.scss',
+          // 'dist/css/<%= pkg.name %>-reboot.css': 'scss/<%= pkg.name %>-reboot.scss',
           'dist/css/<%= pkg.name %>-progress.css': 'scss/<%= pkg.name %>-progress.scss'
         }
       },

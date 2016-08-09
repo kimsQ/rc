@@ -35,21 +35,25 @@
  */
 
  .animated {
-   -webkit-animation-duration: 1s;
    animation-duration: 1s;
-   -webkit-animation-fill-mode: both;
    animation-fill-mode: both;
  }
 
  .animated.infinite {
-   -webkit-animation-iteration-count: infinite;
    animation-iteration-count: infinite;
  }
 
- .animated.hinge {
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
- }
+.animated.fadeInUp,
+.animated.fadeInDown,
+.animated.fadeOutUp,
+.animated.fadeOutDown {
+  animation-duration: .5s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .75s;
+}
 
 
 // bounce
@@ -319,4 +323,26 @@
 
 .bounceOutDown {
   animation-name: bounceOutDown;
+}
+
+
+// delay
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+.delay-2 {
+  animation-delay: 0.25s;
+}
+.delay-3 {
+  animation-delay: 0.4s;
+}
+.delay-4 {
+  animation-delay: 0.55s;
+}
+.delay-5 {
+  animation-delay: 0.7s;
+}
+.delay-6 {
+  animation-delay: 0.95s;
 }
