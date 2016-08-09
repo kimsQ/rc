@@ -3,18 +3,25 @@
  * ----------------------------------------------------------------------------
  */
 
- .loader-wrapper {
-   background-color: transparent;;
-   color: #444;
-   font-weight: 500;
-   font-size: 1.1em;
-   text-align: center;
+/* default theme */
 
-   /* loader default */
-   .default .loader {
-     font-size: 10px;
-     position: relative;
-     text-indent: -9999em;
+.loader-wrapper {
+  color: #444;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-align: center;
+
+  .loader {
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+  }
+}
+
+.loader-wrapper.default {
+  background-color: transparent;;
+
+   .loader {
      border-top: 0.4rem solid #f4f4f4;
      border-right: 0.4rem solid #f4f4f4;
      border-bottom: 0.4rem solid #f4f4f4;
@@ -81,6 +88,7 @@
   width: 100%;
   z-index: 9;
   background-color: rgba(0,0,0,.1);
+  z-index: 11;
 
   .loader-wrapper {
     position: absolute;
@@ -94,12 +102,13 @@
     padding: 15px;
     background-color: #fff;
     color: #444;
+  }
+  .loader-wrapper.default {
     border-radius: 3px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
     line-height: 40px;
     font-weight: 500;
     font-size: 1.1em;
-
     .loader {
       position: absolute;
       top: 15px;

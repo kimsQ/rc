@@ -141,7 +141,7 @@ $('selector').loader({
      <tr>
        <td>tpl</td>
        <td>string</td>
-       <td>{% highlight html %}<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>'{% endhighlight %}</td>
+       <td>{% highlight html %}<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>{% endhighlight %}</td>
        <td>Loader 템플릿</td>
      </tr>
      <tr>
@@ -167,7 +167,7 @@ defaults = {
   'position': 'block',        // block | right | inside | overlay
   'text': '',                 // Text to display next to the loader
   'iconTheme': 'default',    // loader CSS theme
-  'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>',
+  'tpl': '<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>',
   'disableSource': true,      // true | false
   'disableOthers': []
 };
@@ -175,6 +175,21 @@ defaults = {
 
 
 ## Exampls
+
+### Customized Loader
+{% highlight html %}
+<style>
+  .loader-overlay {...}
+  .loader-overlay .loader-wrapper.myLoader {...}
+</style>
+{% endhighlight %}
+
+{% highlight js %}
+$('selector').loader({
+  theme: 'myLoader',
+  tpl: '..'
+});
+{% endhighlight %}
 
 ### Loader in modal
 {% highlight js %}

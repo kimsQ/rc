@@ -33,6 +33,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
+- name: customized-loader
+  path: controls/loader
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
+
 - name: loader-in-modal
   path: controls/loader
   jsfiddle: kimsQ/0odhbtzv/

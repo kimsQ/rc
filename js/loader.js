@@ -39,8 +39,8 @@
         defaults = {
             'position': "block",        // right | inside | overlay
             'text': "",                 // Text to display next to the loader
-            'iconTheme': "default",    // loader CSS class
-            'tpl': '<span class="loader-wrapper %wrapper%"><span class="%iconTheme%"><i class="loader">Loading...</i></span>%text%</span>',    // loader base Tag
+            'theme': "default",    // loader CSS class
+            'tpl': '<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>',    // loader base Tag
             'disableSource': true,      // true | false
             'disableOthers': []
         };
@@ -82,8 +82,8 @@
         show: function() {
 
             var self = this,
-            tpl = self.options.tpl.replace( '%wrapper%', 'loader-show ' + 'loader-' + self.options.position );
-            tpl = tpl.replace( '%iconTheme%', self.options['iconTheme'] );
+            tpl = self.options.tpl.replace( '%wrapper%', '' + 'loader-' + self.options.position );
+            tpl = tpl.replace( '%theme%', self.options['theme'] );
             tpl = tpl.replace( '%text%', ( self.options.text !== "" ) ? self.options.text + ' ' : '' );
             self._loader = $( tpl );
 
@@ -110,8 +110,8 @@
                     var $wrapperTpl = null;
 
                     if( $( self.element ).is( "body") ) {
-                        //$wrapperTpl = $('<div class="rc-loading-overlay" style="z-index:11">');
-                        $wrapperTpl = $('<div class="loader-overlay" style="z-index:11">');
+
+                        $wrapperTpl = $('<div class="loader-overlay">');
 
                         $( "body" ).prepend( $wrapperTpl );
 

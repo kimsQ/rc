@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>loader</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href="../../../dist/css/ratchet-plus.css" rel="stylesheet">
+
+		<link href="./customized-loader.css" rel="stylesheet">
+
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="../../../dist/js/ratchet-plus.js"></script>
+
+
+	</head>
+	<body>
+
+		<header class="bar bar-nav bar-light bg-faded">
+		  <h1 class="title">Customized Loader</h1>
+		</header>
+
+		<div class="content">
+			<div class="content-padded">
+
+				<div id="demo">
+					<p class="bg-faded p-a-2">Content</p>
+					<button type="button" class="btn btn-secondary btn-lg btn-block">Test</button>
+				</div>
+
+			</div>
+		</div>
+
+		<script>
+
+		$(function() {
+
+		  // Action on Click
+		  $("#demo .btn").click(function() {
+
+		    // Setup Loading plugin
+				$.loader({
+					text: "Custom Loader...",
+					theme: "custom",
+					tpl:
+						"<div class='loader-wrapper %wrapper% %theme% loading-spinner'>" +
+		          "<div class='loader rb-fading-circle'>" +
+		              "<div class='rb-circle1 rb-circle'></div>" +
+		              "<div class='rb-circle2 rb-circle'></div>" +
+		              "<div class='rb-circle3 rb-circle'></div>" +
+		              "<div class='rb-circle4 rb-circle'></div>" +
+		              "<div class='rb-circle5 rb-circle'></div>" +
+		              "<div class='rb-circle6 rb-circle'></div>" +
+		              "<div class='rb-circle7 rb-circle'></div>" +
+		              "<div class='rb-circle8 rb-circle'></div>" +
+		              "<div class='rb-circle9 rb-circle'></div>" +
+		              "<div class='rb-circle10 rb-circle'></div>" +
+		              "<div class='rb-circle11 rb-circle'></div>" +
+		              "<div class='rb-circle12 rb-circle'></div>" +
+		          "</div>" +
+		          "<div class='rb-text'>%text%</div>" +
+		      "</div>"
+				});
+
+		    // Re-enabling event
+		    setTimeout(function() {
+				  $.loader( "hide" );
+		      $("#demo p").html("Content Loaded")
+		    }, 1000);
+
+		  });
+
+		});
+		</script>
+
+	</body>
+</html>
