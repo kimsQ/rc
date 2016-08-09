@@ -144,6 +144,10 @@ module.exports = function (grunt) {
       docs: {
         src: 'docs/assets/css/src/docs.css',
         dest: 'docs/assets/css/src/docs.css'
+      },
+      snap: {
+        src: 'extensions/snap/1.9.3/rc.snap.css',
+        dest: 'extensions/snap/1.9.3/rc.snap.css'
       }
     },
 
@@ -156,6 +160,9 @@ module.exports = function (grunt) {
       },
       docs: {
         src: ['docs/assets/css/src/docs.css']
+      },
+      snap: {
+        src: ['extensions/snap/1.9.3/rc.snap.css']
       },
       examples: {
         expand: true,
@@ -211,6 +218,11 @@ module.exports = function (grunt) {
         src: 'fonts/**',
         dest: 'dist/'
       },
+      extensions: {
+        expand: true,
+        src: 'extensions/**',
+        dest: 'dist/'
+      },
       docs: {
         expand: true,
         cwd: 'dist/',
@@ -218,12 +230,7 @@ module.exports = function (grunt) {
           '**/*'
         ],
         dest: 'docs/dist/'
-      },
-      extensions: {
-        expand: true,
-        src: 'extensions/**',
-        dest: 'dist/'
-      },
+      }
     },
 
     connect: {
@@ -403,6 +410,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-css', ['sass-compile', 'exec:postcss', 'cssmin:core', 'cssmin:docs']);
 
   grunt.registerTask('dist-ext', ['copy:extensions']);
+  // grunt.registerTask('dist-css-snap', ['csscomb:snap','autoprefixer:snap']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist','copy:extensions', 'dist-css', 'dist-js']);
