@@ -6883,7 +6883,6 @@ button.list-group-item-danger.active:hover {
   width: 100%;
   z-index: 9;
   background-color: rgba(0, 0, 0, 0.1);
-  z-index: 11;
 }
 
 .loader-overlay .loader-wrapper {

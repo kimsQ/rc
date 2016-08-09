@@ -60,9 +60,5 @@ group: components
 Call page with id `page-target` with a single line of JavaScript:
 
 {% highlight js %}
-$('#page-target').page({
-  show: true,
-  start: '#page-start',
-  target: '#page-target'
-});
+$('#page-target').page({ start: '#page-start' });
 {% endhighlight %}
