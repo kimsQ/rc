@@ -127,7 +127,7 @@ $('selector').loader({
      <tr>
        <td>text</td>
        <td>string</td>
-       <td></td>
+       <td>null</td>
        <td>
         loader 출력시 표시되는 문구
        </td>
@@ -141,8 +141,10 @@ $('selector').loader({
      <tr>
        <td>tpl</td>
        <td>string</td>
-       <td>{% highlight html %}<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>{% endhighlight %}</td>
-       <td>Loader 템플릿</td>
+       <td colspan="2">
+       {% highlight html %}<span class="loader-wrapper %wrapper% %theme%"><i class="loader">Loading...</i>%text%</span>{% endhighlight %}
+       <p>Loader template</p>
+       </td>
      </tr>
      <tr>
        <td>disableSource</td>
