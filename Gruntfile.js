@@ -92,7 +92,7 @@ module.exports = function (grunt) {
           'js/popover.js',
           'js/fbutton.js',
           'js/collapse.js',
-          'js/toggles.js',
+          // 'js/toggles.js',
           'js/segmented-controllers.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
