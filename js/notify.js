@@ -28,7 +28,7 @@
  	var defaults = {
  		element: 'body',
  		position: null,
- 		type: "info",
+ 		type: "default",
  		allow_dismiss: true,
  		allow_duplicates: true,
  		newest_on_top: false,
@@ -54,7 +54,7 @@
  		onClosed: null,
            onClick: null,
  		icon_type: 'class',
- 		template: '<span data-notify="container" class="alert alert-{0}">{2}</span>'
+ 		template: '<span data-notify="container" class="alert alert-{0} col-xs-11 col-sm-4">{2}</span>'
  	};
 
  	String.format = function () {

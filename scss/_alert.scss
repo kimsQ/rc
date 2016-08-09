@@ -42,6 +42,13 @@
 //
 // Generate contextual modifier classes for colorizing the alert.
 
+.alert-default {
+  color: #fff;
+  background-color: #222;
+  border-color: transparent;
+  text-align: center;
+  border-radius: 1.875rem
+}
 .alert-success {
   @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
 }
