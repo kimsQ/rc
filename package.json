@@ -1,5 +1,5 @@
 {
-  "name": "ratchet-plus",
+  "name": "rc",
   "description": "The most popular front-end framework for developing responsive, mobile only projects on the web.",
   "version": "1.0.0-alpha.2",
   "keywords": [
@@ -12,7 +12,7 @@
     "web"
   ],
   "homepage": "http://rc.kimsq.com",
-  "author": "The Ratchet plus Authors (https://github.com/kimsQ/rc/graphs/contributors)",
+  "author": "kimsQ core team (https://github.com/kimsQ/rc/graphs/contributors)",
   "contributors": [
     "Redblock, Inc."
   ],
@@ -25,8 +25,8 @@
     "postcss-docs": "postcss --config grunt/postcss.js --no-map --replace docs/assets/css/docs.min.css && postcss --config grunt/postcss.js --no-map --replace docs/examples/**/*.css",
     "test": "npm run eslint && npm run jscs && grunt test"
   },
-  "style": "dist/css/ratchet-plus.css",
-  "sass": "scss/ratchet-plus.scss",
+  "style": "dist/css/rc.css",
+  "sass": "scss/rc.scss",
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
@@ -86,7 +86,7 @@
     "LICENSE"
   ],
   "jspm": {
-    "main": "js/ratchet-plus",
+    "main": "js/rc",
     "ignore": [
       "dist/js/npm"
     ],
@@ -94,7 +94,7 @@
       "lib": "dist"
     },
     "shim": {
-      "js/ratchet-plus": {
+      "js/rc": {
         "deps": [
           "jquery"
         ],

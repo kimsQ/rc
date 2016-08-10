@@ -1,17 +1,17 @@
 /*!
- * Ratchet-plus v1.0.0-alpha.2 (http://rc.kimsq.com)
- * Copyright 2016 The Ratchet plus Authors (https://github.com/kimsQ/rc/graphs/contributors)
+ * kimsQ RC v1.0.0-alpha.2 (http://rc.kimsq.com)
+ * Copyright 2016 kimsQ core team (https://github.com/kimsQ/rc/graphs/contributors)
  * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)
  */
 
 if (typeof jQuery === 'undefined') {
-  throw new Error('Ratchet-plus\'s JavaScript requires jQuery')
+  throw new Error('kimsQ RC\'s JavaScript requires jQuery')
 }
 
 +function ($) {
   var version = $.fn.jquery.split(' ')[0].split('.')
   if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 3)) {
-    throw new Error('Ratchet-plus\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0')
+    throw new Error('kimsQ RC\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0')
   }
 }(jQuery);
 

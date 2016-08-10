@@ -1,5 +1,5 @@
 /*!
- * Ratchet-plus's Gruntfile
+ * kimsQ RC's Gruntfile
  * http://rc.kimsq.com
  * inspired by @Bootstrap's Gruntfile.js
  * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)
@@ -33,17 +33,17 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * Ratchet-plus v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * kimsQ RC v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)\n' +
             ' */\n',
     jqueryCheck: 'if (typeof jQuery === \'undefined\') {\n' +
-                 '  throw new Error(\'Ratchet-plus\\\'s JavaScript requires jQuery\')\n' +
+                 '  throw new Error(\'kimsQ RC\\\'s JavaScript requires jQuery\')\n' +
                  '}\n',
     jqueryVersionCheck: '+function ($) {\n' +
                         '  var version = $.fn.jquery.split(\' \')[0].split(\'.\')\n' +
                         '  if ((version[0] < 2 && version[1] < 9) || (version[0] == 1 && version[1] == 9 && version[2] < 1) || (version[0] >= 3)) {\n' +
-                        '    throw new Error(\'Ratchet-plus\\\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0\')\n' +
+                        '    throw new Error(\'kimsQ RC\\\'s JavaScript requires at least jQuery v1.9.1 but less than v3.0.0\')\n' +
                         '  }\n' +
                         '}(jQuery);\n\n',
 
@@ -331,7 +331,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'ratchet-plus-<%= pkg.version %>-dist.zip',
+          archive: 'rc-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -341,7 +341,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'ratchet-plus-<%= pkg.version %>-dist'
+            dest: 'rc-<%= pkg.version %>-dist'
           }
         ]
       }
