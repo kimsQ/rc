@@ -45,7 +45,7 @@ Swiper is the most modern mobile touch slider with hardware accelerated transiti
 {% endhighlight %}
 
 {% highlight html %}
-<script src="path/to/rc.swiper.min.js"></script>
+<script src="path/to/rc-swiper.js"></script>
 {% endhighlight %}
 
 

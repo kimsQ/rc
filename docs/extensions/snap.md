@@ -44,11 +44,11 @@ The navigation drawer is a panel that displays the app’s main navigation optio
 ### Extension Import
 
 {% highlight html %}
-<link href="path/to/rc.snap.css" rel="stylesheet">
+<link href="path/to/rc-snap.css" rel="stylesheet">
 {% endhighlight %}
 
 {% highlight html %}
-<script src="path/to/rc.snap.js"></script>
+<script src="path/to/rc-snap.js"></script>
 {% endhighlight %}
 
 ### Create a Drawer Layout
