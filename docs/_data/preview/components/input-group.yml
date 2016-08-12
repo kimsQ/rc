@@ -1,0 +1,19 @@
+- name: content
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: sizing
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: checkboxes-and-radio-addons
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: multiple-addons
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/
+
+- name: button-addons
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/
