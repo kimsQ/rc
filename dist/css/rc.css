@@ -2468,6 +2468,67 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
+.form-list {
+  background-color: #fff;
+}
+
+.form-list select,
+.form-list textarea,
+.form-list input[type="text"],
+.form-list input[type="search"],
+.form-list input[type="password"],
+.form-list input[type="datetime"],
+.form-list input[type="datetime-local"],
+.form-list input[type="date"],
+.form-list input[type="month"],
+.form-list input[type="time"],
+.form-list input[type="week"],
+.form-list input[type="number"],
+.form-list input[type="email"],
+.form-list input[type="url"],
+.form-list input[type="tel"],
+.form-list input[type="color"] {
+  width: 100%;
+  -webkit-appearance: none;
+  padding: 0.9375rem 0.625rem;
+  line-height: 1.3125;
+  background-color: #fff;
+  outline: none;
+}
+
+.form-list input,
+.form-list textarea {
+  margin-bottom: 0;
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.form-list .input-row {
+  overflow: hidden;
+  padding: 0;
+  line-height: 1.3125;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.075);
+}
+
+.form-list .input-row label {
+  float: left;
+  width: 35%;
+  margin-bottom: 0;
+  padding: 0.9375rem 0.625rem;
+  line-height: 1.3125;
+}
+
+.form-list .input-row input {
+  float: right;
+  width: 65%;
+  padding-left: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
 .btn {
   display: inline-block;
   font-weight: normal;
