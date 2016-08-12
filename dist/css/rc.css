@@ -2468,6 +2468,28 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   }
 }
 
+input[type="search"] {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 1.25rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="search"]:focus {
+  text-align: left;
+}
+
+textarea {
+  height: auto;
+}
+
+select {
+  height: auto;
+  font-size: .875rem;
+  background-color: #fff;
+}
+
 .form-list {
   background-color: #fff;
 }
@@ -2493,6 +2515,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.9375rem 0.625rem;
   line-height: 1.3125;
   background-color: #fff;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.15);
   outline: none;
 }
 
