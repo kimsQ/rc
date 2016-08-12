@@ -1,14 +1,14 @@
 - name: content
-  path: components/animation
+  path: controls/animation
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: bounce
-  path: components/animation
+  path: controls/animation
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: attention-seekers
-  path: components/animation
+  path: controls/animation
   jsfiddle: kimsQ/0odhbtzv/
   history: true

@@ -49,7 +49,6 @@
     - title: Collapse
     - title: Toggle
     - title: Icons
-    - title: Animation
     - title: Utilities
 
 - title: Controls
@@ -60,6 +59,7 @@
     - title: Notify
     - title: Affix
     - title: Updown
+    - title: Animation
     - title: Utility
 
 - title: Extensions
