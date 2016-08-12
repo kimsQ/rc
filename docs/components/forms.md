@@ -12,6 +12,39 @@ Bootstrap provides several form control styles, layout options, and custom compo
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
+## Form with placeholder labels
+{% example html %}
+<form class="form-list">
+  <input type="text" placeholder="Full name">
+  <input type="email" placeholder="Email">
+  <input type="text" placeholder="Username">
+</form>
+{% endexample %}
+
+## Form with inline labels
+{% example html %}
+<form class="form-list">
+  <div class="input-row">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister Ratchet">
+  </div>
+  <div class="input-row">
+    <label>Email</label>
+    <input type="email" placeholder="ratchetframework@gmail.com">
+  </div>
+  <div class="input-row">
+    <label>Username</label>
+    <input type="text" placeholder="goRatchet">
+  </div>
+</form>
+{% endexample %}
+
+## Form with stacked labels
+
+## Form with floating labels
+
+
+
 ## Form controls
 
 Ratchet-plus's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices. The example form below demonstrates common HTML form elements that receive updated styles from Ratchet-plus with additional classes.

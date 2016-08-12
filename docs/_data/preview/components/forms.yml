@@ -3,6 +3,26 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: form-with-inline-labels
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: form-with-stacked-labels
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: form-with-floating-labels
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: form-controls
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: form-group
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/

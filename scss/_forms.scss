@@ -367,3 +367,79 @@ select.form-control-lg {
     }
   }
 }
+
+
+
+
+// Form-list (cluster multiple inputs together into a single group)
+// -------------------------------------------------------------------
+
+// Remove spacing, borders, shadows and rounding since it all belongs on the .input-group not the input
+.form-list {
+  background-color: #fff;
+
+  // Stretch inputs/textareas to full width and add height to maintain a consistent baseline
+  select,
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="color"] {
+    width: 100%;
+    -webkit-appearance: none;
+    padding: $input-row-padding-y $input-row-padding-x;
+    line-height: $input-row-line-height;
+    background-color: #fff;
+    outline: none;
+  }
+
+  input,
+  textarea {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    @include box-shadow(none);
+  }
+
+  // Form list with labels
+  // --------------------------------------------------
+
+  // To use labels with input groups, wrap a label and an input in an .input-row
+  .input-row {
+    overflow: hidden;
+    padding: 0;
+    line-height: $input-row-line-height;
+    border-bottom: $border-default;
+
+    // Labels get floated left with a set percentage width
+    label {
+      float: left;
+      width: 35%;
+      margin-bottom: 0;
+      padding: $input-row-padding-y $input-row-padding-x;
+      line-height: $input-row-line-height; // Put the text on the baseline.
+    }
+
+    // Actual inputs float to right of labels and also have a set percentage
+    input {
+      float: right;
+      width: 65%;
+      padding-left: 0;
+      margin-bottom: 0;
+      border: 0;
+    }
+  }
+}
