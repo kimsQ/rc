@@ -5,14 +5,14 @@ title: Forms
 group: components
 ---
 
-Bootstrap provides several form control styles, layout options, and custom components for creating a wide variety of forms.
+kimsQ RC provides several form control styles, layout options, and custom components for creating a wide variety of forms.
 
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Form with placeholder labels
+## Placeholder labels
 {% highlight html %}
 <form class="form-list">
   <input type="text" placeholder="Full name">
@@ -21,7 +21,7 @@ Bootstrap provides several form control styles, layout options, and custom compo
 </form>
 {% endhighlight %}
 
-## Form with inline labels
+## Inline labels
 {% highlight html %}
 <form class="form-list">
   <div class="input-row">
@@ -39,7 +39,7 @@ Bootstrap provides several form control styles, layout options, and custom compo
 </form>
 {% endhighlight %}
 
-## Form with stacked labels
+## Stacked labels
 
 {% highlight html %}
 <form class="form-list">
@@ -59,7 +59,7 @@ Bootstrap provides several form control styles, layout options, and custom compo
 {% endhighlight %}
 
 
-## Form with floating labels
+## Floating labels
 
 {% highlight html %}
 <form class="form-list">
@@ -95,7 +95,7 @@ Bootstrap provides several form control styles, layout options, and custom compo
 
 kimsQ RC's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices. The example form below demonstrates common HTML form elements that receive updated styles from kimsQ RC with additional classes.
 
-Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `type` attribute**.
+Remember, since kimsQ RC utilizes the HTML5 doctype, **all inputs must have a `type` attribute**.
 {% example html %}
 <form>
   <input class="form-control" type="text" placeholder="Full name">
@@ -177,7 +177,7 @@ Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `
 </form>
 {% endexample %}
 
-Below is a complete list of the specific form controls supported by Bootstrap and the classes that customize them. Additional documentation is available for each group.
+Below is a complete list of the specific form controls supported by kimsQ RC and the classes that customize them. Additional documentation is available for each group.
 
 <table>
   <thead>
@@ -276,13 +276,13 @@ Here are examples of `.form-control` applied to each textual HTML5 `<input>` `ty
 <div class="form-group row">
   <label for="example-email-input" class="col-sm-2 col-form-label">Email</label>
   <div class="col-sm-10">
-    <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+    <input class="form-control" type="email" value="kimsQ RC@example.com" id="example-email-input">
   </div>
 </div>
 <div class="form-group row">
   <label for="example-url-input" class="col-sm-2 col-form-label">URL</label>
   <div class="col-sm-10">
-    <input class="form-control" type="url" value="http://getbootstrap.com" id="example-url-input">
+    <input class="form-control" type="url" value="http://getkimsQ RC.com" id="example-url-input">
   </div>
 </div>
 <div class="form-group row">
@@ -343,7 +343,7 @@ Here are examples of `.form-control` applied to each textual HTML5 `<input>` `ty
 
 ## Form layouts
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Since kimsQ RC applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
 
 ### Form groups
 
@@ -367,7 +367,7 @@ The `.form-group` class is the easiest way to add some structure to forms. Its o
 Use the `.form-inline` class to display a series of labels, form controls, and buttons on a single horizontal row. Form controls within inline forms behave differently:
 
 - Controls are `display: inline-block` to provide alignment control via `vertical-align` and `margin`.
-- Controls receive `width: auto` to override the Bootstrap default `width: 100%`.
+- Controls receive `width: auto` to override the kimsQ RC default `width: 100%`.
 - Controls **only appear inline in viewports that are at least 768px wide** to account for narrow viewports on mobile devices.
 
 Because of this, you may need to manually address the width and alignment of individual form controls. Lastly, as shown below, you should always include a `<label>` with each form control.
@@ -430,7 +430,7 @@ Assistive technologies such as screen readers will have trouble with your forms 
 
 ### Using the Grid
 
-For more structured form layouts that are also responsive, you can utilize Bootstrap's [predefined grid classes](/layout/grid/#predefined-classes) or [mixins](/layout/grid/#sass-mixins) to create horizontal forms. Add the `.row` class to form groups and use the `.col-*-*` classes to specify the width of your labels and controls.
+For more structured form layouts that are also responsive, you can utilize kimsQ RC's [predefined grid classes](/layout/grid/#predefined-classes) or [mixins](/layout/grid/#sass-mixins) to create horizontal forms. Add the `.row` class to form groups and use the `.col-*-*` classes to specify the width of your labels and controls.
 
 Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls. For `<legend>` elements, you can use `.col-form-legend` to make them appear similar to regular `<label>` elements.
 
@@ -681,7 +681,7 @@ By default, browsers will treat all native form controls (`<input>`, `<select>` 
 {% callout danger %}
 #### Cross-browser compatibility
 
-While Bootstrap will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
+While kimsQ RC will apply these styles in all browsers, Internet Explorer 11 and below don't fully support the `disabled` attribute on a `<fieldset>`. Use custom JavaScript to disable the fieldset in these browsers.
 {% endcallout %}
 
 ## Readonly inputs
@@ -772,7 +772,7 @@ Inline text can use any typical inline HTML element (be it a `<small>`, `<span>`
 
 ## Validation
 
-Bootstrap includes validation styles for danger, warning, and success states on form controls. Here's a rundown of how they work:
+kimsQ RC includes validation styles for danger, warning, and success states on form controls. Here's a rundown of how they work:
 
 - To use, add `.has-warning`, `.has-danger`, or `.has-success` to the parent element. Any `.col-form-label`, `.form-control`, or custom form element will receive the validation styles.
 - Contextual validation text, in addition to your usual form field help text, can be added with the use of `.form-control-feedback`. This text will adapt to the parent `.has-*` class. By default it only includes a bit of `margin` for spacing and a modified `color` for each state.

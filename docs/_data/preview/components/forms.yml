@@ -3,17 +3,17 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
-- name: form-with-inline-labels
+- name: inline-labels
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
-- name: form-with-stacked-labels
+- name: stacked-labels
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
-- name: form-with-floating-labels
+- name: floating-labels
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/
   history: false
