@@ -13,41 +13,87 @@ Bootstrap provides several form control styles, layout options, and custom compo
 {:toc}
 
 ## Form with placeholder labels
-{% example html %}
+{% highlight html %}
 <form class="form-list">
   <input type="text" placeholder="Full name">
   <input type="email" placeholder="Email">
   <input type="text" placeholder="Username">
 </form>
-{% endexample %}
+{% endhighlight %}
 
 ## Form with inline labels
-{% example html %}
+{% highlight html %}
 <form class="form-list">
   <div class="input-row">
     <label>Full name</label>
-    <input type="text" placeholder="Mister Ratchet">
+    <input type="text" placeholder="Mister kimsQ">
   </div>
   <div class="input-row">
     <label>Email</label>
-    <input type="email" placeholder="ratchetframework@gmail.com">
+    <input type="email" placeholder="rc@gmail.com">
   </div>
   <div class="input-row">
     <label>Username</label>
-    <input type="text" placeholder="goRatchet">
+    <input type="text" placeholder="gokimsQ">
   </div>
 </form>
-{% endexample %}
+{% endhighlight %}
 
 ## Form with stacked labels
 
+{% highlight html %}
+<form class="form-list">
+  <div class="input-row stacked">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister kimsQ">
+  </div>
+  <div class="input-row stacked">
+    <label>Email</label>
+    <input type="email" placeholder="rc@gmail.com">
+  </div>
+  <div class="input-row stacked">
+    <label>Username</label>
+    <input type="text" placeholder="gokimsQ">
+  </div>
+</form>
+{% endhighlight %}
+
+
 ## Form with floating labels
 
+{% highlight html %}
+<form class="form-list">
+  <div class="input-row floating">
+    <label>Full name</label>
+    <input type="text" placeholder="Mister kimsQ">
+  </div>
+  <div class="input-row floating">
+    <label>Email</label>
+    <input type="email" placeholder="rc@gmail.com">
+  </div>
+  <div class="input-row floating">
+    <label>Username</label>
+    <input type="text" placeholder="gokimsQ">
+  </div>
+</form>
+{% endhighlight %}
+
+
+## Carded forms
+{% highlight html %}
+<form class="card">
+  <div class="form-list">
+    <input type="text" placeholder="Full name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Username">
+  </div>
+</form>
+{% endhighlight %}
 
 
 ## Form controls
 
-Ratchet-plus's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices. The example form below demonstrates common HTML form elements that receive updated styles from Ratchet-plus with additional classes.
+kimsQ RC's form controls expand on [our Rebooted form styles]({{ site.baseurl }}/content/reboot/#forms) with classes. Use these classes to opt into their customized displays for a more consistent rendering across browsers and devices. The example form below demonstrates common HTML form elements that receive updated styles from kimsQ RC with additional classes.
 
 Remember, since Bootstrap utilizes the HTML5 doctype, **all inputs must have a `type` attribute**.
 {% example html %}

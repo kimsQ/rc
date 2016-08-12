@@ -18,6 +18,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: carded-forms
+  path: components/forms
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: form-controls
   path: components/forms
   jsfiddle: kimsQ/0odhbtzv/
