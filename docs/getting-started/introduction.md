@@ -21,14 +21,14 @@ Looking to quickly add kimsQ RC to your project? Use the kimsQ RC CDN, provided 
 Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS.
 
 {% highlight html %}
-<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ site.cdn.css }}">
 {% endhighlight %}
 
 Add our JavaScript plugins, jQuery, and Tether near the end of your pages, right before the closing `</body>` tag. Be sure to place jQuery and Tether first, as our code depends on them.
 
 {% highlight html %}
-<script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-<script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+<script src="{{ site.cdn.jquery }}"></script>
+<script src="{{ site.cdn.js }}"></script>
 {% endhighlight %}
 
 And that's it—you're on your way to a fully kimsQ RCped site. If you're at all unsure about the general page structure, keep reading for an example page template.
@@ -53,14 +53,14 @@ Put it all together and your pages should look like this:
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- kimsQ RC CSS -->
-    <link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.cdn.css }}">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
     <!-- jQuery first, then kimsQ RC JS. -->
-    <script src="{{ site.cdn.jquery }}" integrity="{{ site.cdn.jquery_hash }}" crossorigin="anonymous"></script>
-    <script src="{{ site.cdn.js }}" integrity="{{ site.cdn.js_hash }}" crossorigin="anonymous"></script>
+    <script src="{{ site.cdn.jquery }}"></script>
+    <script src="{{ site.cdn.js }}"></script>
   </body>
 </html>
 {% endhighlight %}
