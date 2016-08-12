@@ -35,7 +35,7 @@
     
         {
             "title" : "Animation",
-            "url"   : "/components/animation/"
+            "url"   : "/controls/animation/"
         } ,
     
 
@@ -211,6 +211,13 @@
         {
             "title" : "Infinite scroll",
             "url"   : "/controls/infinite-scroll/"
+        } ,
+    
+
+    
+        {
+            "title" : "Input group",
+            "url"   : "/components/input-group/"
         } ,
     
 
