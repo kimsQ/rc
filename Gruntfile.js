@@ -426,6 +426,8 @@ module.exports = function (grunt) {
   grunt.registerTask('docs', ['lint-docs-css', 'docs-css', 'docs-js', 'clean:docs', 'copy:docs']);
   grunt.registerTask('docs-github', ['jekyll:github']);
 
+  grunt.registerTask('zip', ['compress']);
+
   grunt.registerTask('prep-release', ['dist', 'docs', 'docs-github', 'compress']);
 
   // Publish to GitHub
