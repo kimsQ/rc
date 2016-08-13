@@ -85,6 +85,7 @@ module.exports = function (grunt) {
           'js/loader.js',
           'js/notify.js',
           'js/scroll.js',
+          'js/transition.js',
           'js/modal.js',
           'js/popup.js',
           'js/page.js',

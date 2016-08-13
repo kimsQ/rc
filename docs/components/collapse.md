@@ -50,10 +50,12 @@ Extend the default collapse behavior to create an accordion.
         Collapsible Group Item #1
       </a>
     </div>
-    <div id="collapseOne" class="card-block collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <p class="card-text">
-        ...
-      </p>
+    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-block">
+        <p class="card-text">
+          ...
+        </p>
+      </div>
     </div>
   </div>
   <div class="card">
@@ -62,10 +64,12 @@ Extend the default collapse behavior to create an accordion.
         Collapsible Group Item #2
       </a>
     </div>
-    <div id="collapseTwo" class="card-block collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <p class="card-text">
-        ...
-      </p>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="card-block">
+        <p class="card-text">
+          ...
+        </p>
+      </div>
     </div>
   </div>
   <div class="card">
@@ -74,10 +78,12 @@ Extend the default collapse behavior to create an accordion.
         Collapsible Group Item #3
       </a>
     </div>
-    <div id="collapseThree" class="card-block collapse" role="tabpanel" aria-labelledby="headingThree">
-      <p class="card-text">
-        ...
-      </p>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-block">
+        <p class="card-text">
+          ...
+        </p>
+      </div>
     </div>
   </div>
 </div>

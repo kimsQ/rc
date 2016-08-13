@@ -1,9 +1,11 @@
 /* ========================================================================
- * Bootstrap: collapse.js v3.3.7
- * http://getbootstrap.com/javascript/#collapse
+ * Ratchet Plus: collapse.js v1.0.0
+ * http://rc.kimsq.com/components/collapse/
  * ========================================================================
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * inspired by @twbs's bootstrap & ratchet
+ * Copyright 2016 redblock inc.
+ * Author kiere (kiere@kimsq.com)
+ * Licensed under MIT.
  * ======================================================================== */
 
 /* jshint latedef: false */
@@ -30,7 +32,7 @@
     if (this.options.toggle) this.toggle()
   }
 
-  Collapse.VERSION  = '3.3.7'
+  Collapse.VERSION  = '1.0.0'
 
   Collapse.TRANSITION_DURATION = 350
 
@@ -47,20 +49,20 @@
     if (this.transitioning || this.$element.hasClass('in')) return
 
     var activesData
-    var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
+    var actives = this.$parent && this.$parent.children('.card').children('.in, .collapsing')
 
     if (actives && actives.length) {
-      activesData = actives.data('bs.collapse')
+      activesData = actives.data('rc.collapse')
       if (activesData && activesData.transitioning) return
     }
 
-    var startEvent = $.Event('show.bs.collapse')
+    var startEvent = $.Event('show.rc.collapse')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
     if (actives && actives.length) {
       Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.collapse', null)
+      activesData || actives.data('rc.collapse', null)
     }
 
     var dimension = this.dimension()
@@ -82,7 +84,7 @@
         .addClass('collapse in')[dimension]('')
       this.transitioning = 0
       this.$element
-        .trigger('shown.bs.collapse')
+        .trigger('shown.rc.collapse')
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -97,7 +99,7 @@
   Collapse.prototype.hide = function () {
     if (this.transitioning || !this.$element.hasClass('in')) return
 
-    var startEvent = $.Event('hide.bs.collapse')
+    var startEvent = $.Event('hide.rc.collapse')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
@@ -121,7 +123,7 @@
       this.$element
         .removeClass('collapsing')
         .addClass('collapse')
-        .trigger('hidden.bs.collapse')
+        .trigger('hidden.rc.collapse')
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -170,11 +172,11 @@
   function Plugin(option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.collapse')
+      var data    = $this.data('rc.collapse')
       var options = $.extend({}, Collapse.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && /show|hide/.test(option)) options.toggle = false
-      if (!data) $this.data('bs.collapse', (data = new Collapse(this, options)))
+      if (!data) $this.data('rc.collapse', (data = new Collapse(this, options)))
       if (typeof option == 'string') data[option]()
     })
   }
@@ -197,13 +199,13 @@
   // COLLAPSE DATA-API
   // =================
 
-  $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+  $(document).on('click.rc.collapse.data-api', '[data-toggle="collapse"]', function (e) {
     var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.collapse')
+    var data    = $target.data('rc.collapse')
     var option  = data ? 'toggle' : $this.data()
 
     Plugin.call($target, option)
