@@ -52,8 +52,8 @@ Icons can also be used for actions in toolbars. Again, be sure to use utility cl
 
 {% highlight html %}
 <header class="bar bar-nav bar-light bg-faded">
-  <a class="icon icon-left-nav pull-left"></a>
-  <a class="icon icon-compose pull-right"></a>
+  <a class="icon icon-left-nav pull-left" role="button"></a>
+  <a class="icon icon-compose pull-right" role="button"></a>
   <h1 class="title">Title</h1>
 </header>
 {% endhighlight %}
@@ -87,9 +87,9 @@ Title bars can also house segmented controls. Feel free to add accompanying butt
     Right
   </button>
   <div class="nav nav-control">
-    <a class="nav-link active">One</a>
-    <a class="nav-link">Two</a>
-    <a class="nav-link">Three</a>
+    <a class="nav-link active" role="button">One</a>
+    <a class="nav-link" role="button">Two</a>
+    <a class="nav-link" role="button">Three</a>
   </div>
 </header>
 {% endhighlight %}
@@ -100,23 +100,23 @@ Use Ratchicons in the `.tab-bar` to represent different sections of your app.
 
 {% highlight html %}
 <nav class="bar bar-tab bar-light bg-faded">
-  <a class="tab-item active" href="#">
+  <a class="tab-item active" role="button">
     <span class="icon icon-home"></span>
     <span class="tab-label">Home</span>
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     <span class="icon icon-person"></span>
     <span class="tab-label">Profile</span>
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     <span class="icon icon-star-filled"></span>
     <span class="tab-label">Favorites</span>
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     <span class="icon icon-search"></span>
     <span class="tab-label">Search</span>
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     <span class="icon icon-gear"></span>
     <span class="tab-label">Settings</span>
   </a>
