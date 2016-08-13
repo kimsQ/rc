@@ -46,12 +46,10 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 Extend the default collapse behavior to create an accordion.
 
 {% highlight html %}
-<div id="accordion" class="card-group-collapse" role="tablist" aria-multiselectable="true">
+<div id="accordion" class="card-group-collapse" role="group" aria-multiselectable="true">
   <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
-      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Collapsible Group Item #1
-      </a>
+    <div class="card-header" role="button" id="headingOne" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Collapsible Group Item #1
     </div>
     <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block">
@@ -62,10 +60,8 @@ Extend the default collapse behavior to create an accordion.
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Collapsible Group Item #2
-      </a>
+    <div class="card-header collapsed" role="button" id="headingTwo" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      Collapsible Group Item #2
     </div>
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="card-block">
@@ -76,10 +72,8 @@ Extend the default collapse behavior to create an accordion.
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingThree">
-      <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Collapsible Group Item #3
-      </a>
+    <div class="card-header collapsed" role="button" id="headingThree" data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      Collapsible Group Item #3
     </div>
     <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
       <div class="card-block">
@@ -98,10 +92,8 @@ It's also possible to swap out `.card-block`s with `.list-group`.
 
 {% highlight html %}
 <div class="card">
-  <div class="card-header" role="tab" id="headingThree">
-    <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Card title
-    </a>
+  <div class="card-header collapsed" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Card title
   </div>
   <div class="collapse" id="collapseExample">
     <ul class="list-group list-group-flush">
