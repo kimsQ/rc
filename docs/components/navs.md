@@ -87,9 +87,9 @@ Title bars can also house segmented controls. Feel free to add accompanying butt
 
 {% highlight html %}
 <div class="nav nav-control">
-  <a class="nav-link active">One</a>
-  <a class="nav-link">Two</a>
-  <a class="nav-link">Three</a>
+  <a class="nav-link active" role="button">One</a>
+  <a class="nav-link" role="button">Two</a>
+  <a class="nav-link" role="button">Three</a>
 </div>
 {% endhighlight %}
 

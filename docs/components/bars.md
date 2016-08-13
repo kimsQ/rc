@@ -128,13 +128,13 @@ If you don't want to use icons, that's okay too. The text will appear larger to 
 
 {% highlight html %}
 <nav class="bar bar-tab bar-light bg-faded">
-  <a class="tab-item active" href="#">
+  <a class="tab-item active" role="button">
     Label
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     Label
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     Label
   </a>
 </nav>
@@ -146,13 +146,13 @@ If you don't want to use icons, that's okay too. The text will appear larger to 
 
 {% highlight html %}
 <nav class="bar bar-tab bar-dark bg-inverse">
-  <a class="tab-item active" href="#">
+  <a class="tab-item active" role="button">
     Label
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     Label
   </a>
-  <a class="tab-item" href="#">
+  <a class="tab-item" role="button">
     Label
   </a>
 </nav>
@@ -165,9 +165,9 @@ Standard bars are basic fixed elements that can be positioned in four places. Th
 <!-- Segmented control in standard bar fixed to top -->
 <nav class="bar bar-standard bar-light bg-faded">
   <div class="nav nav-control">
-    <a class="nav-link active">One</a>
-    <a class="nav-link">Two</a>
-    <a class="nav-link">Three</a>
+    <a class="nav-link active" role="button">One</a>
+    <a class="nav-link" role="button">Two</a>
+    <a class="nav-link" role="button">Three</a>
   </div>
 </nav>
 
@@ -183,8 +183,8 @@ Standard bars are basic fixed elements that can be positioned in four places. Th
 
 <!-- Icons in standard bar fixed to the bottom of the screen -->
 <div class="bar bar-standard bar-footer bar-light bg-faded">
-  <a class="icon icon-compose pull-left"></a>
-  <a class="icon icon-gear pull-right"></a>
+  <a class="icon icon-compose pull-left" role="button"></a>
+  <a class="icon icon-gear pull-right" role="button"></a>
 </div>
 {% endhighlight %}
 
