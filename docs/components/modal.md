@@ -25,7 +25,7 @@ A rendered modal with title, set of actions in the header and content.
 <!-- Modal -->
 <div id="myModal" class="modal">
   <header class="bar bar-nav bar-light bg-faded">
-    <a class="icon icon-close pull-right" data-history="back"></a>
+    <a class="icon icon-close pull-right" data-history="back" role="button"></a>
     <h1 class="title">Modal</h1>
   </header>
   <div class="content">

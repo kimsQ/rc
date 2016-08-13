@@ -64,9 +64,9 @@ Create a basic markup
 {% highlight html %}
 <div class="swiper-container" data-extension="swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slider">Slide 1</div>
-    <div class="swiper-slider">Slide 2</div>
-    <div class="swiper-slider">Slide 3</div>
+    <div class="swiper-slider" role="button">Slide 1</div>
+    <div class="swiper-slider" role="button">Slide 2</div>
+    <div class="swiper-slider" role="button">Slide 3</div>
     ....
   </div>
 
