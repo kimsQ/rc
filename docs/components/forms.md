@@ -14,27 +14,31 @@ kimsQ RC provides several form control styles, layout options, and custom compon
 
 ## Placeholder labels
 {% highlight html %}
-<form class="form-list">
-  <input type="text" placeholder="Full name">
-  <input type="email" placeholder="Email">
-  <input type="text" placeholder="Username">
+<form>
+  <div class="form-list">
+    <input type="text" placeholder="Full name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Username">
+  </div>
 </form>
 {% endhighlight %}
 
 ## Inline labels
 {% highlight html %}
-<form class="form-list">
-  <div class="input-row">
-    <label>Full name</label>
-    <input type="text" placeholder="Mister kimsQ">
-  </div>
-  <div class="input-row">
-    <label>Email</label>
-    <input type="email" placeholder="rc@gmail.com">
-  </div>
-  <div class="input-row">
-    <label>Username</label>
-    <input type="text" placeholder="gokimsQ">
+<form>
+  <div class="form-list">
+    <div class="input-row">
+      <label>Full name</label>
+      <input type="text" placeholder="Mister kimsQ">
+    </div>
+    <div class="input-row">
+      <label>Email</label>
+      <input type="email" placeholder="rc@gmail.com">
+    </div>
+    <div class="input-row">
+      <label>Username</label>
+      <input type="text" placeholder="gokimsQ">
+    </div>
   </div>
 </form>
 {% endhighlight %}
@@ -42,18 +46,20 @@ kimsQ RC provides several form control styles, layout options, and custom compon
 ## Stacked labels
 
 {% highlight html %}
-<form class="form-list">
-  <div class="input-row stacked">
-    <label>Full name</label>
-    <input type="text" placeholder="Mister kimsQ">
-  </div>
-  <div class="input-row stacked">
-    <label>Email</label>
-    <input type="email" placeholder="rc@gmail.com">
-  </div>
-  <div class="input-row stacked">
-    <label>Username</label>
-    <input type="text" placeholder="gokimsQ">
+<form>
+  <div class="form-list stacked">
+    <div class="input-row">
+      <label>Full name</label>
+      <input type="text" placeholder="Mister kimsQ">
+    </div>
+    <div class="input-row">
+      <label>Email</label>
+      <input type="email" placeholder="rc@gmail.com">
+    </div>
+    <div class="input-row">
+      <label>Username</label>
+      <input type="text" placeholder="gokimsQ">
+    </div>
   </div>
 </form>
 {% endhighlight %}
@@ -62,30 +68,43 @@ kimsQ RC provides several form control styles, layout options, and custom compon
 ## Floating labels
 
 {% highlight html %}
-<form class="form-list">
-  <div class="input-row floating">
-    <label>Full name</label>
-    <input type="text" placeholder="Mister kimsQ">
-  </div>
-  <div class="input-row floating">
-    <label>Email</label>
-    <input type="email" placeholder="rc@gmail.com">
-  </div>
-  <div class="input-row floating">
-    <label>Username</label>
-    <input type="text" placeholder="gokimsQ">
+<form>
+  <div class="form-list floating">
+    <div class="input-row">
+      <label>Full name</label>
+      <input type="text" placeholder="Full name">
+    </div>
+    <div class="input-row">
+      <label>Email</label>
+      <input type="email" placeholder="Email">
+    </div>
+    <div class="input-row">
+      <label>Username</label>
+      <input type="text" placeholder="Username">
+    </div>
   </div>
 </form>
 {% endhighlight %}
 
+{% highlight js %}
+$(".form-list.floating .input-row input").on('keyup', function(event) {
+  if ($(this).val().length >= 1) {
+    $(this).parents('.input-row').addClass('active');
+  } else {
+    $(this).parents('.input-row').removeClass('active');
+  }
+})
+{% endhighlight %}
 
 ## Carded forms
 {% highlight html %}
-<form class="card">
-  <div class="form-list">
-    <input type="text" placeholder="Full name">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Username">
+<form>
+  <div class="card">
+    <div class="form-list">
+      <input type="text" placeholder="Full name">
+      <input type="email" placeholder="Email">
+      <input type="text" placeholder="Username">
+    </div>
   </div>
 </form>
 {% endhighlight %}

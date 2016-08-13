@@ -9,6 +9,10 @@
 
 		<link href="../../../dist/css/rc.css" rel="stylesheet">
 
+		<!-- kimsQ RC core JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../dist/js/rc.js"></script>
+
 	</head>
 	<body>
 
@@ -17,22 +21,39 @@
 		</header>
 
 		<div class="content">
-			<form class="form-list">
-			  <div class="input-row floating">
-			    <label>Full name</label>
-			    <input type="text" placeholder="Mister kimsQ">
-			  </div>
-			  <div class="input-row floating">
-			    <label>Email</label>
-			    <input type="email" placeholder="rc@gmail.com">
-			  </div>
-			  <div class="input-row floating">
-			    <label>Username</label>
-			    <input type="text" placeholder="gokimsQ">
-			  </div>
+
+			<form>
+				<div class="form-list floating">
+				  <div class="input-row">
+				    <label>Full name</label>
+				    <input type="text" placeholder="Full name">
+				  </div>
+				  <div class="input-row">
+				    <label>Email</label>
+				    <input type="email" placeholder="Email">
+				  </div>
+				  <div class="input-row">
+				    <label>Username</label>
+				    <input type="text" placeholder="Username">
+				  </div>
+				</div>
+				<div class="content-padded">
+					<button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+				</div>
 			</form>
 
 		</div>
+
+		<script>
+
+		$(".form-list.floating .input-row input").on('keyup', function(event) {
+		  if ($(this).val().length >= 1) {
+		    $(this).parents('.input-row').addClass('active');
+		  } else {
+		    $(this).parents('.input-row').removeClass('active');
+		  }
+		})
+		</script>
 
 	</body>
 </html>
