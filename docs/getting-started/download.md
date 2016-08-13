@@ -4,7 +4,7 @@ title: Download
 group: getting-started
 ---
 
-**ratchet-plus v{{ site.current_version}}** is available for download in several ways, including some of your favorite package managers. Choose from the options below to snag just what you need.
+**RC v{{ site.current_version}}** is available for download in several ways, including some of your favorite package managers. Choose from the options below to snag just what you need.
 
 <div class="row m-t-2">
   <div class="col-sm-6">
@@ -13,7 +13,7 @@ group: getting-started
 Download just the compiled and minified CSS and JavaScript. Doesn't include any documentation or original source files.
 
 {% comment %}
-<a href="{{ site.download.dist }}" class="btn btn-bs btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download ratchet-plus</a>
+<a href="{{ site.download.dist }}" class="btn btn-bs btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download kimsq-rc</a>
 {% endcomment %}
 <span class="text-muted">Coming soon!</span>
 {% endmarkdown %}
@@ -30,7 +30,7 @@ Download everything: source Sass, JavaScript, and documentation files. **Require
 
 ## Package managers
 
-Pull in 's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, ratchet-plus will **require a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)** for a setup that matches our official compiled versions.
+Pull in 's **source files** into nearly any project with some of the most popular package managers. No matter the package manager, kimsq-rc will **require a Sass compiler, [Autoprefixer](https://github.com/postcss/autoprefixer), and [postcss-flexbugs-fixes](https://github.com/luisrudge/postcss-flexbugs-fixes)** for a setup that matches our official compiled versions.
 
 {% callout warning %}
 **Heads up!** Not all package managers have the v1 alpha published yet, but we should have them up shortly!
@@ -38,71 +38,71 @@ Pull in 's **source files** into nearly any project with some of the most popula
 
 ### npm
 
-Install ratchet-plus in your Node powered apps with [the npm package](https://www.npmjs.org/package/ratchet-plus):
+Install kimsq-rc in your Node powered apps with [the npm package](https://www.npmjs.org/package/kimsq-rc):
 
 {% highlight bash %}
-$ npm install ratchet-plus@{{ site.current_version }}
+$ npm install kimsq-rc@{{ site.current_version }}
 {% endhighlight %}
 
-`require('ratchet-plus')` will load all of ratchet-plus's jQuery plugins onto the jQuery object. The `ratchet-plus` module itself does not export anything. You can manually load ratchet-plus's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
+`require('kimsq-rc')` will load all of kimsq-rc's jQuery plugins onto the jQuery object. The `kimsq-rc` module itself does not export anything. You can manually load kimsq-rc's jQuery plugins individually by loading the `/js/*.js` files under the package's top-level directory.
 
-ratchet-plus's `package.json` contains some additional metadata under the following keys:
+kimsq-rc's `package.json` contains some additional metadata under the following keys:
 
-- `sass` - path to ratchet-plus's main [Sass](http://sass-lang.com/) source file
-- `style` - path to ratchet-plus's non-minified CSS that's been precompiled using the default settings (no customization)
+- `sass` - path to kimsq-rc's main [Sass](http://sass-lang.com/) source file
+- `style` - path to kimsq-rc's non-minified CSS that's been precompiled using the default settings (no customization)
 
 ### RubyGems
 
-Install ratchet-plus in your Ruby apps using [Bundler](http://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](http://bundler.io/gemfile.html):
+Install kimsq-rc in your Ruby apps using [Bundler](http://bundler.io/) (**recommended**) and [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](http://bundler.io/gemfile.html):
 
 {% highlight ruby %}
-gem 'ratchet-plus', '~> 1.0.0.alpha1'
+gem 'kimsq-rc', '~> 1.0.0.alpha1'
 {% endhighlight %}
 
 Alternatively, if you're not using Bundler, you can install the gem by running this command:
 
 {% highlight bash %}
-$ gem install ratchet-plus -v 1.0.0.alpha1
+$ gem install kimsq-rc -v 1.0.0.alpha1
 {% endhighlight %}
 
-[See the gem's README](https://github.com/kimsQ/ratchet-plus-rubygem/blob/master/README.md) for further details.
+[See the gem's README](https://github.com/kimsQ/kimsq-rc-rubygem/blob/master/README.md) for further details.
 
 ### Meteor
 
 {% highlight bash %}
-$ meteor add kimsQ:ratchet-plus@={{ site.current_version }}
+$ meteor add kimsQ:kimsq-rc@={{ site.current_version }}
 {% endhighlight %}
 
 ### Composer
 
-You can also install and manage ratchet-plus's Sass and JavaScript using [Composer](https://getcomposer.org):
+You can also install and manage kimsq-rc's Sass and JavaScript using [Composer](https://getcomposer.org):
 
 {% highlight bash %}
-$ composer require kimsQ/ratchet-plus
+$ composer require kimsQ/kimsq-rc
 {% endhighlight %}
 
 ### Bower
 
-Install and manage ratchet-plus's Sass and JavaScript using [Bower](http://bower.io).
+Install and manage kimsq-rc's Sass and JavaScript using [Bower](http://bower.io).
 
 {% highlight bash %}
-$ bower install ratchet-plus#v{{ site.current_version }}
+$ bower install kimsq-rc#v{{ site.current_version }}
 {% endhighlight %}
 
 ### NuGet
 
-If you develop in .NET, you can also install and manage ratchet-plus's [CSS](https://www.nuget.org/packages/ratchet-plus/) or [Sass](https://www.nuget.org/packages/ratchet-plus.sass/) and JavaScript using [NuGet](https://www.nuget.org):
+If you develop in .NET, you can also install and manage kimsq-rc's [CSS](https://www.nuget.org/packages/kimsq-rc/) or [Sass](https://www.nuget.org/packages/kimsq-rc.sass/) and JavaScript using [NuGet](https://www.nuget.org):
 
 {% highlight powershell %}
-PM> Install-Package ratchet-plus -Pre
-PM> Install-Package ratchet-plus.sass -Pre
+PM> Install-Package kimsq-rc -Pre
+PM> Install-Package kimsq-rc.sass -Pre
 {% endhighlight %}
 
-The `-Pre` is required until ratchet-plus v1 has a stable release.
+The `-Pre` is required until kimsq-rc v1 has a stable release.
 
 ## Custom builds
 
-Need only a part of ratchet-plus's CSS or JS? Use one of the custom builds to snag just what you need.
+Need only a part of kimsq-rc's CSS or JS? Use one of the custom builds to snag just what you need.
 
 <div class="row">
   <div class="col-sm-4">
@@ -117,7 +117,7 @@ Need only a part of ratchet-plus's CSS or JS? Use one of the custom builds to sn
   </div>
   <div class="col-sm-4">
     <h3>Flexbox</h3>
-    <p>All of ratchet-plus with flexbox enabled and <strong>lower browser support</strong>.</p>
+    <p>All of kimsq-rc with flexbox enabled and <strong>lower browser support</strong>.</p>
     <a class="btn btn-bs btn-outline" href="#">Download</a>
   </div>
 </div>
