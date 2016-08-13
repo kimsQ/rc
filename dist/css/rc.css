@@ -2491,6 +2491,7 @@ select {
 }
 
 .form-list {
+  margin-bottom: 1.875rem;
   background-color: #fff;
 }
 
@@ -2550,6 +2551,79 @@ select {
   padding-left: 0;
   margin-bottom: 0;
   border: 0;
+}
+
+.form-list.stacked .input-row {
+  padding: 6px 0 5px 16px;
+  line-height: 1.3125;
+}
+
+.form-list.stacked .input-row label {
+  float: none;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.9375rem 0.625rem;
+  line-height: 1.3125;
+  padding: 4px 0 0 0px;
+  vertical-align: middle;
+}
+
+.form-list.stacked .input-row input {
+  float: none;
+  display: block;
+  width: 100%;
+  display: block;
+  padding-top: .125rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  height: 2.125rem;
+  vertical-align: middle;
+  font-size: .875rem;
+  line-height: 1rem;
+}
+
+.form-list.floating .input-row {
+  padding: 6px 0 5px 16px;
+  line-height: 1.3125;
+}
+
+.form-list.floating .input-row label {
+  float: none;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0.9375rem 0.625rem;
+  line-height: 1.3125;
+  padding: 4px 0 0 0px;
+  vertical-align: middle;
+  position: relative;
+  padding: 5px 0 0 0;
+  opacity: 0;
+  top: 10px;
+  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;
+  -o-transition: opacity 0.15s ease-in, top 0.2s linear;
+  transition: opacity 0.15s ease-in, top 0.2s linear;
+}
+
+.form-list.floating .input-row.active label {
+  opacity: 1;
+  top: 0;
+  -webkit-transition: opacity 0.15s ease-in, top 0.2s linear;
+  -o-transition: opacity 0.15s ease-in, top 0.2s linear;
+  transition: opacity 0.15s ease-in, top 0.2s linear;
+}
+
+.form-list.floating .input-row input {
+  float: none;
+  display: block;
+  width: 100%;
+  display: block;
+  padding-top: .125rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  height: 2.125rem;
+  vertical-align: middle;
+  font-size: .875rem;
+  line-height: 1rem;
 }
 
 .btn {
@@ -5410,6 +5484,12 @@ input[type="button"].btn-block {
 }
 
 .card .table-view-cell:last-child {
+  border-bottom: 0;
+}
+
+.card .form-list {
+  margin-bottom: 0;
+  border-top: 0;
   border-bottom: 0;
 }
 
