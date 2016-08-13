@@ -630,14 +630,14 @@ When you need to place plain text next to a form label within a form, use the `.
 {% example html %}
 <form>
   <div class="form-group row">
-    <label class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
+    <label class="col-sm-2 col-xs-3 col-form-label">Email</label>
+    <div class="col-sm-10 col-xs-9">
       <p class="form-control-static">email@example.com</p>
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-    <div class="col-sm-10">
+    <label for="inputPassword" class="col-sm-2 col-xs-3 col-form-label">Password</label>
+    <div class="col-sm-10 col-xs-9">
       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
     </div>
   </div>

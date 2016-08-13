@@ -7,18 +7,4 @@
 @import "utilities/spacing";
 @import "utilities/text";
 @import "utilities/visibility";
-
-
-// Content padding
-.content-padded {
-  margin: $bar-side-spacing;
-}
-
-// Floats left on all viewport sizes
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
-}
+@import "utilities/content-padded";

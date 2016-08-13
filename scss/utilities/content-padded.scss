@@ -1,0 +1,11 @@
+// Content padding
+.content-padded {
+  margin: $bar-side-spacing;
+
+  @media (min-width: 544px) {
+    &.container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
