@@ -16,7 +16,7 @@ Easily extend form controls by adding text, buttons, or button groups on either 
 
 Place one add-on or button on either side of an input. You may also place one on both sides of an input. **We do not support multiple form-controls in a single input group.**
 
-{% example html %}
+{% highlight html %}
 <div class="input-group">
   <span class="input-group-addon" id="basic-addon1">@</span>
   <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
@@ -44,13 +44,13 @@ Place one add-on or button on either side of an input. You may also place one on
   <span class="input-group-addon">0.00</span>
   <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Sizing
 
 Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
 
-{% example html %}
+{% highlight html %}
 <div class="input-group input-group-lg">
   <span class="input-group-addon" id="sizing-addon1">@</span>
   <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
@@ -60,97 +60,78 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
   <span class="input-group-addon" id="sizing-addon2">@</span>
   <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Checkboxes and radio addons
 
 Place any checkbox or radio option within an input group's addon instead of text.
 
-{% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="Checkbox for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with checkbox">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="radio" aria-label="Radio button for following text input">
-      </span>
-      <input type="text" class="form-control" aria-label="Text input with radio button">
-    </div>
-  </div>
+{% highlight html %}
+<div class="input-group">
+  <span class="input-group-addon">
+    <input type="checkbox" aria-label="Checkbox for following text input">
+  </span>
+  <input type="text" class="form-control" aria-label="Text input with checkbox">
 </div>
-{% endexample %}
+
+<div class="input-group">
+  <span class="input-group-addon">
+    <input type="radio" aria-label="Radio button for following text input">
+  </span>
+  <input type="text" class="form-control" aria-label="Text input with radio button">
+</div>
+{% endhighlight %}
 
 ## Multiple addons
 
 Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
 
-{% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">
-        <input type="checkbox" aria-label="Checkbox for following text input">
-      </span>
-      <span class="input-group-addon">$</span>
-      <input type="text" class="form-control" aria-label="Text input with checkbox">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
-      <span class="input-group-addon">0.00</span>
-      <input type="text" class="form-control" aria-label="Text input with radio button">
-    </div>
-  </div>
+{% highlight html %}
+<div class="input-group">
+  <span class="input-group-addon">
+    <input type="checkbox" aria-label="Checkbox for following text input">
+  </span>
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control" aria-label="Text input with checkbox">
 </div>
-{% endexample %}
+
+<div class="input-group">
+  <span class="input-group-addon">$</span>
+  <span class="input-group-addon">0.00</span>
+  <input type="text" class="form-control" aria-label="Text input with radio button">
+</div>
+{% endhighlight %}
 
 
 ## Button addons
 
 Buttons in input groups are a bit different and require one extra level of nesting. Instead of `.input-group-addon`, you'll need to use `.input-group-btn` to wrap the buttons. This is required due to default browser styles that cannot be overridden.
 
-{% example html %}
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Search for...">
-    </div>
-  </div>
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for...">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-    </div>
-  </div>
+{% highlight html %}
+<div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button">Go!</button>
+  </span>
+  <input type="text" class="form-control" placeholder="Search for...">
 </div>
-<br>
-<div class="row">
-  <div class="col-lg-offset-3 col-lg-6">
-    <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Hate it</button>
-      </span>
-      <input type="text" class="form-control" placeholder="Product name">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Love it</button>
-      </span>
-    </div>
-  </div>
+
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search for...">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button">Go!</button>
+  </span>
 </div>
-{% endexample %}
+
+<div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button">Hate it</button>
+  </span>
+  <input type="text" class="form-control" placeholder="Product name">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button">Love it</button>
+  </span>
+</div>
+{% endhighlight %}
 
 ## Accessibility
 

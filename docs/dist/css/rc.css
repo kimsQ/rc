@@ -5893,6 +5893,9 @@ input[type="button"].btn-block {
 
 .input-group-btn > .btn {
   position: relative;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
 .input-group-btn > .btn + .btn {
