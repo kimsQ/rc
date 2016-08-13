@@ -5229,6 +5229,10 @@ input[type="button"].btn-block {
   border-radius: 0.125rem 0.125rem 0 0;
 }
 
+.card-header.collapsed {
+  border-bottom: none;
+}
+
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f5f5f5;
