@@ -469,4 +469,77 @@ select {
       border: 0;
     }
   }
+
+  // stacked label
+  &.stacked .input-row {
+    padding: 6px 0 5px 16px;
+    line-height: 1.3125;
+
+    label {
+	    float: none;
+			display: inline-block;
+	    margin-bottom: 0;
+	    padding: 0.9375rem 0.625rem;
+	    line-height: 1.3125;
+			padding: 4px 0 0 0px;
+			vertical-align: middle;
+		}
+
+    input {
+	    float: none;;
+			display: block;
+	    width: 100%;
+			display: block;
+			padding-top: .125rem;
+			padding-bottom: 0;
+			padding-left: 0;
+			height: 2.125rem;
+			vertical-align: middle;
+			font-size: .875rem;
+			line-height: 1rem;
+		}
+
+  }
+
+  // floating label
+  &.floating .input-row {
+    padding: 6px 0 5px 16px;
+    line-height: 1.3125;
+
+    label {
+	    float: none;
+			display: inline-block;
+	    margin-bottom: 0;
+	    padding: 0.9375rem 0.625rem;
+	    line-height: 1.3125;
+			padding: 4px 0 0 0px;
+			vertical-align: middle;
+
+			position: relative;
+	    padding: 5px 0 0 0;
+	    opacity: 0;
+	    top: 10px;
+	    transition: opacity 0.15s ease-in, top 0.2s linear;
+		}
+
+    &.active label {
+	    opacity: 1;
+	    top: 0;
+	    transition: opacity 0.15s ease-in, top 0.2s linear;
+		}
+
+    input {
+      float: none;;
+  		display: block;
+      width: 100%;
+  		display: block;
+  		padding-top: .125rem;
+  		padding-bottom: 0;
+  		padding-left: 0;
+  		height: 2.125rem;
+  		vertical-align: middle;
+  		font-size: .875rem;
+  		line-height: 1rem;
+		}
+  }
 }
