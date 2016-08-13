@@ -5,7 +5,10 @@ title: Collapse
 group: components
 ---
 
-The ratchet-plus collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.
+The kimsQ RC collapse plugin allows you to toggle content on your pages with a few classes thanks to some helpful JavaScript.
+
+{% capture callout-include %}{% include callout-danger-plugin-dependency-transitions.md %}{% endcapture %}
+{{ callout-include | markdownify }}
 
 ## Contents
 
@@ -88,6 +91,31 @@ Extend the default collapse behavior to create an accordion.
   </div>
 </div>
 {% endhighlight %}
+
+### Collapsible Card
+
+It's also possible to swap out `.card-block`s with `.list-group`.
+
+{% highlight html %}
+<div class="card">
+  <div class="card-header" role="tab" id="headingThree">
+    <a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Card title
+    </a>
+  </div>
+  <div class="collapse" id="collapseExample">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-footer">
+      Footer
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
 
 ## Accessibility
 
@@ -176,7 +204,7 @@ Hides a collapsible element.
 
 ### Events
 
-Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
+kimsQ RC's collapse class exposes a few events for hooking into collapse functionality.
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">

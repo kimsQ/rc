@@ -199,7 +199,7 @@
   // COLLAPSE DATA-API
   // =================
 
-  $(document).on('click.rc.collapse.data-api', '[data-toggle="collapse"]', function (e) {
+  $(document).on('tap.rc.collapse.data-api', '[data-toggle="collapse"]', function (e) {
     var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
