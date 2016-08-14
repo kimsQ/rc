@@ -156,10 +156,17 @@
     left: .625rem;
     z-index: 1;
 
+    .custom-control-input {
+      width: 2.8125rem;
+      left: -.625rem;
+      top: -1.4375rem;
+      height: 2.875rem;
+    }
     .custom-control-indicator {
       top: 0;
       left: 0;
       transform: translateY(-50%);
     }
+
   }
 }

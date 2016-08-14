@@ -5832,6 +5832,13 @@ input[type="button"].btn-block {
   z-index: 1;
 }
 
+.table-view-cell.control .custom-control .custom-control-input {
+  width: 2.8125rem;
+  left: -.625rem;
+  top: -1.4375rem;
+  height: 2.875rem;
+}
+
 .table-view-cell.control .custom-control .custom-control-indicator {
   top: 0;
   left: 0;
