@@ -2261,7 +2261,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .form-check {
   position: relative;
   display: block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .form-check + .form-check {
@@ -5786,6 +5786,61 @@ input[type="button"].btn-block {
   margin-top: .9375rem;
 }
 
+.table-view-cell.checkbox,
+.table-view-cell.radio {
+  padding-right: .9375rem;
+}
+
+.table-view-cell.checkbox .custom-control,
+.table-view-cell.radio .custom-control {
+  display: block;
+  margin-bottom: 0;
+  padding-left: 2.3rem;
+}
+
+.table-view-cell.checkbox .custom-control .custom-control-input,
+.table-view-cell.radio .custom-control .custom-control-input {
+  width: 100%;
+}
+
+.table-view-cell.checkbox .custom-control .custom-control-indicator,
+.table-view-cell.radio .custom-control .custom-control-indicator {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.table-view-cell.checkbox .custom-control .custom-control-description,
+.table-view-cell.radio .custom-control .custom-control-description {
+  display: block;
+}
+
+.table-view-cell.control {
+  padding-left: 3.125rem;
+}
+
+.table-view-cell.control > a:not(.btn) {
+  margin-left: -3.125rem;
+}
+
+.table-view-cell.control .custom-control {
+  position: absolute;
+  top: 50%;
+  left: .625rem;
+  z-index: 1;
+}
+
+.table-view-cell.control .custom-control .custom-control-indicator {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .input-group {
   position: relative;
   width: 100%;
@@ -5927,7 +5982,7 @@ input[type="button"].btn-block {
 .custom-control {
   position: relative;
   display: inline;
-  padding-left: 1.5rem;
+  padding-left: 2.3rem;
   cursor: pointer;
 }
 
@@ -5944,11 +5999,7 @@ input[type="button"].btn-block {
 .custom-control-input:checked ~ .custom-control-indicator {
   color: #fff;
   background-color: #0074d9;
-}
-
-.custom-control-input:focus ~ .custom-control-indicator {
-  -webkit-box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #0074d9;
-          box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #0074d9;
+  border: none;
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
@@ -5968,25 +6019,26 @@ input[type="button"].btn-block {
 
 .custom-control-indicator {
   position: absolute;
-  top: .0625rem;
+  top: -.35rem;
   left: 0;
   display: block;
-  width: 1rem;
-  height: 1rem;
+  width: 1.8rem;
+  height: 1.8rem;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #ddd;
+  background-color: #fff;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: 50% 50%;
           background-size: 50% 50%;
+  border: 0.0625rem solid #ddd;
 }
 
 .custom-checkbox .custom-control-indicator {
-  border-radius: 0.125rem;
+  border-radius: 50%;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-indicator {
@@ -6012,7 +6064,7 @@ input[type="button"].btn-block {
 
 .custom-controls-stacked .custom-control::after {
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.7rem;
   content: "";
 }
 
