@@ -238,32 +238,33 @@ Ratchicons can also used instead of images.
 ## Table view with radio
 {% highlight html %}
 <ul class="table-view">
-  <li class="table-view-cell">
-    Item 1
-    <div class="form-check">
-      <label class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input">
-        <span class="custom-control-indicator"></span>
-      </label>
-    </div>
+  <li class="table-view-cell radio">
+    <label class="custom-control custom-radio">
+      <input id="radio1" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Radio Item 1</span>
+    </label>
   </li>
-  <li class="table-view-cell">
-    Item 2
-    <div class="form-check">
-      <label class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" checked>
-        <span class="custom-control-indicator"></span>
-      </label>
-    </div>
+  <li class="table-view-cell radio">
+    <label class="custom-control custom-radio">
+      <input id="radio2" name="radio" type="radio" class="custom-control-input" checked>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Radio Item 2</span>
+    </label>
   </li>
-  <li class="table-view-cell">
-    Item 3
-    <div class="form-check">
-      <label class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input">
-        <span class="custom-control-indicator"></span>
-      </label>
-    </div>
+  <li class="table-view-cell radio">
+    <label class="custom-control custom-radio">
+      <input id="radio3" name="radio" type="radio" class="custom-control-input">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Radio Item 3</span>
+    </label>
+  </li>
+  <li class="table-view-cell radio">
+    <label class="custom-control custom-radio">
+      <input id="radio3" name="radio" type="radio" class="custom-control-input" disabled>
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">Radio Item 4 (disabled)</span>
+    </label>
   </li>
 </ul>
 {% endhighlight %}
