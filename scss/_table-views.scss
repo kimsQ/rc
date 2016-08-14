@@ -112,3 +112,54 @@
 .content > .table-view:first-child {
   margin-top: .9375rem;
 }
+
+
+// Table-views with checkbox & radio
+// --------------------------------------------------
+
+.table-view-cell.checkbox,
+.table-view-cell.radio {
+  padding-right: .9375rem;
+
+  .custom-control {
+    display: block;
+    margin-bottom: 0;
+    padding-left: 2.3rem;
+
+    .custom-control-input {
+  		width: 100%
+  	}
+  	.custom-control-indicator {
+    	top: 50%;
+  		transform: translateY(-50%);
+  	}
+    .custom-control-description {
+      display: block;
+  	}
+  }
+}
+
+// Table-views with controls
+// --------------------------------------------------
+
+
+.table-view-cell.control {
+  padding-left: 3.125rem;
+
+  > a:not(.btn) {
+    margin-left: -3.125rem
+  }
+
+  .custom-control {
+    position: absolute;
+    top: 50%;
+    left: .625rem;
+    z-index: 1;
+
+    .custom-control-indicator {
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
