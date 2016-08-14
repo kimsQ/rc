@@ -22,5 +22,14 @@
 - name: table-view-with-toggles
   path: components/table-view
 
+- name: table-view-with-checkbox
+  path: components/table-view
+
+- name: table-view-with-checkbox-and-chevrons
+  path: components/table-view
+
+- name: table-view-with-radio
+  path: components/table-view
+
 - name: carded-table-views
   path: components/table-view

@@ -207,6 +207,106 @@ Ratchicons can also used instead of images.
 </ul>
 {% endhighlight %}
 
+## Table view with checkbox
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 2
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" checked>
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 3
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
+
+## Table view with checkbox and chevrons
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 2
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" checked>
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 3
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
+
+
+## Table view with radio
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 2
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" checked>
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 3
+    <div class="form-check">
+      <label class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+      </label>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
 
 ## Carded table views
 
