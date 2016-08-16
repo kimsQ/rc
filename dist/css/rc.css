@@ -5158,6 +5158,44 @@ input[type="button"].btn-block {
   border-radius: 10rem;
 }
 
+.badge-outline {
+  padding-right: 0.6rem;
+  padding-left: 0.6rem;
+  background-color: transparent;
+  border-radius: 10rem;
+  border: 0.0625rem solid #373a3c;
+}
+
+.badge-outline.badge-default {
+  border-color: #818a91;
+  color: #818a91;
+}
+
+.badge-outline.badge-primary {
+  border-color: #0275d8;
+  color: #0275d8;
+}
+
+.badge-outline.badge-success {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
+
+.badge-outline.badge-info {
+  border-color: #5bc0de;
+  color: #5bc0de;
+}
+
+.badge-outline.badge-warning {
+  border-color: #f0ad4e;
+  color: #f0ad4e;
+}
+
+.badge-outline.badge-danger {
+  border-color: #d9534f;
+  color: #d9534f;
+}
+
 .card {
   position: relative;
   display: block;
@@ -6007,6 +6045,10 @@ input[type="button"].btn-block {
   color: #fff;
   background-color: #0074d9;
   border: none;
+}
+
+.custom-control-input:checked ~ .custom-control-description {
+  color: #0074d9;
 }
 
 .custom-control-input:active ~ .custom-control-indicator {
