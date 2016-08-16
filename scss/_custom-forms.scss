@@ -32,6 +32,10 @@
     @include box-shadow($custom-control-checked-indicator-box-shadow);
   }
 
+  &:checked ~ .custom-control-description {
+    color: $custom-control-checked-indicator-bg;
+  }
+
   &:focus ~ .custom-control-indicator {
     // the mixin is not used here to make sure there is feedback
     // box-shadow: $custom-control-focus-indicator-box-shadow;

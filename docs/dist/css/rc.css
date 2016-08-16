@@ -6009,6 +6009,10 @@ input[type="button"].btn-block {
   border: none;
 }
 
+.custom-control-input:checked ~ .custom-control-description {
+  color: #0074d9;
+}
+
 .custom-control-input:active ~ .custom-control-indicator {
   color: #fff;
   background-color: #84c6ff;
