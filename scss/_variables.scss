@@ -630,11 +630,15 @@ $badge-font-weight:           bold !default;
 $badge-padding-x:             .4rem !default;
 $badge-padding-y:             .25rem !default;
 
-$badge-pill-padding-x:        .6rem !default;
+
 // Use a higher than normal value to ensure completely rounded edges when
-// customizing padding or font-size on labels.
+// customizing padding or font-size on badge.
+$badge-pill-padding-x:        .6rem !default;
 $badge-pill-border-radius:    10rem !default;
 
+$badge-outline-padding-x:        .6rem !default;
+$badge-outline-border-radius:    10rem !default;
+$badge-outline-border-width:     .0625rem !default;
 
 // Modals
 

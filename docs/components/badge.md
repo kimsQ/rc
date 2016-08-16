@@ -62,6 +62,19 @@ Use the `.badge-pill` modifier class to make tags more rounded (with a larger `b
 <span class="badge badge-danger badge-inverted">Danger</span>
 {% endhighlight %}
 
+
+## Outline badges
+{% highlight html %}
+<span class="badge badge-outline">Normal</span>
+<span class="badge badge-default badge-outline">Default</span>
+<span class="badge badge-primary badge-outline">Primary</span>
+<span class="badge badge-success badge-outline">Success</span>
+<span class="badge badge-info badge-outline">Info</span>
+<span class="badge badge-warning badge-outline">Warning</span>
+<span class="badge badge-danger badge-outline">Danger</span>
+{% endhighlight %}
+
+
 ## Buttons with badges
 
 {% highlight html %}

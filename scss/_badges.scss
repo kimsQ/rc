@@ -87,3 +87,39 @@
   padding-left: $badge-pill-padding-x;
   @include border-radius($badge-pill-border-radius);
 }
+
+.badge-outline {
+  padding-right: $badge-outline-padding-x;
+  padding-left: $badge-outline-padding-x;
+  background-color: transparent;
+  border-radius: $badge-outline-border-radius;
+  border: $badge-outline-border-width solid $gray-dark;
+
+  &.badge-default {
+    border-color: $badge-default-bg;
+    color: $gray-light;
+  }
+
+  &.badge-primary {
+    border-color: $badge-primary-bg;
+    color: $badge-primary-bg;
+  }
+
+  &.badge-success {
+    border-color: $badge-success-bg;
+    color: $badge-success-bg;
+  }
+
+  &.badge-info {
+    border-color: $badge-info-bg;
+    color: $badge-info-bg;
+  }
+  &.badge-warning {
+    border-color: $badge-warning-bg;
+    color: $badge-warning-bg;
+  }
+  &.badge-danger {
+    border-color: $badge-danger-bg;
+    color: $badge-danger-bg;
+  }
+}

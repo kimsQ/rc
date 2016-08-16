@@ -18,6 +18,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: outline-badges
+  path: components/badge
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: buttons-with-badges
   path: components/badge
   jsfiddle: kimsQ/0odhbtzv/
