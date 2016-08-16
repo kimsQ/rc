@@ -18,7 +18,7 @@ The most basic table view is simply an unordered list with list items, and the p
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">Item 1</li>
-  <li class="table-view-cell table-view-cell">Item 2</li>
+  <li class="table-view-cell">Item 2</li>
   <li class="table-view-divider">Divider</li>
   <li class="table-view-cell">Item 3</li>
 </ul>
