@@ -33,3 +33,6 @@
 
 - name: carded-table-views
   path: components/table-view
+
+- name: nesting
+  path: components/table-view

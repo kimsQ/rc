@@ -334,3 +334,33 @@ Use `.card` to wrap any content in a padded element.
   </ul>
 </div>
 {% endhighlight %}
+
+
+## Nesting
+Table view components can also be nested until 4 depth. 
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+    <ul class="table-view">
+      <li class="table-view-cell">
+        Item 1-1
+        <ul class="table-view">
+          <li class="table-view-cell">
+            Item 1-1-1
+            <ul class="table-view">
+              <li class="table-view-cell">
+                Item 1-1-1-1
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="table-view-cell">Item 1-2</li>
+      <li class="table-view-cell">Item 1-3</li>
+    </ul>
+  </li>
+  <li class="table-view-cell">Item 2</li>
+  <li class="table-view-cell">Item 3</li>
+</ul>
+{% endhighlight %}
