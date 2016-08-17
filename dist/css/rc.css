@@ -798,6 +798,10 @@ pre code {
   clear: both;
 }
 
+.row.btn-grid [class^="col-"] ~ [class^="col-"] {
+  padding-left: 0;
+}
+
 .col-xs-1 {
   position: relative;
   min-height: 1px;

@@ -19,5 +19,8 @@
 - name: disabled-state
   path: components/buttons
 
+- name: button-grid
+  path: components/buttons
+
 - name: button-plugin
   path: components/buttons

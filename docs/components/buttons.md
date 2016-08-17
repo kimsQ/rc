@@ -144,6 +144,23 @@ Disabled buttons using the `<a>` element behave a bit different:
 The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a `tabindex="-1"` attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
 {% endcallout %}
 
+## Button grid
+
+{% highlight html %}
+<div class="content-padded">
+  <div class="row btn-grid">
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-secondary btn-block">Cancel/button>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-primary btn-block">OK</button>
+    </div>
+  </div>
+</div>
+
+{% endhighlight %}
+
+
 ## Button plugin
 
 Do more with buttons. Control button states or create groups of buttons for more components like toolbars.
