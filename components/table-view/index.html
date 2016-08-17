@@ -331,20 +331,6 @@
           
 
           <li class="">
-            <a href="/layout/media-object">
-              Media object
-            </a>
-
-            
-          </li>
-        
-          
-          
-          
-
-          
-
-          <li class="">
             <a href="/layout/responsive-utilities">
               Responsive utilities
             </a>
@@ -1044,6 +1030,8 @@
   <li><a href="#table-view-with-radio" id="markdown-toc-table-view-with-radio">Table view with radio</a></li>
   <li><a href="#table-view-with-controls-and-chevrons" id="markdown-toc-table-view-with-controls-and-chevrons">Table view with controls and chevrons</a></li>
   <li><a href="#carded-table-views" id="markdown-toc-carded-table-views">Carded table views</a></li>
+  <li><a href="#nesting" id="markdown-toc-nesting">Nesting</a></li>
+  <li><a href="#nesting-table-view-with-media" id="markdown-toc-nesting-table-view-with-media">Nesting table view with media</a></li>
 </ul>
 
 <h2 id="basic-example">Basic example</h2>
@@ -1341,6 +1329,78 @@
   <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+<h2 id="nesting">Nesting</h2>
+<p>Table view components can also be nested until 4 depth.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+    Item 1
+
+    <span class="c">&lt;!-- 2depth --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+        Item 1-1
+
+        <span class="c">&lt;!-- 3depth --&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+            Item 1-1-1
+
+            <span class="c">&lt;!-- 4depth --&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+                Item 1-1-1-1
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1-2<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1-3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h2 id="nesting-table-view-with-media">Nesting table view with media</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell media"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navigate-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"media-object pull-left"</span> <span class="na">src=</span><span class="s">"http://placehold.it/42x42"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+        Item 1
+        <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+
+    <span class="c">&lt;!-- 2depth --&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell media"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navigate-right"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"media-object pull-left"</span> <span class="na">src=</span><span class="s">"http://placehold.it/42x42"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+            Item 1-1
+            <span class="nt">&lt;p&gt;</span>...<span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+      ..
+    <span class="nt">&lt;/ul&gt;</span>
+
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell media"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"navigate-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"media-object pull-left"</span> <span class="na">src=</span><span class="s">"http://placehold.it/42x42"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"media-body"</span><span class="nt">&gt;</span>
+        Item 2
+        <span class="nt">&lt;p&gt;</span>..<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
 
             </div>
             <div class="col-lg-4 hidden-md-down" style="padding-left: 0">
@@ -1594,6 +1654,48 @@
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/components/table-view/carded-table-views" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#nesting">
+      <iframe width="100%" height="555" src="/examples/components/table-view/nesting.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/nesting.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/nesting.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/nesting" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#nesting-table-view-with-media">
+      <iframe width="100%" height="555" src="/examples/components/table-view/nesting-table-view-with-media.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/nesting-table-view-with-media.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/nesting-table-view-with-media.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/nesting-table-view-with-media" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
         </li>

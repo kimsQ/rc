@@ -6078,6 +6078,52 @@ input[type="button"].btn-block {
           transform: translateY(-50%);
 }
 
+.table-view {
+  /*2depth*/
+}
+
+.table-view .table-view {
+  margin-top: .6875rem;
+  margin-bottom: -.6875rem;
+  margin-left: -.9375rem;
+  margin-right: -4.0625rem;
+  border-bottom: none;
+  /*3depth*/
+}
+
+.table-view .table-view .table-view-cell {
+  padding-left: 1.875rem;
+}
+
+.table-view .table-view .table-view-cell a {
+  margin-left: -1.875rem;
+}
+
+.table-view .table-view .table-view {
+  margin-left: -1.875rem;
+  /*4depth*/
+}
+
+.table-view .table-view .table-view .table-view-cell {
+  padding-left: 2.8125rem;
+}
+
+.table-view .table-view .table-view .table-view-cell a {
+  margin-left: -2.8125rem;
+}
+
+.table-view .table-view .table-view .table-view {
+  margin-left: -2.8125rem;
+}
+
+.table-view .table-view .table-view .table-view .table-view-cell {
+  padding-left: 3.75rem;
+}
+
+.table-view .table-view .table-view .table-view .table-view-cell a {
+  margin-left: -3.75rem;
+}
+
 .input-group {
   position: relative;
   width: 100%;

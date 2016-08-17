@@ -251,13 +251,6 @@
 
     
         {
-            "title" : "Media object",
-            "url"   : "/layout/media-object/"
-        } ,
-    
-
-    
-        {
             "title" : "Migrating to v4",
             "url"   : "/migration/"
         } ,
