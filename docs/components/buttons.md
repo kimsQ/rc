@@ -148,7 +148,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 
 {% highlight html %}
 <div class="content-padded">
-  <div class="row btn-grid">
+  <div class="row">
     <div class="col-xs-6">
       <button type="button" class="btn btn-secondary btn-block">Cancel/button>
     </div>

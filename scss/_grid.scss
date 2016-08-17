@@ -27,11 +27,6 @@
 @if $enable-grid-classes {
   .row {
     @include make-row();
-
-    // button grid
-    &.btn-grid [class^="col-"]~ [class^="col-"] {
-      padding-left: 0;
-    }
   }
 }
 
