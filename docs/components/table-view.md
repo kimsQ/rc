@@ -342,12 +342,18 @@ Table view components can also be nested until 4 depth.
 <ul class="table-view">
   <li class="table-view-cell">
     Item 1
+
+    <!-- 2depth -->
     <ul class="table-view">
       <li class="table-view-cell">
         Item 1-1
+
+        <!-- 3depth -->
         <ul class="table-view">
           <li class="table-view-cell">
             Item 1-1-1
+
+            <!-- 4depth -->
             <ul class="table-view">
               <li class="table-view-cell">
                 Item 1-1-1-1
