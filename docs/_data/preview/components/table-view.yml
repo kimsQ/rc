@@ -36,3 +36,6 @@
 
 - name: nesting
   path: components/table-view
+
+- name: nesting-table-view-with-media
+  path: components/table-view

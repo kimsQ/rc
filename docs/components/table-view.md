@@ -337,7 +337,7 @@ Use `.card` to wrap any content in a padded element.
 
 
 ## Nesting
-Table view components can also be nested until 4 depth. 
+Table view components can also be nested until 4 depth.
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">
@@ -362,5 +362,46 @@ Table view components can also be nested until 4 depth.
   </li>
   <li class="table-view-cell">Item 2</li>
   <li class="table-view-cell">Item 3</li>
+</ul>
+{% endhighlight %}
+
+
+## Nesting table view with media
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 1
+        <p>...</p>
+      </div>
+    </a>
+
+    <!-- 2depth -->
+    <ul class="table-view">
+      <li class="table-view-cell media">
+        <a class="navigate-right">
+          <img class="media-object pull-left" src="http://placehold.it/42x42">
+          <div class="media-body">
+            Item 1-1
+            <p>...</p>
+          </div>
+        </a>
+      </li>
+      ..
+    </ul>
+
+  </li>
+  <li class="table-view-cell media">
+    <a class="navigate-right">
+      <img class="media-object pull-left" src="http://placehold.it/42x42">
+      <div class="media-body">
+        Item 2
+        <p>..</p>
+      </div>
+    </a>
+  </li>
 </ul>
 {% endhighlight %}
