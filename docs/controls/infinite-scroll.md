@@ -50,14 +50,15 @@ $('#myInfiniteScroll').infinitescroll({
   dataSource: function(helpers, callback){
     //passing back more content
     callback({ content: '...' });
-  }
+  },
+  appendToEle : $('#myInfiniteScroll1 .table-view')
 });
 {% endhighlight %}
 
 ### Markup
-Simply place `class="infinitescroll"` on an element of your choosing (preferably a div or span).
+Simply place `selector` on an element of your choosing (preferably `class="content"`).
 {% highlight html %}
-<div class="infinitescroll" id="myInfiniteScroll"></div>
+<div class="content" id="myInfiniteScroll"></div>
 {% endhighlight %}
 
 
@@ -86,6 +87,12 @@ You can pass options via JavaScript at initialization.
        <td>
        Called whenever the user scrolls the specified percentage towards the bottom. Arguments passed include a helpers object and callback function. The helpers object contains current percentage and scrollTop values. The callback function appends more content to the element. Pass an object back within the callback function structured as follows: <code>{ content: '...' }</code> If you append no additonal content, add the attribute end: true to that object. This code will append <code>'---------'</code> by default and prevent further dataSource calls. Pass a string value for the end attribute to append that string instead of the default.
        </td>
+     </tr>
+     <tr>
+       <td>appendToEle</td>
+       <td>function</td>
+       <td>null</td>
+       <td>컨텐츠를 추가할 엘리먼트를 지정</td>
      </tr>
      <tr>
        <td>hybrid</td>
