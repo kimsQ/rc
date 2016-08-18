@@ -49,9 +49,9 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		this.$element.on('scroll.fu.infinitescroll', $.proxy(this.onScroll, this));
 		this.onScroll();
 	};
-    
-    // require tab.js & history.js & utilty.js    
-    if (!$.fn.loader=="undefined") throw new Error('infinite-scroll requires loader.js')  
+
+    // require tab.js & history.js & utilty.js
+    if (!$.fn.loader=="undefined") throw new Error('infinite-scroll requires loader.js')
 
 
 	InfiniteScroll.prototype = {
@@ -96,7 +96,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 		},
 
 		fetchData: function (force) {
-			var load = $('<div class="infinitescroll-load"></div>');
+			var load = $('<div class="infinitescroll-load content-padded"></div>');
 			var self = this;
 			var moreBtn;
 
@@ -131,7 +131,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 			this.fetchingData = true;
 			this.$element.append(load);
 			if (this.options.hybrid && force !== true) {
-				moreBtn = $('<button type="button" class="btn btn-primary">more</button>');
+				moreBtn = $('<button type="button" class="btn btn-secondary btn-block">more</button>');
 				if (typeof this.options.hybrid === 'object') {
 					moreBtn.append(this.options.hybrid.label);
 				} else {
