@@ -1068,13 +1068,14 @@
   <span class="na">dataSource</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">helpers</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
     <span class="c1">//passing back more content</span>
     <span class="nx">callback</span><span class="p">({</span> <span class="na">content</span><span class="p">:</span> <span class="s1">'...'</span> <span class="p">});</span>
-  <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="na">appendToEle</span> <span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'#myInfiniteScroll1 .table-view'</span><span class="p">)</span>
 <span class="p">});</span></code></pre></figure>
 
 <h3 id="markup">Markup</h3>
-<p>Simply place <code class="highlighter-rouge">class="infinitescroll"</code> on an element of your choosing (preferably a div or span).</p>
+<p>Simply place <code class="highlighter-rouge">selector</code> on an element of your choosing (preferably <code class="highlighter-rouge">class="content"</code>).</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"infinitescroll"</span> <span class="na">id=</span><span class="s">"myInfiniteScroll"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="na">id=</span><span class="s">"myInfiniteScroll"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></figure>
 
 <h3 id="loads-with-button">Loads with button</h3>
 
@@ -1099,6 +1100,12 @@
        <td>
        Called whenever the user scrolls the specified percentage towards the bottom. Arguments passed include a helpers object and callback function. The helpers object contains current percentage and scrollTop values. The callback function appends more content to the element. Pass an object back within the callback function structured as follows: <code>{ content: '...' }</code> If you append no additonal content, add the attribute end: true to that object. This code will append <code>'---------'</code> by default and prevent further dataSource calls. Pass a string value for the end attribute to append that string instead of the default.
        </td>
+     </tr>
+     <tr>
+       <td>appendToEle</td>
+       <td>function</td>
+       <td>null</td>
+       <td>컨텐츠를 추가할 엘리먼트를 지정</td>
      </tr>
      <tr>
        <td>hybrid</td>
