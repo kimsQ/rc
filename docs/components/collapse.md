@@ -154,11 +154,11 @@ Extend the default collapse behavior to create an accordion.
 
 css
 {% highlight css %}
-.navigate-right.collapsed:after {
-    content: '\e826';
+#tree .navigate-right.collapsed:after {
+  content: '\e826';
 }
-.navigate-right:after {
-    content: '\e820';
+#tree .navigate-right:after {
+  content: '\e820';
 }
 {% endhighlight %}
 ## Accessibility
