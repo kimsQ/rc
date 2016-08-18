@@ -105,7 +105,7 @@ There are some caveats regarding using popups on mobile devices. [See our browse
 </div>
 {% endhighlight %}
 
-## with single button
+### with single button
 {% highlight html %}
 <div id="myPopup" class="popup zoom">
   <div class="popup-content">
@@ -122,7 +122,7 @@ There are some caveats regarding using popups on mobile devices. [See our browse
 </div>
 {% endhighlight %}
 
-## With tab bar
+### With tab bar
 {% highlight html %}
 <div id="myPopup" class="popup zoom">
   <div class="popup-content">
