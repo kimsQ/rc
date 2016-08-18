@@ -114,38 +114,53 @@ Extend the default collapse behavior to create an accordion.
 [Nesting table view](/components/table-view/#nesting) 에 `data-toggle="collapse"`과 `data-parent=""` 를 추가하여 tree를 구현할 수 있다.
 
 {% highlight html %}
-<ul class="table-view">
-  <li class="table-view-cell">
-    Item 1
+<div id="tree">
+  <ul class="table-view">
+    <li class="table-view-cell">
+      <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
+        Item 1
+      </a>
 
-    <!-- 2depth -->
-    <ul class="table-view">
-      <li class="table-view-cell">
-        Item 1-1
+      <!-- 2depth -->
+      <ul class="table-view collapse" id="1">
+        <li class="table-view-cell">
+          <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-1">
+            Item 1-1
+          </a>
 
-        <!-- 3depth -->
-        <ul class="table-view">
-          <li class="table-view-cell">
-            Item 1-1-1
+          <!-- 3depth -->
+          <ul class="table-view collapse" id="1-1">
+            <li class="table-view-cell">
+              <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-1-1">
+                Item 1-1-1
+              </a>
 
-            <!-- 4depth -->
-            <ul class="table-view">
-              <li class="table-view-cell">
-                Item 1-1-1-1
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="table-view-cell">Item 1-2</li>
-    </ul>
-  </li>
-  <li class="table-view-cell">Item 2</li>
-</ul>
+              <!-- 4depth -->
+              <ul class="table-view collapse" id="1-1-1">
+                <li class="table-view-cell">
+                  Item 1-1-1-1
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="table-view-cell">Item 1-2</li>
+      </ul>
+    </li>
+    <li class="table-view-cell">Item 2</li>
+  </ul>
+</div>
 {% endhighlight %}
 
-
-
+css
+{% highlight css %}
+.navigate-right.collapsed:after {
+    content: '\e826';
+}
+.navigate-right:after {
+    content: '\e820';
+}
+{% endhighlight %}
 ## Accessibility
 
 Be sure to add `aria-expanded` to the control element. This attribute explicitly defines the current state of the collapsible element to screen readers and similar assistive technologies. If the collapsible element is closed by default, it should have a value of `aria-expanded="false"`. If you've set the collapsible element to be open by default using the `in` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute based on whether or not the collapsible element has been opened or closed.
