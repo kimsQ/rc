@@ -6850,13 +6850,13 @@ input[type="button"].btn-block {
 
 .navigate-left:after,
 .push-left:after {
-  left: .9375rem;
+  left: 0.9375rem;
   content: '\e822';
 }
 
 .navigate-right:after,
 .push-right:after {
-  right: .9375rem;
+  right: 0.9375rem;
   content: '\e826';
 }
 
