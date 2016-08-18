@@ -44,7 +44,7 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 
 ### Collapsible Card
 
-It's also possible to swap out `.card-block`s with `.list-group`.
+It's also possible to swap out `.card-block`s with `.table-view`.
 
 {% highlight html %}
 <div class="card">
@@ -52,10 +52,10 @@ It's also possible to swap out `.card-block`s with `.list-group`.
     Card title
   </div>
   <div class="collapse" id="collapseExample">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+    <ul class="table-view">
+      <li class="table-view-cell">Item 1</li>
+      <li class="table-view-cell">Item 2</li>
+      <li class="table-view-cell">Item 3</li>
     </ul>
     <div class="card-footer">
       Footer
