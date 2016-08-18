@@ -3015,6 +3015,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 	var InfiniteScroll = function (element, options) {
 		this.$element = $(element);
+		this.$appendToEle=options.appendToEle;
 		this.$element.addClass('infinitescroll');
 		this.options = $.extend({}, $.fn.infinitescroll.defaults, options);
 
@@ -3091,7 +3092,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 						var end;
 						load.remove();
 						if (resp.content) {
-							self.$element.append(resp.content);
+							self.$appendToEle.append(resp.content);
 						}
 
 						if (resp.end) {
