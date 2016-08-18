@@ -18,7 +18,7 @@ If you're familiar with Bootstrap 3, cards replace our old panels, wells, and th
 
 Cards require a small amount of markup and classes to provide you with as much control as possible. These classes and markup are flexible though and can typically be remixed and extended with ease. For example, if your card has no flush content like images, feel free to put the `.card-block` class on the `.card` element to consolidate your markup.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
   <div class="card-block">
@@ -27,69 +27,69 @@ Cards require a small amount of markup and classes to provide you with as much c
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Content types
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.
+Cards support a wide variety of content, including images, text, table views, links, and more. Mix and match multiple content types to create the card you need.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
   <div class="card-block">
     <h4 class="card-title">Card title</h4>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+  <ul class="table-view">
+    <li class="table-view-cell">Item 1</li>
+    <li class="table-view-cell">Item 2</li>
   </ul>
   <div class="card-block">
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
-### List group
-Lists can be added to a card by adding a list group.
+### Table view
+Lists can be added to a card by adding a table view.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+  <ul class="table-view">
+    <li class="table-view-cell">Item 1</li>
+    <li class="table-view-cell">Item 2</li>
+    <li class="table-view-cell">Item 3</li>
+    <li class="table-view-cell">Item 4</li>
+    <li class="table-view-cell">Item 5</li>
   </ul>
 </div>
-{% endexample %}
-
+{% endhighlight %}
 ### Image top
 
 `.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100px180/?text=Image cap" alt="Card image cap">
   <div class="card-block">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Block
 
 Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to  a `<a>` tag.
 
-{% example html %}
+{% highlight html %}
 <div class="card card-block">
   <h4 class="card-title">Card title</h4>
   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   <a href="#" class="card-link">Card link</a>
   <a href="#" class="card-link">Another link</a>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Sub title
 
@@ -97,7 +97,7 @@ Subtitles are used by adding a `.card-subtitle` to an `<h*>` tag. If the `.card-
 
 The multiple content types can be easily combined to create the card you need. See below for an example.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <div class="card-block">
     <h4 class="card-title">Card title</h4>
@@ -110,7 +110,7 @@ The multiple content types can be easily combined to create the card you need. S
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Sizing
 
@@ -118,7 +118,7 @@ Constrain the width of cards via custom CSS, our predefined grid classes, or wit
 
 Using the grid:
 
-{% example html %}
+{% highlight html %}
 <div class="row">
   <div class="col-sm-6">
     <div class="card card-block">
@@ -135,25 +135,25 @@ Using the grid:
     </div>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Custom widths
 
 Using custom widths:
 
-{% example html %}
+{% highlight html %}
 <div class="card card-block" style="width: 18rem;">
   <h3 class="card-title">Special title treatment</h3>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Text alignment
 
 You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{ site.baseurl }}/components/utilities/#text-alignment).
 
-{% example html %}
+{% highlight html %}
 <div class="card card-block">
   <h4 class="card-title">Special title treatment</h4>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -171,13 +171,13 @@ You can quickly change the text alignment of any card—in its entirety or speci
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   <a href="#" class="btn btn-primary">Go somewhere</a>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Header and footer
 
 Add an optional header and/or footer within a card.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <div class="card-header">
     Featured
@@ -188,13 +188,13 @@ Add an optional header and/or footer within a card.
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Heading
 
 Card headers can be styled by adding `.card-header` to `<h*>` elements.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <h3 class="card-header">Featured</h3>
   <div class="card-block">
@@ -203,11 +203,11 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Quote
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <div class="card-header">
     Quote
@@ -219,11 +219,11 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     </blockquote>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Text center
 
-{% example html %}
+{% highlight html %}
 <div class="card text-xs-center">
   <div class="card-header">
     Featured
@@ -237,7 +237,7 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
     2 days ago
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Header nav
 
@@ -245,7 +245,7 @@ Use Bootstrap's nav pills or tabs within a card header. Be sure to always includ
 
 ### Header tabs
 
-{% example html %}
+{% highlight html %}
 <div class="card text-xs-center">
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs pull-xs-left">
@@ -266,11 +266,11 @@ Use Bootstrap's nav pills or tabs within a card header. Be sure to always includ
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ### Header pills
 
-{% example html %}
+{% highlight html %}
 <div class="card text-xs-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills pull-xs-left">
@@ -291,13 +291,13 @@ Use Bootstrap's nav pills or tabs within a card header. Be sure to always includ
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Image caps
 
 Similar to headers and footers, cards include top and bottom image caps.
 
-{% example html %}
+{% highlight html %}
 <div class="card">
   <img class="card-img-top" data-src="holder.js/100px180/" alt="Card image cap">
   <div class="card-block">
@@ -314,13 +314,13 @@ Similar to headers and footers, cards include top and bottom image caps.
   </div>
   <img class="card-img-bottom" data-src="holder.js/100px180/" alt="Card image cap">
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Image overlays
 
 Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need `.card-inverse` (see below).
 
-{% example html %}
+{% highlight html %}
 <div class="card card-inverse">
   <img class="card-img" data-src="holder.js/100px270/#55595c:#373a3c/text:Card image" alt="Card image">
   <div class="card-img-overlay">
@@ -329,7 +329,7 @@ Turn an image into a card background and overlay your card's text. Depending on 
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Inverted text
 
@@ -337,7 +337,7 @@ Cards include a class for quickly toggling **the text color**. By default, cards
 
 You can also use `.card-inverse` with the [contextual backgrounds variants](#background-variants).
 
-{% example html %}
+{% highlight html %}
 <div class="card card-inverse" style="background-color: #333; border-color: #333;">
   <div class="card-block">
     <h3 class="card-title">Special title treatment</h3>
@@ -345,13 +345,13 @@ You can also use `.card-inverse` with the [contextual backgrounds variants](#bac
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Background variants
 
 Cards include their own variant classes for quickly changing the `background-color` and `border-color` of a card. **Darker colors require the use of `.card-inverse`.**
 
-{% example html %}
+{% highlight html %}
 <div class="card card-inverse card-primary text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
@@ -392,7 +392,7 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -401,7 +401,7 @@ Cards include their own variant classes for quickly changing the `background-col
 
 In need of a colored card, but not the hefty background colors they bring? Replace the default modifier classes with the `.card-outline-*` ones to style just the `border-color` of a card.
 
-{% example html %}
+{% highlight html %}
 <div class="card card-outline-primary text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
@@ -450,7 +450,7 @@ In need of a colored card, but not the hefty background colors they bring? Repla
     </blockquote>
   </div>
 </div>
-{% endexample %}
+{% endhighlight %}
 
 ## Groups
 

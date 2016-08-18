@@ -4,7 +4,7 @@
 - name: content-types
   path: components/card
 
-- name: list-group
+- name: table-view
   path: components/card
 
 - name: image-top
