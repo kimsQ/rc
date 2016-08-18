@@ -99,7 +99,7 @@ There are some caveats regarding using popups on mobile devices. [See our browse
       </div>
     </nav>
     <div class="content">
-      <p class="content-padded text-xs-center">..</p>
+      <div class="p-a-3 text-xs-center">..</div>
     </div>
   </div>
 </div>
@@ -116,7 +116,7 @@ There are some caveats regarding using popups on mobile devices. [See our browse
       <button type="button" class="btn btn-primary btn-block">OK</button>
     </nav>
     <div class="content">
-      <p class="content-padded text-xs-center">..</p>
+      <div class="p-a-3 text-xs-center">..</div>
     </div>
   </div>
 </div>
@@ -138,7 +138,7 @@ There are some caveats regarding using popups on mobile devices. [See our browse
       </a>
     </nav>
     <div class="content">
-      <p class="content-padded text-xs-center">..</p>
+      <div class="p-a-3 text-xs-center">..</div>
     </div>
   </div>
 </div>
