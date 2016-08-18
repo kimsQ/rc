@@ -709,30 +709,23 @@ $progress-bar-danger-bg:      $brand-danger !default;
 $progress-bar-info-bg:        $brand-info !default;
 
 
-// List group
+// Table view
 
-$list-group-bg:                 #fff !default;
-$list-group-border-color:       #ddd !default;
-$list-group-border-width:       $border-width !default;
-$list-group-border-radius:      $border-radius !default;
+$table-view-margin-bottom:         .9375rem !default;
+$table-view-bg:                    #fff !default;
 
-$list-group-hover-bg:           #f5f5f5 !default;
-$list-group-active-color:       $component-active-color !default;
-$list-group-active-bg:          $component-active-bg !default;
-$list-group-active-border:      $list-group-active-bg !default;
-$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+$table-view-cell-padding-y:        .6875rem !default;
+$table-view-cell-padding-left:     .9375rem !default;
+$table-view-cell-padding-right:    4.0625rem !default;
 
-$list-group-disabled-color:      $gray-light !default;
-$list-group-disabled-bg:         $gray-lighter !default;
-$list-group-disabled-text-color: $list-group-disabled-color !default;
+$table-view-cell-active-color:     #eee !default;
 
-$list-group-link-color:         #555 !default;
-$list-group-link-hover-color:   $list-group-link-color !default;
-$list-group-link-heading-color: #333 !default;
+$table-view-divider-padding-y:     .375rem !default;
+$table-view-divider-padding-left:  .9375rem !default;
+$table-view-divider-color:         #999 !default;
+$table-view-divider-bg:            #fafafa !default;
 
-$list-group-item-padding-x:             1.25rem !default;
-$list-group-item-padding-y:             .75rem !default;
-$list-group-item-heading-margin-bottom: 5px !default;
+$table-view-media-margin-x:       .625rem !default;
 
 
 // Image thumbnails

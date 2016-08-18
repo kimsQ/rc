@@ -49,10 +49,6 @@
     float: left;
     width: percentage($size / $columns);
   }
-
-  ~ [class^="col-"] {
-    padding-left: 0;
-  }
 }
 
 @mixin make-col-offset($size, $columns: $grid-columns) {

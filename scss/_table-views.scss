@@ -5,9 +5,9 @@
 .table-view {
   padding-left: 0;
   margin-top: 0;
-  margin-bottom: .9375rem;
+  margin-bottom: $table-view-margin-bottom;
   list-style: none; // Remove usual bullet styles from table view
-  background-color: #fff;
+  background-color: $table-view-bg;
   border-top: $border-default;
   border-bottom: $border-default;
 }
@@ -15,7 +15,7 @@
 // Pad each table view item and add dividers
 .table-view-cell {
   position: relative;
-  padding: .6875rem 4.0625rem .6875rem .9375rem;
+  padding: $table-view-cell-padding-y $table-view-cell-padding-right $table-view-cell-padding-y $table-view-cell-padding-left;
   overflow: hidden;
   border-bottom: $border-default;
 
@@ -28,12 +28,12 @@
     position: relative;
     display: block;
     padding: inherit;
-    margin: -.6875rem -4.0625rem -.6875rem -.9375rem; // Make the entire list item tappable.
+    margin: (-$table-view-cell-padding-y) (-$table-view-cell-padding-right) (-$table-view-cell-padding-y) (-$table-view-cell-padding-left); // Make the entire list item tappable.
     overflow: hidden;
     color: inherit;
 
     &:active {
-      background-color: #eee;
+      background-color: $table-view-cell-active-color;
     }
   }
   p {
@@ -52,14 +52,14 @@
 // --------------------------------------------------
 
 .table-view-divider {
-  padding-top: .375rem;
-  padding-bottom: .375rem;
-  padding-left: .9375rem;
+  padding-top: $table-view-divider-padding-y;
+  padding-bottom: $table-view-divider-padding-y;
+  padding-left: $table-view-divider-padding-left;
   margin-top: -.0625rem; // Hides the border of the previous list item
   margin-left: 0;
   font-weight: $font-weight;
-  color: #999;
-  background-color: #fafafa;
+  color: $table-view-divider-color;
+  background-color: $table-view-divider-bg;
   border-top: $border-default;
   border-bottom: $border-default;
 }
@@ -74,10 +74,10 @@
 }
 .table-view .media-object {
   &.pull-left {
-    margin-right: .625rem;
+    margin-right: $table-view-media-margin-x;
   }
   &.pull-right {
-    margin-left: .625rem;
+    margin-left: $table-view-media-margin-x;
   }
 }
 
@@ -178,39 +178,39 @@
 
   /*2depth*/
   .table-view {
-    margin-top: .6875rem;
-    margin-bottom: -.6875rem;
-    margin-left: -.9375rem;
-    margin-right: -4.0625rem;
+    margin-top: $table-view-cell-padding-y;
+    margin-bottom: (-$table-view-cell-padding-y) + -.0625rem;
+    margin-left: (-$table-view-cell-padding-left);
+    margin-right: (-$table-view-cell-padding-right);
     border-bottom: none;
 
     .table-view-cell {
-      padding-left: 1.875rem
+      padding-left: ($table-view-cell-padding-left * 2);
     }
     .table-view-cell a {
-      margin-left: -1.875rem;
+      margin-left: (-$table-view-cell-padding-left * 2);
     }
 
     /*3depth*/
     .table-view {
-      margin-left: -1.875rem;
+      margin-left: (-$table-view-cell-padding-left * 2);
 
       .table-view-cell {
-        padding-left: 2.8125rem;
+        padding-left: ($table-view-cell-padding-left * 3);
       }
       .table-view-cell a {
-        margin-left: -2.8125rem;
+        margin-left: (-$table-view-cell-padding-left * 3);
       }
 
       /*4depth*/
       .table-view {
-        margin-left: -2.8125rem;
+        margin-left: (-$table-view-cell-padding-left * 3);
 
         .table-view-cell {
-          padding-left: 3.75rem;
+          padding-left: ($table-view-cell-padding-left * 4);
         }
         .table-view-cell a {
-          margin-left: -3.75rem;
+          margin-left: (-$table-view-cell-padding-left * 4);
         }
       }
     }
