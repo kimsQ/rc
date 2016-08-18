@@ -41,6 +41,30 @@ You can use a link with the `href` attribute, or a button with the `data-target`
 </div>
 {% endhighlight %}
 
+
+### Collapsible Card
+
+It's also possible to swap out `.card-block`s with `.list-group`.
+
+{% highlight html %}
+<div class="card">
+  <div class="card-header collapsed" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Card title
+  </div>
+  <div class="collapse" id="collapseExample">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-footer">
+      Footer
+    </div>
+  </div>
+</div>
+{% endhighlight %}
+
+
 ## Accordion example
 
 Extend the default collapse behavior to create an accordion.
@@ -86,27 +110,40 @@ Extend the default collapse behavior to create an accordion.
 </div>
 {% endhighlight %}
 
-### Collapsible Card
-
-It's also possible to swap out `.card-block`s with `.list-group`.
+### Tree example
+[Nesting table view](/components/table-view/#nesting) 에 `data-toggle="collapse"`과 `data-parent=""` 를 추가하여 tree를 구현할 수 있다.
 
 {% highlight html %}
-<div class="card">
-  <div class="card-header collapsed" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Card title
-  </div>
-  <div class="collapse" id="collapseExample">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+
+    <!-- 2depth -->
+    <ul class="table-view">
+      <li class="table-view-cell">
+        Item 1-1
+
+        <!-- 3depth -->
+        <ul class="table-view">
+          <li class="table-view-cell">
+            Item 1-1-1
+
+            <!-- 4depth -->
+            <ul class="table-view">
+              <li class="table-view-cell">
+                Item 1-1-1-1
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="table-view-cell">Item 1-2</li>
     </ul>
-    <div class="card-footer">
-      Footer
-    </div>
-  </div>
-</div>
+  </li>
+  <li class="table-view-cell">Item 2</li>
+</ul>
 {% endhighlight %}
+
 
 
 ## Accessibility

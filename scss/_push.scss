@@ -35,6 +35,10 @@
 }
 
 // Add chevrons to elements
+.navigate-up-left,
+.navigate-down-left,
+.navigate-up-right,
+.navigate-down-right,
 .navigate-left,
 .navigate-right,
 .push-left,
@@ -52,13 +56,29 @@
     @include transform(translateY(-50%));
   }
 }
+.navigate-up-left:after {
+  left: $table-view-cell-padding-left;
+  content: '\e80d';
+}
+.navigate-down-left:after {
+  left: $table-view-cell-padding-left;
+  content: '\e820';
+}
+.navigate-up-right:after {
+  right: $table-view-cell-padding-left;
+  content: '\e80d';
+}
+.navigate-down-right:after {
+  right: $table-view-cell-padding-left;
+  content: '\e820';
+}
 .navigate-left:after,
 .push-left:after {
-  left: .9375rem;
+  left: $table-view-cell-padding-left;
   content: '\e822';
 }
 .navigate-right:after,
 .push-right:after{
-  right: .9375rem;
+  right: $table-view-cell-padding-left;
   content: '\e826';
 }

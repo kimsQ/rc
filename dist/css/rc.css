@@ -6829,6 +6829,10 @@ input[type="button"].btn-block {
           transform: translate3d(100%, 0, 0);
 }
 
+.navigate-up-left:after,
+.navigate-down-left:after,
+.navigate-up-right:after,
+.navigate-down-right:after,
 .navigate-left:after,
 .navigate-right:after,
 .push-left:after,
@@ -6848,15 +6852,35 @@ input[type="button"].btn-block {
           transform: translateY(-50%);
 }
 
+.navigate-up-left:after {
+  left: 0.9375rem;
+  content: '\e80d';
+}
+
+.navigate-down-left:after {
+  left: 0.9375rem;
+  content: '\e820';
+}
+
+.navigate-up-right:after {
+  right: 0.9375rem;
+  content: '\e80d';
+}
+
+.navigate-down-right:after {
+  right: 0.9375rem;
+  content: '\e820';
+}
+
 .navigate-left:after,
 .push-left:after {
-  left: .9375rem;
+  left: 0.9375rem;
   content: '\e822';
 }
 
 .navigate-right:after,
 .push-right:after {
-  right: .9375rem;
+  right: 0.9375rem;
   content: '\e826';
 }
 

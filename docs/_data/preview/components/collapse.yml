@@ -12,3 +12,8 @@
   path: components/collapse
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: tree-example
+  path: components/collapse
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
