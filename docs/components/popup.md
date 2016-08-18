@@ -127,7 +127,6 @@ There are some caveats regarding using popups on mobile devices. [See our browse
 <div id="myPopup" class="popup zoom">
   <div class="popup-content">
     <header class="bar bar-nav">
-      <a class="icon icon-close pull-right" data-history="back" role="button"></a>
       <h1 class="title">with buttons</h1>
     </header>
     <nav class="bar bar-tab">
