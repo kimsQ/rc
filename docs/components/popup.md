@@ -33,7 +33,6 @@ A rendered popup with title, set of actions in the header and content.
     </div>
   </div>
 </div>
-
 {% endhighlight %}
 
 ### Via data attributes
@@ -81,9 +80,70 @@ Always try to place a popup's HTML code in a top-level position in your document
 There are some caveats regarding using popups on mobile devices. [See our browser support docs]({{ site.baseurl }}/getting-started/browsers-devices/#popups-and-dropdowns-on-mobile) for details.
 {% endcallout %}
 
+## Footer bar
 
+{% highlight html %}
+<div id="myPopup" class="popup zoom">
+  <div class="popup-content">
+    <header class="bar bar-nav">
+      <h1 class="title">with buttons</h1>
+    </header>
+    <nav class="bar bar-standard bar-footer">
+      <div class="row">
+        <div class="col-xs-6">
+          <button type="button" class="btn btn-secondary btn-block">Cancel</button>
+        </div>
+        <div class="col-xs-6 p-l-0">
+          <button type="button" class="btn btn-primary btn-block">OK</button>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <p class="content-padded text-xs-center">..</p>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
 
+## with single button
+{% highlight html %}
+<div id="myPopup" class="popup zoom">
+  <div class="popup-content">
+    <header class="bar bar-nav">
+      <h1 class="title">with-single-button</h1>
+    </header>
+    <nav class="bar bar-standard bar-footer">
+      <button type="button" class="btn btn-primary btn-block">OK</button>
+    </nav>
+    <div class="content">
+      <p class="content-padded text-xs-center">..</p>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
 
+## With tab bar
+{% highlight html %}
+<div id="myPopup" class="popup zoom">
+  <div class="popup-content">
+    <header class="bar bar-nav">
+      <a class="icon icon-close pull-right" data-history="back" role="button"></a>
+      <h1 class="title">with buttons</h1>
+    </header>
+    <nav class="bar bar-tab">
+      <a class="tab-item bg-secondary" role="button">
+        Cancel
+      </a>
+      <a class="tab-item bg-primary" role="button">
+        OK
+      </a>
+    </nav>
+    <div class="content">
+      <p class="content-padded text-xs-center">..</p>
+    </div>
+  </div>
+</div>
+{% endhighlight %}
 
 ## Animation
 

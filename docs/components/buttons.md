@@ -145,12 +145,12 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 {% endcallout %}
 
 ## Button grid
-use `.p-l-0` class 
+use `.p-l-0` class
 {% highlight html %}
 <div class="content-padded">
   <div class="row">
     <div class="col-xs-6">
-      <button type="button" class="btn btn-secondary btn-block">Cancel/button>
+      <button type="button" class="btn btn-secondary btn-block">Cancel</button>
     </div>
     <div class="col-xs-6 p-l-0">
       <button type="button" class="btn btn-primary btn-block">OK</button>

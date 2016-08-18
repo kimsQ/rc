@@ -13,6 +13,21 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: footer-bar
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: with-single-button
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: with-tab-bar
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: zoom
   path: components/popup
   jsfiddle: kimsQ/0odhbtzv/
