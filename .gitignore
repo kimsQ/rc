@@ -54,11 +54,3 @@ docs/.jekyll-metadata
 # Folders to ignore
 bower_components
 node_modules
-
-dist/fonts/ratchicons.eot
-
-dist/fonts/ratchicons.svg
-
-dist/fonts/ratchicons.ttf
-
-dist/fonts/ratchicons.woff
