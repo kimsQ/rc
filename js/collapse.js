@@ -32,6 +32,8 @@
     if (this.options.toggle) this.toggle()
   }
 
+  if (!$.fn.emulateTransitionEnd) throw new Error('Collapse requires transition.js')
+
   Collapse.VERSION  = '1.0.0'
 
   Collapse.TRANSITION_DURATION = 350
@@ -49,7 +51,7 @@
     if (this.transitioning || this.$element.hasClass('in')) return
 
     var activesData
-    var actives = this.$parent && this.$parent.children('.card').children('.in, .collapsing')
+    var actives = this.$parent && this.$parent.children().children('.in, .collapsing')
 
     if (actives && actives.length) {
       activesData = actives.data('rc.collapse')
@@ -92,7 +94,7 @@
     var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
     this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one('rcTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
 
@@ -130,7 +132,7 @@
 
     this.$element
       [dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one('rcTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
 

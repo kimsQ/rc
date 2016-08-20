@@ -37,7 +37,7 @@
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
-    $(this).one('bsTransitionEnd', function () { called = true })
+    $(this).one('rcTransitionEnd', function () { called = true })
     var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
     setTimeout(callback, duration)
     return this
@@ -48,7 +48,7 @@
 
     if (!$.support.transition) return
 
-    $.event.special.bsTransitionEnd = {
+    $.event.special.rcTransitionEnd = {
       bindType: $.support.transition.end,
       delegateType: $.support.transition.end,
       handle: function (e) {
