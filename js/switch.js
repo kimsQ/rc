@@ -11,8 +11,8 @@
 !(function () {
   'use strict';
 
-  if (!window.RATCHET) throw new Error('Switch requires ratchet-common.js')
- 
+  if (!window.RATCHET) throw new Error('Switch requires common.js')
+
   var start     = {};
   var touchMove = false;
   var distanceX = false;
@@ -109,7 +109,7 @@
 
     e = $.Event('rc.switched', { relatedTarget: handle})
     $(toggle).trigger(e);
-   
+
     touchMove = false;
     toggle    = false;
   });

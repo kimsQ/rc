@@ -77,6 +77,7 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
+          'js/common.js',
           'js/history.js',
           'js/tap.js',
           'js/utility.js',
@@ -93,7 +94,7 @@ module.exports = function (grunt) {
           'js/popover.js',
           'js/fbutton.js',
           'js/collapse.js',
-          // 'js/toggles.js',
+          'js/switch.js',
           'js/segmented-controllers.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
