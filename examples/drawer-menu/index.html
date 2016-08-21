@@ -81,50 +81,47 @@
   				  </li>
           </ul>
 
-          <div id="tree">
+  				<ul class="table-view" id="tree">
+            <li class="table-view-divider">Tree Menu (2 depth)</li>
+            <li class="table-view-cell">
+  						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
+  				      Item 1
+  				    </a>
+  				    <!-- 2depth -->
+  				    <ul class="table-view collapse" id="1" role="tabpanel">
+  				      <li class="table-view-cell">
+  								<a class="navigate-right collapsed" href="#">
+  						      Item 1-1
+  						    </a>
+  					      </li>
+  					      <li class="table-view-cell">
+  									<a class="navigate-right collapsed" href="#">
+  										Item 1-2
+  									</a>
+  					      </li>
+  					    </ul>
+  				  </li>
 
-    				<ul class="table-view">
-              <li class="table-view-divider">Tree Menu (2 depth)</li>
-              <li class="table-view-cell">
-    						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
-    				      Item 1
-    				    </a>
-    				    <!-- 2depth -->
-    				    <ul class="table-view collapse" id="1" role="tabpanel">
-    				      <li class="table-view-cell">
-    								<a class="navigate-right collapsed" href="#">
-    						      Item 1-1
-    						    </a>
-    					      </li>
-    					      <li class="table-view-cell">
-    									<a class="navigate-right collapsed" href="#">
-    										Item 1-2
-    									</a>
-    					      </li>
-    					    </ul>
-    				  </li>
+  					<li class="table-view-cell">
+  						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
+  				      Item 2
+  				    </a>
+  				    <!-- 2depth -->
+  				    <ul class="table-view collapse" id="2">
+  				      <li class="table-view-cell">
+  								<a class="navigate-right collapsed" href="#">
+  						      Item 2-1
+  						    </a>
+  					      </li>
+  					      <li class="table-view-cell">
+  									<a class="navigate-right collapsed" href="#">
+  										Item 2-2
+  									</a>
+  					      </li>
+  					    </ul>
+  				  </li>
+  				</ul>
 
-    					<li class="table-view-cell">
-    						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
-    				      Item 2
-    				    </a>
-    				    <!-- 2depth -->
-    				    <ul class="table-view collapse" id="2">
-    				      <li class="table-view-cell">
-    								<a class="navigate-right collapsed" href="#">
-    						      Item 2-1
-    						    </a>
-    					      </li>
-    					      <li class="table-view-cell">
-    									<a class="navigate-right collapsed" href="#">
-    										Item 2-2
-    									</a>
-    					      </li>
-    					    </ul>
-    				  </li>
-    				</ul>
-
-        </div>
       </div>
     </div>
 

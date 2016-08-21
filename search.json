@@ -384,6 +384,13 @@
 
     
         {
+            "title" : "Switch",
+            "url"   : "/components/switch/"
+        } ,
+    
+
+    
+        {
             "title" : "Table view",
             "url"   : "/components/table-view/"
         } ,
@@ -400,13 +407,6 @@
         {
             "title" : "Team",
             "url"   : "/about/team/"
-        } ,
-    
-
-    
-        {
-            "title" : "Toggle",
-            "url"   : "/components/toggle/"
         } ,
     
 

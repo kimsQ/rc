@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
  * =====================================================
- * Ratchet Plus v1.0.0-alpha (https://github.com/kimsq/rc)
+ * Ratchet Plus v1.0.0-alpha.3 (https://github.com/kimsq/rc)
  * =====================================================
  * inspired by @twbs's bootstrap & ratchet
  * Copyright 2016 redblock inc.
@@ -5775,10 +5775,10 @@ input[type="button"].btn-block {
 
 .table-view-cell > .btn,
 .table-view-cell > .badge,
-.table-view-cell > .toggle,
+.table-view-cell > .switch,
 .table-view-cell > a > .btn,
 .table-view-cell > a > .badge,
-.table-view-cell > a > .toggle {
+.table-view-cell > a > .switch {
   position: absolute;
   top: 50%;
   right: .9375rem;
@@ -5790,28 +5790,28 @@ input[type="button"].btn-block {
 
 .table-view-cell .navigate-left > .btn,
 .table-view-cell .navigate-left > .badge,
-.table-view-cell .navigate-left > .toggle,
+.table-view-cell .navigate-left > .switch,
 .table-view-cell .navigate-right > .btn,
 .table-view-cell .navigate-right > .badge,
-.table-view-cell .navigate-right > .toggle,
+.table-view-cell .navigate-right > .switch,
 .table-view-cell .push-left > .btn,
 .table-view-cell .push-left > .badge,
-.table-view-cell .push-left > .toggle,
+.table-view-cell .push-left > .switch,
 .table-view-cell .push-right > .btn,
 .table-view-cell .push-right > .badge,
-.table-view-cell .push-right > .toggle,
+.table-view-cell .push-right > .switch,
 .table-view-cell > a .navigate-left > .btn,
 .table-view-cell > a .navigate-left > .badge,
-.table-view-cell > a .navigate-left > .toggle,
+.table-view-cell > a .navigate-left > .switch,
 .table-view-cell > a .navigate-right > .btn,
 .table-view-cell > a .navigate-right > .badge,
-.table-view-cell > a .navigate-right > .toggle,
+.table-view-cell > a .navigate-right > .switch,
 .table-view-cell > a .push-left > .btn,
 .table-view-cell > a .push-left > .badge,
-.table-view-cell > a .push-left > .toggle,
+.table-view-cell > a .push-left > .switch,
 .table-view-cell > a .push-right > .btn,
 .table-view-cell > a .push-right > .badge,
-.table-view-cell > a .push-right > .toggle {
+.table-view-cell > a .push-right > .switch {
   right: 2.1875rem;
 }
 
@@ -6723,7 +6723,7 @@ input[type="button"].btn-block {
      transition-duration: .4s;
 }
 
-.toggle {
+.switch {
   position: relative;
   display: block;
   width: 74px;
@@ -6739,7 +6739,7 @@ input[type="button"].btn-block {
           transition-duration: 0.2s;
 }
 
-.toggle .toggle-handle {
+.switch .switch-handle {
   position: absolute;
   top: -1px;
   left: -1px;
@@ -6760,7 +6760,7 @@ input[type="button"].btn-block {
           transition-duration: 0.2s;
 }
 
-.toggle:before {
+.switch:before {
   position: absolute;
   top: 3px;
   right: 11px;
@@ -6770,25 +6770,25 @@ input[type="button"].btn-block {
   content: "Off";
 }
 
-.toggle.active {
+.switch.active {
   background-color: #0275d8;
   border: 2px solid #0275d8;
 }
 
-.toggle.active .toggle-handle {
+.switch.active .switch-handle {
   border-color: #0275d8;
   -webkit-transform: translate3d(44px, 0, 0);
           transform: translate3d(44px, 0, 0);
 }
 
-.toggle.active:before {
+.switch.active:before {
   right: auto;
   left: 15px;
   color: #fff;
   content: "On";
 }
 
-.toggle input[type="checkbox"] {
+.switch input[type="checkbox"] {
   display: none;
 }
 
