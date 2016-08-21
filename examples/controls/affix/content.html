@@ -13,16 +13,12 @@
     <script src="../../../dist/js/rc.js"></script>
 
     <style>
-    .affix {
-      margin: 0 !important
-    }
-
-    .affix.nav-control {
-      border-radius: 0;
-      border-left: none;
-      border-right: none
-    }
-
+      .affix.nav-control {
+        margin: 0 !important;
+        border-radius: 0;
+        border-left: none;
+        border-right: none
+      }
     </style>
 
 
@@ -62,6 +58,14 @@
         type: 'affix',
         offset:{top:165}
       });
+
+      // apply animation
+      $('#myAfix').on('affixed.rc.scroll',function(){
+          $(this).addClass('animated fadeInDown')
+			})
+      $('#myAfix').on('affixed-top.rc.scroll',function(){
+          $(this).removeClass('animated fadeInDown')
+			})
     </script>
 
   </body>
