@@ -17,11 +17,11 @@
 
       var Scroll = function (element, options) {
             this.options = $.extend({}, Scroll.DEFAULTS, options)
-          
+
             this.$target = $(this.options.target)
                  .on('scroll.rc.scroll.data-api', $.proxy(this.checkPosition, this))
                  .on('tap.rc.scroll.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
-          
+
             this.$element     = $(element)
             this.type=this.options.type// affix , detect, ....
             this.scrolled      = null
@@ -89,17 +89,17 @@
             if (typeof offset != 'object')         offsetBottom = offsetTop = offset
             if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
             if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
-             
+
             var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
-            
-            // when affix 
+
+            // when affix
             if(this.type=='affix'){
                   if (this.affixed != affix) {
                         if (this.unpin != null) this.$element.css('top', '')
 
                         var affixType = 'affix' + (affix ? '-' + affix : '')
                         var e         = $.Event(affixType + '.rc.scroll')
-                        
+
                         this.$element.trigger(e)
 
                         if (e.isDefaultPrevented()) return
@@ -126,13 +126,13 @@
                        if(state==true){
                             if(nowScrollTop < this.defaultHeight) scrollEvent=$.Event('default.rc.scroll');
                             else{
-                      	           if(nowScrollTop>lastScrollTop) scrollEvent=$.Event('down.rc.scroll');  
+                      	           if(nowScrollTop>lastScrollTop) scrollEvent=$.Event('down.rc.scroll');
                       	           else scrollEvent=$.Event('up.rc.scroll');
                       	      }
-                      	      this.$element.trigger(scrollEvent); // trigger event 
-                            this.lastScrollTop=nowScrollTop;  // update lastScrollTop     	      
-                      }                      
-            } 
+                      	      this.$element.trigger(scrollEvent); // trigger event
+                            this.lastScrollTop=nowScrollTop;  // update lastScrollTop
+                      }
+            }
 
       }
 
