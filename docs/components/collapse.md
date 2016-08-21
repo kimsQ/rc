@@ -114,42 +114,40 @@ Extend the default collapse behavior to create an accordion.
 [Nesting table view](/components/table-view/#nesting) 에 `data-toggle="collapse"`과 `data-parent=""` 를 추가하여 tree를 구현할 수 있다.
 
 {% highlight html %}
-<div id="tree">
-  <ul class="table-view">
-    <li class="table-view-cell">
-      <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
-        Item 1
-      </a>
+<ul class="table-view" id="tree">
+  <li class="table-view-cell">
+    <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
+      Item 1
+    </a>
 
-      <!-- 2depth -->
-      <ul class="table-view collapse" id="1">
-        <li class="table-view-cell">
-          <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-1">
-            Item 1-1
-          </a>
+    <!-- 2depth -->
+    <ul class="table-view collapse" id="1">
+      <li class="table-view-cell">
+        <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-1">
+          Item 1-1
+        </a>
 
-          <!-- 3depth -->
-          <ul class="table-view collapse" id="1-1">
-            <li class="table-view-cell">
-              <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-1-1">
-                Item 1-1-1
-              </a>
+        <!-- 3depth -->
+        <ul class="table-view collapse" id="1-1">
+          <li class="table-view-cell">
+            <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-1-1">
+              Item 1-1-1
+            </a>
 
-              <!-- 4depth -->
-              <ul class="table-view collapse" id="1-1-1">
-                <li class="table-view-cell">
-                  Item 1-1-1-1
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="table-view-cell">Item 1-2</li>
-      </ul>
-    </li>
-    <li class="table-view-cell">Item 2</li>
-  </ul>
-</div>
+            <!-- 4depth -->
+            <ul class="table-view collapse" id="1-1-1">
+              <li class="table-view-cell">
+                Item 1-1-1-1
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="table-view-cell">Item 1-2</li>
+    </ul>
+  </li>
+  <li class="table-view-cell">Item 2</li>
+</ul>
 {% endhighlight %}
 
 css
