@@ -5445,6 +5445,9 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   var distanceX = false;
   var toggle    = false;
   var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
+  var supportsTouch = false;
+  if ('ontouchstart' in window) supportsTouch = true; //iOS & android
+  else if(window.navigator.msPointerEnabled) supportsTouch = true; //Win8 
 
   var findToggle = function (target) {
     var i;
@@ -5515,7 +5518,8 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
 
-  window.addEventListener('touchend', function (e) {
+  function touchend(e){
+    
     if (!toggle) {
       return;
     }
@@ -5534,12 +5538,24 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 
-    e = $.Event('checked.rc.switch', { relatedTarget: handle})
+    e = $.Event('changed.rc.switch', { relatedTarget: handle})
     $(toggle).trigger(e);
-
+   
     touchMove = false;
     toggle    = false;
+  }
+  window.addEventListener('touchend', function(e){
+     touchend(e);
   });
+
+ function mouseHandler(e)
+ {
+    e = e.originalEvent || e;
+    toggle = findToggle(e.target);
+    touchend(e);    
+ }
+
+ if(supportsTouch===false) window.addEventListener("click", mouseHandler, true);
 
 }(jQuery));
 

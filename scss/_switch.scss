@@ -12,6 +12,7 @@
   border-radius: 20px;
   @include transition-property(background-color, border);
   @include transition-duration(.2s);
+  cursor: pointer;
 
   // Sliding handle
   .switch-handle {

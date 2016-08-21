@@ -6737,6 +6737,7 @@ input[type="button"].btn-block {
   -webkit-transition-duration: 0.2s;
        -o-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  cursor: pointer;
 }
 
 .switch .switch-handle {

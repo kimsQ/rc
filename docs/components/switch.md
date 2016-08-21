@@ -58,17 +58,17 @@ It can be used by sliding or tapping the control.
     </thead>
     <tbody>
      <tr>
-       <td>checked.rc.switch</td>
-       <td>This event is fired when the switch is selected.</td>
+       <td>changed.rc.switch</td>
+       <td>This event is fired when the switch is changed.</td>
      </tr>
     </tbody>
   </table>
 </div>
 
-### `checked.rc.switch`
+### `changed.rc.switch`
 
 {% highlight js %}
-$('.switch').on('checked.rc.switch', function () {
+$('.switch').on('changed.rc.switch', function () {
   // Only needed if you want to fire a callback
 })
 
