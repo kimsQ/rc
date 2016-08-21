@@ -111,4 +111,23 @@ $('selector').scroll({type:'updown'});
 
 ### Material Layout
 
+{% highlight html %}
+<div class="content" data-control="scroll" data-type="updown" data-defaultHeight="160">
+  ...
+</div>
+{% endhighlight %}
+
+
+{% highlight js %}
+$('.content').on('down.rc.scroll', function() {
+  $('.bar-nav').addClass('animated fadeInDown');
+  $('.bar-nav .title').css('display','block');
+})
+$('.content').on('default.rc.scroll', function() {
+  $('.bar-nav').removeClass('animated fadeInDown')
+  $('.bar-nav .title').css('display','none');
+})
+{% endhighlight %}
+
+
 <br><br><br><br>
