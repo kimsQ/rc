@@ -1,14 +1,14 @@
 - name: content
-  path: components/toggle
+  path: components/switch
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
-- name: table-view-with-toggles
-  path: components/toggle
+- name: table-view-with-switches
+  path: components/switch
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
 - name: event-binding
-  path: components/toggle
+  path: components/switch
   jsfiddle: kimsQ/0odhbtzv/
   history: true
