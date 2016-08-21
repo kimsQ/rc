@@ -82,13 +82,13 @@
 }
 
 
-// Table-views with buttons, badges and toggles
+// Table-views with buttons, badges and switchs
 // --------------------------------------------------
 .table-view-cell,
 .table-view-cell > a {
   > .btn,
   > .badge,
-  > .toggle {
+  > .switch {
     position: absolute;
     top: 50%;
     right: .9375rem;
@@ -102,7 +102,7 @@
   .push-right {
     > .btn,
     > .badge,
-    > .toggle {
+    > .switch {
       right: 2.1875rem;
     }
   }

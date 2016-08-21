@@ -5775,10 +5775,10 @@ input[type="button"].btn-block {
 
 .table-view-cell > .btn,
 .table-view-cell > .badge,
-.table-view-cell > .toggle,
+.table-view-cell > .switch,
 .table-view-cell > a > .btn,
 .table-view-cell > a > .badge,
-.table-view-cell > a > .toggle {
+.table-view-cell > a > .switch {
   position: absolute;
   top: 50%;
   right: .9375rem;
@@ -5790,28 +5790,28 @@ input[type="button"].btn-block {
 
 .table-view-cell .navigate-left > .btn,
 .table-view-cell .navigate-left > .badge,
-.table-view-cell .navigate-left > .toggle,
+.table-view-cell .navigate-left > .switch,
 .table-view-cell .navigate-right > .btn,
 .table-view-cell .navigate-right > .badge,
-.table-view-cell .navigate-right > .toggle,
+.table-view-cell .navigate-right > .switch,
 .table-view-cell .push-left > .btn,
 .table-view-cell .push-left > .badge,
-.table-view-cell .push-left > .toggle,
+.table-view-cell .push-left > .switch,
 .table-view-cell .push-right > .btn,
 .table-view-cell .push-right > .badge,
-.table-view-cell .push-right > .toggle,
+.table-view-cell .push-right > .switch,
 .table-view-cell > a .navigate-left > .btn,
 .table-view-cell > a .navigate-left > .badge,
-.table-view-cell > a .navigate-left > .toggle,
+.table-view-cell > a .navigate-left > .switch,
 .table-view-cell > a .navigate-right > .btn,
 .table-view-cell > a .navigate-right > .badge,
-.table-view-cell > a .navigate-right > .toggle,
+.table-view-cell > a .navigate-right > .switch,
 .table-view-cell > a .push-left > .btn,
 .table-view-cell > a .push-left > .badge,
-.table-view-cell > a .push-left > .toggle,
+.table-view-cell > a .push-left > .switch,
 .table-view-cell > a .push-right > .btn,
 .table-view-cell > a .push-right > .badge,
-.table-view-cell > a .push-right > .toggle {
+.table-view-cell > a .push-right > .switch {
   right: 2.1875rem;
 }
 
