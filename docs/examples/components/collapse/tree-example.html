@@ -33,115 +33,112 @@
 		</header>
 		<div class="content">
 
-			<div id="tree">
-
-				<ul class="table-view">
-				  <li class="table-view-cell">
-						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
-				      Item 1
-				    </a>
-				    <!-- 2depth -->
-				    <ul class="table-view collapse" id="1" role="tabpanel">
+			<ul class="table-view" id="tree">
+			  <li class="table-view-cell">
+					<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
+			      Item 1
+			    </a>
+			    <!-- 2depth -->
+			    <ul class="table-view collapse" id="1" role="tabpanel">
+			      <li class="table-view-cell">
+							<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-1">
+					      Item 1-1
+					    </a>
+			        <!-- 3depth -->
+			        <ul class="table-view collapse" id="1-1" role="tabpanel">
+			          <li class="table-view-cell">
+									<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-1-1">
+							      Item 1-1-1
+							    </a>
+			            <!-- 4depth -->
+			            <ul class="table-view collapse" id="1-1-1">
+			              <li class="table-view-cell">
+											<a class="">
+									      Item 1-1-1-1
+									    </a>
+			              </li>
+			            </ul>
+			          </li>
+			        </ul>
+				      </li>
 				      <li class="table-view-cell">
-								<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-1">
-						      Item 1-1
-						    </a>
-				        <!-- 3depth -->
-				        <ul class="table-view collapse" id="1-1" role="tabpanel">
+								<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-2">
+									Item 1-2
+								</a>
+								<!-- 3depth -->
+				        <ul class="table-view collapse" id="1-2">
 				          <li class="table-view-cell">
-										<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-1-1">
-								      Item 1-1-1
+										<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-2-1">
+								      Item 1-2-1
 								    </a>
 				            <!-- 4depth -->
-				            <ul class="table-view collapse" id="1-1-1">
+				            <ul class="table-view collapse" id="1-2-1">
 				              <li class="table-view-cell">
 												<a class="">
-										      Item 1-1-1-1
+										      Item 1-2-1-1
 										    </a>
 				              </li>
 				            </ul>
 				          </li>
 				        </ul>
-					      </li>
-					      <li class="table-view-cell">
-									<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#1-2">
-										Item 1-2
-									</a>
-									<!-- 3depth -->
-					        <ul class="table-view collapse" id="1-2">
-					          <li class="table-view-cell">
-											<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#1-2-1">
-									      Item 1-2-1
+				      </li>
+				    </ul>
+			  </li>
+
+
+				<li class="table-view-cell">
+					<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
+			      Item 2
+			    </a>
+			    <!-- 2depth -->
+			    <ul class="table-view collapse" id="2">
+			      <li class="table-view-cell">
+							<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#2" data-target="#2-1">
+					      Item 2-1
+					    </a>
+			        <!-- 3depth -->
+			        <ul class="table-view collapse" id="2-1">
+			          <li class="table-view-cell">
+									<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#2-1" data-target="#2-1-1">
+							      Item 2-1-1
+							    </a>
+			            <!-- 4depth -->
+			            <ul class="table-view collapse" id="2-1-1">
+			              <li class="table-view-cell">
+											<a class="">
+									      Item 2-1-1-1
 									    </a>
-					            <!-- 4depth -->
-					            <ul class="table-view collapse" id="1-2-1">
-					              <li class="table-view-cell">
-													<a class="">
-											      Item 1-2-1-1
-											    </a>
-					              </li>
-					            </ul>
-					          </li>
-					        </ul>
-					      </li>
-					    </ul>
-				  </li>
-
-
-					<li class="table-view-cell">
-						<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
-				      Item 2
-				    </a>
-				    <!-- 2depth -->
-				    <ul class="table-view collapse" id="2">
+			              </li>
+			            </ul>
+			          </li>
+			        </ul>
+				      </li>
 				      <li class="table-view-cell">
-								<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#2-1">
-						      Item 2-1
-						    </a>
-				        <!-- 3depth -->
-				        <ul class="table-view collapse" id="2-1">
+								<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#2" data-target="#2-2">
+									Item 2-2
+								</a>
+								<!-- 3depth -->
+				        <ul class="table-view collapse" id="2-2">
 				          <li class="table-view-cell">
-										<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#2-1" data-target="#2-1-1">
-								      Item 2-1-1
+										<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#2-1" data-target="#2-2-1">
+								      Item 2-2-1
 								    </a>
 				            <!-- 4depth -->
-				            <ul class="table-view collapse" id="2-1-1">
+				            <ul class="table-view collapse" id="2-2-1">
 				              <li class="table-view-cell">
 												<a class="">
-										      Item 2-1-1-1
+										      Item 2-2-1-1
 										    </a>
 				              </li>
 				            </ul>
 				          </li>
 				        </ul>
-					      </li>
-					      <li class="table-view-cell">
-									<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1" data-target="#2-2">
-										Item 2-2
-									</a>
-									<!-- 3depth -->
-					        <ul class="table-view collapse" id="2-2">
-					          <li class="table-view-cell">
-											<a class="navigate-right collapsed" data-toggle="collapse" data-parent="#1-1" data-target="#2-2-1">
-									      Item 2-2-1
-									    </a>
-					            <!-- 4depth -->
-					            <ul class="table-view collapse" id="2-2-1">
-					              <li class="table-view-cell">
-													<a class="">
-											      Item 2-2-1-1
-											    </a>
-					              </li>
-					            </ul>
-					          </li>
-					        </ul>
-					      </li>
-					    </ul>
-				  </li>
+				      </li>
+				    </ul>
+			  </li>
 
 
-				</ul>
-			</div>
+			</ul>
 
 
 		</div>
