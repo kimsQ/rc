@@ -1116,6 +1116,19 @@
 
 <h3 id="material-layout">Material Layout</h3>
 
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span> <span class="na">data-control=</span><span class="s">"scroll"</span> <span class="na">data-type=</span><span class="s">"updown"</span> <span class="na">data-defaultHeight=</span><span class="s">"160"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.content'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'down.rc.scroll'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.bar-nav'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'animated fadeInDown'</span><span class="p">);</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.bar-nav .title'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'display'</span><span class="p">,</span><span class="s1">'block'</span><span class="p">);</span>
+<span class="p">})</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'.content'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'default.rc.scroll'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.bar-nav'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'animated fadeInDown'</span><span class="p">)</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'.bar-nav .title'</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'display'</span><span class="p">,</span><span class="s1">'none'</span><span class="p">);</span>
+<span class="p">})</span></code></pre></figure>
+
 <p><br /><br /><br /><br /></p>
 
             </div>

@@ -12,40 +12,56 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
     <script src="../../../dist/js/rc.js"></script>
 
+    <style>
+    .bar-nav {
+      border-bottom: none
+    }
+    .main {
+      height: 160px;
+      position: relative;
+      background-color: #eee
+    }
+    </style>
+
   </head>
   <body>
 
-    <header class="bar bar-nav bar-light bg-faded">
-      <h1 class="title">
+    <header class="bar bar-nav bg-primary">
+      <a class="icon icon-left-nav pull-left" role="button"></a>
+      <a class="icon icon-compose pull-right" role="button"></a>
+      <h1 class="title" style="display: none">
         Material Layout
       </h1>
     </header>
 
-    <div class="content">
-      <div class="content-padded" data-control="scroll" data-type="updown">
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
-        <p>Scroll Up Down Test</p>
+    <div class="content" data-control="scroll" data-type="updown" data-defaultHeight="160">
+      <div class="main bg-primary animated fadeindown p-a-3">
+          <h2 class="text-xs-center">Material Layout</h2>
+      </div>
+      <div class="content-padded">
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+
       </div>
     </div>
 
     <script>
-
+      $('.content').on('down.rc.scroll', function() {
+        $('.bar-nav').addClass('animated fadeInDown');
+        $('.bar-nav .title').css('display','block');
+      })
+      $('.content').on('default.rc.scroll', function() {
+        $('.bar-nav').removeClass('animated fadeInDown')
+        $('.bar-nav .title').css('display','none');
+      })
     </script>
 
   </body>
