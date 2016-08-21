@@ -8,7 +8,7 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: true
 
-- name: event-binding
+- name: event
   path: components/switch
   jsfiddle: kimsQ/0odhbtzv/
   history: true

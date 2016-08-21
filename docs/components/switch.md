@@ -9,11 +9,11 @@ Switches technically is the same thing as an HTML checkbox input, except it look
 It can be used by sliding or tapping the control.
 
 {% highlight html %}
-<div class="switch active">
+<div data-toggle="switch" class="switch active">
   <div class="switch-handle"></div>
 </div>
 
-<div class="switch">
+<div data-toggle="switch" class="switch">
   <div class="switch-handle"></div>
 </div>
 {% endhighlight %}
@@ -25,19 +25,19 @@ It can be used by sliding or tapping the control.
 <ul class="table-view">
   <li class="table-view-cell">
     Item 1
-    <div class="switch">
+    <div data-toggle="switch" class="switch">
       <div class="switch-handle"></div>
     </div>
   </li>
   <li class="table-view-cell">
     Item 2
-    <div class="switch active">
+    <div data-toggle="switch" class="switch active">
       <div class="switch-handle"></div>
     </div>
   </li>
   <li class="table-view-cell">
     Item 3
-    <div class="switch">
+    <div data-toggle="switch" class="switch">
       <div class="switch-handle"></div>
     </div>
   </li>
@@ -47,7 +47,6 @@ It can be used by sliding or tapping the control.
 
 ## Event
 
-### `selected.rc.switch`
 
 <div class="table-responsive">
   <table class="table table-bordered">
@@ -66,6 +65,7 @@ It can be used by sliding or tapping the control.
   </table>
 </div>
 
+### `selected.rc.switch`
 
 {% highlight js %}
 $('.switch').on('selected.rc.switch', function () {
