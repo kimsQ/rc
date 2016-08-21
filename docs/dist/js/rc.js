@@ -18,6 +18,73 @@ if (typeof jQuery === 'undefined') {
 
 +function ($) {
 
+/*!
+ * =====================================================
+ * Ratchet v2.0.2 (http://goratchet.com)
+ * Copyright 2016 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ *
+ * v2.0.2 designed by @connors.
+ * =====================================================
+ */
+/* ========================================================================
+ * Ratchet: common.js v2.0.2
+ * http://goratchet.com/
+ * ========================================================================
+ * Copyright 2015 Connor Sears
+ * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * ======================================================================== */
+
+!(function () {
+  'use strict';
+
+  // Compatible With CustomEvent
+  if (!window.CustomEvent) {
+    window.CustomEvent = function (type, config) {
+      var e = document.createEvent('CustomEvent');
+      e.initCustomEvent(type, config.bubbles, config.cancelable, config.detail);
+      return e;
+    };
+  }
+
+  // Create Ratchet namespace
+  if (typeof window.RATCHET === 'undefined') {
+    window.RATCHET = {};
+  }
+
+  // Original script from http://davidwalsh.name/vendor-prefix
+  window.RATCHET.getBrowserCapabilities = (function () {
+    var styles = window.getComputedStyle(document.documentElement, '');
+    var pre = (Array.prototype.slice
+        .call(styles)
+        .join('')
+        .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+      )[1];
+    return {
+      prefix: '-' + pre + '-',
+      transform: pre[0].toUpperCase() + pre.substr(1) + 'Transform'
+    };
+  })();
+
+  window.RATCHET.getTransitionEnd = (function () {
+    var el = document.createElement('ratchet');
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition : 'transitionend',
+      OTransition : 'oTransitionEnd otransitionend',
+      transition : 'transitionend'
+    };
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return transEndEventNames[name];
+      }
+    }
+
+    return transEndEventNames.transition;
+  })();
+}());
+
 /**
  * History.js jQuery Adapter
  * @author Benjamin Arthur Lupton <contact@balupton.com>
@@ -3828,11 +3895,11 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
       var Scroll = function (element, options) {
             this.options = $.extend({}, Scroll.DEFAULTS, options)
-          
+
             this.$target = $(this.options.target)
                  .on('scroll.rc.scroll.data-api', $.proxy(this.checkPosition, this))
                  .on('tap.rc.scroll.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
-          
+
             this.$element     = $(element)
             this.type=this.options.type// affix , detect, ....
             this.scrolled      = null
@@ -3900,17 +3967,17 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             if (typeof offset != 'object')         offsetBottom = offsetTop = offset
             if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
             if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
-             
+
             var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
-            
-            // when affix 
+
+            // when affix
             if(this.type=='affix'){
                   if (this.affixed != affix) {
                         if (this.unpin != null) this.$element.css('top', '')
 
                         var affixType = 'affix' + (affix ? '-' + affix : '')
                         var e         = $.Event(affixType + '.rc.scroll')
-                        
+
                         this.$element.trigger(e)
 
                         if (e.isDefaultPrevented()) return
@@ -3937,13 +4004,13 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                        if(state==true){
                             if(nowScrollTop < this.defaultHeight) scrollEvent=$.Event('default.rc.scroll');
                             else{
-                      	           if(nowScrollTop>lastScrollTop) scrollEvent=$.Event('down.rc.scroll');  
+                      	           if(nowScrollTop>lastScrollTop) scrollEvent=$.Event('down.rc.scroll');
                       	           else scrollEvent=$.Event('up.rc.scroll');
                       	      }
-                      	      this.$element.trigger(scrollEvent); // trigger event 
-                            this.lastScrollTop=nowScrollTop;  // update lastScrollTop     	      
-                      }                      
-            } 
+                      	      this.$element.trigger(scrollEvent); // trigger event
+                            this.lastScrollTop=nowScrollTop;  // update lastScrollTop
+                      }
+            }
 
       }
 
@@ -3993,6 +4060,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       })
 
 }(jQuery);
+
 /* ========================================================================
  * Ratchet Plus: transition.js v1.0.0
  * http://rc.kimsq.com/controls/transitions/
@@ -4032,7 +4100,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   $.fn.emulateTransitionEnd = function (duration) {
     var called = false
     var $el = this
-    $(this).one('bsTransitionEnd', function () { called = true })
+    $(this).one('rcTransitionEnd', function () { called = true })
     var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
     setTimeout(callback, duration)
     return this
@@ -4043,7 +4111,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     if (!$.support.transition) return
 
-    $.event.special.bsTransitionEnd = {
+    $.event.special.rcTransitionEnd = {
       bindType: $.support.transition.end,
       delegateType: $.support.transition.end,
       handle: function (e) {
@@ -4053,7 +4121,6 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   })
 
 }(jQuery);
-
 /* ========================================================================
  * Ratchet Plus: Modal.js v1.0.0
  * http://rc.kimsq.com/components/modal/
@@ -5175,6 +5242,8 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if (this.options.toggle) this.toggle()
   }
 
+  if (!$.fn.emulateTransitionEnd) throw new Error('Collapse requires transition.js')
+
   Collapse.VERSION  = '1.0.0'
 
   Collapse.TRANSITION_DURATION = 350
@@ -5192,7 +5261,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     if (this.transitioning || this.$element.hasClass('in')) return
 
     var activesData
-    var actives = this.$parent && this.$parent.children('.card').children('.in, .collapsing')
+    var actives = this.$parent && this.$parent.children().children('.in, .collapsing')
 
     if (actives && actives.length) {
       activesData = actives.data('rc.collapse')
@@ -5235,7 +5304,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     var scrollSize = $.camelCase(['scroll', dimension].join('-'))
 
     this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one('rcTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)[dimension](this.$element[0][scrollSize])
   }
 
@@ -5273,7 +5342,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     this.$element
       [dimension](0)
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one('rcTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Collapse.TRANSITION_DURATION)
   }
 
@@ -5355,6 +5424,124 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   })
 
 }(jQuery);
+
+/* ========================================================================
+ * Ratchet Plus: Switch.js v1.0.0
+ * http://http://rc.kimsq.com/components/switch/
+ * ========================================================================
+ * inspired by @twbs's bootstrap & ratchet
+ * Copyright 2016 redblock inc.
+ * Author kiere (kiere@kimsq.com)
+ * Licensed under MIT.
+ * ======================================================================== */
+
+!(function () {
+  'use strict';
+
+  if (!window.RATCHET) throw new Error('Switch requires common.js')
+
+  var start     = {};
+  var touchMove = false;
+  var distanceX = false;
+  var toggle    = false;
+  var transformProperty = window.RATCHET.getBrowserCapabilities.transform;
+
+  var findToggle = function (target) {
+    var i;
+    var toggles = document.querySelectorAll('[data-toggle="switch"]');
+
+    for (; target && target !== document; target = target.parentNode) {
+      for (i = toggles.length; i--;) {
+        if (toggles[i] === target) {
+          return target;
+        }
+      }
+    }
+  };
+
+  window.addEventListener('touchstart', function (e) {
+    e = e.originalEvent || e;
+
+    toggle = findToggle(e.target);
+
+    if (!toggle) {
+      return;
+    }
+
+    var handle      = toggle.querySelector('.switch-handle');
+    var toggleWidth = toggle.clientWidth;
+    var handleWidth = handle.clientWidth;
+    var offset      = toggle.classList.contains('active') ? (toggleWidth - handleWidth) : 0;
+
+    start     = { pageX : e.touches[0].pageX - offset, pageY : e.touches[0].pageY };
+    touchMove = false;
+  });
+
+  window.addEventListener('touchmove', function (e) {
+    e = e.originalEvent || e;
+
+    if (e.touches.length > 1) {
+      return; // Exit if a pinch
+    }
+
+    if (!toggle) {
+      return;
+    }
+
+    var handle      = toggle.querySelector('.switch-handle');
+    var current     = e.touches[0];
+    var toggleWidth = toggle.clientWidth;
+    var handleWidth = handle.clientWidth;
+    var offset      = toggleWidth - handleWidth;
+
+    touchMove = true;
+    distanceX = current.pageX - start.pageX;
+
+    if (Math.abs(distanceX) < Math.abs(current.pageY - start.pageY)) {
+      return;
+    }
+
+    e.preventDefault();
+
+    if (distanceX < 0) {
+      return (handle.style[transformProperty] = 'translate3d(0,0,0)');
+    }
+    if (distanceX > offset) {
+      return (handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)');
+    }
+
+    handle.style[transformProperty] = 'translate3d(' + distanceX + 'px,0,0)';
+
+    toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
+  });
+
+  window.addEventListener('touchend', function (e) {
+    if (!toggle) {
+      return;
+    }
+
+    var handle      = toggle.querySelector('.switch-handle');
+    var toggleWidth = toggle.clientWidth;
+    var handleWidth = handle.clientWidth;
+    var offset      = (toggleWidth - handleWidth);
+    var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
+
+    if (slideOn) {
+      handle.style[transformProperty] = 'translate3d(' + offset + 'px,0,0)';
+    } else {
+      handle.style[transformProperty] = 'translate3d(0,0,0)';
+    }
+
+    toggle.classList[slideOn ? 'add' : 'remove']('active');
+
+    e = $.Event('rc.switched', { relatedTarget: handle})
+    $(toggle).trigger(e);
+
+    touchMove = false;
+    toggle    = false;
+  });
+
+}(jQuery));
 
 /* ========================================================================
  * Ratchet: segmented-controllers.js v2.0.2

@@ -27,6 +27,7 @@ current_version:  1.0.0-alpha.2
 repo:             https://github.com/kimsQ/rc
 slack:            https://kimsq-slack.herokuapp.com
 fiddle:           https://jsfiddle.net
+codepen:          http://codepen.io
 
 download:
   source:         https://github.com/kimsQ/rc/archive/v1.0.0-alpha.2.zip

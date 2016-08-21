@@ -18,6 +18,11 @@
           <a data-src="/examples/{{ preview.path }}/{{ preview.name }}" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
+          {% if preview.codepen %}
+          <a href="{{ site.codepen }}/{{ preview.codepen }}" target="_blank" data-toggle="tooltip" title="codepen">
+            <i class="fa fa-codepen" aria-hidden="true"></i>
+          </a>
+          {% endif %}
         </li>
       </ul>
     </div>

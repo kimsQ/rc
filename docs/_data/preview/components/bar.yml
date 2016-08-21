@@ -1,38 +1,65 @@
 - name: title-bar
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/vKrRzm
+  history: false
 
 - name: title-bar-with-buttons
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/vKrRzm
+  history: false
+
 
 - name: title-bar-with-buttons
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/AXzywB
+  history: false
 
 - name: title-bar-with-icons
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: title-bar-with-link-buttons-and-icons
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: title-bar-with-segmented-control
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: tab-bar
   path: components/bars/bar-tab
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: tab-bar-labels-only
   path: components/bars/bar-tab
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: tab-bar-inverse-color
   path: components/bars/bar-tab
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: standard-bars
   path: components/bars/bar-standard
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: color-schemes
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: primary-color
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
 
 - name: custom-color
   path: components/bars/bar-nav
+  codepen: /kimsQ/pen/
+  history: false
