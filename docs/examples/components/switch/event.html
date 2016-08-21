@@ -38,7 +38,7 @@
 		</div>
 
 		<script>
-			$('.switch').on('selected.rc.switch',function(){
+			$('.switch').on('checked.rc.switch',function(){
 				var _switch=$(this);
 				var id=$(this).attr('id')
 				if($(_switch).hasClass('active')) alert(id +'--> On')
