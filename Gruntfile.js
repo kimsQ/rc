@@ -225,6 +225,11 @@ module.exports = function (grunt) {
         src: 'extensions/**',
         dest: 'dist/'
       },
+      fonts: {
+        expand: true,
+        src: 'fonts/**',
+        dest: 'dist/'
+      },
       docs: {
         expand: true,
         cwd: 'dist/',
@@ -415,7 +420,7 @@ module.exports = function (grunt) {
   // grunt.registerTask('dist-css-snap', ['csscomb:snap','autoprefixer:snap']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist','copy:extensions', 'dist-css', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist','copy:extensions','copy:fonts', 'dist-css', 'dist-js']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'test']);

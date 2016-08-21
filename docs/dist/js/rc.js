@@ -1,5 +1,5 @@
 /*!
- * kimsQ RC v1.0.0-alpha.2 (http://rc.kimsq.com)
+ * kimsQ RC v1.0.0-alpha.3 (http://rc.kimsq.com)
  * Copyright 2016 kimsQ core team (https://github.com/kimsQ/rc/graphs/contributors)
  * Licensed under MIT (https://github.com/kimsQ/rc/blob/master/LICENSE)
  */
