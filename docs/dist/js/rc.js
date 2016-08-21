@@ -5534,7 +5534,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     toggle.classList[slideOn ? 'add' : 'remove']('active');
 
-    e = $.Event('rc.switched', { relatedTarget: handle})
+    e = $.Event('selected.rc.switch', { relatedTarget: handle})
     $(toggle).trigger(e);
 
     touchMove = false;

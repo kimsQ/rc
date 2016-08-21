@@ -281,7 +281,7 @@ Manually hides a modal. **Returns to the caller before the modal has actually be
 
 ## Events
 
-Bootstrap's modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
+kimsQ RC's modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
 
 <div class="table-responsive">
   <table class="table table-bordered table-striped">

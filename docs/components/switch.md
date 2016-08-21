@@ -45,13 +45,31 @@ It can be used by sliding or tapping the control.
 {% endhighlight %}
 
 
-## Event binding
+## Event
 
-switch.js binds an event to the document that returns a detail object and can be used to fire a callback.
+### `selected.rc.switch`
+
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th style="width: 150px;">Event Type</th>
+       <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+       <td>selected.rc.switch</td>
+       <td>This event is fired when the switch is selected.</td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+
 
 {% highlight js %}
-// Only needed if you want to fire a callback
-document
-.querySelector('#myswitch')
-.addEventListener('switch', myFunction)
+$('.switch').on('selected.rc.switch', function () {
+  // Only needed if you want to fire a callback
+})
+
 {% endhighlight %}
