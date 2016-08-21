@@ -23,15 +23,15 @@ gems:
   - jekyll-sitemap
 
 # Custom vars
-current_version:  1.0.0-alpha.2
+current_version:  1.0.0-alpha.3
 repo:             https://github.com/kimsQ/rc
 slack:            https://kimsq-slack.herokuapp.com
 fiddle:           https://jsfiddle.net
 codepen:          http://codepen.io
 
 download:
-  source:         https://github.com/kimsQ/rc/archive/v1.0.0-alpha.2.zip
-  dist:           https://github.com/kimsQ/rc/releases/download/v1.0.0-alpha.2/rc-1.0.0-alpha.2-dist.zip
+  source:         https://github.com/kimsQ/rc/archive/v1.0.0-alpha.3.zip
+  dist:           https://github.com/kimsQ/rc/releases/download/v1.0.0-alpha.2/rc-1.0.0-alpha.3-dist.zip
 
 blog:             http://blog.kimsq.com
 expo:             http://expo.kimsq.com
@@ -39,9 +39,9 @@ packages:           http://www.kimsq.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            http://cdn.kimsq.com/rc/1.0.0-alpha.2/css/rc.css
+  css:            http://cdn.kimsq.com/rc/1.0.0-alpha.3/css/rc.css
   css_hash:       ""
-  js:             http://cdn.kimsq.com/rc/1.0.0-alpha.2/js/rc.js
+  js:             http://cdn.kimsq.com/rc/1.0.0-alpha.3/js/rc.js
   js_hash:        ""
   jquery:         https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
   jquery_hash:    "sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
