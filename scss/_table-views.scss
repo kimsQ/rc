@@ -82,12 +82,13 @@
 }
 
 
-// Table-views with buttons, badges and switches
+// Table-views with buttons, badges , switches and select
 // --------------------------------------------------
 .table-view-cell,
 .table-view-cell > a {
   > .btn,
   > .badge,
+  > .select,
   > .switch {
     position: absolute;
     top: 50%;
@@ -102,6 +103,7 @@
   .push-right {
     > .btn,
     > .badge,
+    > .select,
     > .switch {
       right: 2.1875rem;
     }
@@ -170,6 +172,31 @@
 
   }
 }
+
+
+// Table-views with select
+// --------------------------------------------------
+
+.table-view-cell .select select {
+	padding-right: 2rem;
+  appearance: none;
+  border: none;
+  background: #fff;
+  color: #333;
+  text-indent: .01px;
+  text-overflow: '';
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+  direction: rtl;
+
+  option {
+    direction: ltr;
+  }
+}
+
+
+
 
 // Nesting Table-views
 // --------------------------------------------------

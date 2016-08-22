@@ -182,30 +182,68 @@ Ratchicons can also used instead of images.
 {% endhighlight %}
 
 
-## Table view with toggles
+## Table view with switch
 
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">
     Item 1
-    <div class="toggle">
-      <div class="toggle-handle"></div>
+    <div data-toggle="switch" class="switch">
+      <div class="switch-handle"></div>
     </div>
   </li>
   <li class="table-view-cell">
     Item 2
-    <div class="toggle active">
-      <div class="toggle-handle"></div>
+    <div data-toggle="switch" class="switch active">
+      <div class="switch-handle"></div>
     </div>
   </li>
   <li class="table-view-cell">
     Item 3
-    <div class="toggle">
-      <div class="toggle-handle"></div>
+    <div data-toggle="switch" class="switch">
+      <div class="switch-handle"></div>
     </div>
   </li>
 </ul>
 {% endhighlight %}
+
+
+## Table view with select
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell">
+    Item 1
+    <div class="select">
+      <select>
+        <option>Blue</option>
+        <option selected>Green</option>
+        <option>Red</option>
+      </select>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 2
+    <div class="select">
+      <select>
+        <option>Blue</option>
+        <option selected>Green</option>
+        <option>Red</option>
+      </select>
+    </div>
+  </li>
+  <li class="table-view-cell">
+    Item 3
+    <div class="select">
+      <select>
+        <option>Blue</option>
+        <option selected>Green</option>
+        <option>Red</option>
+      </select>
+    </div>
+  </li>
+</ul>
+{% endhighlight %}
+
 
 ## Table view with checkbox
 

@@ -19,7 +19,10 @@
 - name: table-view-with-buttons
   path: components/table-view
 
-- name: table-view-with-toggles
+- name: table-view-with-switch
+  path: components/table-view
+
+- name: table-view-with-select
   path: components/table-view
 
 - name: table-view-with-checkbox
