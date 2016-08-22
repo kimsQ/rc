@@ -9,31 +9,34 @@
 
 		<link href="../../../dist/css/rc.css" rel="stylesheet">
 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+    <script src="../../../dist/js/rc.js"></script>
+
 	</head>
 	<body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-			<h1 class="title">With toggles</h1>
+			<h1 class="title">With switches</h1>
 		</header>
 
 		<div class="content">
 			<ul class="table-view">
 			  <li class="table-view-cell">
 			    Item 1
-			    <div class="toggle">
-			      <div class="toggle-handle"></div>
+			    <div data-toggle="switch" class="switch">
+			      <div class="switch-handle"></div>
 			    </div>
 			  </li>
 			  <li class="table-view-cell">
 			    Item 2
-			    <div class="toggle active">
-			      <div class="toggle-handle"></div>
+			    <div data-toggle="switch" class="switch active">
+			      <div class="switch-handle"></div>
 			    </div>
 			  </li>
 			  <li class="table-view-cell">
 			    Item 3
-			    <div class="toggle">
-			      <div class="toggle-handle"></div>
+			    <div data-toggle="switch" class="switch">
+			      <div class="switch-handle"></div>
 			    </div>
 			  </li>
 			</ul>

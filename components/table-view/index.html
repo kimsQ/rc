@@ -1025,7 +1025,8 @@
   <li><a href="#table-view-with-media-images" id="markdown-toc-table-view-with-media-images">Table view with media (images)</a></li>
   <li><a href="#table-view-with-media-icons" id="markdown-toc-table-view-with-media-icons">Table view with media (icons)</a></li>
   <li><a href="#table-view-with-buttons" id="markdown-toc-table-view-with-buttons">Table view with buttons</a></li>
-  <li><a href="#table-view-with-toggles" id="markdown-toc-table-view-with-toggles">Table view with toggles</a></li>
+  <li><a href="#table-view-with-switch" id="markdown-toc-table-view-with-switch">Table view with switch</a></li>
+  <li><a href="#table-view-with-select" id="markdown-toc-table-view-with-select">Table view with select</a></li>
   <li><a href="#table-view-with-checkbox" id="markdown-toc-table-view-with-checkbox">Table view with checkbox</a></li>
   <li><a href="#table-view-with-radio" id="markdown-toc-table-view-with-radio">Table view with radio</a></li>
   <li><a href="#table-view-with-controls-and-chevrons" id="markdown-toc-table-view-with-controls-and-chevrons">Table view with controls and chevrons</a></li>
@@ -1186,25 +1187,60 @@
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 4 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-negative"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-toggles">Table view with toggles</h2>
+<h2 id="table-view-with-switch">Table view with switch</h2>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
     Item 1
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-toggle=</span><span class="s">"switch"</span> <span class="na">class=</span><span class="s">"switch"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"switch-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
     Item 2
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle active"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-toggle=</span><span class="s">"switch"</span> <span class="na">class=</span><span class="s">"switch active"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"switch-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
     Item 3
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toggle-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-toggle=</span><span class="s">"switch"</span> <span class="na">class=</span><span class="s">"switch"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"switch-handle"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h2 id="table-view-with-select">Table view with select</h2>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+    Item 1
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Blue<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Green<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Red<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+    Item 2
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Blue<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Green<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Red<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
+    Item 3
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"select"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;select&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Blue<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option</span> <span class="na">selected</span><span class="nt">&gt;</span>Green<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;option&gt;</span>Red<span class="nt">&lt;/option&gt;</span>
+      <span class="nt">&lt;/select&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
@@ -1557,19 +1593,40 @@
   </li>
   
   <li>
-    <a class="nav-link ratchet-body" href="#table-view-with-toggles">
-      <iframe width="100%" height="555" src="/examples/components/table-view/table-view-with-toggles.html" frameborder="0"></iframe>
+    <a class="nav-link ratchet-body" href="#table-view-with-switch">
+      <iframe width="100%" height="555" src="/examples/components/table-view/table-view-with-switch.html" frameborder="0"></iframe>
     </a>
     <div class="device-button">
       <ul class="pager">
         <li class="pager-prev">
-          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/table-view-with-toggles.html" target="_blank" data-toggle="tooltip" title="View code">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/table-view-with-switch.html" target="_blank" data-toggle="tooltip" title="View code">
             <i class="fa fa-code" aria-hidden="true"></i>
           </a>
-          <a href="/examples/components/table-view/table-view-with-toggles.html" target="_blank" data-toggle="tooltip" title="New window">
+          <a href="/examples/components/table-view/table-view-with-switch.html" target="_blank" data-toggle="tooltip" title="New window">
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
-          <a data-src="/examples/components/table-view/table-view-with-toggles" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+          <a data-src="/examples/components/table-view/table-view-with-switch" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#table-view-with-select">
+      <iframe width="100%" height="555" src="/examples/components/table-view/table-view-with-select.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/table-view-with-select.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/table-view-with-select.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/table-view-with-select" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
         </li>

@@ -5775,9 +5775,11 @@ input[type="button"].btn-block {
 
 .table-view-cell > .btn,
 .table-view-cell > .badge,
+.table-view-cell > .select,
 .table-view-cell > .switch,
 .table-view-cell > a > .btn,
 .table-view-cell > a > .badge,
+.table-view-cell > a > .select,
 .table-view-cell > a > .switch {
   position: absolute;
   top: 50%;
@@ -5790,27 +5792,35 @@ input[type="button"].btn-block {
 
 .table-view-cell .navigate-left > .btn,
 .table-view-cell .navigate-left > .badge,
+.table-view-cell .navigate-left > .select,
 .table-view-cell .navigate-left > .switch,
 .table-view-cell .navigate-right > .btn,
 .table-view-cell .navigate-right > .badge,
+.table-view-cell .navigate-right > .select,
 .table-view-cell .navigate-right > .switch,
 .table-view-cell .push-left > .btn,
 .table-view-cell .push-left > .badge,
+.table-view-cell .push-left > .select,
 .table-view-cell .push-left > .switch,
 .table-view-cell .push-right > .btn,
 .table-view-cell .push-right > .badge,
+.table-view-cell .push-right > .select,
 .table-view-cell .push-right > .switch,
 .table-view-cell > a .navigate-left > .btn,
 .table-view-cell > a .navigate-left > .badge,
+.table-view-cell > a .navigate-left > .select,
 .table-view-cell > a .navigate-left > .switch,
 .table-view-cell > a .navigate-right > .btn,
 .table-view-cell > a .navigate-right > .badge,
+.table-view-cell > a .navigate-right > .select,
 .table-view-cell > a .navigate-right > .switch,
 .table-view-cell > a .push-left > .btn,
 .table-view-cell > a .push-left > .badge,
+.table-view-cell > a .push-left > .select,
 .table-view-cell > a .push-left > .switch,
 .table-view-cell > a .push-right > .btn,
 .table-view-cell > a .push-right > .badge,
+.table-view-cell > a .push-right > .select,
 .table-view-cell > a .push-right > .switch {
   right: 2.1875rem;
 }
@@ -5879,6 +5889,26 @@ input[type="button"].btn-block {
       -ms-transform: translateY(-50%);
        -o-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.table-view-cell .select select {
+  padding-right: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: #fff;
+  color: #333;
+  text-indent: .01px;
+  text-overflow: '';
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.table-view-cell .select select option {
+  direction: ltr;
 }
 
 .table-view {
