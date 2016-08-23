@@ -1,11 +1,12 @@
-// kimsQ RC button-group only
+// kimsQ RC pagination only
 
 @import "custom";
 @import "variables";
-@import "mixins/buttons";
+
 @import "mixins/border-radius";
 @import "mixins/hover";
-@import "mixins/clearfix";
+@import "mixins/pagination";
+
 
 // Box shadow
 @mixin box-shadow($shadow...) {
@@ -15,4 +16,4 @@
 }
 
 // Components
-@import "button-group";
+@import "pagination";

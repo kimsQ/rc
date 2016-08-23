@@ -17,7 +17,7 @@ Stylize [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/doc
 ### CSS Import
 
 {% highlight html %}
-<link href="path/to/ratchet-plus-progress.css" rel="stylesheet">
+<link href="path/to/css/extra/rc-progress.css" rel="stylesheet">
 {% endhighlight %}
 
 

@@ -1,0 +1,8 @@
+- name: content
+  path: components/button-group
+
+- name: button-toolbar
+  path: components/button-group
+
+- name: sizing
+  path: components/button-group

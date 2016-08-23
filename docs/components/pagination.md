@@ -12,6 +12,13 @@ Provide pagination links for your site or app with the multi-page pagination com
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
+
+### CSS Import
+
+{% highlight html %}
+<link href="path/to/css/extra/rc-pagination.css" rel="stylesheet">
+{% endhighlight %}
+
 ## Overview
 
 Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.
