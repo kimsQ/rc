@@ -1,0 +1,19 @@
+- name: content
+  path: layout/media-object
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: nesting
+  path: layout/media-object
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: alignment
+  path: layout/media-object
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
+- name: media-list
+  path: layout/media-object
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false

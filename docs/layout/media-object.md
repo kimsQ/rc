@@ -1,5 +1,6 @@
 ---
-layout: docs
+layout: preview
+preview: media-object
 title: Media object
 group: layout
 ---
