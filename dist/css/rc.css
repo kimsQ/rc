@@ -5616,90 +5616,54 @@ input[type="button"].btn-block {
   color: #843534;
 }
 
-.pagination {
-  display: inline-block;
+.media,
+.media-body {
+  overflow: hidden;
+}
+
+.media-body {
+  width: 10000px;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.media-middle {
+  vertical-align: middle;
+}
+
+.media-bottom {
+  vertical-align: bottom;
+}
+
+.media-object {
+  display: block;
+}
+
+.media-object.img-thumbnail {
+  max-width: none;
+}
+
+.media-right {
+  padding-left: 10px;
+}
+
+.media-left {
+  padding-right: 10px;
+}
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.media-list {
   padding-left: 0;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 0.125rem;
-}
-
-.page-item {
-  display: inline;
-}
-
-.page-item:first-child .page-link {
-  margin-left: 0;
-  border-bottom-left-radius: 0.125rem;
-  border-top-left-radius: 0.125rem;
-}
-
-.page-item:last-child .page-link {
-  border-bottom-right-radius: 0.125rem;
-  border-top-right-radius: 0.125rem;
-}
-
-.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #0275d8;
-  border-color: #0275d8;
-}
-
-.page-item.disabled .page-link, .page-item.disabled .page-link:focus, .page-item.disabled .page-link:hover {
-  color: #818a91;
-  pointer-events: none;
-  cursor: not-allowed;
-  background-color: #fff;
-  border-color: #ddd;
-}
-
-.page-link {
-  position: relative;
-  float: left;
-  padding: 0.5rem 0.75rem;
-  margin-left: -1px;
-  color: #0275d8;
-  text-decoration: none;
-  background-color: #fff;
-  border: 0.0625rem solid #ddd;
-}
-
-.page-link:focus, .page-link:hover {
-  color: #014c8c;
-  background-color: #eceeef;
-  border-color: #ddd;
-}
-
-.pagination-lg .page-link {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.25rem;
-}
-
-.pagination-lg .page-item:first-child .page-link {
-  border-bottom-left-radius: 0.125rem;
-  border-top-left-radius: 0.125rem;
-}
-
-.pagination-lg .page-item:last-child .page-link {
-  border-bottom-right-radius: 0.125rem;
-  border-top-right-radius: 0.125rem;
-}
-
-.pagination-sm .page-link {
-  padding: 0.275rem 0.75rem;
-  font-size: 0.875rem;
-}
-
-.pagination-sm .page-item:first-child .page-link {
-  border-bottom-left-radius: 0.125rem;
-  border-top-left-radius: 0.125rem;
-}
-
-.pagination-sm .page-item:last-child .page-link {
-  border-bottom-right-radius: 0.125rem;
-  border-top-right-radius: 0.125rem;
+  list-style: none;
 }
 
 .table-view {

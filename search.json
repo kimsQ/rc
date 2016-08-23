@@ -10,8 +10,6 @@
     
 
     
-
-    
         {
             "title" : "Accessibility",
             "url"   : "/getting-started/accessibility/"
@@ -85,6 +83,13 @@
         {
             "title" : "Build tools",
             "url"   : "/getting-started/build-tools/"
+        } ,
+    
+
+    
+        {
+            "title" : "Button group",
+            "url"   : "/components/button-group/"
         } ,
     
 
@@ -246,6 +251,13 @@
         {
             "title" : "Loader",
             "url"   : "/controls/loader/"
+        } ,
+    
+
+    
+        {
+            "title" : "Media object",
+            "url"   : "/layout/media-object/"
         } ,
     
 
