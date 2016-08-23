@@ -115,7 +115,8 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 						var end;
 						load.remove();
 						if (resp.content) {
-							self.$appendToEle.append(resp.content);
+							if(self.$appendToEle) self.$appendToEle.append(resp.content);
+							else self.$element.append(resp.content);
 						}
 
 						if (resp.end) {
