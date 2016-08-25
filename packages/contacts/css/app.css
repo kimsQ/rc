@@ -1,0 +1,32 @@
+/* Your app's CSS, make it your own */
+
+input[type="search"] {
+   border-radius: 2px;
+}
+
+#search-bar {
+  background-color: #fff;
+  padding: 10px
+}
+
+#search-bar.affix  {
+  position: fixed;
+  top: 88px;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.075);
+}
+
+
+.floating {
+    box-sizing: border-box;
+    margin: 15px;
+    position: fixed;
+    white-space: nowrap;
+    z-index: 16;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+.floating-br {
+    right: 0;
+    bottom: 0;
+}
