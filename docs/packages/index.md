@@ -5,16 +5,16 @@ title: Packages
 
 [Download the kimsQ RC source code]({{ site.download.source }}) to snag these examples.
 
-## Business
+## Basic
 
 Examples that focus on implementing uses of built-in components provided by kimsQ RC.
 
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/starter-template/">
+    <a href="{{ site.baseurl }}/packages/contacts/">
       <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Landing-pages</h4>
+    <h4>Contacts</h4>
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
