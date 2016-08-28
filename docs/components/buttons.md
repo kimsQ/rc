@@ -87,21 +87,21 @@ In need of a button, but not the hefty background colors they bring? Replace the
 
 Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
-{% example html %}
+{% highlight html %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
 <button type="button" class="btn btn-secondary btn-lg">Large button</button>
-{% endexample %}
+{% endhighlight %}
 
-{% example html %}
+{% highlight html %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-{% endexample %}
+{% endhighlight %}
 
 ## Block level buttons
 
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
-{% example html %}
+{% highlight html %}
 <button type="button" class="btn btn-primary btn-lg btn-block">
   Large block button
 </button>
@@ -109,16 +109,21 @@ Create block level buttons—those that span the full width of a parent—by add
 <button type="button" class="btn btn-primary btn-block">
   Normal block button
 </button>
-{% endexample %}
+{% endhighlight %}
 
 ## Active state
 
 Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. **There's no need to add a class to `<button>`s as they use a pseudo-class**. However, you can still force the same active appearance with `.active` (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.
 
-{% example html %}
-<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
-{% endexample %}
+{% highlight html %}
+<a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+  Primary link
+</a>
+
+<a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+  Link
+</a>
+{% endhighlight %}
 
 ## Disabled state
 
@@ -128,10 +133,15 @@ Make buttons look inactive by adding the `disabled` boolean attribute to any `<b
 **Heads up!** IE9 and below render disabled buttons with gray, shadowed text that we can't override.
 {% endcallout %}
 
-{% example html %}
-<button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
-<button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
-{% endexample %}
+{% highlight html %}
+<button type="button" class="btn btn-lg btn-primary" disabled>
+  Primary button
+</button>
+
+<button type="button" class="btn btn-secondary btn-lg" disabled>
+  Button
+</button>
+{% endhighlight %}
 
 Disabled buttons using the `<a>` element behave a bit different:
 
@@ -139,10 +149,15 @@ Disabled buttons using the `<a>` element behave a bit different:
 - Some future-friendly styles are included to disable all `pointer-events` on anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
 - Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
 
-{% example html %}
-<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
-<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
-{% endexample %}
+{% highlight html %}
+<a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">
+  Primary link
+</a>
+
+<a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">
+  Link
+</a>
+{% endhighlight %}
 
 {% callout warning %}
 #### Link functionality caveat
@@ -151,7 +166,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 {% endcallout %}
 
 ## Button grid
-use `.p-l-0` class
+add `.p-l-0` class
 {% highlight html %}
 <div class="content-padded">
   <div class="row">
