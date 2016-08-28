@@ -115,7 +115,7 @@
   height: 3.5rem;
   min-width: 3.5rem;
   width: 3.5rem;
-  @include box-shadow($btn-fab-shadow);
+  box-shadow: $btn-fab-shadow;
 
   @include hover {
     color: $color;

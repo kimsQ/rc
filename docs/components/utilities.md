@@ -249,7 +249,44 @@ The `.pos-f-t` class can be used to easily position elements at the top of the v
   top: 0;
   right: 0;
   left: 0;
-  z-index: $zindex-navbar-fixed;
+  z-index: $zindex-nav-fixed;
+}
+
+.pos-f-t-l {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-nav-fixed;
+}
+
+.pos-f-t-r {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: $zindex-nav-fixed;
+}
+
+.pos-f-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-nav-fixed;
+}
+
+.pos-f-b-l {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-nav-fixed;
+}
+
+.pos-f-b-r {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: $zindex-nav-fixed;
 }
 {% endhighlight %}
 
