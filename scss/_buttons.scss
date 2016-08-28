@@ -180,11 +180,19 @@ fieldset[disabled] a.btn {
 // Block button
 //
 
+
 .btn-block {
   display: block;
   width: 100%;
-  @include button-size($btn-padding-y-block, $btn-padding-x-block, $btn-font-size-block, $btn-border-radius-block);
+    @include button-size($btn-padding-y-block, $btn-padding-x-block, $btn-font-size-block, $btn-border-radius-block);
+
+  &.btn-lg {
+    @include button-size($btn-padding-y-block-lg, $btn-padding-x-block, $btn-font-size-lg-block, $btn-border-radius-block);
+  }
+
 }
+
+
 
 // Vertically space out multiple block buttons
 .btn-block + .btn-block {

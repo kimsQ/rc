@@ -294,10 +294,11 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-font-size-base: .875rem !default;
-$btn-font-size-lg:   1rem !default;
-$btn-font-size-sm:   .75rem !default;
-$btn-font-size-block: 1.125rem !default;
+$btn-font-size-base:     .875rem !default;
+$btn-font-size-lg:       1rem !default;
+$btn-font-size-sm:       .75rem !default;
+$btn-font-size-block:    1rem !default;
+$btn-font-size-lg-block: 1.125rem !default;
 
 $btn-padding-x:                  .5rem !default;
 $btn-padding-y:                  .4375rem !default;
@@ -340,7 +341,8 @@ $btn-padding-x-lg:               1.5rem !default;
 $btn-padding-y-lg:               .75rem !default;
 
 $btn-padding-x-block:            0 !default;
-$btn-padding-y-block:            .9375rem !default;
+$btn-padding-y-block:            .75rem !default;
+$btn-padding-y-block-lg:         .9375rem !default;
 
 $btn-block-spacing-y:            .5rem !default;
 $btn-toolbar-margin:             .5rem !default;

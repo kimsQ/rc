@@ -13,6 +13,9 @@
 - name: sizes
   path: components/buttons
 
+- name: block-level-buttons
+  path: components/buttons
+
 - name: active-state
   path: components/buttons
 

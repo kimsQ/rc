@@ -97,11 +97,18 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 <button type="button" class="btn btn-secondary btn-sm">Small button</button>
 {% endexample %}
 
+## Block level buttons
+
 Create block level buttons—those that span the full width of a parent—by adding `.btn-block`.
 
 {% example html %}
-<button type="button" class="btn btn-primary btn-block">Block level button</button>
-<button type="button" class="btn btn-secondary btn-block">Block level button</button>
+<button type="button" class="btn btn-primary btn-lg btn-block">
+  Large block button
+</button>
+
+<button type="button" class="btn btn-primary btn-block">
+  Normal block button
+</button>
 {% endexample %}
 
 ## Active state
