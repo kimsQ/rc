@@ -1,5 +1,5 @@
 /*
- * sheet 시트  
+ * sheet 시트
  * ----------------------------------------------------------------------------
  */
 
@@ -22,7 +22,7 @@
     -webkit-transform: translate3d(0, 100%, 0);
     -ms-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
-    z-index: 20
+    z-index: $zindex-sheet
 }
 .sheet.active {
     display: block;

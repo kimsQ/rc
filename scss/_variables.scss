@@ -494,16 +494,14 @@ $form-icon-danger: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www
 // Warning: Avoid customizing these values. They're used for a bird's eye view
 // of components dependent on the z-axis and are designed to all work together.
 
-$zindex-dropdown-backdrop:  990 !default;
-$zindex-navbar:            1000 !default;
-$zindex-dropdown:          1000 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
-$zindex-navbar-fixed:      1030 !default;
-$zindex-navbar-sticky:     1030 !default;
-$zindex-modal-bg:          1040 !default;
-$zindex-modal:             1050 !default;
-
+$zindex-bar:            10 !default;
+$zindex-popover:        20 !default;
+$zindex-nav-fixed:      14 !default;
+$zindex-backdrop:       15 !default;
+$zindex-modal:          20 !default;
+$zindex-popup:          20 !default;
+$zindex-sheet:          20 !default;
+$zindex-popover:        20 !default;
 
 // Bar
 

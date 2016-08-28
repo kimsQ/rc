@@ -12,7 +12,7 @@
     max-width: 630px;
     min-width: 320px;
     height: auto;
-    z-index: 20;
+    z-index: $zindex-popup;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;

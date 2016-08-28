@@ -6303,13 +6303,13 @@ input[type="button"].btn-block {
 }
 
 /*
- * modal 모달  
+ * modal 모달
  * ----------------------------------------------------------------------------
  */
 .modal {
   position: fixed;
   top: 0;
-  z-index: 11;
+  z-index: 20;
   width: 100%;
   min-height: 100%;
   overflow: hidden;
@@ -6335,39 +6335,6 @@ input[type="button"].btn-block {
   transition: transform .25s, -webkit-transform .25s, -o-transform .25s;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  z-index: 20;
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  background-color: #fff;
-  opacity: 0;
-  -webkit-transition: -webkit-transform .25s, opacity 1ms .25s;
-  -webkit-transition: opacity 1ms .25s, -webkit-transform .25s;
-  transition: opacity 1ms .25s, -webkit-transform .25s;
-  -o-transition: transform .25s, opacity 1ms .25s, -o-transform .25s;
-  transition: transform .25s, opacity 1ms .25s;
-  transition: transform .25s, opacity 1ms .25s, -webkit-transform .25s, -o-transform .25s;
-  -webkit-transform: translate3d(0, 100%, 0);
-  -ms-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-}
-
-.modal.active {
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: -webkit-transform .25s;
-  transition: -webkit-transform .25s;
-  -o-transition: transform .25s, -o-transform .25s;
-  transition: transform .25s;
-  transition: transform .25s, -webkit-transform .25s, -o-transform .25s;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 
 .modal.zoom {
@@ -6645,7 +6612,7 @@ input[type="button"].btn-block {
 }
 
 /*
- * sheet 시트  
+ * sheet 시트
  * ----------------------------------------------------------------------------
  */
 .sheet {
@@ -7423,7 +7390,44 @@ a.bg-danger:focus, a.bg-danger:hover {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 14;
+}
+
+.pos-f-t-l {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 14;
+}
+
+.pos-f-t-r {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 14;
+}
+
+.pos-f-b {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  z-index: 14;
+}
+
+.pos-f-b-l {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 14;
+}
+
+.pos-f-b-r {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 14;
 }
 
 .text-justify {
