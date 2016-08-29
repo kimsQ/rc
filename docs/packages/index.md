@@ -18,10 +18,10 @@ Examples that focus on implementing uses of built-in components provided by kims
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/grid/">
+    <a href="{{ site.baseurl }}/packages/directory/">
       <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Business</h4>
+    <h4>Employee Directory</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
   </div>
   <div class="clearfix hidden-sm-up"></div>
