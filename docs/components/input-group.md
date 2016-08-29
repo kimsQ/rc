@@ -137,13 +137,15 @@ Buttons in input groups are a bit different and require one extra level of nesti
 Inputs can also be placed in headers, along with buttons to submit or cancel the form.
 
 {% highlight html %}
-<div class="input-group input-group-inset">
-  <span class="input-group-addon">$</span>
-  <input type="text" class="form-control" placeholder="Search">
-  <span class="input-group-btn">
-    <button class="btn btn-secondary" type="button">Cancel</button>
-  </span>
-</div>
+<header class="bar bar-nav">
+  <div class="input-group input-group-inset">
+    <span class="input-group-placeholder icon icon-search"></span>
+    <input type="search" class="form-control" placeholder="Search">
+    <span class="input-group-btn">
+      <button class="btn btn-link" type="button">Cancel</button>
+    </span>
+  </div>
+</header>
 {% endhighlight %}
 
 
