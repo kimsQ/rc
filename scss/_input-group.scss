@@ -228,13 +228,23 @@
   }
 
   .input-group-btn {
-    
+
     .btn {
-    	padding: 0.4rem 0.75rem;
+    	padding: .4rem .75rem;
     }
     .btn-link {
+      padding: .4rem 0 .4rem .75rem;
     	color: #b2b2b2;
     	font-weight: normal;
+
+    &:focus,
+    &.focus,
+    &.active,
+    &:active {
+      box-shadow: none;
+      color: #eee
+    }
+
     }
   }
 }
