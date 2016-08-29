@@ -16,3 +16,7 @@
   text-align: left;
   padding-left: 15px
 }
+
+.snap-drawer .content > .table-view:first-child {
+  margin-top: 0;
+}
