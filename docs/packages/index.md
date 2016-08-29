@@ -27,7 +27,7 @@ Examples that focus on implementing uses of built-in components provided by kims
   <div class="clearfix hidden-sm-up"></div>
 
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/fintech/">
+    <a href="{{ site.baseurl }}/packages/fintech/">
       <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
     <h4>Financial Technology</h4>
