@@ -25,36 +25,76 @@
 
 
     <div class="snap-drawers">
-      <div class="snap-drawer snap-drawer-left" id="myDrawer">
+      <div class="snap-drawer snap-drawer-left" id="all">
 
-        <header class="bar bar-nav bar-light bg-faded">
-          <h1 class="title">Left Drawer</h1>
+        <header class="bar bar-nav bar-dark bg-primary">
+          <a class="icon icon-gear pull-right" role="button" href=""></a>
+          <h1 class="title">홍길동</h1>
         </header>
-        <div class="content">
+
+        <div class="bar bar-standard bar-header-secondary bar-dark bg-primary">
+          <h1 class="title">안녕하세요.</h1>
+        </div>
+
+        <!-- Block button in standard bar fixed above the footer -->
+        <div class="bar bar-standard bar-footer-secondary bar-dark" style="background-color: #3a444d;">
           <ul class="table-view">
-  				  <li class="table-view-cell">Item 1</li>
-  				  <li class="table-view-cell">Item 2</li>
-  				  <li class="table-view-divider">Divider</li>
-  				  <li class="table-view-cell">Item 3</li>
-  					<li class="table-view-cell">
-  				    <a class="navigate-right">
-  				      <span class="badge badge-pill">5</span>
-  				      Item 4
-  				    </a>
-  				  </li>
-  				  <li class="table-view-cell">
-  				    <a class="navigate-right">
-  				      <span class="badge badge-pill">5</span>
-  				      Item 5
-  				    </a>
-  				  </li>
-  				  <li class="table-view-cell">
-  				    <a class="navigate-right">
-  				      <span class="badge badge-pill">5</span>
-  				      Item 6
-  				    </a>
-  				  </li>
-  				</ul>
+            <li class="table-view-cell">000 <button class="btn btn-outline-secondary">000</button></li>
+          </ul>
+        </div>
+
+        <nav class="bar bar-tab bar-dark" style="background-color: #3a444d;">
+          <a class="tab-item" role="button" href="">
+            현재버전 00.00
+          </a>
+          <a class="tab-item" role="button" href="">
+            최신버전 00.00
+          </a>
+        </nav>
+
+        <div class="content">
+          <ul class="table-view" id="tree">
+            <li class="table-view-cell">
+              <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
+                <span class="media-object pull-left icon icon-star"></span>
+                <div class="media-body">
+                  Menu 1
+                </div>
+              </a>
+              <ul class="table-view collapse" id="1">
+                <li class="table-view-cell">
+                  <a href="">
+                    Menu 1-1
+                  </a>
+                </li>
+                <li class="table-view-cell">
+                  <a href="">
+                    Menu 1-2
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="table-view-cell">
+              <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
+                <span class="media-object pull-left icon icon-star"></span>
+                <div class="media-body">
+                  Menu 2
+                </div>
+              </a>
+              <ul class="table-view collapse" id="2">
+                <li class="table-view-cell">
+                  <a href="">
+                    Menu 2-1
+                  </a>
+                </li>
+                <li class="table-view-cell">
+                  <a href="">
+                    Menu 2-2
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
       </div>
@@ -62,7 +102,7 @@
 
     <div class="snap-content" data-extension="drawer">
   		<header class="bar bar-nav bar-dark bg-primary">
-        <a class="icon icon-bars pull-left" role="button" href="#myDrawer" data-toggle="drawer" ></a>
+        <a class="icon icon-bars pull-left" role="button" href="#all" data-toggle="drawer"></a>
   		  <h1 class="title">굿핀 <span id="state"></span></h1>
   		</header>
 
@@ -76,10 +116,32 @@
 
       <div class="content" data-control="scroll" data-type="updown" data-defaultHeight="50">
 
-        <div id="search-bar">
-          <input class="form-control m-b-0" type="search" placeholder="검색하세요.">
-        </div>
+        <div class="card">
+  			  <img class="card-img-top img-fluid" src="http://placehold.it/800x400" alt="Card image cap">
+  			  <div class="card-block">
+  			    <h4 class="card-title">Card title</h4>
+  			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  			    <a href="#" class="btn btn-primary">Go somewhere</a>
+  			  </div>
+  			</div>
 
+        <div class="card">
+  			  <img class="card-img-top img-fluid" src="http://placehold.it/800x400" alt="Card image cap">
+  			  <div class="card-block">
+  			    <h4 class="card-title">Card title</h4>
+  			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  			    <a href="#" class="btn btn-primary">Go somewhere</a>
+  			  </div>
+  			</div>
+
+        <div class="card">
+  			  <img class="card-img-top img-fluid" src="http://placehold.it/800x400" alt="Card image cap">
+  			  <div class="card-block">
+  			    <h4 class="card-title">Card title</h4>
+  			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  			    <a href="#" class="btn btn-primary">Go somewhere</a>
+  			  </div>
+  			</div>
 
 
       </div><!-- /.content -->
