@@ -505,7 +505,7 @@ Regular table background variants are not available with the inverse table, howe
 or
 
 {% highlight html %}
-<ul class="table-view bg-primary">
+<ul class="table-view table-view-inverse bg-primary">
   ...
 </ul>
 {% endhighlight %}
