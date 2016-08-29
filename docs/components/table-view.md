@@ -456,7 +456,9 @@ Table view components can also be nested until 4 depth.
 </ul>
 {% endhighlight %}
 
-## Invert the colors
+## Color schemes
+
+### Invert the colors
 
 You can also invert the colors with light text on dark backgrounds with `.table-view-inverse`.
 
@@ -466,7 +468,7 @@ You can also invert the colors with light text on dark backgrounds with `.table-
 </ul>
 {% endhighlight %}
 
-## Contextual classes
+### Contextual classes
 Use contextual classes to color table view cells.
 
 {% highlight html %}
@@ -487,7 +489,7 @@ or
 </ul>
 {% endhighlight %}
 
-## Background utilities
+### Background utilities
 Regular table background variants are not available with the inverse table, however, you may use [text or background utilities](/components/utilities/#contextual-colors-and-backgrounds) to achieve similar styles.
 
 {% highlight html %}
