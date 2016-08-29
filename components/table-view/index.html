@@ -1047,20 +1047,31 @@
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#basic-example" id="markdown-toc-basic-example">Basic example</a></li>
-  <li><a href="#table-view-with-chevrons" id="markdown-toc-table-view-with-chevrons">Table view with chevrons</a></li>
-  <li><a href="#table-view-with-badges" id="markdown-toc-table-view-with-badges">Table view with badges</a></li>
-  <li><a href="#table-view-with-badges-and-chevrons" id="markdown-toc-table-view-with-badges-and-chevrons">Table view with badges and chevrons</a></li>
-  <li><a href="#table-view-with-media-images" id="markdown-toc-table-view-with-media-images">Table view with media (images)</a></li>
-  <li><a href="#table-view-with-media-icons" id="markdown-toc-table-view-with-media-icons">Table view with media (icons)</a></li>
-  <li><a href="#table-view-with-buttons" id="markdown-toc-table-view-with-buttons">Table view with buttons</a></li>
-  <li><a href="#table-view-with-switch" id="markdown-toc-table-view-with-switch">Table view with switch</a></li>
-  <li><a href="#table-view-with-select" id="markdown-toc-table-view-with-select">Table view with select</a></li>
-  <li><a href="#table-view-with-checkbox" id="markdown-toc-table-view-with-checkbox">Table view with checkbox</a></li>
-  <li><a href="#table-view-with-radio" id="markdown-toc-table-view-with-radio">Table view with radio</a></li>
-  <li><a href="#table-view-with-controls-and-chevrons" id="markdown-toc-table-view-with-controls-and-chevrons">Table view with controls and chevrons</a></li>
   <li><a href="#carded-table-views" id="markdown-toc-carded-table-views">Carded table views</a></li>
-  <li><a href="#nesting" id="markdown-toc-nesting">Nesting</a></li>
-  <li><a href="#nesting-table-view-with-media" id="markdown-toc-nesting-table-view-with-media">Nesting table view with media</a></li>
+  <li><a href="#table-view-with-components" id="markdown-toc-table-view-with-components">Table view with components</a>    <ul>
+      <li><a href="#table-view-with-chevrons" id="markdown-toc-table-view-with-chevrons">Table view with chevrons</a></li>
+      <li><a href="#table-view-with-badges" id="markdown-toc-table-view-with-badges">Table view with badges</a></li>
+      <li><a href="#table-view-with-badges-and-chevrons" id="markdown-toc-table-view-with-badges-and-chevrons">Table view with badges and chevrons</a></li>
+      <li><a href="#table-view-with-media-images" id="markdown-toc-table-view-with-media-images">Table view with media (images)</a></li>
+      <li><a href="#table-view-with-media-icons" id="markdown-toc-table-view-with-media-icons">Table view with media (icons)</a></li>
+      <li><a href="#table-view-with-buttons" id="markdown-toc-table-view-with-buttons">Table view with buttons</a></li>
+      <li><a href="#table-view-with-switch" id="markdown-toc-table-view-with-switch">Table view with switch</a></li>
+      <li><a href="#table-view-with-select" id="markdown-toc-table-view-with-select">Table view with select</a></li>
+      <li><a href="#table-view-with-checkbox" id="markdown-toc-table-view-with-checkbox">Table view with checkbox</a></li>
+      <li><a href="#table-view-with-radio" id="markdown-toc-table-view-with-radio">Table view with radio</a></li>
+      <li><a href="#table-view-with-controls-and-chevrons" id="markdown-toc-table-view-with-controls-and-chevrons">Table view with controls and chevrons</a></li>
+    </ul>
+  </li>
+  <li><a href="#nesting" id="markdown-toc-nesting">Nesting</a>    <ul>
+      <li><a href="#nesting-table-view-with-media" id="markdown-toc-nesting-table-view-with-media">Nesting table view with media</a></li>
+    </ul>
+  </li>
+  <li><a href="#color-schemes" id="markdown-toc-color-schemes">Color schemes</a>    <ul>
+      <li><a href="#invert-the-colors" id="markdown-toc-invert-the-colors">Invert the colors</a></li>
+      <li><a href="#contextual-classes" id="markdown-toc-contextual-classes">Contextual classes</a></li>
+      <li><a href="#background-utilities" id="markdown-toc-background-utilities">Background utilities</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="basic-example">Basic example</h2>
@@ -1073,7 +1084,23 @@
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-chevrons">Table view with chevrons</h2>
+<h2 id="carded-table-views">Carded table views</h2>
+
+<p>Use <code class="highlighter-rouge">.card</code> to wrap any content in a padded element.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-divider"</span><span class="nt">&gt;</span>Divider<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+<h2 id="table-view-with-components">Table view with components</h2>
+
+<h3 id="table-view-with-chevrons">Table view with chevrons</h3>
 
 <p>Chevrons should be used to indicate that the item is linked. Just apply the classes <code class="highlighter-rouge">.navigate-right</code> or <code class="highlighter-rouge">.navigate-left</code> to use a chevron.</p>
 
@@ -1097,7 +1124,7 @@
 
 <p><strong>Note</strong>: Table views with the Android theme don’t have chevrons to comply with Android Design guidelines. More information can be found <a href="https://developer.android.com/design/patterns/pure-android.html">here</a>.</p>
 
-<h2 id="table-view-with-badges">Table view with badges</h2>
+<h3 id="table-view-with-badges">Table view with badges</h3>
 
 <p>Badges are a great way of showing data.</p>
 
@@ -1116,7 +1143,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-badges-and-chevrons">Table view with badges and chevrons</h2>
+<h3 id="table-view-with-badges-and-chevrons">Table view with badges and chevrons</h3>
 
 <p>Feel free to use chevrons and badges together. They’ll automatically positon themselves correctly.</p>
 
@@ -1141,7 +1168,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-media-images">Table view with media (images)</h2>
+<h3 id="table-view-with-media-images">Table view with media (images)</h3>
 
 <p>Showing media inside table views is easy. This component to perfect for images and text.</p>
 
@@ -1175,7 +1202,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-media-icons">Table view with media (icons)</h2>
+<h3 id="table-view-with-media-icons">Table view with media (icons)</h3>
 
 <p>Ratchicons can also used instead of images.</p>
 
@@ -1206,16 +1233,16 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-buttons">Table view with buttons</h2>
+<h3 id="table-view-with-buttons">Table view with buttons</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-secondary"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 2 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-positive"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 4 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-negative"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 4 <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-switch">Table view with switch</h2>
+<h3 id="table-view-with-switch">Table view with switch</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
@@ -1238,7 +1265,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-select">Table view with select</h2>
+<h3 id="table-view-with-select">Table view with select</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>
@@ -1273,7 +1300,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-checkbox">Table view with checkbox</h2>
+<h3 id="table-view-with-checkbox">Table view with checkbox</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell checkbox"</span><span class="nt">&gt;</span>
@@ -1299,7 +1326,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-radio">Table view with radio</h2>
+<h3 id="table-view-with-radio">Table view with radio</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell radio"</span><span class="nt">&gt;</span>
@@ -1332,7 +1359,7 @@
   <span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="table-view-with-controls-and-chevrons">Table view with controls and chevrons</h2>
+<h3 id="table-view-with-controls-and-chevrons">Table view with controls and chevrons</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-divider"</span><span class="nt">&gt;</span>checkboxs<span class="nt">&lt;/li&gt;</span>
@@ -1379,20 +1406,6 @@
 
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="carded-table-views">Carded table views</h2>
-
-<p>Use <code class="highlighter-rouge">.card</code> to wrap any content in a padded element.</p>
-
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 1<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 2<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-divider"</span><span class="nt">&gt;</span>Divider<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
-    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 4<span class="nt">&lt;/li&gt;</span>
-  <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></figure>
-
 <h2 id="nesting">Nesting</h2>
 <p>Table view components can also be nested until 4 depth.</p>
 
@@ -1427,7 +1440,7 @@
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell"</span><span class="nt">&gt;</span>Item 3<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
-<h2 id="nesting-table-view-with-media">Nesting table view with media</h2>
+<h3 id="nesting-table-view-with-media">Nesting table view with media</h3>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell media"</span><span class="nt">&gt;</span>
@@ -1463,6 +1476,50 @@
       <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/a&gt;</span>
   <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h2 id="color-schemes">Color schemes</h2>
+
+<h3 id="invert-the-colors">Invert the colors</h3>
+
+<p>You can also invert the colors with light text on dark backgrounds with <code class="highlighter-rouge">.table-view-inverse</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view table-view-inverse"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h3 id="contextual-classes">Contextual classes</h3>
+<p>Use contextual classes to color table view cells.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-active"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell table-view-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view table-view-active"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<h3 id="background-utilities">Background utilities</h3>
+<p>Regular table background variants are not available with the inverse table, however, you may use <a href="/components/utilities/#contextual-colors-and-backgrounds">text or background utilities</a> to achieve similar styles.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view table-view-inverse"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell bg-primary"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell bg-success"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell bg-info"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell bg-warning"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"table-view-cell bg-danger"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"table-view bg-primary"</span><span class="nt">&gt;</span>
+  ...
 <span class="nt">&lt;/ul&gt;</span></code></pre></figure>
 
 
@@ -1781,6 +1838,69 @@
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/components/table-view/nesting-table-view-with-media" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#invert-the-colors">
+      <iframe width="100%" height="555" src="/examples/components/table-view/invert-the-colors.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/invert-the-colors.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/invert-the-colors.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/invert-the-colors" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#contextual-classes">
+      <iframe width="100%" height="555" src="/examples/components/table-view/contextual-classes.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/contextual-classes.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/contextual-classes.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/contextual-classes" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#background-utilities">
+      <iframe width="100%" height="555" src="/examples/components/table-view/background-utilities.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/components/table-view/background-utilities.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/components/table-view/background-utilities.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/components/table-view/background-utilities" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
         </li>
