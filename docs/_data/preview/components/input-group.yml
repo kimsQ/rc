@@ -17,3 +17,7 @@
 - name: button-addons
   path: components/input-group
   jsfiddle: kimsQ/0odhbtzv/
+
+- name: header-inputs
+  path: components/input-group
+  jsfiddle: kimsQ/0odhbtzv/

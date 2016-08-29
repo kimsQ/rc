@@ -38,6 +38,7 @@
 }
 
 .input-group-addon,
+.input-group-placeholder,
 .input-group-btn,
 .input-group .form-control {
   @if not $enable-flex {
@@ -50,6 +51,7 @@
 }
 
 .input-group-addon,
+.input-group-placeholder,
 .input-group-btn {
   @if not $enable-flex {
     width: 1%;
@@ -184,6 +186,55 @@
       @include hover-focus-active {
         z-index: 3;
       }
+    }
+  }
+}
+
+
+// input-group inset
+// --------------------------------------------------
+
+.input-group-inset {
+
+  .input-group-placeholder,
+  .input-group-placeholder.icon {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	width: 2rem;
+    margin-bottom: 0;
+    font-size: .875rem;
+    font-weight: normal;
+    color: #aaa;
+    text-align: center;
+    background-color: transparent;;
+    border: none;
+  	z-index: 11
+  }
+
+  .form-control,
+  input[type="search"] {
+    height: 2.06rem;
+  	margin: 0;
+  	padding: .4rem .75rem .4rem 2.2rem;
+  	background-color: #eee;
+  	border: none
+  }
+
+  .form-control::-webkit-input-placeholder {
+  	font-weight: 300;
+    color: #aaa;
+  }
+
+  .input-group-btn {
+    
+    .btn {
+    	padding: 0.4rem 0.75rem;
+    }
+    .btn-link {
+    	color: #b2b2b2;
+    	font-weight: normal;
     }
   }
 }

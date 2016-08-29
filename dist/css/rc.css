@@ -4698,6 +4698,11 @@ input[type="button"].btn-block {
   display: table;
 }
 
+.bar .input-group {
+  position: relative;
+  top: 0.3rem;
+}
+
 .bar-light {
   border-color: rgba(0, 0, 0, 0.075);
 }
@@ -5959,18 +5964,21 @@ input[type="button"].btn-block {
 }
 
 .input-group-addon,
+.input-group-placeholder,
 .input-group-btn,
 .input-group .form-control {
   display: table-cell;
 }
 
 .input-group-addon:not(:first-child):not(:last-child),
+.input-group-placeholder:not(:first-child):not(:last-child),
 .input-group-btn:not(:first-child):not(:last-child),
 .input-group .form-control:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 
 .input-group-addon,
+.input-group-placeholder,
 .input-group-btn {
   width: 1%;
   white-space: nowrap;
@@ -6075,6 +6083,46 @@ input[type="button"].btn-block {
 .input-group-btn:not(:first-child) > .btn-group:active,
 .input-group-btn:not(:first-child) > .btn-group:hover {
   z-index: 3;
+}
+
+.input-group-inset .input-group-placeholder,
+.input-group-inset .input-group-placeholder.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2rem;
+  margin-bottom: 0;
+  font-size: .875rem;
+  font-weight: normal;
+  color: #aaa;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  z-index: 11;
+}
+
+.input-group-inset .form-control,
+.input-group-inset input[type="search"] {
+  height: 2.06rem;
+  margin: 0;
+  padding: .4rem .75rem .4rem 2.2rem;
+  background-color: #eee;
+  border: none;
+}
+
+.input-group-inset .form-control::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #aaa;
+}
+
+.input-group-inset .input-group-btn .btn {
+  padding: 0.4rem 0.75rem;
+}
+
+.input-group-inset .input-group-btn .btn-link {
+  color: #b2b2b2;
+  font-weight: normal;
 }
 
 .custom-control {

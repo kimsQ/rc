@@ -133,6 +133,20 @@ Buttons in input groups are a bit different and require one extra level of nesti
 </div>
 {% endhighlight %}
 
+## Header Inputs
+Inputs can also be placed in headers, along with buttons to submit or cancel the form.
+
+{% highlight html %}
+<div class="input-group input-group-inset">
+  <span class="input-group-addon">$</span>
+  <input type="text" class="form-control" placeholder="Search">
+  <span class="input-group-btn">
+    <button class="btn btn-secondary" type="button">Cancel</button>
+  </span>
+</div>
+{% endhighlight %}
+
+
 ## Accessibility
 
 Screen readers will have trouble with your forms if you don't include a label for every input. For these input groups, ensure that any additional label or functionality is conveyed to assistive technologies.
