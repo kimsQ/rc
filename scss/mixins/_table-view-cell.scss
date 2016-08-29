@@ -1,0 +1,13 @@
+// Table-view
+
+@mixin table-view-cell-variant($state, $background) {
+  // Exact selectors below required to override `.table-striped` and prevent
+  // inheritance to nested tables.
+  .table-view-#{$state} {
+    &,
+    > table-view-cell {
+      background-color: $background;
+    }
+  }
+
+}

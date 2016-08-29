@@ -24,7 +24,27 @@ The most basic table view is simply an unordered list with list items, and the p
 </ul>
 {% endhighlight %}
 
-## Table view with chevrons
+
+## Carded table views
+
+Use `.card` to wrap any content in a padded element.
+
+{% highlight html %}
+<div class="card">
+  <ul class="table-view">
+    <li class="table-view-cell">Item 1</li>
+    <li class="table-view-cell">Item 2</li>
+    <li class="table-view-cell table-view-divider">Divider</li>
+    <li class="table-view-cell">Item 3</li>
+    <li class="table-view-cell">Item 4</li>
+  </ul>
+</div>
+{% endhighlight %}
+
+
+## Table view with components
+
+### Table view with chevrons
 
 Chevrons should be used to indicate that the item is linked. Just apply the classes `.navigate-right` or `.navigate-left` to use a chevron.
 
@@ -52,7 +72,7 @@ Chevrons should be used to indicate that the item is linked. Just apply the clas
 
 
 
-## Table view with badges
+### Table view with badges
 
 Badges are a great way of showing data.
 
@@ -73,7 +93,7 @@ Badges are a great way of showing data.
 </ul>
 {% endhighlight %}
 
-## Table view with badges and chevrons
+### Table view with badges and chevrons
 
 Feel free to use chevrons and badges together. They'll automatically positon themselves correctly.
 
@@ -101,7 +121,7 @@ Feel free to use chevrons and badges together. They'll automatically positon the
 {% endhighlight %}
 
 
-## Table view with media (images)
+### Table view with media (images)
 
 Showing media inside table views is easy. This component to perfect for images and text.
 
@@ -137,7 +157,7 @@ Showing media inside table views is easy. This component to perfect for images a
 </ul>
 {% endhighlight %}
 
-## Table view with media (icons)
+### Table view with media (icons)
 
 Ratchicons can also used instead of images.
 
@@ -170,19 +190,19 @@ Ratchicons can also used instead of images.
 </ul>
 {% endhighlight %}
 
-## Table view with buttons
+### Table view with buttons
 
 {% highlight html %}
 <ul class="table-view">
-  <li class="table-view-cell">Item 1 <button class="btn">Button</button></li>
+  <li class="table-view-cell">Item 1 <button class="btn btn-secondary">Button</button></li>
   <li class="table-view-cell">Item 2 <button class="btn btn-primary">Button</button></li>
-  <li class="table-view-cell">Item 3 <button class="btn btn-positive">Button</button></li>
-  <li class="table-view-cell">Item 4 <button class="btn btn-negative">Button</button></li>
+  <li class="table-view-cell">Item 3 <button class="btn btn-success">Button</button></li>
+  <li class="table-view-cell">Item 4 <button class="btn btn-danger">Button</button></li>
 </ul>
 {% endhighlight %}
 
 
-## Table view with switch
+### Table view with switch
 
 {% highlight html %}
 <ul class="table-view">
@@ -208,7 +228,8 @@ Ratchicons can also used instead of images.
 {% endhighlight %}
 
 
-## Table view with select
+### Table view with select
+
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell">
@@ -245,7 +266,7 @@ Ratchicons can also used instead of images.
 {% endhighlight %}
 
 
-## Table view with checkbox
+### Table view with checkbox
 
 {% highlight html %}
 <ul class="table-view">
@@ -273,7 +294,8 @@ Ratchicons can also used instead of images.
 </ul>
 {% endhighlight %}
 
-## Table view with radio
+### Table view with radio
+
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-cell radio">
@@ -307,7 +329,8 @@ Ratchicons can also used instead of images.
 </ul>
 {% endhighlight %}
 
-## Table view with controls and chevrons
+### Table view with controls and chevrons
+
 {% highlight html %}
 <ul class="table-view">
   <li class="table-view-divider">checkboxs</li>
@@ -357,23 +380,6 @@ Ratchicons can also used instead of images.
 {% endhighlight %}
 
 
-## Carded table views
-
-Use `.card` to wrap any content in a padded element.
-
-{% highlight html %}
-<div class="card">
-  <ul class="table-view">
-    <li class="table-view-cell">Item 1</li>
-    <li class="table-view-cell">Item 2</li>
-    <li class="table-view-cell table-view-divider">Divider</li>
-    <li class="table-view-cell">Item 3</li>
-    <li class="table-view-cell">Item 4</li>
-  </ul>
-</div>
-{% endhighlight %}
-
-
 ## Nesting
 Table view components can also be nested until 4 depth.
 {% highlight html %}
@@ -410,7 +416,7 @@ Table view components can also be nested until 4 depth.
 {% endhighlight %}
 
 
-## Nesting table view with media
+### Nesting table view with media
 
 {% highlight html %}
 <ul class="table-view">
@@ -447,5 +453,57 @@ Table view components can also be nested until 4 depth.
       </div>
     </a>
   </li>
+</ul>
+{% endhighlight %}
+
+## Invert the colors
+
+You can also invert the colors with light text on dark backgrounds with `.table-view-inverse`.
+
+{% highlight html %}
+<ul class="table-view table-view-inverse">
+  ...
+</ul>
+{% endhighlight %}
+
+## Contextual classes
+Use contextual classes to color table view cells.
+
+{% highlight html %}
+<ul class="table-view">
+  <li class="table-view-cell table-view-active">...</li>
+  <li class="table-view-cell table-view-success">...</li>
+  <li class="table-view-cell table-view-info">...</li>
+  <li class="table-view-cell table-view-warning">...</li>
+  <li class="table-view-cell table-view-danger">...</li>
+</ul>
+{% endhighlight %}
+
+or
+
+{% highlight html %}
+<ul class="table-view table-view-active">
+  ...
+</ul>
+{% endhighlight %}
+
+## Background utilities
+Regular table background variants are not available with the inverse table, however, you may use [text or background utilities](/components/utilities/#contextual-colors-and-backgrounds) to achieve similar styles.
+
+{% highlight html %}
+<ul class="table-view table-view-inverse">
+  <li class="table-view-cell bg-primary">...</li>
+  <li class="table-view-cell bg-success">...</li>
+  <li class="table-view-cell bg-info">...</li>
+  <li class="table-view-cell bg-warning">...</li>
+  <li class="table-view-cell bg-danger">...</li>
+</ul>
+{% endhighlight %}
+
+or
+
+{% highlight html %}
+<ul class="table-view bg-primary">
+  ...
 </ul>
 {% endhighlight %}

@@ -712,7 +712,11 @@ $progress-bar-info-bg:        $brand-info !default;
 // Table view
 
 $table-view-margin-bottom:         .9375rem !default;
-$table-view-bg:                    #fff !default;
+
+$table-view-bg:                    transparent !default;
+$table-view-bg-accent:             rgba(0,0,0,.05) !default;
+$table-view-bg-hover:              rgba(0,0,0,.075) !default;
+$table-view-bg-active:             $table-bg-hover !default;
 
 $table-view-cell-padding-y:        .6875rem !default;
 $table-view-cell-padding-left:     .9375rem !default;
@@ -722,8 +726,6 @@ $table-view-cell-active-color:     #eee !default;
 
 $table-view-divider-padding-y:     .375rem !default;
 $table-view-divider-padding-left:  .9375rem !default;
-$table-view-divider-color:         #999 !default;
-$table-view-divider-bg:            #fafafa !default;
 
 $table-view-media-margin-x:       .625rem !default;
 

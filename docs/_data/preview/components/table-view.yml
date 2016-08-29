@@ -42,3 +42,12 @@
 
 - name: nesting-table-view-with-media
   path: components/table-view
+
+- name: invert-the-colors
+  path: components/table-view
+
+- name: contextual-classes
+  path: components/table-view
+
+- name: background-utilities
+  path: components/table-view

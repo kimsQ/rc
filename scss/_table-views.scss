@@ -7,7 +7,7 @@
   margin-top: 0;
   margin-bottom: $table-view-margin-bottom;
   list-style: none; // Remove usual bullet styles from table view
-  background-color: $table-view-bg;
+  background-color: $table-view-bg;;
   border-top: $border-default;
   border-bottom: $border-default;
 }
@@ -58,8 +58,8 @@
   margin-top: -.0625rem; // Hides the border of the previous list item
   margin-left: 0;
   font-weight: $font-weight;
-  color: $table-view-divider-color;
-  background-color: $table-view-divider-bg;
+  color: $gray;
+  background-color: $gray-lighter;
   border-top: $border-default;
   border-bottom: $border-default;
 }
@@ -241,5 +241,78 @@
         }
       }
     }
+  }
+}
+
+// Table-view backgrounds
+//
+
+// Generate the contextual variants
+@include table-view-cell-variant(active, $table-view-bg-active);
+@include table-view-cell-variant(success, $state-success-bg);
+@include table-view-cell-variant(info, $state-info-bg);
+@include table-view-cell-variant(warning, $state-warning-bg);
+@include table-view-cell-variant(danger, $state-danger-bg);
+
+
+
+// Inverse styles
+//
+// Same table markup, but inverted color scheme—dark background and light text.
+
+.table-view-inverse {
+  color: $gray-lighter;
+  background-color: $gray-dark;
+  border-top: none;
+  border-bottom: none;
+
+  .table-view-cell {
+    border-color: $gray;
+
+    > a:not(.btn) {
+      color: $gray-lightest;
+
+      &:active {
+        background-color: $gray;
+      }
+    }
+    p {
+      color: $gray-light;
+    }
+    .badge {
+      color: $gray-lighter;
+      background-color: $gray;
+    }
+    .btn {
+      color: $gray-lighter;
+      background-color: $gray;
+
+      &.btn-primary {
+        @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+      }
+      &.btn-secondary {
+        @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+      }
+      &.btn-info {
+        @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+      }
+      &.btn-success {
+        @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+      }
+      &.btn-warning {
+        @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+      }
+      &.btn-danger {
+        @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+      }
+
+    }
+
+  }
+
+  .table-view-divider {
+    color: #fff;
+    background-color: $gray;
+    border-color: $gray-dark;
   }
 }
