@@ -6117,12 +6117,19 @@ input[type="button"].btn-block {
 }
 
 .input-group-inset .input-group-btn .btn {
-  padding: 0.4rem 0.75rem;
+  padding: .4rem .75rem;
 }
 
 .input-group-inset .input-group-btn .btn-link {
+  padding: .4rem 0 .4rem .75rem;
   color: #b2b2b2;
   font-weight: normal;
+}
+
+.input-group-inset .input-group-btn .btn-link:focus, .input-group-inset .input-group-btn .btn-link.focus, .input-group-inset .input-group-btn .btn-link.active, .input-group-inset .input-group-btn .btn-link:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #eee;
 }
 
 .custom-control {
