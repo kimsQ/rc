@@ -1,0 +1,18 @@
+/* Your app's CSS, make it your own */
+
+input[type="search"] {
+   border-radius: 2px;
+}
+
+#search-bar {
+  background-color: #fff;
+  padding: 10px
+}
+
+#search-bar.affix  {
+  position: fixed;
+  top: 88px;
+  z-index: 9;
+  width: 100%;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.075);
+}
