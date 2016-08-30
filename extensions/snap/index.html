@@ -1354,11 +1354,40 @@
   Launch Drawer
 <span class="nt">&lt;/button&gt;</span></code></pre></figure>
 
-<p>Via JavaScript</p>
+<p>or Via JavaScript</p>
 
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="p">..</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myDrawer'</span><span class="p">).</span><span class="nx">drawer</span><span class="p">({</span>
+  <span class="na">backdrop</span> <span class="p">:</span> <span class="kc">false</span>
+<span class="p">})</span></code></pre></figure>
 
 <h3 id="material-design-style">Material design style</h3>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.snap-drawer-left</span> <span class="p">{</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+  <span class="nl">right</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">translate3d</span><span class="p">(</span><span class="m">-265px</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+          <span class="nl">transform</span><span class="p">:</span> <span class="n">translate3d</span><span class="p">(</span><span class="m">-265px</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+  <span class="nl">-webkit-box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">10px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0.9</span><span class="p">);</span>
+          <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0px</span> <span class="m">0px</span> <span class="m">10px</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0.9</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.snapjs-left</span> <span class="nc">.snap-drawer-left</span> <span class="p">{</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">11</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">snapper</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Snap</span><span class="p">({</span>
+  <span class="na">element</span><span class="p">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"#myDrawer"</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+  <span class="na">maxPosition</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="na">minPosition</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+  <span class="na">transitionSpeed</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="c1">// Initialize drawer</span>
+<span class="nx">RC_initDrawer</span><span class="p">();</span></code></pre></figure>
+
+<p><br /><br /><br /></p>
 
             </div>
             <div class="col-lg-4 hidden-md-down" style="padding-left: 0">
@@ -1474,6 +1503,37 @@
             <i class="fa fa-share" aria-hidden="true"></i>
           </a>
           <a data-src="/examples/extensions/snap/backdrop-option" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
+            <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
+          </a>
+          
+          <a href="https://jsfiddle.net/kimsQ/0odhbtzv/" target="_blank" data-toggle="tooltip" title="JSFiddle">
+            <i class="fa fa-jsfiddle" aria-hidden="true"></i>
+          </a>
+          
+        </li>
+        <li class="pager-next">
+          <a href="#" data-history="back" data-toggle="tooltip" title="History back">
+            <i class="fa fa-history" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  
+  <li>
+    <a class="nav-link ratchet-body" href="#material-design-style">
+      <iframe width="100%" height="555" src="/examples/extensions/snap/material-design-style.html" frameborder="0"></iframe>
+    </a>
+    <div class="device-button">
+      <ul class="pager">
+        <li class="pager-prev">
+          <a href="https://github.com/kimsQ/rc/tree/gh-pages/examples/extensions/snap/material-design-style.html" target="_blank" data-toggle="tooltip" title="View code">
+            <i class="fa fa-code" aria-hidden="true"></i>
+          </a>
+          <a href="/examples/extensions/snap/material-design-style.html" target="_blank" data-toggle="tooltip" title="New window">
+            <i class="fa fa-share" aria-hidden="true"></i>
+          </a>
+          <a data-src="/examples/extensions/snap/material-design-style" class="emulator rb-tooltip" data-toggle="modal" href="#emulator" title="Emulator">
             <i class="fa fa-tablet fa-lg" aria-hidden="true"></i>
           </a>
           
