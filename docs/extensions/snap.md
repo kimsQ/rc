@@ -337,9 +337,44 @@ Via data attributes
 {% endhighlight %}
 
 
-Via JavaScript
+or Via JavaScript
 {% highlight js %}
-..
+$('#myDrawer').drawer({
+  backdrop : false
+})
 {% endhighlight %}
 
 ### Material design style
+
+{% highlight css %}
+.snap-drawer-left {
+  position: fixed;
+  top: 0;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(-265px, 0, 0);
+          transform: translate3d(-265px, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+}
+.snapjs-left .snap-drawer-left {
+  z-index: 11;
+}
+{% endhighlight %}
+
+{% highlight js %}
+snapper = new Snap({
+  element: $("#myDrawer")[0],
+  maxPosition: 1,
+  minPosition: -1,
+  transitionSpeed: 0.1,
+})
+
+// Initialize drawer
+RC_initDrawer();
+
+{% endhighlight %}
+
+
+<br><br><br>

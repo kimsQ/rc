@@ -17,3 +17,8 @@
   path: extensions/snap
   jsfiddle: kimsQ/0odhbtzv/
   history: true
+
+- name: material-design-style
+  path: extensions/snap
+  jsfiddle: kimsQ/0odhbtzv/
+  history: true
