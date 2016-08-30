@@ -63,12 +63,11 @@
 
     <script>
 
-      // $('#myModal').modal('show')
-
       $('#myModal').on('shown.rc.modal', function () {
-        $('#search-input').focus()
+        setTimeout(function() {
+          $('#search-input').focus();
+        }, 50);
       })
-
 
     </script>
 	</body>
