@@ -183,8 +183,6 @@ There are some caveats regarding using popups on mobile devices. [See our browse
 {% endhighlight %}
 
 
-
-
 ## Options
 
 Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-`, as in `data-history=""`. 옵션은 data 속성이나 자바스크립트로 전해질 수 있다. data 속성은 data-selector="" 처럼 data- 에 옵션명을 덧붙히면 됩니다.
@@ -352,9 +350,13 @@ $('.btn').tap(function(){
 
 ### Backdrop
 
-- 용도 : 팝업 호출시 배경을 제어합니다.팝업을 닫지 않는 배경을 위해 `static` 를 명시하세요.
+- 용도 : 팝업 호출시 배경을 제어합니다.
 - 유형 : `boolean` 또는 `string` ( true , false , static )
 - 기본값 : `true`
+
+<br><br>
+
+#### False Backdrop
 
 Via data attributes
 {% highlight html %}
@@ -365,6 +367,25 @@ Via JavaScript
 {% highlight js %}
 $(‘#foo’).popup({
     backdrop :'false'
+});
+{% endhighlight %}
+
+
+<br><br>
+
+#### Static Backdrop with Animation
+
+specify `static` for a backdrop which doesn't close the popup on tap.
+
+Via data attributes
+{% highlight html %}
+<button data-toggle="popup" data-backdrop="static">
+{% endhighlight %}
+
+Via JavaScript
+{% highlight js %}
+$(‘#foo’).popup({
+    backdrop :'static'
 });
 {% endhighlight %}
 

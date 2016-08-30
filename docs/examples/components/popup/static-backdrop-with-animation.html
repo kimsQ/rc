@@ -14,13 +14,13 @@
   <body>
 
 		<header class="bar bar-nav bar-light bg-faded">
-		  <h1 class="title">False Backdrop</h1>
+		  <h1 class="title">Static Backdrop</h1>
 		</header>
 
 		<div class="content">
 		  <div class="content-padded">
 
-		    <button class="btn btn-primary btn-block" data-toggle="popup" data-target="#myPopup" data-backdrop="false">
+		    <button class="btn btn-primary btn-block" data-toggle="popup" data-target="#myPopup" data-backdrop="static">
           Launch popup
         </button>
 
@@ -31,9 +31,11 @@
 		<div id="myPopup" class="popup zoom">
 		  <div class="popup-content">
 		    <header class="bar bar-nav bar-light bg-faded">
-		      <a class="icon icon-close pull-right" data-history="back" role="button"></a>
 		      <h1 class="title">Popup</h1>
 		    </header>
+        <nav class="bar bar-standard bar-footer">
+          <button type="button" class="btn btn-primary btn-block" data-history="back">OK</button>
+        </nav>
 		    <div class="content">
 		      <p class="content-padded">The contents of my modal go here.</p>
 		    </div>
@@ -42,6 +44,17 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
     <script src="../../../dist/js/rc.js"></script>
+
+    <script>
+
+      $('.backdrop').tap(function() {
+        $("#myPopup .popup-content").addClass("animated shake");
+        setTimeout(function() {
+          $('#myPopup .popup-content').removeClass('animated shake');
+        }, 600);
+      });
+
+    </script>
 
   </body>
 </html>

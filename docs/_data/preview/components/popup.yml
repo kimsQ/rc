@@ -73,6 +73,11 @@
   jsfiddle: kimsQ/0odhbtzv/
   history: false
 
+- name: static-backdrop-with-animation
+  path: components/popup
+  jsfiddle: kimsQ/0odhbtzv/
+  history: false
+
 - name: popupshow
   path: components/popup
   jsfiddle: kimsQ/0odhbtzv/
