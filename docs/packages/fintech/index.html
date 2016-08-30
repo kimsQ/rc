@@ -15,6 +15,8 @@
 
     <link href="../../../dist/extensions/snap/1.9.3/rc-snap.css" rel="stylesheet">
 
+    <link href="../../../dist/css/extra/rc-progress.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="css/app.css" rel="stylesheet">
 
@@ -28,17 +30,12 @@
       <div class="snap-drawer snap-drawer-left" id="all">
 
         <header class="bar bar-nav bar-dark bg-primary">
-          <a class="icon icon-gear pull-right" role="button" href=""></a>
-          <h1 class="title">홍길동</h1>
+    		  <h1 class="title">굿핀</h1>
         </header>
 
-        <div class="bar bar-standard bar-header-secondary bar-dark bg-primary">
-          <h1 class="title">안녕하세요.</h1>
-        </div>
-
         <!-- Block button in standard bar fixed above the footer -->
-        <div class="bar bar-standard bar-footer-secondary bar-dark" style="background-color: #3a444d;">
-          <ul class="table-view">
+        <div class="bar bar-standard bar-footer-secondary bar-dark">
+          <ul class="table-view table-view-inverse">
             <li class="table-view-cell">000 <button class="btn btn-outline-secondary">000</button></li>
           </ul>
         </div>
@@ -55,11 +52,13 @@
         <div class="content">
           <ul class="table-view" id="tree">
             <li class="table-view-cell">
+              <a href="" class="navigate-right">
+                홈
+              </a>
+            </li>
+            <li class="table-view-cell">
               <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#1">
-                <span class="media-object pull-left icon icon-star"></span>
-                <div class="media-body">
-                  Menu 1
-                </div>
+                투자하기
               </a>
               <ul class="table-view collapse" id="1">
                 <li class="table-view-cell">
@@ -76,10 +75,7 @@
             </li>
             <li class="table-view-cell">
               <a class="navigate-right collapsed" data-toggle="collapse" data-parent="#tree" data-target="#2">
-                <span class="media-object pull-left icon icon-star"></span>
-                <div class="media-body">
-                  Menu 2
-                </div>
+               대출하기
               </a>
               <ul class="table-view collapse" id="2">
                 <li class="table-view-cell">
@@ -94,6 +90,21 @@
                 </li>
               </ul>
             </li>
+            <li class="table-view-cell">
+              <a href="" class="navigate-right">
+                관심상품
+              </a>
+            </li>
+            <li class="table-view-cell">
+              <a href="" class="navigate-right">
+                업체 소개
+              </a>
+            </li>
+            <li class="table-view-cell">
+              <a href="" class="navigate-right">
+                설정
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -102,31 +113,67 @@
 
     <div class="snap-content" data-extension="drawer">
   		<header class="bar bar-nav bar-dark bg-primary">
-        <a class="icon icon-bars pull-left" role="button" href="#all" data-toggle="drawer"></a>
-  		  <h1 class="title">굿핀 <span id="state"></span></h1>
+        <span class="icon icon-bars pull-left" role="button" data-target="#all" data-toggle="drawer"></span>
+        <button class="btn btn-secondary pull-right">
+          필터
+        </button>
+  		  <h1 class="title">굿핀</h1>
   		</header>
 
       <nav class="bar bar-standard bar-header-secondary bar-light bg-faded">
   			<nav class="nav nav-inline">
-  			  <a class="nav-link active" href="#">메뉴1</a>
-  			  <a class="nav-link" href="#">메뉴2</a>
-  			  <a class="nav-link" href="#">메뉴3</a>
+  			  <a class="nav-link active" href="#">추천순</a>
+  			  <a class="nav-link" href="#">최신순</a>
+  			  <a class="nav-link" href="#">담보:전체</a>
   			</nav>
   		</nav>
 
       <div class="content" data-control="scroll" data-type="updown" data-defaultHeight="50">
 
         <div class="card">
-  			  <img class="card-img-top img-fluid" src="http://placehold.it/800x400" alt="Card image cap">
+  			  <img class="card-img-top img-fluid" src="http://goodfinance.co.kr/layouts/jumbotron/_images/view-pic-01.jpg" alt="Card image cap">
   			  <div class="card-block">
-  			    <h4 class="card-title">Card title</h4>
-  			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  			    <a href="#" class="btn btn-primary">Go somewhere</a>
+  			    <h4 class="card-title">제54차 제주도 타운하우스 신축프로젝트</h4>
+            <p class="card-text text-muted">모집기간 : 2016.04.28 ~ 2016.04.28</p>
   			  </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>연수익률</th>
+                <th>투자기간</th>
+                <th>세후예상수익률</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>18.0%</td>
+                <td>10개월</td>
+                <td>10.88%</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="card-block">
+
+            <dl class="rb-progress">
+              <dt>펀딩진행률</dt>
+              <dd>
+                <div class="progress">
+                  <progress class="progress progress-striped" value="25" max="100">
+                    25%
+                  </progress>
+                </div>
+              </dd>
+              <dd class="rb-text"><strong>7억원</strong> / 7억원</dd>
+            </dl>
+
+            <span class="badge badge-pill badge-default">상환중 선순위채권</span>
+            <span class="badge badge-pill badge-primary">매입보증채권</span>
+            <span class="badge badge-pill badge-success">중도인출가능</span>
+            </div>
   			</div>
 
         <div class="card">
-  			  <img class="card-img-top img-fluid" src="http://placehold.it/800x400" alt="Card image cap">
+  			  <img class="card-img-top img-fluid" src="http://goodfinance.co.kr/layouts/jumbotron/_images/pic-03.jpg" alt="Card image cap">
   			  <div class="card-block">
   			    <h4 class="card-title">Card title</h4>
   			    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
