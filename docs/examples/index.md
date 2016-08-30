@@ -60,32 +60,32 @@ Examples that focus on implementing uses of built-in components provided by Boot
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
     <a href="{{ site.baseurl }}/examples/search/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/search.png" alt="">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Search template</h4>
+    <h4>Search</h4>
     <p>Nothing but the basics: compiled CSS and JavaScript.</p>
   </div>
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/grid/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/grid.jpg" alt="">
+    <a href="{{ site.baseurl }}/examples/blog/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Grids</h4>
+    <h4>Blog</h4>
     <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
   </div>
   <div class="clearfix hidden-sm-up"></div>
 
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/jumbotron/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron.jpg" alt="">
+    <a href="{{ site.baseurl }}/examples/gallery/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Jumbotron</h4>
+    <h4>Gallery</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
   </div>
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/narrow-jumbotron/">
-      <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/jumbotron-narrow.jpg" alt="">
+    <a href="{{ site.baseurl }}/examples/login/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
     </a>
-    <h4>Narrow jumbotron</h4>
+    <h4>Login</h4>
     <p>Build a more custom page by narrowing the default container and jumbotron.</p>
   </div>
 </div>
@@ -96,10 +96,10 @@ Taking the default navbar component and showing how it can be moved, placed, and
 
 <div class="row bd-examples">
   <div class="col-xs-6 col-md-4">
-    <a href="{{ site.baseurl }}/examples/navbar/">
+    <a href="{{ site.baseurl }}/examples/tabs-striped/">
       <img class="img-thumbnail" src="{{ site.baseurl }}/examples/screenshots/navbar.jpg" alt="">
     </a>
-    <h4>Navbar</h4>
+    <h4>Striped Style Tabs</h4>
     <p>Super basic template that includes the navbar along with some additional content.</p>
   </div>
   <div class="col-xs-6 col-md-4">

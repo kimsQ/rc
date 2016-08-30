@@ -33,6 +33,31 @@ Examples that focus on implementing uses of built-in components provided by kims
     <h4>Financial Technology</h4>
     <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
   </div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/packages/mail/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
+    </a>
+    <h4>Mail Box</h4>
+    <p>Nothing but the basics: compiled CSS and JavaScript.</p>
+  </div>
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/packages/chatting/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
+    </a>
+    <h4>Chatting Messenger</h4>
+    <p>Multiple examples of grid layouts with all four tiers, nesting, and more.</p>
+  </div>
+  <div class="clearfix hidden-sm-up"></div>
+
+  <div class="col-xs-6 col-md-4">
+    <a href="{{ site.baseurl }}/packages/feed/">
+      <img class="img-thumbnail" src="http://placehold.it/600x375" alt="">
+    </a>
+    <h4>Activity Feed</h4>
+    <p>Build around the jumbotron with a navbar and some basic grid columns.</p>
+  </div>
+
 </div>
 
 <a class="btn btn-secondary btn-lg btn-block" href="{{ site.packages }}" target="_blank" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Store');">더 많은 패키지 보기</a>
