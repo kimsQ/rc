@@ -379,13 +379,14 @@ specify `static` for a backdrop which doesn't close the popup on tap.
 
 Via data attributes
 {% highlight html %}
-<button data-toggle="popup" data-backdrop="static">
+<button data-toggle="popup" data-backdrop="static" data-history="false">
 {% endhighlight %}
 
-Via JavaScript
+or Via JavaScript
 {% highlight js %}
 $(‘#foo’).popup({
-    backdrop :'static'
+    backdrop :'static',
+    history :'false'
 });
 {% endhighlight %}
 
