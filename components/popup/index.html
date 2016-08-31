@@ -1434,12 +1434,13 @@ The popup plugin toggles your hidden content on demand, via data attributes or J
 
 <p>Via data attributes</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"popup"</span> <span class="na">data-backdrop=</span><span class="s">"static"</span><span class="nt">&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">data-toggle=</span><span class="s">"popup"</span> <span class="na">data-backdrop=</span><span class="s">"static"</span> <span class="na">data-history=</span><span class="s">"false"</span><span class="nt">&gt;</span></code></pre></figure>
 
-<p>Via JavaScript</p>
+<p>or Via JavaScript</p>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="err">‘#</span><span class="nx">foo</span><span class="err">’</span><span class="p">).</span><span class="nx">popup</span><span class="p">({</span>
-    <span class="na">backdrop</span> <span class="p">:</span><span class="s1">'static'</span>
+    <span class="na">backdrop</span> <span class="p">:</span><span class="s1">'static'</span><span class="p">,</span>
+    <span class="na">history</span> <span class="p">:</span><span class="s1">'false'</span>
 <span class="p">});</span></code></pre></figure>
 
 <h2 id="methods">Methods</h2>
