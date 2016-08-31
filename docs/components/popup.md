@@ -25,7 +25,7 @@ A rendered popup with title, set of actions in the header and content.
 <div id="myPopup" class="popup zoom">
   <div class="popup-content">
     <header class="bar bar-nav">
-      <a class="icon icon-close pull-right" data-history="back" role="button"></a>
+      <a class="icon icon-close pull-right" data-dismiss="popup" role="button"></a>
       <h1 class="title">Popup</h1>
     </header>
     <div class="content">
