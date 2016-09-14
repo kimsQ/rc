@@ -60,10 +60,10 @@ group: components
 
 ### Via JavaScript
 
-한 줄의 자바스크립트로 `mySheet`의 id 를 가진 시트를 불러옵니다.
+한 줄의 자바스크립트로 `myPopover`의 id 를 가진 시트를 불러옵니다.
 
 {% highlight js %}
 $('.btn').tap(function() {
-  $('#mySheet').sheet();
+  $('#myPopover').sheet();
 });
 {% endhighlight %}
