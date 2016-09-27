@@ -64,9 +64,9 @@ Create a basic markup
 {% highlight html %}
 <div class="swiper-container" data-extension="swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slider" role="button">Slide 1</div>
-    <div class="swiper-slider" role="button">Slide 2</div>
-    <div class="swiper-slider" role="button">Slide 3</div>
+    <div class="swiper-slide" role="button">Slide 1</div>
+    <div class="swiper-slide" role="button">Slide 2</div>
+    <div class="swiper-slide" role="button">Slide 3</div>
     ....
   </div>
 
@@ -113,7 +113,7 @@ $('mySelector2').RC_initSwiper(option)
 `.swiper-slide` 에서 컨포넌트 호출시에 Swipe와 Tap 제스츄어가 중복으로 적용됩니다. 충돌을 회피하기 위해 `data-toggle` 대신 `data-component` 를 사용합니다.
 
 {% highlight html %}
-<div class="swiper-slider" data-component="modal">Slide 1</div>
+<div class="swiper-slide" data-component="modal">Slide 1</div>
 {% endhighlight %}
 
 
