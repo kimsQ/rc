@@ -9,6 +9,15 @@
 
 		<link href="../../../dist/css/rc.css" rel="stylesheet">
 
+		<style>
+		.bar.bar-light .nav-inline .nav-link {
+			color: inherit;
+		}
+		.bar.bar-light .nav-inline .nav-link.active {
+	    color: #0275d8;
+		}
+		</style>
+
 	</head>
 	<body>
 
@@ -16,7 +25,7 @@
 		  <h1 class="title">inline nav ( Justified )</h1>
 		</header>
 
-		<div class="bar bar-standard bar-header-secondary bar-light bg-faded">
+		<div class="bar bar-standard bar-header-secondary bar-light bg-faded p-x-0">
 			<nav class="nav nav-inline">
 			  <a class="nav-link active" href="#">Active</a>
 			  <a class="nav-link" href="#">Link</a>
@@ -24,7 +33,6 @@
 			  <a class="nav-link disabled" href="#">Disabled</a>
 			</nav>
 		</div>
-
 
 	</body>
 </html>

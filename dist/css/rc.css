@@ -7010,7 +7010,7 @@ input[type="button"].btn-block {
   max-width: 630px;
   min-width: 320px;
   height: auto;
-  z-index: 20;
+  z-index: 22;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -7182,7 +7182,7 @@ input[type="button"].btn-block {
   position: fixed;
   top: 55px;
   left: 50%;
-  z-index: 20;
+  z-index: 22;
   display: none;
   width: 280px;
   margin-left: -140px;
@@ -7222,7 +7222,7 @@ input[type="button"].btn-block {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 15;
+  z-index: 21;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -7278,7 +7278,7 @@ input[type="button"].btn-block {
   -webkit-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
-  z-index: 20;
+  z-index: 22;
 }
 
 .sheet.active {
@@ -7370,7 +7370,7 @@ input[type="button"].btn-block {
 
 .switch:before {
   position: absolute;
-  top: 3px;
+  top: 4.8px;
   right: 11px;
   font-size: 13px;
   color: #999;

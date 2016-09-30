@@ -1,0 +1,30 @@
+/* Your app's CSS, make it your own */
+
+
+.bar .title {
+  position: static;
+  padding-left: 15px;
+  text-align: left;
+}
+
+#tree .navigate-right.collapsed:after {
+  content: '\e826';
+}
+#tree .navigate-right:after {
+  content: '\e820';
+}
+
+.snap-drawer-left {
+  position: fixed;
+  top: 0;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(-265px, 0, 0);
+          transform: translate3d(-265px, 0, 0);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+          box-shadow: 0px 0px 10px rgba(0,0,0,0.9);
+}
+.snapjs-left .snap-drawer-left {
+  z-index: 11;
+}

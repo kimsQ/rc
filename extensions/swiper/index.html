@@ -1114,9 +1114,9 @@
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-container"</span> <span class="na">data-extension=</span><span class="s">"swiper"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-wrapper"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slider"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slider"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slider"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span> <span class="na">role=</span><span class="s">"button"</span><span class="nt">&gt;</span>Slide 3<span class="nt">&lt;/div&gt;</span>
     ....
   <span class="nt">&lt;/div&gt;</span>
 
@@ -1156,7 +1156,7 @@
 
 <p><code class="highlighter-rouge">.swiper-slide</code> 에서 컨포넌트 호출시에 Swipe와 Tap 제스츄어가 중복으로 적용됩니다. 충돌을 회피하기 위해 <code class="highlighter-rouge">data-toggle</code> 대신 <code class="highlighter-rouge">data-component</code> 를 사용합니다.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slider"</span> <span class="na">data-component=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"swiper-slide"</span> <span class="na">data-component=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Slide 1<span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
 <h2 id="options">Options</h2>
 <p>아래는 RC Swiper 에서 제공하는 Options 항목이며 적용방법은 <code class="highlighter-rouge">.swiper-container</code> div 에

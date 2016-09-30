@@ -486,8 +486,8 @@
   $.fn.typeahead.defaults = {
         source: [],
         items: 8,
-        menu: '<ul class="typeahead table-view" role="listbox"></ul>',
-        item: '<li class="table-view-cell"><a class="navigate-right" href="#" role="option"></a></li>',
+        menu: '<ul class="typeahead dropdown-menu" role="listbox"></ul>',
+        item: '<li><a class="dropdown-item" href="#" role="option"></a></li>',
         minLength: 1,
         scrollHeight: 0,
         autoSelect: true,
@@ -496,7 +496,7 @@
         delay: 0,
         separator: 'category',
         headerHtml: '<li class="dropdown-header"></li>',
-        headerDivider: '<li class="table-view-divider" role="separator"></li>'
+        headerDivider: '<li class="divider" role="separator"></li>'
   };
 
   $.fn.typeahead.Constructor = Typeahead;
