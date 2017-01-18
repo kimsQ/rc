@@ -39,9 +39,9 @@ packages:           http://www.kimsq.com
 
 cdn:
   # See https://www.srihash.org for info on how to generate the hashes
-  css:            http://cdn.kimsq.com/rc/1.0.0-alpha.3/css/rc.css
+  css:            https://cdn.kimsq.com/rc/1.0.0-alpha.3/css/rc.css
   css_hash:       ""
-  js:             http://cdn.kimsq.com/rc/1.0.0-alpha.3/js/rc.js
+  js:             https://cdn.kimsq.com/rc/1.0.0-alpha.3/js/rc.min.js
   js_hash:        ""
   jquery:         https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
   jquery_hash:    "sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
